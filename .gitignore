@@ -1,3 +1,5 @@
-TT.txt
-.DS_Store
-/node_modules
+*TT.txt
+*.DS_Store
+*node_modules
+*.png
+*.jpg
