@@ -1,0 +1,191 @@
+/* COLOR PALETTE */
+/* 
+#e8e6dc
+#b7c2bd
+#2e5875
+#152742
+ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    background-color: #e8e6dc;
+}
+
+h2,
+h3,
+h4 {
+    color: #152742;
+}
+
+h5,
+p {
+    color: #2e5875;
+}
+
+nav,
+.nav-links {
+    display: flex;
+}
+
+nav {
+    justify-content: space-around;
+    align-items: center;
+    height: 17vh;
+}
+
+.nav-links {
+    gap: 2rem;
+    list-style: none;
+    font-size: 24px;
+}
+
+a {
+    color: #152742;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #b7c2bd;
+    text-decoration: underline;
+    text-underline-offset: 12px;
+}
+
+.logo {
+    height: 250px;
+    width: 250px;
+    margin: auto 0;
+}
+
+/* SECTIONS */
+section {
+    padding-top: 4vh;
+    height: 96vh;
+    margin: 0 10rem;
+    box-sizing: border-box;
+    min-height: fit-content;
+}
+
+.section-container {
+    display: flex;
+}
+
+/* PROFILE SECTION */
+
+#profile {
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+    height: 80vh;
+}
+
+.section__pic-container {
+    display: flex;
+    height: 400px;
+    width: 400px;
+    margin: auto 0;
+}
+
+.section__text {
+    align-self: center;
+    text-align: center;
+}
+
+.section__text p {
+    font-weight: 600;
+}
+
+.section__text__p1 {
+    text-align: center;
+}
+
+.section__text__p2 {
+    font-size: 24px;
+}
+
+.title {
+    color: #152742;
+    font-size: 48px;
+    text-align: center;
+}
+
+/* EXPERIENCE SECTION */
+
+#experience {
+    position: relative;
+}
+
+.icon {
+    height: 48px;
+    width: 48px;
+}
+
+li {
+    list-style: none;
+    padding: 0.75rem;
+}
+
+.experience-container {
+    gap: 2rem;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
+
+.experience-details-container {
+    justify-content: center;
+    flex-direction: column;
+}
+
+.experience-details-container,
+.experience-container {
+    display: flex;
+}
+
+.details-container {
+    padding: 1.5rem;
+    flex: 1;
+    background-color: #fff;
+    border-radius: 32px;
+    border: #152742 0.1rem solid;
+    border-color: #2e5875;
+    text-align: center;
+}
+
+.sub-title {
+    color: #152742;
+    font-size: 36px;
+    text-align: center;
+}
+
+#contact {
+    position: relative;
+}
+
+.contact-container {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+}
+
+.portfolio:link,
+.portfolio:visited {
+    color: #152742;
+    text-decoration: none;
+}
+
+.portfolio:hover,
+.portfolio:active {
+    color: #b7c2bd;
+    text-decoration: none;
+}
+
+.contact-icon {
+    margin: 0.5rem 1rem;
+    height: 36px;
+    width: 36px;
+}

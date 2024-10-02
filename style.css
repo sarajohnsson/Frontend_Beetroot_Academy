@@ -31,3 +31,8 @@ a:hover,
 a:active {
     color: #d9480f;
 }
+
+li {
+    list-style: none;
+    margin-bottom: 24px;
+}
