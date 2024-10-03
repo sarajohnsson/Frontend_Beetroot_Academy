@@ -73,5 +73,34 @@
                 <footer></footer>
             </article>
         </main>
+
+        <!-- Some nesting problem -->
+        <!-- Can't put link inside a link or a button inside a button -->
+        <picture>
+            <source srcet="" />
+        </picture>
+
+        <h2>Login</h2>
+        <!-- Input types, date, text, tel, number, color, checkbox, radio -->
+        <!-- Date is not recommended as you cannot style the calender at all and looks different from browser to browser -->
+        <form></form>
+
+        <select name="user_role" id="">
+            <!-- The value should always be different so the value won't impact the backend -->
+            <option value="0">Admin</option>
+            <option value="1">Editor</option>
+            <option value="2">User</option>
+        </select>
+
+        <div class="input_group">
+            <label for="user_name">
+                <input placeholder="John Doe" type="text" name="" />
+            </label>
+        </div>
+
+        <!-- Different type of links -->
+        <a href="https://google.com">I'm a link to google</a>
+        <a href="tel: 070 123 45 67"></a>
+        <a href="mailto: myemail@gmail.com">myemail@gmail.com</a>
     </body>
 </html>
