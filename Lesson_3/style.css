@@ -146,6 +146,10 @@ li {
     margin-top: 2rem;
 }
 
+.experience-list {
+    text-align: left;
+}
+
 .experience-details-container {
     justify-content: center;
     flex-direction: column;
