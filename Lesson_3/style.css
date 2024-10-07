@@ -13,7 +13,7 @@
     box-sizing: border-box;
 }
 
-.header {
+.top-header {
     background-color: #527c8e;
     position: sticky;
     top: 0;
@@ -45,6 +45,7 @@ nav {
     justify-content: space-around;
     align-items: center;
     height: 10vh;
+    border-bottom: #152742 0.1rem solid;
 }
 
 .nav-links {
@@ -89,7 +90,7 @@ section {
     display: flex;
     justify-content: center;
     gap: 5rem;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .profile-pic {
@@ -130,7 +131,7 @@ section {
 /* EXPERIENCE SECTION */
 
 #experience {
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .icon {
@@ -180,7 +181,7 @@ li {
 }
 
 #contact {
-    height: 100vh;
+    min-height: 80vh;
 }
 
 .contact-form-container {
@@ -252,4 +253,18 @@ li {
     color: #b7c2bd;
     background-color: #152742;
     border: #152742 0.1rem solid;
+}
+
+/* FOOTER */
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5vh;
+    background-color: #527c8e;
+    border-top: #152742 0.1rem solid;
+}
+
+.footer__text {
+    color: #e8e6dc;
 }
