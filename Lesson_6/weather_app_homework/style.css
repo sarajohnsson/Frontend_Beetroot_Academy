@@ -23,6 +23,7 @@ body {
 }
 
 .countries-row-container {
+    display: block;
 }
 
 .countries-line-container {
@@ -53,13 +54,4 @@ body {
 .icon {
     height: 36px;
     width: 36px;
-}
-
-.lisbon {
-}
-
-.paris {
-}
-
-.belgrade {
 }
