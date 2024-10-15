@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
+        <title>Document</title>
+    </head>
+    <body>
+        <h2>CSS selectors you should know:</h2>
+        <ol>
+            <li>* - selects ALL</li>
+            <li>#myId - select element with id='myId'</li>
+            <li>myClassName - select all elements with class ='myClassName'</li>
+            <li>li - select all elements with tag li</li>
+            <li>
+                .parent .child - nested selector, will select all elements with
+                class='child' nested inside element with class='parent'
+            </li>
+            <li>
+                .class.class - select all elements with class='class1 class 2'
+            </li>
+            <li>
+                .my_el + .el - select element with class='el' placed after
+                element with class='my_el'
+            </li>
+            <li>
+                .parent > .child - select element with class='chils' which is a
+                1st lvl child of a .parent
+            </li>
+        </ol>
+
+        <!-- How to center an element. Common interview question. -->
+        <form action="#" class="site_form">
+            <h2>LOG IN</h2>
+            <div class="input_row">
+                <input type="text" id="user_name" placeholder="John Doe" />
+                <label for="user_name">User name:</label>
+            </div>
+            <button class="submit">Submit</button>
+        </form>
+    </body>
+</html>

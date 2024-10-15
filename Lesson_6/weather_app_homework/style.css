@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+}
+
+.main-container {
+    padding-top: 5%;
+    display: block;
+}
+
+.weather-container {
+    display: block;
+    margin: 0 auto;
+    background-color: #3399cc;
+    padding: 60px 135px 120px 135px;
+    border: 10px solid #2b81ac;
+}
+
+.countries-row-container {
+}
+
+.countries-line-container {
+    display: flex;
+    min-width: 1170px;
+}
+
+.country-container {
+    display: block;
+    background-color: #5ec6fa;
+}
+
+.temperature-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.country-text {
+    text-align: center;
+    font-size: 18px;
+}
+
+.temperature-text {
+    margin-right: 12px;
+}
+
+.icon {
+    height: 36px;
+    width: 36px;
+}
+
+.lisbon {
+}
+
+.paris {
+}
+
+.belgrade {
+}

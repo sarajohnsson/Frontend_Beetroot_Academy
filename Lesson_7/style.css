@@ -1,0 +1,109 @@
+/* 10 */
+/* .nav_item {
+    background-color: lightcoral;
+} */
+
+/* Browser reads your code from top to bottom and therefore will chose the last item */
+/* .nav_list_item {
+    background-color: lightgreen;
+} */
+
+/* 1 */
+/* li {
+    background-color: lightskyblue;
+} */
+
+/* Avoid ID selectors as they are too heavy. It is difficult to override it, instead use common class */
+/* 100 */
+/* #accent {
+    background-color: lightslategray;
+}
+
+.my_nav .nav_item {
+    background-color: lightblue;
+} */
+
+/* .nav_item.nav_list_item {
+    background-color: lightcoral;
+}
+
+#content a.text {
+    background-color: red;
+} */
+
+/* When I need to create custom elements for a form ie custom radio button or checkbox */
+/* .active-page + .nav_item {
+    background-color: red;
+} */
+
+/* Common practice when you need to create a navigation with different levels */
+/* .nav_list_wrapper > .nav_item {
+    color: rebeccapurple;
+}
+
+.nav_list_wrapper ~ .nav_item {
+    color: rebeccapurple;
+} */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.site_form {
+    margin: 0 auto;
+    width: 500px;
+    padding: 20px;
+    background-color: lightskyblue;
+    color: #fff;
+    border-radius: 10px;
+
+    text-align: center;
+    text-transform: uppercase;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.site_form input {
+    width: 100%;
+
+    border: 1px solid #fff;
+    border-radius: 10px;
+    padding: 10px 0 10px 0;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.submit {
+    margin-top: 10px;
+    text-transform: uppercase;
+    background-color: lightcoral;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 10px;
+
+    cursor: pointer;
+}
+
+/* Pseudo classes */
+.submit:hover {
+    transform: scale(1.1);
+    transition: all 0.5s ease;
+}
+
+form:hover {
+    background-color: lightgreen;
+    transition: all 0.5s ease;
+}
+
+.submit:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}

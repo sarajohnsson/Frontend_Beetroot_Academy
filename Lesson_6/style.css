@@ -1,0 +1,69 @@
+.box {
+    /* If you know how to use it, use it but it's also ok with inline-block */
+    display: flex;
+    background-color: lightcoral;
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+    width: 25%;
+    height: 100px;
+    /* Distance between content and element */
+    padding: 20px;
+    margin: 20px;
+    /* To avoid jumping when hovering over the element, add border but change property to transparent and then only change color on hover */
+    border: 5px solid transparent;
+
+    font-family: Arial, Helvetica, sans-serif;
+    /* box-sizing: border-box; */
+}
+
+.box:hover {
+    border-color: lightblue;
+}
+
+/* .wrapper {
+    width: 500px;
+} */
+
+.hero {
+    min-height: 100vh;
+    width: 50vw;
+}
+
+section {
+    background-color: lightblue;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+}
+
+.design_tools {
+    padding-bottom: 90px;
+    background-color: lightcoral;
+    margin-bottom: 50px;
+}
+
+.about {
+    padding: 120px 0 100px;
+    font-size: 40px;
+    /* Margins will overlap and browser will use the biggest value for distance */
+    /* margin-top: 50px; */
+    box-sizing: border-box;
+}
+
+button {
+    background-color: orange;
+    color: #fff;
+    font-size: 16px;
+}
+
+.container {
+    max-width: 1125px;
+    width: 90%;
+}
