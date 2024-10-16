@@ -6,33 +6,23 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
+    text-wrap: nowrap;
     color: #fff;
 }
 
 .main-container {
-    display: inline-block;
-    margin: 0 auto;
-    max-width: 80%;
+    position: relative;
     background-color: #3399cc;
     border: 10px solid #2b81ac;
-}
-
-.weather-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 1fr);
+    justify-content: center;
     padding: 60px 135px 120px 135px;
 }
 
-.countries-container {
-    display: grid;
-    justify-content: center;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-}
-
 .country-container {
-    background-color: #5ec6fa;
     outline: 3px solid #fff;
     text-align: center;
-    padding: 28px 92px;
 }
 
 .temperature-container {
@@ -44,16 +34,25 @@ body {
 .main-text-container {
     display: flex;
     align-items: center;
-    margin-bottom: 28px;
+    margin-bottom: 36px;
 }
 
 .weather-text__p1 {
+    font-size: 18px;
     align-items: center;
     margin-right: 12px;
 }
 
+.weather-text__p2 {
+    align-items: center;
+    margin-top: 36px;
+    font-size: 12px;
+}
+
 .country-text {
+    display: inline-block;
     text-align: center;
+    margin-bottom: 4px;
     font-size: 18px;
 }
 
@@ -75,4 +74,67 @@ body {
 
 .country-container.max {
     grid-column: span 4;
+}
+
+.main-text-container {
+    grid-column: span 4;
+}
+
+.end-text-container {
+    grid-column: span 4;
+}
+
+.lisbon {
+    background-color: #5ec6fa;
+    padding: 26px 92px;
+}
+
+.paris {
+    background-color: #33cccc;
+    padding: 26px 92px;
+}
+
+.belgrade {
+    background-color: #996699;
+    padding: 26px 92px;
+}
+
+.venice {
+    background-color: #c24747;
+    padding: 26px 92px;
+}
+
+.tel-avive {
+    background-color: #e2674a;
+    padding: 26px 92px;
+}
+
+.cairo {
+    background-color: #ffcc66;
+    padding: 26px 92px;
+}
+
+.new-york {
+    background-color: #99cc99;
+    padding: 26px 92px;
+}
+
+.new-dehli {
+    background-color: #669999;
+    padding: 26px 92px;
+}
+
+.san-fransisco {
+    background-color: #cc6699;
+    padding: 26px 92px;
+}
+
+.tokyo {
+    background-color: #339966;
+    padding: 26px 92px;
+}
+
+.sydney {
+    background-color: #666699;
+    padding: 26px 92px;
 }
