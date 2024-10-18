@@ -20,31 +20,28 @@ h1 {
     margin: 0 auto;
 }
 
-a:link,
-a:visited {
-    text-decoration: none;
-    font-weight: 500;
-    color: #444;
-}
-
-a:hover,
-a:active {
-    color: #d9480f;
-}
-
 li {
     list-style: none;
     margin-bottom: 24px;
 }
 
-a.homework-assignment {
-    background-color: #d9480f;
+.nav-item {
+    display: inline-block;
+    background-color: #e8590c;
     color: #fff;
-    font-weight: 700;
+    border: 2px solid #d9480f;
     border-radius: 6px;
+    min-width: 100px;
     padding: 12px;
+    font-weight: 700;
+    text-decoration: none;
+    text-align: center;
+
+    transition: all 300ms ease-in-out;
 }
 
-.homework-assignment:hover {
-    background-color: #ff6122;
+.nav-item:hover {
+    background-color: #f76707;
+    transform: scale(1.1);
+    border: 2px solid #f76707;
 }
