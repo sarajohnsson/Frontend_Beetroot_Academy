@@ -1,0 +1,60 @@
+.page-wrapper {
+    margin: 0 auto;
+    display: inline-block;
+    width: 100%;
+    max-width: 1170px;
+}
+
+.containers {
+    background-color: lightblue;
+    padding: 35px 0 95px;
+    border: 25px solid darkcyan;
+}
+
+.country-container {
+    /* Hack, sometimes browser add tiny space between element */
+    font-size: 0;
+}
+
+.country-box {
+    padding: 20px 30px;
+    text-align: center;
+    color: #fff;
+    outline: 2px solid #fff;
+    display: inline-block;
+    box-sizing: border-box;
+    width: 25%;
+    font-size: 22px;
+    background-color: lightgray;
+}
+
+.w50 {
+    width: 50%;
+}
+
+.w100 {
+    width: 100%;
+}
+
+.country-box:nth-child(1) {
+}
+.country-box:nth-child(2) {
+}
+.country-box:nth-child(3) {
+}
+.country-box:nth-child(4) {
+}
+.country-box:nth-child(5) {
+}
+.country-box:nth-child(6) {
+}
+.country-box:nth-child(7) {
+}
+.country-box:nth-child(8) {
+}
+.country-box:nth-child(9) {
+}
+.country-box:nth-child(10) {
+}
+.country-box:nth-child(11) {
+}
