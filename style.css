@@ -36,3 +36,15 @@ li {
     list-style: none;
     margin-bottom: 24px;
 }
+
+a.homework-assignment {
+    background-color: #d9480f;
+    color: #fff;
+    font-weight: 700;
+    border-radius: 6px;
+    padding: 12px;
+}
+
+.homework-assignment:hover {
+    background-color: #ff6122;
+}
