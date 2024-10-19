@@ -23,6 +23,7 @@ img {
 
 button {
     background: none;
+    outline: none;
     border: none;
 }
 
@@ -72,7 +73,7 @@ button {
     text-transform: capitalize;
     text-align: center;
     border-radius: 4px;
-    padding: 12px 26px;
+    padding: 16px 20px;
     font-weight: 700;
     color: #173a56;
     cursor: pointer;
@@ -88,14 +89,15 @@ button {
     font-size: 0;
 }
 
-.hero_title {
+.hero-title {
     font-size: 44px;
+    font-weight: 700;
     line-height: 54px;
     color: #2f281e;
     margin-bottom: 30px;
 }
 
-.hero_desc {
+.hero-desc {
     font-size: 18px;
     line-height: 28px;
 }
@@ -105,15 +107,15 @@ button {
     vertical-align: middle;
 }
 
-.colum:first-child {
+.column:first-child {
     width: 45%;
 }
 
-.colum:last-child {
+.column:last-child {
     width: 55%;
 }
 
-.hero_img {
+.hero-img {
     max-width: 605px;
     width: 100%;
 }
