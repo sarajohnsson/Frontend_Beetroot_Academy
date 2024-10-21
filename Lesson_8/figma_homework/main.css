@@ -47,7 +47,7 @@ button {
 }
 
 .logo_link {
-    width: 175px;
+    min-width: 175px;
 }
 
 .nav_bar,
