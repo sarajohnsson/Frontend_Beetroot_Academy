@@ -1,0 +1,33 @@
+.marketers {
+    font-size: 0;
+}
+
+.last_section_container {
+    max-width: 1126px;
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+
+.marketers_col {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.marketers_desc_container {
+    max-width: 486px;
+}
+
+.marketers_col:first-child {
+    max-width: 50%;
+    margin-right: 100px;
+}
+
+.marketemarketers_col:last-child {
+    max-width: 50%;
+}
+
+.marketers_img {
+    max-width: 525px;
+    width: 100%;
+}

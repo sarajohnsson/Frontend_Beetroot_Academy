@@ -1,0 +1,36 @@
+.footer {
+    font-size: 0;
+}
+
+.footer_container {
+    max-width: 1126px;
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 80px;
+
+    border-top: 1px solid #bcd0e5;
+}
+
+.footer_nav {
+    color: #544837;
+    font-size: 16px;
+    line-height: 35px;
+}
+
+.footer_col {
+    display: inline-block;
+    vertical-align: middle;
+    max-width: 325px;
+    margin-right: 120px;
+}
+
+.footer_nav,
+.footer_nav_list,
+.newsletter_container {
+    display: inline-block;
+    align-items: middle;
+}
+
+.footer_link {
+    width: 175px;
+}

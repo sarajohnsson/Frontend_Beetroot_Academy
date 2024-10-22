@@ -1,3 +1,7 @@
+/* SCSS FILES */
+@import "productManagers";
+@import "marketers";
+@import "footer";
 /* GENERAL STYLING */
 * {
     padding: 0;
@@ -39,6 +43,13 @@ button {
     max-width: 1126px;
     width: 90%;
     margin: 0 auto;
+}
+
+.section_container {
+    max-width: 1126px;
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 120px;
 }
 
 /* HEADER */
@@ -207,7 +218,7 @@ button {
 
 .icon_shadow.arrow {
     background-image: linear-gradient(
-        rgb(255, 255, 255),
+        white,
         rgba(255, 255, 255, 0.5),
         rgba(119, 82, 190, 0.25)
     );
@@ -215,7 +226,7 @@ button {
 
 .icon_shadow.curve {
     background-image: linear-gradient(
-        rgb(255, 255, 255),
+        white,
         rgba(255, 255, 255, 0.5),
         rgba(250, 176, 5, 0.25)
     );
@@ -223,7 +234,7 @@ button {
 
 .icon_shadow.heart {
     background-image: linear-gradient(
-        rgb(255, 255, 255),
+        white,
         rgba(255, 255, 255, 0.5),
         rgba(240, 62, 61, 0.25)
     );
@@ -231,7 +242,7 @@ button {
 
 .icon_shadow.hourglass {
     background-image: linear-gradient(
-        rgb(255, 255, 255),
+        white,
         rgba(255, 255, 255, 0.5),
         rgba(77, 173, 247, 0.25)
     );
@@ -268,7 +279,6 @@ button {
 .feature_column {
     display: inline-block;
     max-width: 1120px;
-    padding-bottom: 60px;
     margin: 0 auto;
 }
 
@@ -278,6 +288,7 @@ button {
     height: 200px;
     max-width: 272px;
     margin-right: 80px;
+    margin-bottom: 60px;
 }
 
 .feature_card:last-child {
@@ -304,8 +315,34 @@ button {
     margin-bottom: 120px;
 }
 
-/* EFFORTLESS VALIDATION */
+/* GENERAL SECTION TEXT */
+.section_title__p {
+    font-size: 16px;
+    margin-bottom: 8px;
+}
 
+.section_title {
+    font-size: 36px;
+    font-weight: 700;
+    color: #2f281e;
+    margin-bottom: 30px;
+}
+
+.section_sub {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 26px;
+    color: #2f281e;
+    margin-bottom: 8px;
+}
+
+.section_desc {
+    font-size: 16px;
+    line-height: 26px;
+    margin-bottom: 30px;
+}
+
+/* EFFORTLESS VALIDATION */
 .effortless_val {
     font-size: 0;
 }
@@ -320,35 +357,74 @@ button {
 }
 
 .effortless_col:first-child {
-    width: 50%;
+    max-width: 50%;
+    margin-right: 110px;
 }
 
 .effortless_col:last-child {
-    width: 50%;
-}
-
-.effortless_title {
-    font-size: 36px;
-    font-weight: 700;
-    color: #2f281e;
-    margin-bottom: 30px;
-}
-
-.effortless_sub {
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 26px;
-    color: #2f281e;
-    margin-bottom: 8px;
-}
-
-.effortless_desc {
-    font-size: 16px;
-    line-height: 26px;
-    margin-bottom: 30px;
+    max-width: 50%;
 }
 
 .effortless_img {
     max-width: 525px;
     width: 100%;
 }
+
+/* PRODUCT MANAGERS SECTION */
+
+// .product_manager {
+//     font-size: 0;
+//     margin-bottom: 120px;
+// }
+
+// .product_col {
+//     display: inline-block;
+//     vertical-align: middle;
+// }
+
+// .product_col:first-child {
+//     max-width: 50%;
+//     margin-right: 100px;
+// }
+
+// .product_col:last-child {
+//     max-width: 50%;
+// }
+
+// .product_container {
+//     max-width: 486px;
+// }
+
+// .product_list {
+//     margin-bottom: 30px;
+// }
+
+// .todo_container {
+//     display: inline-block;
+//     vertical-align: middle;
+//     margin-right: 30px;
+
+//     background-color: #ff9900;
+//     border-radius: 13px;
+//     width: 35px;
+//     height: 35px;
+// }
+
+// .todo_icon {
+//     height: 16px;
+//     width: 16px;
+//     padding: 9px;
+// }
+
+// .product_text {
+//     display: inline-block;
+//     vertical-align: middle;
+//     max-width: 385px;
+//     font-size: 16;
+//     line-height: 26px;
+// }
+
+// .product_img {
+//     max-width: 532px;
+//     width: 100%;
+// }
