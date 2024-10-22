@@ -47,7 +47,7 @@ button {
 }
 
 .logo_link {
-    min-width: 175px;
+    width: 175px;
 }
 
 .nav_bar,
@@ -87,12 +87,27 @@ button {
     color: #173a56;
     cursor: pointer;
     margin-right: 6px;
+    font-size: 16px;
 }
 
 .btn.accent {
+    font-size: 16px;
     color: #fff;
     background-color: #ff9900;
     border-color: #ff9900;
+    margin-right: 0;
+}
+
+.btn:hover {
+    background-color: #bcd0e5;
+    border: 1px solid #bcd0e5;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn.accent:hover {
+    background-color: #e67700;
+    border-color: #e67700;
+    transition: all 0.3s ease-in-out;
 }
 
 /* HERO SECTION */
@@ -139,25 +154,34 @@ button {
 
 .hero_action {
     display: inline-block;
-    font-size: 16px;
+}
+
+.hero_get_started {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 30px;
 }
 
 .hero_link {
     display: inline-block;
     vertical-align: middle;
-
-    color: #ff9900;
-    text-decoration: underline;
-    font-size: 16px;
-    font-weight: 600;
 }
 
 .play_icon {
     display: inline-block;
     vertical-align: middle;
-    width: 24px;
+    width: 20px;
+    height: 17px;
     margin-right: 8px;
-    margin-left: 30px;
+}
+
+.hero_watch_video {
+    display: inline-block;
+    vertical-align: middle;
+    color: #ff9900;
+    text-decoration: underline;
+    font-size: 16px;
+    font-weight: 600;
 }
 
 /* FEATURE SECTION */
@@ -175,9 +199,70 @@ button {
     margin-bottom: 60px;
 }
 
-.card_icon {
+.icon_shadow {
     width: 50px;
+    height: 50px;
     margin-bottom: 28px;
+}
+
+.icon_shadow.arrow {
+    background-image: linear-gradient(
+        rgb(255, 255, 255),
+        rgba(255, 255, 255, 0.5),
+        rgba(119, 82, 190, 0.25)
+    );
+}
+
+.icon_shadow.curve {
+    background-image: linear-gradient(
+        rgb(255, 255, 255),
+        rgba(255, 255, 255, 0.5),
+        rgba(250, 176, 5, 0.25)
+    );
+}
+
+.icon_shadow.heart {
+    background-image: linear-gradient(
+        rgb(255, 255, 255),
+        rgba(255, 255, 255, 0.5),
+        rgba(240, 62, 61, 0.25)
+    );
+}
+
+.icon_shadow.hourglass {
+    background-image: linear-gradient(
+        rgb(255, 255, 255),
+        rgba(255, 255, 255, 0.5),
+        rgba(77, 173, 247, 0.25)
+    );
+}
+
+.icon_container {
+    border-radius: 19px;
+    width: 50px;
+    height: 50px;
+}
+
+.icon_container.arrow {
+    background-color: #7752be;
+}
+
+.icon_container.curve {
+    background-color: #fab005;
+}
+
+.icon_container.heart {
+    background-color: #f03e3d;
+}
+
+.icon_container.hourglass {
+    background-color: #4dadf7;
+}
+
+.card_icon {
+    width: 16px;
+    height: 16px;
+    padding: 17px;
 }
 
 .feature_column {
@@ -192,7 +277,7 @@ button {
     vertical-align: middle;
     height: 200px;
     max-width: 272px;
-    margin-right: 10px;
+    margin-right: 80px;
 }
 
 .feature_card:last-child {
@@ -210,7 +295,7 @@ button {
     font-size: 16px;
     line-height: 26px;
     text-align: start;
-    padding-right: 60px;
+    max-width: 200px;
 }
 
 .feature_action {

@@ -1,0 +1,39 @@
+// When you have a big application and only want to change one line of code. It can also be used for long properties.
+// These can be moved into a separate folder _variables and then we need to put @use before oor @import (works better because you don't have put the name before the variable)
+$accent: #fff;
+$gradient: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(9, 9, 121, 1) 35%,
+    rgba(0, 212, 255, 0) 100%
+);
+
+@mixin font($fz, $lh, $color, $fw: 400) {
+    font-size: $fz;
+    line-height: $lh;
+    color: $color;
+    font-weight: $fw;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+p {
+    font-size: 16px;
+    display: grid;
+    box-shadow: 1px;
+}
+
+.title {
+    @include font(50px, 24px, #000, 400);
+}
+
+.desc {
+    @include font(25px, 12px, #fff, 400);
+}
+
+a {
+    text-decoration: none;
+}
