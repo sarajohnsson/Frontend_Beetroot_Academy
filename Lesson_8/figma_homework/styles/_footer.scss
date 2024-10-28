@@ -13,18 +13,29 @@
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
+
+    &_col {
+        display: inline-block;
+        width: 25%;
+        padding: 0;
+
+        color: #544837;
+        font-size: 16px;
+        line-height: 35px;
+        margin-bottom: 10px;
+    }
 }
 
-.footer_nav .footer_col {
-    display: inline-block;
-    width: 25%;
-    padding: 0;
+// .footer_nav .footer_col {
+//     display: inline-block;
+//     width: 25%;
+//     padding: 0;
 
-    color: #544837;
-    font-size: 16px;
-    line-height: 35px;
-    margin-bottom: 10px;
-}
+//     color: #544837;
+//     font-size: 16px;
+//     line-height: 35px;
+//     margin-bottom: 10px;
+// }
 
 .email_container {
     min-width: 323px;

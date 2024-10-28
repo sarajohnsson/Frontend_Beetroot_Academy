@@ -1,5 +1,5 @@
 /* SCSS FILES */
-product_managers {
+.product_managers {
   font-size: 0;
 }
 
@@ -7,25 +7,24 @@ product_managers {
   display: inline-block;
   vertical-align: middle;
 }
-
+.product_col_img {
+  max-width: 532px;
+  width: 100%;
+}
 .product_col:first-child {
-  max-width: 50%;
   margin-right: 100px;
 }
-
-.product_col:last-child {
+.product_col:first-child, .product_col:last-child {
   max-width: 50%;
 }
-
-.product_desc_container {
+.product_col_desc_container {
   max-width: 486px;
 }
 
 .product_list {
   margin-bottom: 30px;
 }
-
-.todo_container {
+.product_list_todo_container {
   display: inline-block;
   vertical-align: middle;
   margin-right: 30px;
@@ -45,13 +44,8 @@ product_managers {
   display: inline-block;
   vertical-align: middle;
   max-width: 385px;
-  font-size: 16;
+  font-size: 16px;
   line-height: 26px;
-}
-
-.product_img {
-  max-width: 532px;
-  width: 100%;
 }
 
 .marketers {
@@ -96,8 +90,7 @@ product_managers {
   justify-content: flex-end;
   align-items: flex-end;
 }
-
-.footer_nav .footer_col {
+.footer_nav_col {
   display: inline-block;
   width: 25%;
   padding: 0;
