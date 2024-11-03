@@ -278,6 +278,9 @@ button {
 }
 
 .icon_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border-radius: 19px;
     width: 50px;
     height: 50px;
@@ -297,6 +300,13 @@ button {
 
 .icon_container.hourglass {
     background-color: #4dadf7;
+}
+
+// Needed to declare size of the icons as they're read as fonts and we made it zero from the start
+.fa-brands,
+.fa-solid {
+    color: #fff;
+    font-size: 1rem;
 }
 
 // .card_icon {
