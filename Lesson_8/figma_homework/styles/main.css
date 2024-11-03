@@ -362,10 +362,6 @@ button {
   background-color: #4dadf7;
 }
 
-.icon_container i {
-  font-size: 2em;
-}
-
 .feature_column {
   display: inline-block;
   max-width: 1120px;
