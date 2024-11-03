@@ -209,6 +209,7 @@ button {
 .play_icon {
     display: inline-block;
     vertical-align: middle;
+    color: orange;
     width: 20px;
     height: 17px;
     margin-right: 8px;
@@ -298,10 +299,14 @@ button {
     background-color: #4dadf7;
 }
 
-.card_icon {
-    width: 16px;
-    height: 16px;
-    padding: 17px;
+// .card_icon {
+//     width: 16px;
+//     height: 16px;
+//     padding: 17px;
+// }
+
+.icon_container i {
+    font-size: 2em;
 }
 
 .feature_column {
