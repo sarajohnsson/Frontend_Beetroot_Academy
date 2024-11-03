@@ -206,14 +206,21 @@ button {
     vertical-align: middle;
 }
 
-.play_icon {
-    display: inline-block;
+.fa-solid.fa-play {
+    color: #ff9900;
+    font-size: 1.5rem;
     vertical-align: middle;
-    color: orange;
-    width: 20px;
-    height: 17px;
-    margin-right: 8px;
+    margin-right: 0.5rem;
 }
+
+// .play_icon {
+//     display: inline-block;
+//     vertical-align: middle;
+//     color: orange;
+//     width: 20px;
+//     height: 17px;
+//     margin-right: 8px;
+// }
 
 .hero_watch_video {
     display: inline-block;
