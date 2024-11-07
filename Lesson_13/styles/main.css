@@ -1,0 +1,20 @@
+.box {
+  padding: 20px;
+  background-color: lightcoral;
+  text-align: center;
+  color: #fff;
+  width: 100%;
+  max-width: 300px;
+}
+
+.row {
+  background-color: lightblue;
+  display: flex;
+  justify-content: space-between;
+  min-height: 100vh;
+  align-items: center;
+}
+
+.bigger {
+  align-self: flex-start;
+}
