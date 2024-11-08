@@ -21,6 +21,12 @@ a {
   text-decoration: none;
 }
 
+button {
+  cursor: pointer;
+  border: none;
+  text-decoration: none;
+}
+
 .page_wrapper {
   margin: 0 auto;
   width: 100%;
@@ -38,7 +44,7 @@ a {
 }
 .hero_container {
   position: absolute;
-  top: 50%;
+  top: 30%;
   left: 50%;
   transform: translate(-50%);
 }
@@ -60,6 +66,7 @@ a {
 }
 .hero_container_search_input {
   position: relative;
+  margin-bottom: 108px;
 }
 .hero_container_search_input input {
   height: 63px;
@@ -98,6 +105,19 @@ a {
   width: 22px;
   height: 24px;
 }
+.hero_container_scroll {
+  text-align: center;
+}
+.hero_container_scroll_text {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 14px;
+  line-height: 26px;
+  letter-spacing: 2.8px;
+  text-transform: capitalize;
+}
+.hero_container_scroll i {
+  font-size: 17px;
+}
 
 .header {
   background-color: #5474fd;
@@ -133,4 +153,55 @@ a {
   line-height: 26px;
   letter-spacing: 2.4px;
   text-transform: uppercase;
+}
+
+.cta_container {
+  background-image: url(../img/section1-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  object-fit: cover;
+  min-height: 90vh;
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cta_container_info {
+  max-width: 560px;
+}
+.cta_container_info_title {
+  font-family: "Aleo", sans-serif;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 26px;
+  margin-bottom: 50px;
+}
+.cta_container_info_text {
+  font-family: "Josefin Sans", sans-serif;
+  color: #e8e8e8;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 1.6px;
+  margin-bottom: 45px;
+}
+.cta_container_info_btn {
+  background-color: #5474fd;
+  color: #ffffff;
+  font-family: "Aleo", sans-serif;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  padding: 15px 38px;
+}
+.cta_container_img {
+  max-width: 560px;
+  position: relative;
+}
+.cta_container_img_small {
+  max-width: 350px;
+  max-height: 220px;
 }
