@@ -1,13 +1,34 @@
-body,
-html {
+$primary: #5474fd;
+$light_grey: #999999;
+$white: #ffffff;
+
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-.container {
+body {
+    font-family: "Josefin Sans", sans-serif;
+    color: $white;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+a {
+    color: inherit;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.page_wrapper {
     margin: 0 auto;
-    width: 90%;
-    max-width: 1440px;
+    width: 100%;
+    max-width: 1770px;
 }
 
 .hero {
@@ -16,17 +37,115 @@ html {
     background-position: center;
     background-size: cover;
     object-fit: cover;
-
     min-height: 100vh;
+    position: relative;
+
+    &_container {
+        // Ask Alex if this is a collapsed element
+        // background-color: lightblue;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%);
+
+        &_title {
+            text-align: center;
+            font-size: 48px;
+            line-height: 26px;
+            letter-spacing: 4.8px;
+            margin-bottom: 11px;
+            text-transform: uppercase;
+
+            &_subtitle {
+                font-size: 22px;
+                line-height: 26px;
+                letter-spacing: 6.82px;
+                text-align: center;
+                text-transform: capitalize;
+                margin-bottom: 48px;
+            }
+        }
+
+        &_search_input {
+            position: relative;
+
+            input {
+                height: 63px;
+                width: 100%;
+                min-width: 653px;
+                border: none;
+                padding: 19px 113px;
+                font-family: "Josefin Sans", sans-serif;
+                font-size: 14px;
+                letter-spacing: 2.8px;
+                color: $light_grey;
+                text-transform: capitalize;
+            }
+
+            &_btn {
+                position: absolute;
+                top: 50%;
+                right: 1px;
+                transform: translateY(-50%);
+                cursor: pointer;
+                background-color: $primary;
+                border: 1px solid $white;
+                font-family: "Aleo", sans-serif;
+                font-size: 14px;
+                line-height: 26px;
+                letter-spacing: 1.4px;
+                padding: 16px 38px 16px 23px;
+                min-width: 153px;
+                color: $white;
+                text-transform: uppercase;
+
+                &_icon {
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    right: 17px;
+                    width: 22px;
+                    height: 24px;
+                }
+            }
+        }
+    }
 }
 
-.title {
+.header {
+    background-color: $primary;
+}
+
+.header_col {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    min-height: 83px;
+}
+
+.nav_bar {
+    max-width: 525px;
+    width: 100%;
+
+    &_list {
+        display: flex;
+        justify-content: space-around;
+
+        &_links {
+            font-family: "Aleo", sans-serif;
+            font-size: 14px;
+            line-height: 26px;
+            text-transform: uppercase;
+        }
+    }
+}
+
+.logo_link {
     font-family: "Josefin Sans", sans-serif;
-    font-size: 55px;
-    color: #fff;
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%);
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 26px;
+    letter-spacing: 2.4px;
+    text-transform: uppercase;
 }

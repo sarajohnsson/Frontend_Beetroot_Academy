@@ -1,13 +1,30 @@
-body,
-html {
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
-.container {
+body {
+  font-family: "Josefin Sans", sans-serif;
+  color: #ffffff;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.page_wrapper {
   margin: 0 auto;
-  width: 90%;
-  max-width: 1440px;
+  width: 100%;
+  max-width: 1770px;
 }
 
 .hero {
@@ -17,15 +34,103 @@ html {
   background-size: cover;
   object-fit: cover;
   min-height: 100vh;
+  position: relative;
 }
-
-.title {
-  font-family: "Josefin Sans", sans-serif;
-  font-size: 55px;
-  color: #fff;
-  margin: 0;
+.hero_container {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%);
+}
+.hero_container_title {
+  text-align: center;
+  font-size: 48px;
+  line-height: 26px;
+  letter-spacing: 4.8px;
+  margin-bottom: 11px;
+  text-transform: uppercase;
+}
+.hero_container_title_subtitle {
+  font-size: 22px;
+  line-height: 26px;
+  letter-spacing: 6.82px;
+  text-align: center;
+  text-transform: capitalize;
+  margin-bottom: 48px;
+}
+.hero_container_search_input {
+  position: relative;
+}
+.hero_container_search_input input {
+  height: 63px;
+  width: 100%;
+  min-width: 653px;
+  border: none;
+  padding: 19px 113px;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 14px;
+  letter-spacing: 2.8px;
+  color: #999999;
+  text-transform: capitalize;
+}
+.hero_container_search_input_btn {
+  position: absolute;
+  top: 50%;
+  right: 1px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  background-color: #5474fd;
+  border: 1px solid #ffffff;
+  font-family: "Aleo", sans-serif;
+  font-size: 14px;
+  line-height: 26px;
+  letter-spacing: 1.4px;
+  padding: 16px 38px 16px 23px;
+  min-width: 153px;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+.hero_container_search_input_btn_icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 17px;
+  width: 22px;
+  height: 24px;
+}
+
+.header {
+  background-color: #5474fd;
+}
+
+.header_col {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+  min-height: 83px;
+}
+
+.nav_bar {
+  max-width: 525px;
+  width: 100%;
+}
+.nav_bar_list {
+  display: flex;
+  justify-content: space-around;
+}
+.nav_bar_list_links {
+  font-family: "Aleo", sans-serif;
+  font-size: 14px;
+  line-height: 26px;
+  text-transform: uppercase;
+}
+
+.logo_link {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 26px;
+  letter-spacing: 2.4px;
+  text-transform: uppercase;
 }
