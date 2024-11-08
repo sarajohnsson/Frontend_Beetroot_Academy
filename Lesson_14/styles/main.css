@@ -1,0 +1,31 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  margin: 0 auto;
+  width: 90%;
+  max-width: 1440px;
+}
+
+.hero {
+  background-image: url(../img/hero-img.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  object-fit: cover;
+  min-height: 100vh;
+}
+
+.title {
+  font-family: "Josefin_Sans";
+  color: #fff;
+  margin: 0;
+  position: absolute;
+  font-size: 55px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%);
+}

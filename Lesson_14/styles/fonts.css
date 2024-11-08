@@ -1,0 +1,10 @@
+@font-face {
+  font-family: "Josefin_Sans";
+  font-weight: 400;
+  src: url("../fonts/Josefin_Sans/JosefinSans-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Aleo";
+  font-weight: 400;
+  src: url("../fonts/Aleo/Aleo-Regular.ttf") format("truetype");
+}
