@@ -1,7 +1,8 @@
 $primary: #5474fd;
-$secondary: #e8e8e8;
+$secondary: #333333;
 $light_grey: #999999;
 $white: #ffffff;
+$off_white: #e8e8e8;
 
 * {
     margin: 0;
@@ -180,7 +181,7 @@ button {
     background-position: center;
     background-size: cover;
     object-fit: cover;
-    min-height: 90vh;
+    min-height: 100vh;
     width: 100%;
 
     position: relative;
@@ -188,7 +189,7 @@ button {
     justify-content: center;
     align-items: center;
 
-    &_info {
+    &_desc {
         max-width: 560px;
 
         &_title {
@@ -201,7 +202,7 @@ button {
 
         &_text {
             font-family: "Josefin Sans", sans-serif;
-            color: $secondary;
+            color: $off_white;
             font-weight: 400;
             font-size: 16px;
             line-height: 26px;
@@ -242,5 +243,49 @@ button {
         //     top: 65%;
         //     transform: translate(-25%);
         // }
+    }
+
+    &_box {
+        background-color: $secondary;
+        width: 100%;
+        min-height: 340px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        gap: 170px;
+
+        &_desc {
+            z-index: 2;
+            text-align: center;
+
+            &:nth-child(3) {
+                margin-right: 0;
+            }
+
+            &_icons {
+                background-color: $secondary;
+                height: 60px;
+                width: 60px;
+                margin-bottom: 20px;
+            }
+
+            &_text {
+                font-family: "Aleo", sans-serif;
+                font-size: 36px;
+                line-height: 26px;
+                text-transform: capitalize;
+            }
+        }
+
+        &_icon-bg {
+            z-index: 1;
+            position: absolute;
+            max-width: 775px;
+            width: 100%;
+            top: 15%;
+            left: 50%;
+            transform: translate(-50%);
+        }
     }
 }
