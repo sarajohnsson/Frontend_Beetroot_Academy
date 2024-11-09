@@ -178,7 +178,7 @@ button {
   line-height: 26px;
   margin-bottom: 50px;
 }
-.cta_container_desc_text {
+.cta_container_desc__p1 {
   font-family: "Josefin Sans", sans-serif;
   color: #e8e8e8;
   font-weight: 400;
@@ -199,11 +199,17 @@ button {
 }
 .cta_container_img {
   max-width: 560px;
-  position: relative;
 }
 .cta_container_img_small {
   max-width: 350px;
   max-height: 220px;
+}
+.cta_container_img .top_left {
+  margin-left: 110px;
+  margin-bottom: 10px;
+}
+.cta_container_img .bottom_right {
+  margin-left: 200px;
 }
 .cta_container_box {
   background-color: #333333;
@@ -228,7 +234,7 @@ button {
   width: 60px;
   margin-bottom: 20px;
 }
-.cta_container_box_desc_text {
+.cta_container_box_desc_label {
   font-family: "Aleo", sans-serif;
   font-size: 36px;
   line-height: 26px;
@@ -242,4 +248,67 @@ button {
   top: 15%;
   left: 50%;
   transform: translate(-50%);
+}
+
+.booking_section_top {
+  background-image: url(../img/section2-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  object-fit: cover;
+  min-height: 100vh;
+  width: 100%;
+}
+.booking_section_top_desc {
+  background-color: #232323;
+  max-width: 545px;
+  max-height: 375px;
+  padding: 50px 32px;
+}
+
+.booking_section_bottom {
+  background-image: url(../img/section3-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  object-fit: cover;
+  min-height: 100vh;
+  width: 100%;
+}
+.booking_section_bottom_desc {
+  background-color: #232323;
+  max-width: 545px;
+  max-height: 375px;
+  padding: 50px 32px;
+}
+
+.booking_section_desc {
+  color: #ffffff;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 400;
+}
+.booking_section_desc_title {
+  font-size: 20px;
+  line-height: 26px;
+  margin-bottom: 23px;
+}
+.booking_section_desc_title_cap {
+  text-transform: uppercase;
+  line-height: 26px;
+  margin-bottom: 13px;
+}
+.booking_section_desc__p1 {
+  font-size: 16px;
+  line-height: 26px;
+  margin-bottom: 46px;
+}
+.booking_section_desc_btn {
+  background-color: #5474fd;
+  min-width: 228px;
+  min-height: 63px;
+  color: #ffffff;
+  font-family: "Aleo", sans-serif;
+  font-size: 16px;
+  line-height: 26px;
+  text-transform: uppercase;
 }

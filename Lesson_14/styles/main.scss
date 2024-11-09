@@ -1,5 +1,6 @@
 $primary: #5474fd;
 $secondary: #333333;
+$dark: #232323;
 $light_grey: #999999;
 $white: #ffffff;
 $off_white: #e8e8e8;
@@ -200,7 +201,7 @@ button {
             margin-bottom: 50px;
         }
 
-        &_text {
+        &__p1 {
             font-family: "Josefin Sans", sans-serif;
             color: $off_white;
             font-weight: 400;
@@ -224,25 +225,20 @@ button {
 
     &_img {
         max-width: 560px;
-        position: relative;
 
         &_small {
             max-width: 350px;
             max-height: 220px;
         }
 
-        // .top_left {
-        //     position: absolute;
-        //     top: 25%;
-        //     left: 50%;
-        //     transform: translate(-50%);
-        // }
+        .top_left {
+            margin-left: 110px;
+            margin-bottom: 10px;
+        }
 
-        // .bottom_right {
-        //     position: absolute;
-        //     top: 65%;
-        //     transform: translate(-25%);
-        // }
+        .bottom_right {
+            margin-left: 200px;
+        }
     }
 
     &_box {
@@ -270,7 +266,7 @@ button {
                 margin-bottom: 20px;
             }
 
-            &_text {
+            &_label {
                 font-family: "Aleo", sans-serif;
                 font-size: 36px;
                 line-height: 26px;
@@ -287,5 +283,74 @@ button {
             left: 50%;
             transform: translate(-50%);
         }
+    }
+}
+
+.booking_section_top {
+    background-image: url(../img/section2-bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    object-fit: cover;
+    min-height: 100vh;
+    width: 100%;
+
+    &_desc {
+        background-color: $dark;
+        max-width: 545px;
+        max-height: 375px;
+        padding: 50px 32px;
+    }
+}
+
+.booking_section_bottom {
+    background-image: url(../img/section3-bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    object-fit: cover;
+    min-height: 100vh;
+    width: 100%;
+
+    &_desc {
+        background-color: $dark;
+        max-width: 545px;
+        max-height: 375px;
+        padding: 50px 32px;
+    }
+}
+
+.booking_section_desc {
+    color: $white;
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 400;
+
+    &_title {
+        font-size: 20px;
+        line-height: 26px;
+        margin-bottom: 23px;
+
+        &_cap {
+            text-transform: uppercase;
+            line-height: 26px;
+            margin-bottom: 13px;
+        }
+    }
+
+    &__p1 {
+        font-size: 16px;
+        line-height: 26px;
+        margin-bottom: 46px;
+    }
+
+    &_btn {
+        background-color: $primary;
+        min-width: 228px;
+        min-height: 63px;
+        color: $white;
+        font-family: "Aleo", sans-serif;
+        font-size: 16px;
+        line-height: 26px;
+        text-transform: uppercase;
     }
 }
