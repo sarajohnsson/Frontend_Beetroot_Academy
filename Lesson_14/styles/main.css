@@ -17,8 +17,8 @@ ul {
 
 a {
   color: inherit;
-  cursor: pointer;
   text-decoration: none;
+  cursor: pointer;
 }
 
 button {
@@ -30,7 +30,7 @@ button {
 .page_wrapper {
   margin: 0 auto;
   width: 100%;
-  max-width: 1770px;
+  max-width: 1440px;
 }
 
 .hero {
