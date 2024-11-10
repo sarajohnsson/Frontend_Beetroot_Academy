@@ -300,14 +300,16 @@ section {
 }
 
 .about_us {
+    max-height: 550px;
+
     &_container {
         height: 100%;
         display: flex;
         justify-content: space-between;
-        align-items: center;
 
         &_desc {
             max-width: 470px;
+            align-items: center;
 
             &__title {
                 max-width: 370px;
@@ -339,7 +341,6 @@ section {
         }
 
         &_box {
-            height: 100%;
             display: flex;
             align-items: flex-end;
 
@@ -391,5 +392,101 @@ section {
             box-shadow: 0 30px 18px 0 rgba(0, 0, 0, 0.2),
                 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         }
+    }
+}
+
+.form {
+    height: 100vh;
+    background-color: $form-bgc;
+
+    &_container {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &_contact {
+            width: 100%;
+            max-width: 535px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            &__title {
+                color: #fff;
+                text-align: center;
+                text-transform: capitalize;
+                font-size: 38px;
+                letter-spacing: -0.5px;
+                margin-bottom: 30px;
+            }
+
+            &__p1 {
+                color: #fff;
+                font-size: 13px;
+                font-weight: 500;
+                margin-bottom: 10px;
+                text-transform: capitalize;
+            }
+
+            input {
+                background-color: transparent;
+                border: none;
+                margin-bottom: 40px;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+                padding-bottom: 5px;
+                font-size: 16px;
+                color: #fff;
+
+                &::placeholder {
+                    font-family: "Montserrat", sans-serif;
+                    font-size: 16px;
+                    color: rgba(255, 255, 255, 0.2);
+                }
+
+                &:last-child {
+                    border: none;
+                }
+
+                &[type="submit"] {
+                    background-color: $primary;
+                    padding: 18px 100px;
+                    color: #fff;
+                    font-size: 17px;
+                    font-weight: 500;
+                    text-transform: capitalize;
+                }
+            }
+
+            textarea {
+                background-color: transparent;
+                border: none;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+                min-height: 120px;
+                margin-bottom: 36px;
+                font-size: 16px;
+                color: #fff;
+
+                &::placeholder {
+                    font-family: "Montserrat", sans-serif;
+                    font-size: 16px;
+                    color: rgba(255, 255, 255, 0.2);
+                }
+            }
+        }
+    }
+}
+
+.footer {
+    height: 100%;
+    min-height: 47px;
+    background-color: $dark;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__p1 {
+        color: #fff;
+        font-size: 12px;
     }
 }

@@ -256,14 +256,17 @@ section {
   max-height: 66px;
 }
 
+.about_us {
+  max-height: 550px;
+}
 .about_us_container {
   height: 100%;
   display: flex;
   justify-content: space-between;
-  align-items: center;
 }
 .about_us_container_desc {
   max-width: 470px;
+  align-items: center;
 }
 .about_us_container_desc__title {
   max-width: 370px;
@@ -290,7 +293,6 @@ section {
   margin-right: 15px;
 }
 .about_us_container_box {
-  height: 100%;
   display: flex;
   align-items: flex-end;
 }
@@ -334,4 +336,89 @@ section {
   font-weight: 500;
   padding: 18px 102px;
   box-shadow: 0 30px 18px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.form {
+  height: 100vh;
+  background-color: #11364e;
+}
+.form_container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.form_container_contact {
+  width: 100%;
+  max-width: 535px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.form_container_contact__title {
+  color: #fff;
+  text-align: center;
+  text-transform: capitalize;
+  font-size: 38px;
+  letter-spacing: -0.5px;
+  margin-bottom: 30px;
+}
+.form_container_contact__p1 {
+  color: #fff;
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: 10px;
+  text-transform: capitalize;
+}
+.form_container_contact input {
+  background-color: transparent;
+  border: none;
+  margin-bottom: 40px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding-bottom: 5px;
+  font-size: 16px;
+  color: #fff;
+}
+.form_container_contact input::placeholder {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.2);
+}
+.form_container_contact input:last-child {
+  border: none;
+}
+.form_container_contact input[type=submit] {
+  background-color: #ff7f57;
+  padding: 18px 100px;
+  color: #fff;
+  font-size: 17px;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+.form_container_contact textarea {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  min-height: 120px;
+  margin-bottom: 36px;
+  font-size: 16px;
+  color: #fff;
+}
+.form_container_contact textarea::placeholder {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.2);
+}
+
+.footer {
+  height: 100%;
+  min-height: 47px;
+  background-color: #13253a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer__p1 {
+  color: #fff;
+  font-size: 12px;
 }
