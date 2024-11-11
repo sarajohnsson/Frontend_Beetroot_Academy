@@ -46,7 +46,7 @@ button {
     background-position: center;
     background-size: cover;
     object-fit: cover;
-    min-height: 100vh;
+    min-height: 50vh;
     position: relative;
 
     &_container {
@@ -187,7 +187,7 @@ button {
     background-position: center;
     background-size: cover;
     object-fit: cover;
-    min-height: 100vh;
+    min-height: 50vh;
     width: 100%;
 
     display: flex;
@@ -296,13 +296,14 @@ button {
     background-position: center;
     background-size: cover;
     object-fit: cover;
-    min-height: 100vh;
+    min-height: 50vh;
     width: 100%;
 
     position: relative;
 
     &_desc {
         background-color: rgba($dark, 0.8);
+        width: 100%;
         max-width: 545px;
         max-height: 375px;
         padding: 50px 32px;
@@ -310,7 +311,7 @@ button {
         position: absolute;
         top: 35%;
         transform: translateX(-50%);
-        left: 34%;
+        left: 30%;
     }
 }
 
@@ -320,13 +321,14 @@ button {
     background-position: center;
     background-size: cover;
     object-fit: cover;
-    min-height: 100vh;
+    min-height: 50vh;
     width: 100%;
 
     position: relative;
 
     &_desc {
         background-color: rgba($dark, 0.8);
+        width: 100%;
         max-width: 545px;
         max-height: 375px;
         padding: 50px 32px;
@@ -334,7 +336,7 @@ button {
         position: absolute;
         top: 35%;
         transform: translateX(-50%);
-        left: 66%;
+        left: 70%;
     }
 }
 
@@ -370,5 +372,61 @@ button {
         font-size: 16px;
         line-height: 26px;
         text-transform: uppercase;
+    }
+}
+
+.testimonials {
+    background-image: url(../img/section4-bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    object-fit: cover;
+    min-height: 50vh;
+    width: 100%;
+
+    &_container {
+        height: 100%;
+        min-height: 731px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        &__title {
+            font-family: "Aleo", sans-serif;
+            font-size: 36px;
+            line-height: 26px;
+            margin-bottom: 90px;
+        }
+
+        &_box {
+            display: flex;
+            max-width: 1110px;
+            max-height: 284px;
+
+            &_desc {
+                background-color: $secondary;
+                padding: 49px 25px 39px 62px;
+
+                &__p1 {
+                    font-family: "Josefin Sans", sans-serif;
+                    font-size: 20px;
+                    line-height: 26px;
+                    text-transform: uppercase;
+                    margin-bottom: 8px;
+                }
+
+                &__p2 {
+                    font-family: "Josefin Sans", sans-serif;
+                    font-size: 16px;
+                    line-height: 26px;
+
+                    i {
+                        font-size: 36px;
+                        color: $primary;
+                    }
+                }
+            }
+        }
     }
 }
