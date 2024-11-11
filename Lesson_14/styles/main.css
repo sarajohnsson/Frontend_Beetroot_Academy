@@ -30,7 +30,6 @@ button {
 .page_wrapper {
   margin: 0 auto;
   width: 100%;
-  max-width: 1440px;
 }
 
 .hero {
@@ -39,12 +38,12 @@ button {
   background-position: center;
   background-size: cover;
   object-fit: cover;
-  min-height: 821px;
+  min-height: 100vh;
   position: relative;
 }
 .hero_container {
   position: absolute;
-  top: 30%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%);
 }
@@ -166,7 +165,7 @@ button {
   background-position: center;
   background-size: cover;
   object-fit: cover;
-  min-height: 685px;
+  padding: 118px 320px;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -335,7 +334,7 @@ button {
   background-position: center;
   background-size: cover;
   object-fit: cover;
-  min-height: 700px;
+  padding: 128px 330px 199px 330px;
   width: 100%;
 }
 .testimonials_container {
@@ -359,6 +358,7 @@ button {
 }
 .testimonials_container_box_desc {
   background-color: #333333;
+  min-width: 668px;
   padding: 49px 25px 39px 62px;
 }
 .testimonials_container_box_desc__p1 {
@@ -375,5 +375,50 @@ button {
 }
 .testimonials_container_box_desc__p2 i {
   font-size: 36px;
+  color: #5474fd;
+}
+
+.footer {
+  background-color: #333333;
+  padding: 122px 0 53px 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+.footer_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 196px;
+}
+.footer_container__title {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 24px;
+  line-height: 26px;
+  font-weight: 700;
+  letter-spacing: 3.36px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.footer_container__p1 {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 1.6px;
+  margin-bottom: 20px;
+  text-transform: capitalize;
+}
+.footer_container_icons {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.footer_container_icons i {
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 1.6px;
+}
+.footer_container_icons .highlight {
   color: #5474fd;
 }
