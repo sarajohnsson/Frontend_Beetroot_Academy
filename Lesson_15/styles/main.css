@@ -30,7 +30,7 @@ button {
   background-color: #fff;
   margin: 0 auto;
   width: 100%;
-  max-width: 1440px;
+  height: 100vh;
 }
 
 header,
@@ -127,7 +127,6 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 1170px;
 }
 .sales_pitch_container__p1 {
   color: #2557ab;
@@ -150,6 +149,10 @@ section {
 .sales_pitch_container_box_card {
   text-align: center;
   max-width: 370px;
+  margin-right: 30px;
+}
+.sales_pitch_container_box_card:last-child {
+  margin-right: 0;
 }
 .sales_pitch_container_box_card_icon {
   width: 64px;
@@ -176,7 +179,7 @@ section {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  min-height: 205px;
+  padding: 60px 0;
 }
 .statistics_container_nr {
   max-height: 85px;
@@ -207,7 +210,6 @@ section {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  max-width: 1170px;
   border-bottom: 1px solid #dce2e6;
 }
 .testimonials_container__p1 {
@@ -230,6 +232,7 @@ section {
 }
 .testimonials_container_desc_small {
   max-width: 370px;
+  margin-right: 30px;
 }
 .testimonials_container_desc_large {
   max-width: 570px;
@@ -257,16 +260,18 @@ section {
 }
 
 .about_us {
-  max-height: 550px;
+  height: 100%;
 }
 .about_us_container {
   height: 100%;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 .about_us_container_desc {
-  max-width: 470px;
   align-items: center;
+  max-width: 470px;
+  margin-right: 100px;
 }
 .about_us_container_desc__title {
   max-width: 370px;
@@ -293,6 +298,7 @@ section {
   margin-right: 15px;
 }
 .about_us_container_box {
+  min-height: 50vh;
   display: flex;
   align-items: flex-end;
 }
@@ -302,7 +308,7 @@ section {
 
 .call_to_action {
   background-color: #ff7f57;
-  min-height: 434px;
+  padding: 100px 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -424,7 +430,7 @@ section {
 
 .footer {
   height: 100%;
-  min-height: 47px;
+  padding: 15px 0;
   background-color: #13253a;
   display: flex;
   justify-content: center;
