@@ -378,6 +378,10 @@ section {
   padding-bottom: 5px;
   font-size: 16px;
   color: #fff;
+  outline: none;
+}
+.form_container_contact input:focus {
+  background-color: #13253a;
 }
 .form_container_contact input::placeholder {
   font-family: "Montserrat", sans-serif;
@@ -395,6 +399,9 @@ section {
   font-weight: 500;
   text-transform: capitalize;
 }
+.form_container_contact input[type=submit]:hover {
+  background-color: #f76707;
+}
 .form_container_contact textarea {
   background-color: transparent;
   border: none;
@@ -403,6 +410,11 @@ section {
   margin-bottom: 36px;
   font-size: 16px;
   color: #fff;
+  outline: none;
+  resize: none;
+}
+.form_container_contact textarea:focus {
+  background-color: #13253a;
 }
 .form_container_contact textarea::placeholder {
   font-family: "Montserrat", sans-serif;

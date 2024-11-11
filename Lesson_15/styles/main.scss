@@ -438,6 +438,12 @@ section {
                 font-size: 16px;
                 color: #fff;
 
+                outline: none;
+
+                &:focus {
+                    background-color: $dark;
+                }
+
                 &::placeholder {
                     font-family: "Montserrat", sans-serif;
                     font-size: 16px;
@@ -456,6 +462,10 @@ section {
                     font-weight: 500;
                     text-transform: capitalize;
                 }
+
+                &[type="submit"]:hover {
+                    background-color: #f76707;
+                }
             }
 
             textarea {
@@ -466,6 +476,13 @@ section {
                 margin-bottom: 36px;
                 font-size: 16px;
                 color: #fff;
+
+                outline: none;
+                resize: none;
+
+                &:focus {
+                    background-color: $dark;
+                }
 
                 &::placeholder {
                     font-family: "Montserrat", sans-serif;
