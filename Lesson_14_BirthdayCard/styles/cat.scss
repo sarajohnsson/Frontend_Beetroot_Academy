@@ -3,6 +3,7 @@ body {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    overflow: hidden;
 
     font-family: "Modak", sans-serif;
 }
@@ -78,7 +79,7 @@ body {
     transform: rotate(-20deg);
 }
 
-// ANIMATION
+// CAT ANIMATION
 .cat {
     position: absolute;
     bottom: -40px;
@@ -96,7 +97,7 @@ body {
 // MOUTH
 .mouth {
     position: absolute;
-    top: -10px;
+    top: 90px;
 }
 
 .m1,
@@ -218,6 +219,8 @@ body {
 // EYES
 .eyes {
     position: absolute;
+    height: 100%;
+    width: 100%;
 }
 
 .eye-l,
@@ -319,6 +322,11 @@ body {
     transform: translateY(-105px);
 }
 
+.box:hover .hat {
+    animation: bounce 1.5s ease-out;
+    animation-delay: 0.3s;
+}
+
 .shadow {
     position: relative;
     background-color: #343a40;
@@ -328,6 +336,24 @@ body {
     top: 580px;
     left: 225px;
     opacity: 0.3;
+}
+
+.hat {
+    position: relative;
+    width: 0;
+    height: 0;
+    border-bottom: 100px solid #fd7e14;
+    border-left: 35px solid transparent;
+    border-right: 35px solid transparent;
+    top: 5px;
+    left: 35px;
+    transform: rotate(-5deg);
+}
+
+@keyframes bounce {
+    20% {
+        transform: translateY(-10px);
+    }
 }
 
 // BALLOONS
@@ -341,19 +367,20 @@ body {
     height: 150px;
     width: 120px;
     border-radius: 50%;
-    top: 100px;
-    left: 400px;
+    top: 25px;
+    left: 425px;
+    animation: floating 5s infinite ease-in-out alternate;
+    animation-delay: 0.8s;
 
     .b-attach {
         position: relative;
         width: 0;
         height: 0;
-        border-top: 25px solid #e03131;
+        border-bottom: 25px solid #e03131;
         border-left: 15px solid transparent;
         border-right: 15px solid transparent;
         top: 145px;
         left: 45px;
-        transform: rotate(180deg);
     }
 }
 
@@ -363,19 +390,20 @@ body {
     height: 150px;
     width: 120px;
     border-radius: 50%;
-    top: -100px;
+    top: -150px;
     left: 300px;
+    animation: floating 5s infinite ease-in-out alternate;
+    animation-delay: 0.1s;
 
     .b-attach {
         position: relative;
         width: 0;
         height: 0;
-        border-top: 25px solid #94d82d;
+        border-bottom: 25px solid #94d82d;
         border-left: 15px solid transparent;
         border-right: 15px solid transparent;
         top: 145px;
         left: 45px;
-        transform: rotate(180deg);
     }
 }
 
@@ -385,19 +413,20 @@ body {
     height: 150px;
     width: 120px;
     border-radius: 50%;
-    top: 0px;
+    top: -50px;
     left: 600px;
+    animation: floating 5s infinite ease-in-out alternate;
+    animation-delay: 0.5s;
 
     .b-attach {
         position: relative;
         width: 0;
         height: 0;
-        border-top: 25px solid #66d9e8;
+        border-bottom: 25px solid #66d9e8;
         border-left: 15px solid transparent;
         border-right: 15px solid transparent;
         top: 145px;
         left: 45px;
-        transform: rotate(180deg);
     }
 }
 
@@ -407,22 +436,31 @@ body {
     height: 150px;
     width: 120px;
     border-radius: 50%;
-    top: 50px;
+    top: 0px;
     left: 100px;
+    animation: floating 5s infinite ease-in-out alternate;
+    animation-delay: 0.3s;
 
     .b-attach {
         position: relative;
         width: 0;
         height: 0;
-        border-top: 25px solid #ffd43b;
+        border-bottom: 25px solid #ffd43b;
         border-left: 15px solid transparent;
         border-right: 15px solid transparent;
         top: 145px;
         left: 45px;
-        transform: rotate(180deg);
     }
 }
 
+// BALOON ANIMATION
+@keyframes floating {
+    100% {
+        transform: translateY(100px);
+    }
+}
+
+// TEXT
 .congratulation {
     position: absolute;
     top: 15%;
