@@ -92,12 +92,17 @@ ul {
     border: none;
     outline: none;
     background-color: transparent;
+    transition: all 0.3s ease;
 
     position: relative;
 
     i {
         color: $primary;
         font-size: 22px;
+    }
+
+    &:hover {
+        transform: scale(1.5);
     }
 }
 
@@ -143,6 +148,14 @@ ul {
 .sidebar_list {
     padding: 8px;
 
+    li {
+        &:hover {
+            .sidebar_content {
+                transform: translateY(0);
+            }
+        }
+    }
+
     a {
         display: inline-block;
         padding: 12px;
@@ -179,4 +192,23 @@ ul {
     background-color: lightblue;
     min-height: 200vh;
     width: 100%;
+}
+
+.sidebar_content {
+    position: fixed;
+    left: 55px;
+    bottom: 0;
+    top: 0;
+    background-color: #fff;
+    padding: 68px 8px;
+    transform: translateY(200%);
+}
+
+.lvl2_link {
+    text-decoration: none;
+    color: #6f6e69;
+    font-size: 14px;
+    line-height: 20px;
+    padding: 10px 12px;
+    display: block;
 }
