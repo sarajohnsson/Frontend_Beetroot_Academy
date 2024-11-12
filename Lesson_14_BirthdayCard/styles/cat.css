@@ -1,0 +1,422 @@
+body {
+  background-color: #c3fae8;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Modak", sans-serif;
+}
+
+.cat {
+  z-index: -5;
+}
+
+.cat-body {
+  z-index: -4;
+}
+
+.face {
+  z-index: -3;
+}
+
+.m1,
+.m2 {
+  z-index: 0;
+}
+
+.m3 {
+  z-index: -1;
+}
+
+.shadow {
+  z-index: -1;
+}
+
+.container {
+  height: 800px;
+  width: 800px;
+  border: 5px solid #fff;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.box {
+  height: 150px;
+  width: 250px;
+  background-color: #b197fc;
+  position: relative;
+  top: 600px;
+  left: 250px;
+  background-image: radial-gradient(#e5dbff 5px, transparent 5px);
+  background-size: 35px 35px;
+  background-position: -5px -10px;
+}
+
+.b1,
+.b2 {
+  background-color: #b197fc;
+  height: 8px;
+  width: 80px;
+  position: relative;
+}
+
+.b1 {
+  left: 246px;
+  top: 13px;
+  transform: rotate(20deg);
+}
+
+.b2 {
+  right: 76px;
+  top: 5px;
+  transform: rotate(-20deg);
+}
+
+.cat {
+  position: absolute;
+  bottom: -40px;
+  left: 50px;
+  transition: 1s;
+}
+
+.face {
+  height: 110px;
+  width: 150px;
+  background-color: #ced4da;
+  border-radius: 50%;
+}
+
+.mouth {
+  position: absolute;
+  top: -10px;
+}
+
+.m1,
+.m2,
+.m3 {
+  position: relative;
+  background-color: #f1f3f5;
+  width: 50px;
+  height: 50px;
+}
+
+.m1 {
+  left: 30px;
+  top: 80px;
+  border-top-left-radius: 45%;
+  border-top-right-radius: 0%;
+  border-bottom-left-radius: 45%;
+  border-bottom-right-radius: 50%;
+}
+
+.m2 {
+  left: 70px;
+  top: 30px;
+  border-top-left-radius: 0%;
+  border-top-right-radius: 45%;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 45%;
+}
+
+.m3 {
+  background-color: #ced4da;
+  left: 50px;
+  bottom: 5px;
+  border-radius: 50%;
+}
+
+.m4 {
+  position: relative;
+  background-color: #ffa8a8;
+  width: 25px;
+  height: 25px;
+  left: 12px;
+  top: 15px;
+  border-radius: 30%;
+}
+
+.n1 {
+  position: absolute;
+  background-color: #fff;
+  width: 30px;
+  height: 65px;
+  border-radius: 20px;
+  bottom: 50px;
+  left: 60px;
+}
+
+.n2 {
+  position: relative;
+  width: 0;
+  height: 0;
+  border-top: 15px solid #ffe3e3;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  bottom: 44px;
+  left: 60px;
+}
+
+.ears {
+  position: absolute;
+  bottom: 95px;
+}
+
+.ear-r,
+.ear-l {
+  position: relative;
+  height: 0;
+  width: 0;
+  border-bottom: 60px solid #adb5bd;
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  border-radius: 5px;
+}
+
+.ear-r {
+  bottom: 32px;
+  right: 10px;
+  transform: rotate(-30deg);
+}
+
+.ear-l {
+  bottom: 93px;
+  left: 100px;
+  transform: rotate(30deg);
+}
+
+.small-r,
+.small-l {
+  position: relative;
+  height: 0;
+  width: 0;
+  border-bottom: 50px solid #ffc9c9;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  border-radius: 5px;
+}
+
+.small-r {
+  top: 8px;
+  right: 27px;
+}
+
+.small-l {
+  top: 8px;
+  right: 23px;
+}
+
+.eyes {
+  position: absolute;
+}
+
+.eye-l,
+.eye-r {
+  background-color: #1864ab;
+  position: relative;
+  height: 25px;
+  width: 40px;
+  border-radius: 50%;
+}
+
+.eye-l {
+  top: 40px;
+  left: 95px;
+  transform: rotate(-10deg);
+}
+
+.eye-r {
+  top: 15px;
+  left: 13px;
+  transform: rotate(10deg);
+}
+
+.iris-l,
+.iris-r {
+  position: relative;
+  background-color: #343a40;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+}
+
+.iris-l {
+  top: 2px;
+  left: 10px;
+}
+
+.iris-r {
+  top: 2px;
+  left: 10px;
+}
+
+.whites-l,
+.whites-r {
+  position: relative;
+  background-color: #fff;
+  height: 5px;
+  width: 5px;
+  border-radius: 50%;
+}
+
+.whites-l {
+  top: 2px;
+  left: 10px;
+}
+
+.whites-r {
+  top: 2px;
+  left: 10px;
+}
+
+.cat-body {
+  background-color: #adb5bd;
+  position: relative;
+  bottom: 50px;
+  width: 150px;
+  height: 100px;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+}
+
+.paws {
+  position: relative;
+  bottom: 35px;
+}
+
+.p1,
+.p2 {
+  position: relative;
+  height: 40px;
+  width: 60px;
+  background-color: #f8f9fa;
+  border-radius: 50%;
+}
+
+.p1 {
+  left: 20px;
+}
+
+.p2 {
+  left: 170px;
+  bottom: 40px;
+}
+
+.box:hover .cat {
+  transform: translateY(-105px);
+}
+
+.shadow {
+  position: relative;
+  background-color: #343a40;
+  border-radius: 50%;
+  height: 40px;
+  width: 300px;
+  top: 580px;
+  left: 225px;
+  opacity: 0.3;
+}
+
+.balloons {
+  position: relative;
+}
+
+.b-red {
+  position: absolute;
+  background-color: #e03131;
+  height: 150px;
+  width: 120px;
+  border-radius: 50%;
+  top: 100px;
+  left: 400px;
+}
+.b-red .b-attach {
+  position: relative;
+  width: 0;
+  height: 0;
+  border-top: 25px solid #e03131;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  top: 145px;
+  left: 45px;
+  transform: rotate(180deg);
+}
+
+.b-green {
+  position: absolute;
+  background-color: #94d82d;
+  height: 150px;
+  width: 120px;
+  border-radius: 50%;
+  top: -100px;
+  left: 300px;
+}
+.b-green .b-attach {
+  position: relative;
+  width: 0;
+  height: 0;
+  border-top: 25px solid #94d82d;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  top: 145px;
+  left: 45px;
+  transform: rotate(180deg);
+}
+
+.b-blue {
+  position: absolute;
+  background-color: #66d9e8;
+  height: 150px;
+  width: 120px;
+  border-radius: 50%;
+  top: 0px;
+  left: 600px;
+}
+.b-blue .b-attach {
+  position: relative;
+  width: 0;
+  height: 0;
+  border-top: 25px solid #66d9e8;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  top: 145px;
+  left: 45px;
+  transform: rotate(180deg);
+}
+
+.b-yellow {
+  position: absolute;
+  background-color: #ffd43b;
+  height: 150px;
+  width: 120px;
+  border-radius: 50%;
+  top: 50px;
+  left: 100px;
+}
+.b-yellow .b-attach {
+  position: relative;
+  width: 0;
+  height: 0;
+  border-top: 25px solid #ffd43b;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  top: 145px;
+  left: 45px;
+  transform: rotate(180deg);
+}
+
+.congratulation {
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.text {
+  font-size: 94px;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-align: center;
+}
