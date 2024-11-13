@@ -51,7 +51,7 @@ body {
 }
 
 .cat {
-  z-index: -5;
+  z-index: -1;
   position: absolute;
   bottom: -40px;
   left: 50px;
@@ -317,7 +317,7 @@ body {
 }
 .balloons {
   position: relative;
-  z-index: 1;
+  z-index: -2;
 }
 
 .b-red {
@@ -352,6 +352,7 @@ body {
 
 .b-green {
   animation: balloon-anim 15s ease-in-out infinite;
+  z-index: -1;
   position: absolute;
   background-color: #94d82d;
   height: 150px;
@@ -461,6 +462,7 @@ body {
   left: 50%;
   transform: translate(-50%);
   transform-origin: left;
+  z-index: -2;
 }
 
 .text {
@@ -495,6 +497,7 @@ body {
   width: 100%;
   height: 60%;
   top: -24%;
+  z-index: -3;
 }
 
 .cloud-1 {
