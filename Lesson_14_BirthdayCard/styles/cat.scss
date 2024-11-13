@@ -3,35 +3,9 @@ body {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    overflow: hidden;
+    // overflow: hidden;
 
     font-family: "Modak", sans-serif;
-}
-
-// Z-INDEX
-.cat {
-    z-index: -5;
-}
-
-.cat-body {
-    z-index: -4;
-}
-
-.face {
-    z-index: -3;
-}
-
-.m1,
-.m2 {
-    z-index: 0;
-}
-
-.m3 {
-    z-index: -1;
-}
-
-.shadow {
-    z-index: -1;
 }
 
 .container {
@@ -47,13 +21,13 @@ body {
 }
 
 .box {
+    // Box position
+    top: 600px;
+    left: 250px;
     height: 150px;
     width: 250px;
     background-color: #b197fc;
     position: relative;
-    // Box position
-    top: 600px;
-    left: 250px;
     background-image: radial-gradient(#e5dbff 5px, transparent 5px);
     background-size: 35px 35px;
     background-position: -5px -10px;
@@ -81,6 +55,7 @@ body {
 
 // CAT ANIMATION
 .cat {
+    z-index: -5;
     position: absolute;
     bottom: -40px;
     left: 50px;
@@ -88,6 +63,7 @@ body {
 }
 
 .face {
+    z-index: -3;
     height: 110px;
     width: 150px;
     background-color: #ced4da;
@@ -110,6 +86,7 @@ body {
 }
 
 .m1 {
+    z-index: 0;
     left: 30px;
     top: 80px;
     border-top-left-radius: 45%;
@@ -119,6 +96,7 @@ body {
 }
 
 .m2 {
+    z-index: 0;
     left: 70px;
     top: 30px;
     border-top-left-radius: 0%;
@@ -128,6 +106,7 @@ body {
 }
 
 .m3 {
+    z-index: -1;
     background-color: #ced4da;
     left: 50px;
     bottom: 5px;
@@ -219,7 +198,6 @@ body {
 // EYES
 .eyes {
     position: absolute;
-    height: 100%;
     width: 100%;
 }
 
@@ -284,6 +262,7 @@ body {
 
 // BODY
 .cat-body {
+    z-index: -4;
     background-color: #adb5bd;
     position: relative;
     bottom: 50px;
@@ -317,17 +296,8 @@ body {
     bottom: 40px;
 }
 
-// INTERACTION
-.box:hover .cat {
-    transform: translateY(-105px);
-}
-
-.box:hover .hat {
-    animation: bounce 1.5s ease-out;
-    animation-delay: 0.3s;
-}
-
 .shadow {
+    z-index: -1;
     position: relative;
     background-color: #343a40;
     border-radius: 50%;
@@ -350,7 +320,7 @@ body {
     transform: rotate(-5deg);
 }
 
-@keyframes bounce {
+@keyframes hat-anim {
     20% {
         transform: translateY(-10px);
     }
@@ -359,18 +329,19 @@ body {
 // BALLOONS
 .balloons {
     position: relative;
+    z-index: 1;
 }
 
 .b-red {
+    animation: balloon-anim 12s ease-in-out infinite;
+
     position: absolute;
     background-color: #e03131;
     height: 150px;
     width: 120px;
     border-radius: 50%;
-    top: 25px;
+    top: -50px;
     left: 425px;
-    animation: floating 5s infinite ease-in-out alternate;
-    animation-delay: 0.8s;
 
     .b-attach {
         position: relative;
@@ -381,19 +352,29 @@ body {
         border-right: 15px solid transparent;
         top: 145px;
         left: 45px;
+
+        .b-line {
+            background-color: #343a40;
+            position: relative;
+            width: 2px;
+            height: 150px;
+            top: 20px;
+            right: 1px;
+            z-index: -2;
+        }
     }
 }
 
 .b-green {
+    animation: balloon-anim 15s ease-in-out infinite;
+
     position: absolute;
     background-color: #94d82d;
     height: 150px;
     width: 120px;
     border-radius: 50%;
-    top: -150px;
+    top: -170px;
     left: 300px;
-    animation: floating 5s infinite ease-in-out alternate;
-    animation-delay: 0.1s;
 
     .b-attach {
         position: relative;
@@ -404,19 +385,29 @@ body {
         border-right: 15px solid transparent;
         top: 145px;
         left: 45px;
+
+        .b-line {
+            background-color: #343a40;
+            position: relative;
+            width: 2px;
+            height: 150px;
+            top: 20px;
+            right: 1px;
+            z-index: -2;
+        }
     }
 }
 
 .b-blue {
+    animation: balloon-anim 13s ease-in-out infinite;
+
     position: absolute;
     background-color: #66d9e8;
     height: 150px;
     width: 120px;
     border-radius: 50%;
-    top: -50px;
+    top: 70px;
     left: 600px;
-    animation: floating 5s infinite ease-in-out alternate;
-    animation-delay: 0.5s;
 
     .b-attach {
         position: relative;
@@ -427,10 +418,22 @@ body {
         border-right: 15px solid transparent;
         top: 145px;
         left: 45px;
+
+        .b-line {
+            background-color: #343a40;
+            position: relative;
+            width: 2px;
+            height: 150px;
+            top: 20px;
+            right: 1px;
+            z-index: -2;
+        }
     }
 }
 
 .b-yellow {
+    animation: balloon-anim 10s ease-in-out infinite;
+
     position: absolute;
     background-color: #ffd43b;
     height: 150px;
@@ -438,8 +441,6 @@ body {
     border-radius: 50%;
     top: 0px;
     left: 100px;
-    animation: floating 5s infinite ease-in-out alternate;
-    animation-delay: 0.3s;
 
     .b-attach {
         position: relative;
@@ -450,22 +451,45 @@ body {
         border-right: 15px solid transparent;
         top: 145px;
         left: 45px;
+
+        .b-line {
+            background-color: #343a40;
+            position: relative;
+            width: 2px;
+            height: 150px;
+            top: 20px;
+            right: 1px;
+            z-index: -2;
+        }
     }
 }
 
-// BALOON ANIMATION
-@keyframes floating {
+// BALLOON ANIMATION
+@keyframes balloon-anim {
+    0% {
+        transform: translateY(1100px);
+        opacity: 0;
+        scale: 0;
+    }
+
+    75% {
+        scale: 1;
+        opacity: 1;
+    }
+
     100% {
-        transform: translateY(100px);
+        transform: translateY(-800px);
     }
 }
 
 // TEXT
 .congratulation {
+    animation: text-anim 1s;
     position: absolute;
     top: 15%;
     left: 50%;
     transform: translate(-50%);
+    transform-origin: left;
 }
 
 .text {
@@ -473,4 +497,229 @@ body {
     font-weight: 400;
     text-transform: uppercase;
     text-align: center;
+}
+
+@keyframes text-anim {
+    0% {
+        scale: 0%;
+    }
+
+    50% {
+        scale: 1.1;
+    }
+
+    100% {
+        scale: 1;
+    }
+}
+
+// INTERACTION
+.box:hover .cat {
+    transform: translateY(-105px);
+}
+
+.box:hover .hat {
+    animation: hat-anim 1.5s ease-out;
+    animation-delay: 0.3s;
+}
+
+// CLOUDS
+.cloud-container {
+    position: relative;
+    width: 100%;
+    height: 60%;
+    top: -24%;
+}
+
+.cloud-1 {
+    animation: cloud-anim 3s ease-in-out infinite alternate;
+    position: absolute;
+    top: 15%;
+    left: 55%;
+
+    .c1 {
+        position: absolute;
+        background-color: #fff;
+        height: 125px;
+        width: 125px;
+        border-radius: 50%;
+        top: -25px;
+    }
+
+    .c2 {
+        position: absolute;
+        background-color: #fff;
+        height: 100px;
+        width: 150px;
+        border-radius: 50%;
+        top: 10px;
+        left: 50px;
+    }
+
+    .c3 {
+        position: absolute;
+        background-color: #fff;
+        height: 100px;
+        width: 150px;
+        border-radius: 50%;
+        top: 10px;
+        left: -120px;
+    }
+
+    .c4 {
+        position: absolute;
+        background-color: #fff;
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+        top: 5px;
+        left: -25px;
+    }
+}
+
+.cloud-2 {
+    animation: cloud-anim 3s ease-in-out infinite alternate;
+    position: absolute;
+    top: 8%;
+    left: 60%;
+    z-index: -1;
+
+    .c1 {
+        position: absolute;
+        background-color: #e9ecef;
+        height: 125px;
+        width: 125px;
+        border-radius: 50%;
+        top: -25px;
+    }
+
+    .c2 {
+        position: absolute;
+        background-color: #e9ecef;
+        height: 100px;
+        width: 150px;
+        border-radius: 50%;
+        top: 10px;
+        left: 50px;
+    }
+
+    .c3 {
+        position: absolute;
+        background-color: #e9ecef;
+        height: 100px;
+        width: 150px;
+        border-radius: 50%;
+        top: 10px;
+        left: -120px;
+    }
+
+    .c4 {
+        position: absolute;
+        background-color: #e9ecef;
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+        top: 5px;
+        left: -25px;
+    }
+}
+
+.cloud-3 {
+    animation: cloud-anim 5s ease-in-out infinite alternate;
+    position: absolute;
+    top: 45%;
+    left: 18%;
+    z-index: -1;
+
+    .c1 {
+        position: absolute;
+        background-color: #fff;
+        height: 125px;
+        width: 125px;
+        border-radius: 50%;
+        top: -25px;
+    }
+
+    .c2 {
+        position: absolute;
+        background-color: #fff;
+        height: 100px;
+        width: 150px;
+        border-radius: 50%;
+        top: 10px;
+        left: 50px;
+    }
+
+    .c3 {
+        position: absolute;
+        background-color: #fff;
+        height: 100px;
+        width: 150px;
+        border-radius: 50%;
+        top: 10px;
+        left: -120px;
+    }
+
+    .c4 {
+        position: absolute;
+        background-color: #fff;
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+        top: 5px;
+        left: -25px;
+    }
+}
+
+.cloud-4 {
+    animation: cloud-anim 2s ease-in-out infinite alternate;
+    position: absolute;
+    top: 70%;
+    left: 70%;
+    z-index: -1;
+
+    .c1 {
+        position: absolute;
+        background-color: #fff;
+        height: 125px;
+        width: 125px;
+        border-radius: 50%;
+        top: -25px;
+    }
+
+    .c2 {
+        position: absolute;
+        background-color: #fff;
+        height: 100px;
+        width: 150px;
+        border-radius: 50%;
+        top: 10px;
+        left: 50px;
+    }
+
+    .c3 {
+        position: absolute;
+        background-color: #fff;
+        height: 100px;
+        width: 150px;
+        border-radius: 50%;
+        top: 10px;
+        left: -120px;
+    }
+
+    .c4 {
+        position: absolute;
+        background-color: #fff;
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+        top: 5px;
+        left: -25px;
+    }
+}
+
+@keyframes cloud-anim {
+    100% {
+        transform: translateY(20px);
+    }
 }
