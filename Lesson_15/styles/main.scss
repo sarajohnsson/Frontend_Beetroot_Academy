@@ -4,6 +4,8 @@ $secondary: #2557ab;
 $form-bgc: #11364e;
 $dark: #13253a;
 $grey: #3b4d6c;
+$primary-hover: #dc5931;
+$secondary-hover: #0b2e6b;
 
 * {
     margin: 0;
@@ -128,6 +130,15 @@ section {
                 padding: 18px 42px;
                 box-shadow: 10px 10px 18px 0 rgba(0, 0, 0, 0.2),
                     0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+                &:hover {
+                    background-color: $primary-hover;
+                    transition: all 0.15s ease-in-out;
+                }
+
+                &:active {
+                    transform: scale(1.05);
+                }
             }
         }
 
@@ -398,6 +409,15 @@ section {
             padding: 18px 102px;
             box-shadow: 0 30px 18px 0 rgba(0, 0, 0, 0.2),
                 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+            &:hover {
+                background-color: $secondary-hover;
+                transition: all 0.15s ease-in-out;
+            }
+
+            &:active {
+                transform: scale(1.05);
+            }
         }
     }
 }
@@ -447,6 +467,7 @@ section {
 
                 outline: none;
 
+                &:hover,
                 &:focus {
                     background-color: $dark;
                 }
@@ -471,7 +492,12 @@ section {
                 }
 
                 &[type="submit"]:hover {
-                    background-color: #f76707;
+                    background-color: $primary-hover;
+                    transition: all 0.15s ease-in-out;
+                }
+
+                &[type="submit"]:active {
+                    transform: scale(1.05);
                 }
             }
 
