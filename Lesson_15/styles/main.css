@@ -1,3 +1,13 @@
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: #ffffff;
+  transition: background-color 5000s ease-in-out 0s;
+  box-shadow: inset 0 0 20px 20px #23232329;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -65,7 +75,7 @@ section {
   line-height: 12px;
   color: #13253a;
 }
-.nav_container_bar_list_links:hover {
+.nav_container_bar_list_links:hover, .nav_container_bar_list_links:focus {
   text-decoration: underline;
   text-decoration-color: #ff7f57;
   text-underline-offset: 0.5rem;
@@ -113,7 +123,7 @@ section {
   padding: 18px 42px;
   box-shadow: 10px 10px 18px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-.hero_container_desc_btn:hover {
+.hero_container_desc_btn:hover, .hero_container_desc_btn:focus {
   background-color: #dc5931;
   transition: all 0.15s ease-in-out;
 }
@@ -350,7 +360,7 @@ section {
   padding: 18px 102px;
   box-shadow: 0 30px 18px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-.call_to_action_container_btn:hover {
+.call_to_action_container_btn:hover, .call_to_action_container_btn:focus {
   background-color: #0b2e6b;
   transition: all 0.15s ease-in-out;
 }
@@ -419,7 +429,7 @@ section {
   font-weight: 500;
   text-transform: capitalize;
 }
-.form_container_contact input[type=submit]:hover {
+.form_container_contact input[type=submit]:hover, .form_container_contact input[type=submit]:focus {
   background-color: #dc5931;
   transition: all 0.15s ease-in-out;
 }

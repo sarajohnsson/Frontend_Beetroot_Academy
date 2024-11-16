@@ -19,8 +19,8 @@ body {
 }
 
 .box {
-  top: 600px;
-  left: 250px;
+  top: 75%;
+  left: 35%;
   height: 150px;
   width: 250px;
   background-color: #b197fc;
@@ -293,8 +293,8 @@ body {
   border-radius: 50%;
   height: 40px;
   width: 300px;
-  top: 580px;
-  left: 225px;
+  top: 72%;
+  left: 32%;
   opacity: 0.3;
 }
 
@@ -308,6 +308,26 @@ body {
   top: 5px;
   left: 35px;
   transform: rotate(-5deg);
+}
+
+button {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%);
+  border: solid 1px #862e9c;
+  background: #ae3ec9;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+  width: 80%;
+  font-size: 1.5rem;
+  font-weight: 700;
+  border-radius: 2rem;
+  padding: 0.5rem 0.75rem;
+}
+button:hover {
+  background-color: #862e9c;
 }
 
 @keyframes hat-anim {

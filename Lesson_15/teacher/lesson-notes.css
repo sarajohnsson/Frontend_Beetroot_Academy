@@ -1,0 +1,12 @@
+.fileupload {
+  background-color: lightblue;
+  width: 100px;
+  height: 75px;
+  display: inline-block;
+  border-radius: 10px;
+  border: 2px dashed #444;
+  cursor: pointer;
+}
+.fileupload input {
+  display: none;
+}
