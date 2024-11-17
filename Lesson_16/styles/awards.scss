@@ -1,0 +1,45 @@
+$primary: #4a4ff2;
+$black: #111111;
+$stroke: #979797;
+
+.details {
+    &_pitch {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 100px;
+
+        &_large {
+            width: 100%;
+            max-width: 590px;
+
+            &_title {
+                font-family: "Mulish", sans-serif;
+                flex: 28px;
+                line-height: 38px;
+            }
+        }
+
+        &_small {
+            width: 100%;
+            max-width: 150px;
+
+            &__p1 {
+                font-family: "Mulish", sans-serif;
+                font-size: 18px;
+                color: $black;
+                opacity: 0.6;
+                margin-bottom: 10px;
+            }
+        }
+    }
+}
+
+.details_awards_1 {
+    height: 100vh;
+    border-top: 1px solid $stroke;
+    padding-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: 4;
+}

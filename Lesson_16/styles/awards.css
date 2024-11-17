@@ -1,0 +1,35 @@
+.details_pitch {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 100px;
+}
+.details_pitch_large {
+  width: 100%;
+  max-width: 590px;
+}
+.details_pitch_large_title {
+  font-family: "Mulish", sans-serif;
+  flex: 28px;
+  line-height: 38px;
+}
+.details_pitch_small {
+  width: 100%;
+  max-width: 150px;
+}
+.details_pitch_small__p1 {
+  font-family: "Mulish", sans-serif;
+  font-size: 18px;
+  color: #111111;
+  opacity: 0.6;
+  margin-bottom: 10px;
+}
+
+.details_awards_1 {
+  height: 100vh;
+  border-top: 1px solid #979797;
+  padding-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: 4;
+}

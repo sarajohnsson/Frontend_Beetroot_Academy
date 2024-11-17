@@ -1,0 +1,160 @@
+.details_pitch {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 100px;
+}
+.details_pitch_large {
+  width: 100%;
+  max-width: 590px;
+}
+.details_pitch_large_title {
+  font-family: "Mulish", sans-serif;
+  flex: 28px;
+  line-height: 38px;
+}
+.details_pitch_small {
+  width: 100%;
+  max-width: 150px;
+}
+.details_pitch_small__p1 {
+  font-family: "Mulish", sans-serif;
+  font-size: 18px;
+  color: #111111;
+  opacity: 0.6;
+  margin-bottom: 10px;
+}
+
+.details_awards_1 {
+  height: 100vh;
+  border-top: 1px solid #979797;
+  padding-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: 4;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Mulissh", sans-serif;
+  color: #111111;
+}
+
+ul {
+  list-style: none;
+  padding: none;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.page_wrapper {
+  background-color: #fff;
+  margin: 0 auto;
+  padding: 0 125px;
+  width: 100%;
+  height: auto;
+}
+
+.top_header {
+  padding: 60px 0 0 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 95px;
+}
+.top_header_logo {
+  max-width: 90px;
+}
+.top_header_logo_img {
+  width: 100%;
+  min-height: 19px;
+}
+
+.navigation {
+  max-width: 162px;
+  width: 100%;
+}
+.navigation_bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navigation_bar_item:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.5rem;
+  color: #4a4ff2;
+  transition: all 0.15s ease-in-out;
+}
+
+.hero {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: space-between;
+  margin-bottom: 145px;
+}
+.hero_intro {
+  font-family: "Mulish", sans-serif;
+  color: #111111;
+  max-width: 635px;
+  height: 10%;
+}
+.hero_intro_subtitle {
+  color: #4a4ff2;
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: -0.42px;
+  margin-bottom: 32px;
+}
+.hero_intro_title {
+  font-size: 40px;
+  line-height: 60px;
+  font-weight: 700;
+}
+.hero_intro_title_accent {
+  color: #4a4ff2;
+}
+.hero_pitch {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.hero_pitch_line {
+  background-color: #111111;
+  opacity: 0.5;
+  width: 30px;
+  height: 2px;
+  margin-bottom: 10px;
+}
+.hero_pitch_text {
+  color: #111111;
+  font-style: italic;
+  opacity: 0.6;
+  font-size: 18px;
+}
+
+img {
+  object-fit: cover;
+  width: 100%;
+}
+
+.gallery {
+  width: 100%;
+  margin-bottom: 90px;
+}
+.gallery_container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  gap: 10px;
+}
