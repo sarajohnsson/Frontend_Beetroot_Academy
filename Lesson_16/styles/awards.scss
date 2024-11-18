@@ -35,11 +35,24 @@ $stroke: #979797;
     }
 }
 
-.details_awards_1 {
+.details_awwwards {
     height: 100vh;
     border-top: 1px solid $stroke;
     padding-top: 50px;
+    padding-bottom: 58px;
     display: grid;
     grid-template-columns: repeat(8, 1fr);
-    grid-template-rows: 4;
+    grid-template-rows: repeat(2, 115px);
+
+    &_category {
+        grid-column: 1/4;
+        grid-row: 1/-1;
+    }
+
+    &_prices {
+    }
+    &_product {
+    }
+    &_year {
+    }
 }
