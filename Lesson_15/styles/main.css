@@ -41,12 +41,6 @@ button {
   margin: 0 auto;
   width: 100%;
   min-height: 100vh;
-  height: auto;
-}
-
-header,
-section {
-  padding: 0 135px;
 }
 
 .header {
@@ -56,7 +50,9 @@ section {
 }
 
 .nav_container {
-  padding: 40px 0;
+  margin: 0 auto;
+  max-width: 1170px;
+  padding-top: 40px;
   display: flex;
   justify-content: space-between;
 }
@@ -66,13 +62,16 @@ section {
 }
 .nav_container_bar {
   width: 100%;
-  max-width: 246px;
+  display: flex;
+  justify-content: flex-end;
 }
 .nav_container_bar_list {
-  height: 100%;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  column-gap: 50px;
+  min-height: 13px;
+}
+.nav_container_bar_list li {
   font-size: 14px;
   font-weight: 600;
   line-height: 12px;
@@ -94,9 +93,11 @@ section {
 }
 .hero_container {
   display: flex;
-  width: 100%;
+  margin: 0 auto;
+  max-width: 1170px;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  column-gap: 130px;
 }
 .hero_container_desc {
   max-width: 470px;
@@ -138,15 +139,18 @@ section {
 }
 
 .sales_pitch {
-  height: 100vh;
+  margin: 0 auto;
+  max-width: 1170px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  column-gap: 30px;
 }
 .sales_pitch_container {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 120px 0 100px 0;
 }
 .sales_pitch_container__p1 {
   color: #2557ab;
@@ -169,10 +173,6 @@ section {
 .sales_pitch_container_box_card {
   text-align: center;
   max-width: 370px;
-  margin-right: 30px;
-}
-.sales_pitch_container_box_card:last-child {
-  margin-right: 0;
 }
 .sales_pitch_container_box_card_icon {
   width: 64px;
@@ -196,10 +196,14 @@ section {
   background-color: #f4f6f7;
 }
 .statistics_container {
+  margin: 0 auto;
+  max-width: 1170px;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   padding: 60px 0;
+  column-gap: 140px;
+  margin-bottom: 100px;
 }
 .statistics_container_nr {
   max-height: 85px;
@@ -221,16 +225,16 @@ section {
 }
 
 .testimonials {
-  height: 100vh;
   margin-bottom: 100px;
 }
 .testimonials_container {
+  margin: 0 auto;
+  max-width: 970px;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-bottom: 1px solid #dce2e6;
 }
 .testimonials_container__p1 {
   color: #2557ab;
@@ -246,13 +250,13 @@ section {
 }
 .testimonials_container_desc {
   display: flex;
+  column-gap: 30px;
   width: 100%;
   justify-content: space-around;
   margin-bottom: 60px;
 }
 .testimonials_container_desc_small {
   max-width: 370px;
-  margin-right: 30px;
 }
 .testimonials_container_desc_large {
   max-width: 570px;
@@ -273,25 +277,27 @@ section {
 .testimonials_container_logos {
   width: 100%;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  column-gap: 73px;
 }
 .testimonials_container_logos_img {
   max-height: 66px;
 }
 
 .about_us {
-  height: 100%;
+  margin: 0 auto;
+  max-width: 1170px;
+  padding-top: 100px;
+  border-top: 1px solid #dce2e6;
 }
 .about_us_container {
-  height: 100%;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: center;
+  align-items: flex-start;
+  column-gap: 100px;
 }
 .about_us_container_desc {
-  align-items: center;
   max-width: 470px;
-  margin-right: 100px;
 }
 .about_us_container_desc__title {
   max-width: 370px;
@@ -318,24 +324,24 @@ section {
   margin-right: 15px;
 }
 .about_us_container_box {
-  min-height: 50vh;
   display: flex;
   align-items: flex-end;
 }
 .about_us_container_box_img {
-  max-width: 570px;
+  max-width: 600px;
 }
 
 .call_to_action {
   background-color: #ff7f57;
-  padding: 100px 0;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .call_to_action_container {
   max-width: 970px;
+  margin: 0 auto;
   text-align: center;
+  padding: 100px 0;
 }
 .call_to_action_container__p1 {
   font-size: 16px;
@@ -372,17 +378,17 @@ section {
 }
 
 .form {
-  height: 100vh;
   background-color: #11364e;
 }
 .form_container {
-  height: 100%;
+  margin: 0 auto;
+  max-width: 1170px;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 140px 0;
 }
 .form_container_contact {
-  width: 100%;
   max-width: 535px;
   display: flex;
   flex-direction: column;
@@ -468,6 +474,8 @@ section {
   align-items: center;
 }
 .footer__p1 {
+  margin: 0 auto;
+  max-width: 1170px;
   color: #fff;
   font-size: 12px;
 }

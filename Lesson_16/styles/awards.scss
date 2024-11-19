@@ -3,33 +3,37 @@ $black: #111111;
 $stroke: #979797;
 
 .details {
+    margin: 0 auto;
+    max-width: 1110px;
+
     &_pitch {
         display: flex;
-        justify-content: space-between;
-        align-items: center;
+        justify-content: center;
         margin-bottom: 100px;
 
-        &_large {
-            width: 100%;
+        &_title {
             max-width: 590px;
-
-            &_title {
-                font-family: "Mulish", sans-serif;
-                flex: 28px;
-                line-height: 38px;
-            }
+            font-family: "Mulish", sans-serif;
+            font-size: 28px;
+            line-height: 38px;
+            margin-right: 140px;
         }
 
-        &_small {
-            width: 100%;
-            max-width: 150px;
+        &_col {
+            display: flex;
+            justify-content: center;
+            margin-right: 70px;
+            min-width: 150px;
 
-            &__p1 {
+            &_list {
                 font-family: "Mulish", sans-serif;
                 font-size: 18px;
                 color: $black;
                 opacity: 0.6;
-                margin-bottom: 10px;
+
+                li {
+                    margin-bottom: 10px;
+                }
             }
         }
     }
