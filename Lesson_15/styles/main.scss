@@ -104,7 +104,8 @@ button {
 
 .hero {
     background-color: $main-bgc;
-    min-height: 100vh;
+    // min-height: 100vh;
+    padding: 143px 0 188px;
     display: flex;
 
     &_container {
