@@ -12,13 +12,15 @@
   max-width: 590px;
   font-size: 28px;
   line-height: 38px;
-  margin-right: 140px;
+  margin-right: 141px;
 }
 .details_pitch_col {
   display: flex;
-  justify-content: center;
   margin-right: 70px;
-  min-width: 150px;
+  max-width: 150px;
+}
+.details_pitch_col:last-child {
+  margin-right: 0;
 }
 .details_pitch_col_list {
   font-size: 18px;
@@ -64,6 +66,8 @@
 }
 .details_awwwards_year {
   grid-column: 8/9;
+  display: flex;
+  justify-content: flex-end;
 }
 .details_awwwards_year__p1 {
   font-size: 16px;
@@ -103,6 +107,8 @@
   opacity: 0.6;
 }
 .details_cssdesignawards_year {
+  display: flex;
+  justify-content: flex-end;
   grid-column: 8/9;
 }
 .details_cssdesignawards_year__p1 {
