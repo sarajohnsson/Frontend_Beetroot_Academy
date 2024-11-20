@@ -16,6 +16,7 @@
 }
 .details_pitch_col {
   display: flex;
+  align-items: center;
   margin-right: 70px;
   max-width: 150px;
 }
