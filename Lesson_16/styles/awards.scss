@@ -54,6 +54,11 @@ $stroke: #979797;
     &_category {
         grid-column: 1/4;
         grid-row: 1/-1;
+
+        &_title {
+            font-size: 22px;
+            font-weight: 700;
+        }
     }
 
     &_distinction {
@@ -104,6 +109,11 @@ $stroke: #979797;
     &_category {
         grid-column: 1/4;
         grid-row: 1/-1;
+
+        &_title {
+            font-size: 22px;
+            font-weight: 700;
+        }
     }
 
     &_distinction {

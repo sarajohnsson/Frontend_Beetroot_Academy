@@ -45,6 +45,10 @@
   grid-column: 1/4;
   grid-row: 1/-1;
 }
+.details_awwwards_category_title {
+  font-size: 22px;
+  font-weight: 700;
+}
 .details_awwwards_distinction {
   grid-column: 4/span 2;
 }
@@ -86,6 +90,10 @@
 .details_cssdesignawards_category {
   grid-column: 1/4;
   grid-row: 1/-1;
+}
+.details_cssdesignawards_category_title {
+  font-size: 22px;
+  font-weight: 700;
 }
 .details_cssdesignawards_distinction {
   grid-column: 4/span 2;
