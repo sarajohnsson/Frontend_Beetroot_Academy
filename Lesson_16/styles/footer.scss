@@ -1,0 +1,46 @@
+$primary: #4a4ff2;
+$black: #111111;
+$stroke: #979797;
+
+.footer {
+    margin: 0 auto;
+    max-width: 1170px;
+    border-top: 1px solid $stroke;
+    padding-top: 114px;
+    padding-bottom: 47px;
+    display: flex;
+
+    &_nav {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        column-gap: 95px;
+
+        &_bar {
+            display: flex;
+            align-items: center;
+            column-gap: 30px;
+            font-size: 18px;
+            font-weight: 700;
+            letter-spacing: -0.35px;
+        }
+
+        &_icons {
+            display: flex;
+            align-items: center;
+            column-gap: 24px;
+
+            &_item {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                a,
+                img {
+                    height: 15px;
+                    width: 15px;
+                }
+            }
+        }
+    }
+}

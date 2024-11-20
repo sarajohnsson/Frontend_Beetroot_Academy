@@ -4,7 +4,8 @@ $stroke: #979797;
 
 .details {
     margin: 0 auto;
-    max-width: 1110px;
+    max-width: 1170px;
+    font-family: "Mulish", sans-serif;
 
     &_pitch {
         display: flex;
@@ -13,7 +14,6 @@ $stroke: #979797;
 
         &_title {
             max-width: 590px;
-            font-family: "Mulish", sans-serif;
             font-size: 28px;
             line-height: 38px;
             margin-right: 140px;
@@ -26,7 +26,6 @@ $stroke: #979797;
             min-width: 150px;
 
             &_list {
-                font-family: "Mulish", sans-serif;
                 font-size: 18px;
                 color: $black;
                 opacity: 0.6;
@@ -40,23 +39,95 @@ $stroke: #979797;
 }
 
 .details_awwwards {
-    height: 100vh;
     border-top: 1px solid $stroke;
     padding-top: 50px;
     padding-bottom: 58px;
     display: grid;
     grid-template-columns: repeat(8, 1fr);
-    grid-template-rows: repeat(2, 115px);
+    grid-template-rows: repeat(2, 150px);
+    row-gap: 80px;
 
     &_category {
         grid-column: 1/4;
         grid-row: 1/-1;
     }
 
-    &_prices {
+    &_distinction {
+        grid-column: 4 / span 2;
+
+        &_subtitle {
+            font-size: 18px;
+            font-weight: 700;
+        }
     }
+
     &_product {
+        grid-column: 6 / span 2;
+        max-width: 190px;
+
+        &__p1 {
+            font-size: 16px;
+            margin-bottom: 12px;
+        }
+
+        &__p2 {
+            font-size: 16px;
+            line-height: 26px;
+            opacity: 0.6;
+        }
     }
+
     &_year {
+        grid-column: 8 / 9;
+        &__p1 {
+            font-size: 16px;
+        }
+    }
+}
+
+.details_cssdesignawards {
+    border-top: 1px solid $stroke;
+    padding-top: 50px;
+    padding-bottom: 58px;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(2, 150px);
+    row-gap: 80px;
+
+    &_category {
+        grid-column: 1/4;
+        grid-row: 1/-1;
+    }
+
+    &_distinction {
+        grid-column: 4 / span 2;
+
+        &_subtitle {
+            font-size: 18px;
+            font-weight: 700;
+        }
+    }
+
+    &_product {
+        grid-column: 6 / span 2;
+        max-width: 190px;
+
+        &__p1 {
+            font-size: 16px;
+            margin-bottom: 12px;
+        }
+
+        &__p2 {
+            font-size: 16px;
+            line-height: 26px;
+            opacity: 0.6;
+        }
+    }
+
+    &_year {
+        grid-column: 8 / 9;
+        &__p1 {
+            font-size: 16px;
+        }
     }
 }

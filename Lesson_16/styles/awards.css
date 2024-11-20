@@ -1,6 +1,7 @@
 .details {
   margin: 0 auto;
-  max-width: 1110px;
+  max-width: 1170px;
+  font-family: "Mulish", sans-serif;
 }
 .details_pitch {
   display: flex;
@@ -9,7 +10,6 @@
 }
 .details_pitch_title {
   max-width: 590px;
-  font-family: "Mulish", sans-serif;
   font-size: 28px;
   line-height: 38px;
   margin-right: 140px;
@@ -21,7 +21,6 @@
   min-width: 150px;
 }
 .details_pitch_col_list {
-  font-family: "Mulish", sans-serif;
   font-size: 18px;
   color: #111111;
   opacity: 0.6;
@@ -31,15 +30,81 @@
 }
 
 .details_awwwards {
-  height: 100vh;
   border-top: 1px solid #979797;
   padding-top: 50px;
   padding-bottom: 58px;
   display: grid;
   grid-template-columns: repeat(8, 1fr);
-  grid-template-rows: repeat(2, 115px);
+  grid-template-rows: repeat(2, 150px);
+  row-gap: 80px;
 }
 .details_awwwards_category {
   grid-column: 1/4;
   grid-row: 1/-1;
+}
+.details_awwwards_distinction {
+  grid-column: 4/span 2;
+}
+.details_awwwards_distinction_subtitle {
+  font-size: 18px;
+  font-weight: 700;
+}
+.details_awwwards_product {
+  grid-column: 6/span 2;
+  max-width: 190px;
+}
+.details_awwwards_product__p1 {
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+.details_awwwards_product__p2 {
+  font-size: 16px;
+  line-height: 26px;
+  opacity: 0.6;
+}
+.details_awwwards_year {
+  grid-column: 8/9;
+}
+.details_awwwards_year__p1 {
+  font-size: 16px;
+}
+
+.details_cssdesignawards {
+  border-top: 1px solid #979797;
+  padding-top: 50px;
+  padding-bottom: 58px;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(2, 150px);
+  row-gap: 80px;
+}
+.details_cssdesignawards_category {
+  grid-column: 1/4;
+  grid-row: 1/-1;
+}
+.details_cssdesignawards_distinction {
+  grid-column: 4/span 2;
+}
+.details_cssdesignawards_distinction_subtitle {
+  font-size: 18px;
+  font-weight: 700;
+}
+.details_cssdesignawards_product {
+  grid-column: 6/span 2;
+  max-width: 190px;
+}
+.details_cssdesignawards_product__p1 {
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+.details_cssdesignawards_product__p2 {
+  font-size: 16px;
+  line-height: 26px;
+  opacity: 0.6;
+}
+.details_cssdesignawards_year {
+  grid-column: 8/9;
+}
+.details_cssdesignawards_year__p1 {
+  font-size: 16px;
 }
