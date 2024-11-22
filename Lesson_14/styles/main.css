@@ -1,3 +1,23 @@
+@font-face {
+  font-family: "Josefin Sans";
+  font-weight: 400;
+  src: url("../fonts/JosefinSans-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Josefin Sans";
+  font-weight: 700;
+  src: url("../fonts/JosefinSans-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Aleo";
+  font-weight: 400;
+  src: url("../fonts/Aleo-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Aleo";
+  font-weight: 700;
+  src: url("../fonts/Aleo-Bold.ttf") format("truetype");
+}
 * {
   margin: 0;
   padding: 0;

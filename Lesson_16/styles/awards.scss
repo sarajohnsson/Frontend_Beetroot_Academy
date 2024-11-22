@@ -4,7 +4,7 @@ $stroke: #979797;
 
 .details {
     margin: 0 auto;
-    max-width: 1170px;
+    max-width: 1110px;
     font-family: "Mulish", sans-serif;
 
     &_pitch {
@@ -101,6 +101,7 @@ $stroke: #979797;
     border-top: 1px solid $stroke;
     padding-top: 50px;
     padding-bottom: 58px;
+    border-bottom: 1px solid $stroke;
     display: grid;
     grid-template-columns: repeat(8, 1fr);
     grid-template-rows: repeat(2, 150px);
