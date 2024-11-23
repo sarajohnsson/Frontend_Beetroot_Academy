@@ -429,7 +429,7 @@ button {
 
 .footer {
   background-color: #333333;
-  padding: 122px 0 53px 0;
+  padding: 120px 0 55px 0;
   display: flex;
   justify-content: center;
   align-items: flex-end;
@@ -438,7 +438,8 @@ button {
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-width: 196px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 .footer_container__title {
   font-family: "Josefin Sans", sans-serif;
@@ -458,10 +459,10 @@ button {
   text-transform: capitalize;
 }
 .footer_container_icons {
-  width: 100%;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
+  gap: 20px;
 }
 .footer_container_icons i {
   font-size: 16px;
