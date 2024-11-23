@@ -5,14 +5,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <!-- <link
+        <link
             href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
             rel="stylesheet"
         />
         <link
             href="https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,100..900;1,100..900&display=swap"
             rel="stylesheet"
-        /> -->
+        />
         <link rel="stylesheet" href="./fontawesome/css/all.min.css" />
 
         <link rel="stylesheet" href="../Lesson_14/styles/main.css" />
@@ -39,12 +39,12 @@
                         />
                         <button class="hero_container_search_input_btn">
                             Search
+                            <img
+                                class="hero_container_search_input_btn_icon"
+                                src="./icons/search-icon-1.svg"
+                                alt=""
+                            />
                         </button>
-                        <img
-                            class="hero_container_search_input_btn_icon"
-                            src="./icons/search-icon-1.svg"
-                            alt=""
-                        />
                     </div>
 
                     <div class="hero_container_scroll">
@@ -58,106 +58,128 @@
 
             <!-- NAVIGATION -->
             <header class="header">
-                <div class="header_col">
-                    <div class="logo_container">
-                        <a href="#" class="logo_link">Bhromaon</a>
+                <div class="header_container">
+                    <div class="header_container_col">
+                        <div class="header_container_col_logo">
+                            <a href="#" class="header_container_col_logo_link"
+                                ><span>Bhromaon</span></a
+                            >
+                        </div>
                     </div>
 
-                    <nav class="nav_bar">
-                        <ul class="nav_bar_list">
-                            <li>
-                                <a href="#" class="nav_bar_list_links"
-                                    >Who we are</a
-                                >
-                            </li>
-                            <li>
-                                <a href="#" class="nav_bar_list_links"
-                                    >What we do</a
-                                >
-                            </li>
-                            <li>
-                                <a href="#" class="nav_bar_list_links"
-                                    >Travel with us</a
-                                >
-                            </li>
-                            <li>
-                                <a href="#" class="nav_bar_list_links"
-                                    >Contact us</a
-                                >
-                            </li>
-                        </ul>
-                    </nav>
+                    <div class="header_container_col">
+                        <nav class="header_container_col_nav">
+                            <ul class="header_container_col_nav_list">
+                                <li>
+                                    <a
+                                        href="#"
+                                        class="header_container_col_nav_list_links"
+                                        >Who we are</a
+                                    >
+                                </li>
+                                <li>
+                                    <a
+                                        href="#"
+                                        class="header_container_col_nav_list_links"
+                                        >What we do</a
+                                    >
+                                </li>
+                                <li>
+                                    <a
+                                        href="#"
+                                        class="header_container_col_nav_list_links"
+                                        >Travel with us</a
+                                    >
+                                </li>
+                                <li>
+                                    <a
+                                        href="#"
+                                        class="header_container_col_nav_list_links"
+                                        >Contact us</a
+                                    >
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
                 </div>
             </header>
 
             <main id="main">
                 <!-- CALL TO ACTION -->
-                <section class="cta_container">
-                    <div class="cta_container_desc">
-                        <h2 class="cta_container_desc_title">Why choose us</h2>
-                        <p class="cta_container_desc__p1">
-                            Tion and dislike men who are so beguiled and
-                            demoralized by desire by the charms of pleasure of
-                            the moment, so blinded by desire, that they cannot
-                            foresee. Ddislike men who are so beguiled and
-                            demoralized by the charms of pleasure of the moment,
-                            so blinded by desire, that.
-                        </p>
-                        <button class="cta_container_desc_btn">
-                            Explore places
-                        </button>
-                    </div>
+                <section class="cta">
+                    <div class="cta_container">
+                        <div class="cta_container_desc">
+                            <h2 class="cta_container_desc_title">
+                                Why choose us
+                            </h2>
+                            <p class="cta_container_desc__p1">
+                                Tion and dislike men who are so beguiled and
+                                demoralized by desire by the charms of pleasure
+                                of the moment, so blinded by desire, that they
+                                cannot foresee. Ddislike men who are so beguiled
+                                and demoralized by the charms of pleasure of the
+                                moment, so blinded by desire, that.
+                            </p>
+                            <button class="cta_container_desc_btn">
+                                Explore places
+                            </button>
+                        </div>
 
-                    <div class="cta_container_img">
-                        <img
-                            class="cta_container_img_small top_left"
-                            src="./img/section1-img-1.jpg"
-                            alt=""
-                        />
-                        <img
-                            class="cta_container_img_small bottom_right"
-                            src="./img/section1-img-2.jpg"
-                            alt=""
-                        />
+                        <div class="cta_container_img">
+                            <img
+                                class="cta_container_img_small top_left"
+                                src="./img/section1-img-1.jpg"
+                                alt=""
+                            />
+                            <img
+                                class="cta_container_img_small bottom_right"
+                                src="./img/section1-img-2.jpg"
+                                alt=""
+                            />
+                        </div>
                     </div>
                 </section>
 
                 <!-- 3 STEPS-->
-                <section class="cta_container_box">
-                    <div class="cta_container_box_desc">
-                        <img
-                            src="./icons/search-icon-2.svg"
-                            alt=""
-                            class="cta_container_box_desc_icons"
-                        />
-                        <p class="cta_container_box_desc_label">
-                            Search places
-                        </p>
+                <section class="three-steps">
+                    <div class="three-steps_container">
+                        <div class="three-steps_container_desc">
+                            <div class="three-steps_container_desc_box">
+                                <img
+                                    src="./icons/search-icon-2.svg"
+                                    alt=""
+                                    class="three-steps_container_desc_box_icons"
+                                />
+                            </div>
+                            <p class="three-steps_container_desc_label">
+                                Search places
+                            </p>
+                        </div>
+                        <div class="three-steps_container_desc">
+                            <div class="three-steps_container_desc_box">
+                                <img
+                                    src="./icons/todo-icon.svg"
+                                    alt=""
+                                    class="three-steps_container_desc_box_icons"
+                                />
+                            </div>
+                            <p class="three-steps_container_desc_label">
+                                Select places
+                            </p>
+                        </div>
+                        <div class="three-steps_container_desc">
+                            <div class="three-steps_container_desc_box">
+                                <img
+                                    src="./icons/thumbsup-icon.svg"
+                                    alt=""
+                                    class="three-steps_container_desc_box_icons"
+                                />
+                            </div>
+                            <p class="three-steps_container_desc_label">
+                                Book & enjoy
+                            </p>
+                        </div>
                     </div>
-                    <div class="cta_container_box_desc">
-                        <img
-                            src="./icons/todo-icon.svg"
-                            alt=""
-                            class="cta_container_box_desc_icons"
-                        />
-                        <p class="cta_container_box_desc_label">
-                            Select places
-                        </p>
-                    </div>
-                    <div class="cta_container_box_desc">
-                        <img
-                            src="./icons/thumbsup-icon.svg"
-                            alt=""
-                            class="cta_container_box_desc_icons"
-                        />
-                        <p class="cta_container_box_desc_label">Book & enjoy</p>
-                    </div>
-
-                    <img
-                        src="./icons/bounce-icon.svg"
-                        alt=""
-                        class="cta_container_box_icon-bg"
-                    />
                 </section>
 
                 <!-- BOOKING SECTION -->

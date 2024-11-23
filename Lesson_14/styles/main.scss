@@ -47,15 +47,13 @@ button {
     background-position: center;
     background-size: cover;
     object-fit: cover;
-    min-height: 100vh;
-    position: relative;
+    // min-height: 100vh;
 
     &_container {
-        // Ask Alex if this is a collapsed element
-        position: absolute;
-        top: 40%;
-        left: 50%;
-        transform: translate(-50%);
+        max-width: 1200px;
+        margin: 0 auto;
+        padding-top: 264px;
+        padding-bottom: 132px;
 
         &_title {
             text-align: center;
@@ -76,13 +74,16 @@ button {
         }
 
         &_search_input {
-            position: relative;
+            display: flex;
+            justify-content: center;
             margin-bottom: 108px;
 
             input {
+                display: flex;
+                justify-content: center;
                 height: 63px;
                 width: 100%;
-                min-width: 653px;
+                max-width: 503px;
                 border: none;
                 padding: 19px 113px;
                 font-family: "Josefin Sans", sans-serif;
@@ -93,10 +94,7 @@ button {
             }
 
             &_btn {
-                position: absolute;
-                top: 50%;
-                right: 1px;
-                transform: translateY(-50%);
+                position: relative;
                 cursor: pointer;
                 background-color: $primary;
                 border: 1px solid $white;
@@ -111,9 +109,9 @@ button {
 
                 &_icon {
                     position: absolute;
-                    top: 50%;
-                    transform: translateY(-50%);
-                    right: 17px;
+                    top: 30%;
+                    left: 83%;
+                    transform: translate(-50%);
                     width: 22px;
                     height: 24px;
                 }
@@ -145,130 +143,162 @@ button {
 
 .header {
     background-color: $primary;
-}
 
-.header_col {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 100%;
-    min-height: 83px;
-}
-
-.nav_bar {
-    max-width: 525px;
-    width: 100%;
-
-    &_list {
+    &_container {
+        max-width: 1200px;
+        margin: 0 auto;
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
 
-        &_links {
-            font-family: "Aleo", sans-serif;
-            font-size: 14px;
-            line-height: 26px;
-            text-transform: uppercase;
+        &_col {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            padding: 32px 0;
+
+            &_logo {
+                height: 20px;
+
+                a {
+                    font-family: "Josefin Sans", sans-serif;
+                    font-size: 24px;
+                    font-weight: 700;
+                    line-height: 26px;
+                    letter-spacing: 2.4px;
+                    text-transform: uppercase;
+                }
+
+                a span {
+                    display: inline-block;
+                    vertical-align: middle;
+                }
+            }
+
+            &_nav {
+                &_list {
+                    display: flex;
+                    gap: 35px;
+
+                    &_links {
+                        font-family: "Aleo", sans-serif;
+                        font-size: 14px;
+                        line-height: 26px;
+                        text-transform: uppercase;
+                    }
+                }
+            }
         }
     }
 }
 
-.logo_link {
-    font-family: "Josefin Sans", sans-serif;
-    font-size: 24px;
-    font-weight: 700;
-    line-height: 26px;
-    letter-spacing: 2.4px;
-    text-transform: uppercase;
-}
-
-.cta_container {
+.cta {
     background-image: url(../img/section1-bg.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     object-fit: cover;
-    // Use padding insted of min-height
-    padding: 118px 320px;
-    width: 100%;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    &_container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 118px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
-    &_desc {
-        max-width: 560px;
+        &_desc {
+            max-width: 560px;
+            margin-right: 110px;
 
-        &_title {
-            font-family: "Aleo", sans-serif;
-            font-weight: 400;
-            font-size: 36px;
-            line-height: 26px;
-            margin-bottom: 50px;
+            &_title {
+                font-family: "Aleo", sans-serif;
+                font-weight: 400;
+                font-size: 36px;
+                line-height: 26px;
+                margin-bottom: 50px;
+            }
+
+            &__p1 {
+                font-family: "Josefin Sans", sans-serif;
+                color: $off_white;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 26px;
+                letter-spacing: 1.6px;
+                margin-bottom: 45px;
+            }
+
+            &_btn {
+                background-color: $primary;
+                color: $white;
+                font-family: "Aleo", sans-serif;
+                font-size: 16px;
+                line-height: 26px;
+                letter-spacing: 1.2px;
+                text-transform: uppercase;
+                padding: 15px 38px;
+            }
         }
 
-        &__p1 {
-            font-family: "Josefin Sans", sans-serif;
-            color: $off_white;
-            font-weight: 400;
-            font-size: 16px;
-            line-height: 26px;
-            letter-spacing: 1.6px;
-            margin-bottom: 45px;
-        }
+        &_img {
+            width: 100%;
+            max-width: 440px;
+            display: inline-block;
 
-        &_btn {
-            background-color: $primary;
-            color: $white;
-            font-family: "Aleo", sans-serif;
-            font-size: 16px;
-            line-height: 26px;
-            letter-spacing: 1.2px;
-            text-transform: uppercase;
-            padding: 15px 38px;
+            &_small {
+                max-width: 350px;
+                max-height: 220px;
+                margin-bottom: 10px;
+            }
+
+            .top_left {
+                text-align: end;
+            }
+
+            .bottom_right {
+                text-align: center;
+            }
         }
     }
+}
 
-    &_img {
-        max-width: 560px;
+.three-steps {
+    background-color: $secondary;
+    background-image: url(../icons/bounce-icon.svg);
+    background-repeat: no-repeat;
+    background-position: 50% 20%;
 
-        &_small {
-            max-width: 350px;
-            max-height: 220px;
-        }
-
-        .top_left {
-            margin-left: 110px;
-            margin-bottom: 10px;
-        }
-
-        .bottom_right {
-            margin-left: 200px;
-        }
-    }
-
-    &_box {
-        background-color: $secondary;
-        width: 100%;
-        min-height: 340px;
+    &_container {
+        max-width: 1200px;
+        margin: 0 auto;
         display: flex;
         justify-content: center;
         align-items: center;
         position: relative;
-        gap: 170px;
+        padding: 85px;
 
         &_desc {
-            z-index: 2;
-            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-right: 140px;
 
             &:nth-child(3) {
                 margin-right: 0;
             }
 
-            &_icons {
+            &_box {
                 background-color: $secondary;
-                height: 60px;
-                width: 60px;
-                margin-bottom: 20px;
+                height: 100px;
+                width: 100px;
+                text-align: center;
+
+                &_icons {
+                    height: 60px;
+                    width: 60px;
+                    margin-bottom: 20px;
+                }
             }
 
             &_label {
@@ -277,16 +307,6 @@ button {
                 line-height: 26px;
                 text-transform: capitalize;
             }
-        }
-
-        &_icon-bg {
-            z-index: 1;
-            position: absolute;
-            max-width: 775px;
-            width: 100%;
-            top: 15%;
-            left: 50%;
-            transform: translate(-50%);
         }
     }
 }
