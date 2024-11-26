@@ -1,0 +1,188 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 1440px;
+
+    @media screen and (max-width: 568px) {
+        padding: 0 20px;
+    }
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+img {
+    width: 100%;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+.logo {
+    width: 200px;
+    display: inline-block;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav {
+    ul {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        list-style-type: none;
+        width: 100%;
+        gap: 10px;
+
+        @media screen and (max-width: 1280px) {
+            display: flex;
+            flex-direction: column;
+
+            li {
+                width: 100%;
+                text-align: center;
+            }
+        }
+
+        a {
+            display: block;
+            text-transform: uppercase;
+            color: #3b3b3b;
+            text-decoration: none;
+            cursor: pointer;
+
+            // Want to change the anchor and not the list area because the anchor is a clickable area
+            @media screen and (max-width: 1280px) {
+                padding: 10px 0;
+                border-bottom: 1px solid rgba($color: #3b3b3b, $alpha: 0.2);
+            }
+        }
+    }
+
+    @media screen and (max-width: 1280px) {
+        transform: translateX(1000px);
+        // display: none;
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        width: 75%;
+        background-color: #fff;
+        border-left: 1px solid rgba($color: #3b3b3b, $alpha: 0.2);
+        top: 48px;
+        transition: all 0.5s ease;
+        z-index: 1;
+
+        &.open {
+            // display: block;
+            transform: translateX(0);
+        }
+    }
+}
+
+.hamburger {
+    display: block;
+    width: 1.5rem;
+    height: 1.25rem;
+    background-color: transparent;
+    border: none;
+    position: relative;
+    cursor: pointer;
+
+    &.open {
+        &::after {
+            content: "";
+            display: block;
+            position: fixed;
+            left: 0;
+            width: 100%;
+            top: 0;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.5);
+        }
+
+        .divider {
+            background: #fff;
+            transition: all 0.3s ease;
+            z-index: 1;
+
+            &::after,
+            &::before {
+                top: 50%;
+                bottom: auto;
+            }
+
+            &::before {
+                transform: rotate(45deg);
+            }
+
+            &::after {
+                transform: rotate(-45deg);
+            }
+        }
+    }
+
+    @media screen and (min-width: 1280px) {
+        display: none;
+    }
+
+    .divider {
+        display: block;
+        width: 100%;
+        height: 2px;
+        background-color: #000;
+
+        &::before,
+        &::after {
+            content: "";
+            width: 100%;
+            display: block;
+            height: 2px;
+            background-color: #000;
+            position: absolute;
+            transition: all 0.3s ease;
+        }
+
+        &::before {
+            top: 0;
+            left: 0;
+        }
+        &::after {
+            bottom: 0;
+            left: 0;
+        }
+    }
+}
+
+// //Large
+// @media screen and (min-width: 1024px) {
+//     body {
+//         background-color: lightcoral;
+//     }
+// }
+
+// // Medium
+// @media screen and (max-width: 1024px) {
+//     body {
+//         background-color: lightcoral;
+//     }
+// }
+
+// // Small
+// @media screen and (max-width: 568px) {
+//     body {
+//         background-color: lightcoral;
+//     }
+// }
