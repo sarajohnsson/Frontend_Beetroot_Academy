@@ -70,7 +70,7 @@ a {
   font-weight: 400;
   margin-bottom: 185px;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1280px) {
   .hero_container {
     height: 100%;
     display: flex;
