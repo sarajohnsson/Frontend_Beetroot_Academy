@@ -20,6 +20,11 @@ a {
   color: inherit;
 }
 
+button {
+  cursor: pointer;
+  border: none;
+}
+
 .page_wrapper {
   max-width: 1160px;
   margin: 0 auto;
@@ -62,9 +67,33 @@ a {
   text-decoration: underline;
   text-underline-offset: 0.5rem;
 }
+.header .navigation a {
+  display: block;
+  text-transform: uppercase;
+}
 @media screen and (max-width: 768px) {
   .header .navigation {
-    display: none;
+    transform: translateX(1000px);
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: 75%;
+    background-color: #000;
+    border-left: 1px solid rgba(59, 59, 59, 0.2);
+    top: 0px;
+    transition: all 0.5s ease;
+    z-index: 1;
+  }
+  .header .navigation ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0 auto;
+    max-width: 50%;
+    padding-top: 75px;
+  }
+  .header .navigation.open {
+    transform: translateX(0);
   }
 }
 
@@ -154,5 +183,45 @@ a {
 @media screen and (max-width: 1280px) {
   .scroller {
     display: none;
+  }
+}
+
+.dots_container {
+  position: relative;
+  display: flex;
+  background-color: transparent;
+  height: 42px;
+  width: 42px;
+}
+.dots_container_divider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+}
+.dots_container_divider_icon {
+  height: 8px;
+  width: 8px;
+  background-color: #242635;
+  border-radius: 50%;
+}
+.dots_container.open .first,
+.dots_container.open .middle,
+.dots_container.open .last {
+  transition: all 0.3s ease;
+  position: absolute;
+  height: 8px;
+  width: 2rem;
+  border-radius: 11rem;
+}
+@media screen and (max-width: 1280px) {
+  .dots_container {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  .dots_container {
+    display: block;
+    z-index: 2;
   }
 }

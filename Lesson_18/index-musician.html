@@ -36,6 +36,20 @@
                                 </li>
                             </ul>
                         </nav>
+
+                        <button class="dots_container">
+                            <div class="dots_container_divider">
+                                <div
+                                    class="dots_container_divider_icon first"
+                                ></div>
+                                <div
+                                    class="dots_container_divider_icon middle"
+                                ></div>
+                                <div
+                                    class="dots_container_divider_icon last"
+                                ></div>
+                            </div>
+                        </button>
                     </header>
                     <h1 class="hero_container_desc_title">Musician</h1>
                     <p class="hero_container_desc__p1">
@@ -69,5 +83,18 @@
                 </div>
             </div>
         </div>
+
+        <script>
+            document
+                .querySelector(".dots_container")
+                .addEventListener("click", () => {
+                    document
+                        .querySelector(".navigation")
+                        .classList.toggle("open");
+                    document
+                        .querySelector(".dots_container")
+                        .classList.toggle("open");
+                });
+        </script>
     </body>
 </html>
