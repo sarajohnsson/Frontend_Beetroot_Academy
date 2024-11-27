@@ -24,6 +24,18 @@ a {
   max-width: 1160px;
   margin: 0 auto;
 }
+@media screen and (max-width: 1280px) {
+  .page_wrapper {
+    max-width: 617px;
+    padding-top: 45px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .page_wrapper {
+    max-width: 320px;
+    padding-top: 15px;
+  }
+}
 
 .col {
   height: 100%;
@@ -39,19 +51,25 @@ a {
   width: 100%;
   margin-bottom: 185px;
 }
-.header ul {
+.header .navigation ul {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 30px;
 }
-.header ul a:hover {
+.header .navigation ul a:hover {
   color: #323651;
   text-decoration: underline;
   text-underline-offset: 0.5rem;
 }
+@media screen and (max-width: 768px) {
+  .header .navigation {
+    display: none;
+  }
+}
 
 .hero_container_desc {
+  display: flex;
   flex-direction: column;
   align-items: start;
   justify-content: center;
@@ -63,12 +81,53 @@ a {
   font-weight: 500;
   margin-bottom: 45px;
 }
+@media screen and (max-width: 1280px) {
+  .hero_container_desc_title {
+    font-size: 72px;
+    line-height: 82.8x;
+    letter-spacing: -1.6px;
+    margin-bottom: 23px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .hero_container_desc_title {
+    font-size: 36px;
+    line-height: 39.6px;
+    letter-spacing: -0.8px;
+    margin-bottom: 15px;
+  }
+}
 .hero_container_desc__p1 {
   font-family: "Source Sans 3", sans-serif;
   font-size: 22px;
   line-height: 34px;
   font-weight: 400;
   margin-bottom: 185px;
+}
+@media screen and (max-width: 1280px) {
+  .hero_container_desc__p1 {
+    max-width: 575px;
+    font-size: 22px;
+    line-height: 33px;
+    margin-bottom: 45px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .hero_container_desc__p1 {
+    max-width: 211px;
+    font-size: 12px;
+    line-height: 18px;
+    margin-bottom: 0px;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .hero_container_desc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
 }
 @media screen and (min-width: 1280px) {
   .hero_container {
@@ -78,9 +137,22 @@ a {
     gap: 160px;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1280px) {
   .hero_container {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.scroller_arrow_icon {
+  height: 60px;
+  width: 60px;
+  cursor: pointer;
+}
+@media screen and (max-width: 1280px) {
+  .scroller {
+    display: none;
   }
 }
