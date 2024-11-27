@@ -84,16 +84,16 @@ button {
     transition: all 0.5s ease;
     z-index: 1;
   }
-  .header .navigation ul {
+  .header .navigation.open {
+    transform: translateX(0);
+  }
+  .header .navigation.open ul {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     margin: 0 auto;
     max-width: 50%;
     padding-top: 75px;
-  }
-  .header .navigation.open {
-    transform: translateX(0);
   }
 }
 
@@ -215,6 +215,11 @@ button {
   border-radius: 11rem;
 }
 @media screen and (max-width: 1280px) {
+  .dots_container {
+    display: none;
+  }
+}
+@media screen and (min-width: 1280px) {
   .dots_container {
     display: none;
   }
