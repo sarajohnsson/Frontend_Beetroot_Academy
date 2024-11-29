@@ -1,0 +1,47 @@
+.container {
+    width: 100%;
+    // max-width: 1440px;
+
+    margin: 0 auto;
+    background-color: lightblue;
+
+    // for tablet
+    @media screen and (min-width: 768px) {
+        width: 768px;
+    }
+
+    @media screen and (min-width: 1024px) {
+        width: 968px;
+    }
+
+    @media screen and (min-width: 1440px) {
+        width: 1280px;
+    }
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    p {
+        &:first-child {
+            width: 35%;
+        }
+
+        &:last-child {
+            width: 70%;
+        }
+    }
+
+    @media screen and (max-width: 568px) {
+        flex-wrap: wrap;
+
+        p.copy_text {
+            &:first-child,
+            &:last-child {
+                width: 100%;
+            }
+        }
+    }
+}

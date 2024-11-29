@@ -1,0 +1,63 @@
+.marketers {
+    font-size: 0;
+
+    &_section_container {
+        max-width: 1126px;
+        width: 90%;
+        margin: 0 auto;
+        margin-bottom: 30px;
+
+        &_col {
+            display: inline-block;
+            vertical-align: middle;
+
+            &:first-child {
+                margin-right: 100px;
+            }
+
+            &:last-child,
+            &:first-child {
+                max-width: 50%;
+            }
+
+            &_img {
+                max-width: 525px;
+                width: 100%;
+            }
+
+            &_desc_container {
+                max-width: 486px;
+            }
+        }
+    }
+}
+
+// .marketers_section_container {
+//     max-width: 1126px;
+//     width: 90%;
+//     margin: 0 auto;
+//     margin-bottom: 30px;
+// }
+
+// .marketers_section_container_col {
+//     display: inline-block;
+//     vertical-align: middle;
+// }
+
+// .marketers_section_container_col:first-child {
+//     max-width: 50%;
+//     margin-right: 100px;
+// }
+
+// .marketers_section_container_col:last-child {
+//     max-width: 50%;
+// }
+
+// .marketers_desc_container {
+//     max-width: 486px;
+// }
+
+// .marketers_img {
+//     max-width: 525px;
+//     width: 100%;
+// }

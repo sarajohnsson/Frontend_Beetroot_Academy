@@ -1,0 +1,40 @@
+.container {
+  width: 100%;
+  margin: 0 auto;
+  background-color: lightblue;
+}
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .container {
+    width: 968px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .container {
+    width: 1280px;
+  }
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.row p:first-child {
+  width: 35%;
+}
+.row p:last-child {
+  width: 70%;
+}
+@media screen and (max-width: 568px) {
+  .row {
+    flex-wrap: wrap;
+  }
+  .row p.copy_text:first-child, .row p.copy_text:last-child {
+    width: 100%;
+  }
+}
