@@ -49,13 +49,16 @@ button {
     background-position: center;
     background-size: cover;
     object-fit: cover;
-    // min-height: 100vh;
 
     &_container {
         max-width: 1200px;
         margin: 0 auto;
         padding-top: 264px;
         padding-bottom: 132px;
+
+        @media screen and (max-width: 1024px) {
+            max-width: 968px;
+        }
 
         &_title {
             text-align: center;
@@ -162,6 +165,17 @@ button {
         display: flex;
         justify-content: space-between;
 
+        @media screen and (max-width: 1024px) {
+            max-width: 968px;
+        }
+
+        @media screen and (max-width: 390px) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
         &_col {
             display: flex;
             justify-content: flex-end;
@@ -213,6 +227,13 @@ button {
     }
 }
 
+.hamburger {
+    border: none;
+    background-color: #232323;
+    width: 2rem;
+    height: 2.5rem;
+}
+
 .cta {
     background-image: url(../img/section1-bg.jpg);
     background-repeat: no-repeat;
@@ -227,6 +248,15 @@ button {
         display: flex;
         justify-content: center;
         align-items: center;
+
+        @media screen and (max-width: 1024px) {
+            max-width: 968px;
+        }
+
+        @media screen and (max-width: 390px) {
+            display: flex;
+            flex-direction: column;
+        }
 
         &_desc {
             max-width: 560px;
@@ -291,6 +321,10 @@ button {
     background-repeat: no-repeat;
     background-position: 50% 20%;
 
+    @media screen and (max-width: 390px) {
+        background-image: none;
+    }
+
     &_container {
         max-width: 1200px;
         margin: 0 auto;
@@ -299,6 +333,18 @@ button {
         align-items: center;
         position: relative;
         padding: 85px;
+
+        @media screen and (max-width: 1024px) {
+            max-width: 968px;
+        }
+
+        @media screen and (max-width: 390px) {
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
 
         &_desc {
             display: flex;
@@ -329,6 +375,16 @@ button {
                 font-size: 36px;
                 line-height: 26px;
                 text-transform: capitalize;
+
+                @media screen and (max-width: 390px) {
+                    font-size: 22px;
+                }
+            }
+
+            @media screen and (max-width: 390px) {
+                text-align: center;
+                margin: 0;
+                padding: 1rem 0;
             }
         }
     }
@@ -336,6 +392,10 @@ button {
 
 .booking {
     &_container {
+        @media screen and (max-width: 1024px) {
+            max-width: 968px;
+        }
+
         &_top {
             background-image: url(../img/section2-bg.jpg);
             background-repeat: no-repeat;
@@ -443,9 +503,23 @@ button {
         &_box {
             display: flex;
 
+            @media screen and (max-width: 768px) {
+                display: flex;
+                flex-direction: column;
+            }
+
             &_desc {
                 background-color: $secondary;
                 padding: 50px 25px 40px 62px;
+                display: flex;
+
+                @media screen and (max-width: 1024px) {
+                    max-height: 247px;
+                    margin: 0 auto;
+                    padding: 25px 12.5px 20px 31px;
+                    display: flex;
+                    flex-direction: column;
+                }
 
                 &__p1 {
                     font-family: "Josefin Sans", sans-serif;
@@ -453,6 +527,10 @@ button {
                     line-height: 26px;
                     text-transform: uppercase;
                     margin-bottom: 8px;
+
+                    @media screen and (max-width: 1024px) {
+                        font-size: 16px;
+                    }
                 }
 
                 &__p2 {
@@ -464,14 +542,22 @@ button {
                         font-size: 36px;
                         color: $primary;
                     }
+
+                    @media screen and (max-width: 1024px) {
+                        font-size: 12px;
+                    }
                 }
             }
 
-            img {
-                min-width: 445px;
-                height: 100%;
+            &_img {
                 width: 100%;
-                object-fit: cover;
+                height: 100%;
+
+                &_backpacker {
+                    width: 100%;
+                    height: 247px;
+                    object-fit: cover;
+                }
             }
         }
     }
@@ -491,6 +577,10 @@ button {
         align-items: center;
         max-width: 1200px;
         margin: 0 auto;
+
+        @media screen and (max-width: 1024px) {
+            max-width: 968px;
+        }
 
         &__title {
             font-family: "Josefin Sans", sans-serif;
