@@ -35,8 +35,14 @@
                     <div class="hero_container_search_input">
                         <input
                             type="text"
+                            id="destination"
+                            name="destination"
                             placeholder="Search your travel destination"
                         />
+                        <label
+                            for="destination"
+                            class="hero_container_search_label"
+                        ></label>
                         <button class="hero_container_search_input_btn">
                             Search
                             <img
@@ -282,5 +288,18 @@
                 </footer>
             </main>
         </div>
+
+        <script>
+            document
+                .querySelector(".hamburger")
+                .addEventListener("click", () => {
+                    document
+                        .querySelector(".header_container_col_nav")
+                        .classList.toggle("open");
+                    document
+                        .querySelector(".hamburger")
+                        .classList.toggle("open");
+                });
+        </script>
     </body>
 </html>

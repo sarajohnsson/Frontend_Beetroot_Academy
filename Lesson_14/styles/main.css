@@ -78,7 +78,7 @@ button {
   margin-bottom: 11px;
   text-transform: uppercase;
 }
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 393px) {
   .hero_container_title {
     font-size: 2.5rem;
   }
@@ -115,17 +115,25 @@ button {
   width: 100%;
   max-width: 503px;
   border: none;
-  padding: 20px 115px;
+  padding: 20px 110px;
   font-family: "Josefin Sans", sans-serif;
   font-size: 14px;
   letter-spacing: 2.8px;
   color: #999999;
   text-transform: capitalize;
 }
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 393px) {
   .hero_container_search_input input {
-    padding: 20px 58px;
+    padding: 20px 55px;
   }
+}
+.hero_container_search_input input[type=text]:focus {
+  outline: none;
+  background-color: #d0eeff;
+  color: #333333;
+}
+.hero_container_search_input input[type=text]:focus::placeholder {
+  color: transparent;
 }
 .hero_container_search_input_btn {
   position: relative;
@@ -205,7 +213,7 @@ button {
     align-items: center;
   }
 }
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 393px) {
   .header_container {
     display: flex;
     flex-direction: column;
@@ -226,7 +234,7 @@ button {
     align-items: center;
   }
 }
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 393px) {
   .header_container_col {
     display: flex;
     flex-direction: column;
@@ -249,7 +257,7 @@ button {
   display: inline-block;
   vertical-align: middle;
 }
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 393px) {
   .header_container_col_logo {
     margin-bottom: 32px;
   }
@@ -264,21 +272,21 @@ button {
   line-height: 26px;
   text-transform: uppercase;
 }
-.header_container_col_nav_list_links:hover {
+.header_container_col_nav_list a:hover {
   text-decoration: underline;
   text-underline-offset: 0.75rem;
-  text-decoration-color: #284ffd;
+  text-decoration-color: #333333;
+  color: #333333;
 }
-.header_container_col_nav_list_links:active {
-  color: #284ffd;
+.header_container_col_nav_list a:active {
+  color: #333333;
 }
 @media screen and (max-width: 768px) {
   .header_container_col_nav_list {
-    padding: 32px 0;
     text-align: center;
   }
 }
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 568px) {
   .header_container_col_nav_list {
     display: flex;
     flex-direction: column;
@@ -288,23 +296,86 @@ button {
 }
 @media screen and (max-width: 768px) {
   .header_container_col_nav {
+    display: none;
+  }
+  .header_container_col_nav.open {
+    visibility: visible;
+    opacity: 1;
+    padding-top: 32px;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
   }
 }
+@media screen and (max-width: 393px) {
+  .header_container_col_nav {
+    display: none;
+  }
+  .header_container_col_nav.open {
+    display: block;
+  }
+}
 
 .hamburger {
   border: none;
-  background-color: #232323;
+  position: relative;
+  cursor: pointer;
+  background-color: transparent;
   width: 2rem;
-  height: 2.5rem;
+  height: 1.5rem;
 }
-@media screen and (min-width: 768px) {
+.hamburger.open .divider {
+  background-color: #5474fd;
+  transition: all 0.3s ease;
+  z-index: 1;
+}
+.hamburger.open .divider::before, .hamburger.open .divider::after {
+  top: 50%;
+  bottom: auto;
+}
+.hamburger.open .divider::before {
+  transform: rotate(45deg);
+}
+.hamburger.open .divider::after {
+  transform: rotate(-45deg);
+}
+@media screen and (min-width: 1024px) {
   .hamburger {
     display: none;
   }
+}
+@media screen and (max-width: 1024px) {
+  .hamburger {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+}
+.hamburger .divider {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #333333;
+}
+.hamburger .divider::before, .hamburger .divider::after {
+  content: "";
+  width: 100%;
+  display: block;
+  height: 2px;
+  background-color: #333333;
+  position: absolute;
+}
+.hamburger .divider::before {
+  top: 0;
+  left: 0;
+}
+.hamburger .divider::after {
+  bottom: 0;
+  left: 0;
 }
 
 .cta {
@@ -336,7 +407,7 @@ button {
     align-items: center;
   }
 }
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 393px) {
   .cta_container {
     display: flex;
     flex-direction: column;
@@ -375,7 +446,7 @@ button {
     font-size: 32px;
   }
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 768px) {
   .cta_container_desc_title {
     font-size: 28px;
   }
@@ -403,7 +474,7 @@ button {
   background-color: #284ffd;
   transition: all 0.3s ease;
 }
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 393px) {
   .cta_container_desc_btn {
     padding: 8px 20px;
   }
@@ -420,7 +491,7 @@ button {
   text-align: right;
   margin-bottom: 10px;
 }
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 393px) {
   .cta_container_img {
     display: flex;
     flex-direction: column;
@@ -449,7 +520,7 @@ button {
     background-image: none;
   }
 }
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 393px) {
   .three-steps {
     background-image: none;
   }
@@ -477,7 +548,7 @@ button {
     align-items: center;
   }
 }
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 393px) {
   .three-steps_container {
     margin: 0 auto;
     display: flex;
@@ -522,7 +593,7 @@ button {
     font-size: 24px;
   }
 }
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 393px) {
   .three-steps_container_desc_label {
     font-size: 22px;
   }
@@ -534,7 +605,7 @@ button {
     padding: 1rem 0;
   }
 }
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 393px) {
   .three-steps_container_desc {
     text-align: center;
     margin: 0;
@@ -585,7 +656,7 @@ button {
     max-width: 90%;
   }
 }
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 393px) {
   .booking_container_bottom_box {
     text-align: center;
   }
@@ -630,7 +701,7 @@ button {
   background-color: #284ffd;
   transition: all 0.3s ease;
 }
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 393px) {
   .desc_btn {
     padding: 10px 32.5px;
   }
@@ -664,7 +735,7 @@ button {
   margin-bottom: 90px;
   text-align: center;
 }
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 393px) {
   .testimonials_container__title {
     font-size: 32px;
     text-align: center;
