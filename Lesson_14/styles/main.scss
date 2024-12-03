@@ -747,6 +747,10 @@ button {
         align-items: center;
         padding: 130px 0 200px 0;
 
+        @media (min-width: 1024px) and (max-width: 1440px) {
+            max-width: 90%;
+        }
+
         @media screen and (max-width: 1024px) {
             max-width: 90%;
         }
@@ -777,6 +781,10 @@ button {
                 padding: 50px 25px 40px 62px;
                 display: flex;
                 flex-direction: column;
+
+                @media (min-width: 768px) and (max-width: 1200px) {
+                    width: 85%;
+                }
 
                 @media screen and (max-width: 768px) {
                     margin: 0 auto;
