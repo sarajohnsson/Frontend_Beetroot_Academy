@@ -1,0 +1,63 @@
+$title-color: #2f281e;
+$text-color: #544837;
+$primary-color: #ff9900;
+$nav-color: #22343d;
+$btn-color: #bcd0e5;
+
+.hero {
+    margin-bottom: 120px;
+
+    &_container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 65px;
+
+        &_desc {
+            display: flex;
+            flex-direction: column;
+            max-width: 465px;
+
+            &_title {
+                font-size: 44px;
+                font-weight: 700;
+            }
+
+            &__p {
+                font-size: 18px;
+                line-height: 28px;
+                margin-bottom: 30px;
+            }
+
+            &_cta {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                gap: 30px;
+
+                &_link {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 8px;
+
+                    a {
+                        font-size: 16px;
+                        font-weight: 600;
+                        color: $primary-color;
+                        text-decoration: underline;
+                    }
+
+                    i {
+                        font-size: 20px;
+                        color: $primary-color;
+                    }
+                }
+            }
+        }
+
+        img {
+            max-width: 585px;
+        }
+    }
+}

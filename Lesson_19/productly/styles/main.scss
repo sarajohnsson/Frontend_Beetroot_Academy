@@ -1,0 +1,128 @@
+// --- 01 TYPOGRAPHY SYSTEM
+
+// - FONT SIZE SYSTEM (px)
+// 10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+// - FONT WEIGHTS
+// DEFAULT: 400
+
+// - LINE HEIGHTS
+// DEFAULT: 1
+
+// - SPACING SYSTEM (px)
+// 2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+$title-color: #2f281e;
+$text-color: #544837;
+$primary-color: #ff9900;
+$nav-color: #22343d;
+$btn-color: #bcd0e5;
+
+@use "hero";
+@use "features";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    color: $text-color;
+    font-size: 0;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    width: 100%;
+}
+
+button {
+    outline: none;
+    background: none;
+    border: none;
+}
+
+.page_wrapper {
+    max-width: 1120px;
+    margin: 0 auto;
+}
+
+.header {
+    padding-top: 20px;
+    font-size: 14px;
+    line-height: 28px;
+    color: $nav-color;
+    margin-bottom: 30px;
+
+    &_container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        &_col {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+
+            &_logo {
+                display: flex;
+                align-items: center;
+                height: 100%;
+                max-width: 175px;
+            }
+
+            &_nav {
+                margin-right: 60px;
+                &_item {
+                    display: flex;
+                    align-items: center;
+                    gap: 32px;
+                }
+            }
+        }
+    }
+}
+
+.btn {
+    margin-right: 12px;
+    padding: 16px 20px;
+    border: 1px solid $btn-color;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: capitalize;
+
+    &:last-child {
+        margin-right: 0;
+    }
+
+    &:hover {
+        background-color: #bcd0e5;
+        border: 1px solid #bcd0e5;
+        transition: all 0.3s ease-in-out;
+    }
+}
+
+.btn.accent {
+    color: #fff;
+    background-color: $primary-color;
+    border-color: $primary-color;
+    margin-right: 0;
+
+    &:hover {
+        background-color: #e67700;
+        border-color: #e67700;
+        transition: all 0.3s ease-in-out;
+    }
+}
