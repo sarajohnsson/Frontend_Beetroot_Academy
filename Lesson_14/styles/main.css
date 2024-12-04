@@ -627,6 +627,11 @@ button {
   display: flex;
   justify-content: flex-start;
 }
+@media (min-width: 1024px) and (max-width: 1280px) {
+  .booking_container_top_box {
+    max-width: 90%;
+  }
+}
 @media screen and (max-width: 1024px) {
   .booking_container_top_box {
     max-width: 90%;
@@ -650,6 +655,11 @@ button {
   padding: 230px 0 100px 0;
   display: flex;
   justify-content: flex-end;
+}
+@media (min-width: 1024px) and (max-width: 1280px) {
+  .booking_container_bottom_box {
+    max-width: 90%;
+  }
 }
 @media screen and (max-width: 1024px) {
   .booking_container_bottom_box {
@@ -782,6 +792,11 @@ button {
   text-transform: uppercase;
   margin-bottom: 8px;
 }
+@media (min-width: 768px) and (max-width: 1200px) {
+  .testimonials_container_box_desc__p1 {
+    font-size: 16px;
+  }
+}
 @media screen and (max-width: 1024px) {
   .testimonials_container_box_desc__p1 {
     font-size: 16px;
@@ -795,6 +810,11 @@ button {
 .testimonials_container_box_desc__p2 i {
   font-size: 36px;
   color: #5474fd;
+}
+@media (min-width: 768px) and (max-width: 1200px) {
+  .testimonials_container_box_desc__p2 {
+    font-size: 12px;
+  }
 }
 @media screen and (max-width: 1024px) {
   .testimonials_container_box_desc__p2 {

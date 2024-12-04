@@ -10,6 +10,7 @@
 .hero_container_desc {
   display: flex;
   flex-direction: column;
+  width: 100%;
   max-width: 465px;
 }
 .hero_container_desc_title {
@@ -43,6 +44,7 @@
   font-size: 20px;
   color: #ff9900;
 }
-.hero_container img {
+.hero_container_img {
+  width: 100%;
   max-width: 585px;
 }

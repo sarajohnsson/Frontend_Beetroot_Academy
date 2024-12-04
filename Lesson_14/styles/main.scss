@@ -644,6 +644,10 @@ button {
                 display: flex;
                 justify-content: flex-start;
 
+                @media (min-width: 1024px) and (max-width: 1280px) {
+                    max-width: 90%;
+                }
+
                 @media screen and (max-width: 1024px) {
                     max-width: 90%;
                 }
@@ -667,6 +671,10 @@ button {
                 padding: 230px 0 100px 0;
                 display: flex;
                 justify-content: flex-end;
+
+                @media (min-width: 1024px) and (max-width: 1280px) {
+                    max-width: 90%;
+                }
 
                 @media screen and (max-width: 1024px) {
                     max-width: 90%;
@@ -801,6 +809,10 @@ button {
                     text-transform: uppercase;
                     margin-bottom: 8px;
 
+                    @media (min-width: 768px) and (max-width: 1200px) {
+                        font-size: 16px;
+                    }
+
                     @media screen and (max-width: 1024px) {
                         font-size: 16px;
                     }
@@ -814,6 +826,10 @@ button {
                     i {
                         font-size: 36px;
                         color: $primary;
+                    }
+
+                    @media (min-width: 768px) and (max-width: 1200px) {
+                        font-size: 12px;
                     }
 
                     @media screen and (max-width: 1024px) {
