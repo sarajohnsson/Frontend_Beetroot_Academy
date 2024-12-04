@@ -134,6 +134,7 @@ button {
 }
 .hero_container_search_input input[type=text]:hover {
   outline-style: solid;
+  outline-width: 1px;
   outline-color: #284ffd;
 }
 .hero_container_search_input input[type=text]:focus::placeholder {
