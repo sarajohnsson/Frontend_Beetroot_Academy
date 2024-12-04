@@ -2,6 +2,7 @@
 
 $primary: #5474fd;
 $accent: #284ffd;
+// $contrast: #ff6363;
 $secondary: #333333;
 $dark: #232323;
 $light_grey: #999999;
@@ -124,6 +125,11 @@ button {
                 outline: none;
                 background-color: $focus;
                 color: $secondary;
+            }
+
+            input[type="text"]:hover {
+                outline-style: solid;
+                outline-color: $accent;
             }
 
             input[type="text"]:focus::placeholder {

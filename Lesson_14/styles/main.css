@@ -132,6 +132,10 @@ button {
   background-color: #d0eeff;
   color: #333333;
 }
+.hero_container_search_input input[type=text]:hover {
+  outline-style: solid;
+  outline-color: #284ffd;
+}
 .hero_container_search_input input[type=text]:focus::placeholder {
   color: transparent;
 }

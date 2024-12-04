@@ -1,0 +1,86 @@
+$title-color: #2f281e;
+$text-color: #544837;
+$primary-color: #ff9900;
+$nav-color: #22343d;
+$btn-color: #bcd0e5;
+
+.products {
+    &_container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 110px;
+        margin-bottom: 120px;
+
+        &_desc {
+            max-width: 485px;
+
+            &_pre-title {
+                color: $text-color;
+                font-size: 16px;
+                line-height: 26px;
+                font-weight: 500;
+                margin-bottom: 8px;
+            }
+
+            &_title {
+                color: $title-color;
+                font-size: 36px;
+                line-height: 26px;
+                font-weight: 700;
+                margin-bottom: 30px;
+            }
+
+            &_subtitle {
+                color: $title-color;
+                font-size: 16px;
+                line-height: 26px;
+                font-weight: 700;
+                margin-bottom: 8px;
+            }
+
+            &__p2 {
+                color: $text-color;
+                font-size: 16px;
+                line-height: 26px;
+                font-weight: 500;
+                margin-bottom: 30px;
+            }
+
+            &_img {
+                max-width: 525px;
+            }
+
+            &_todo {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                gap: 30px;
+                margin-bottom: 30px;
+
+                &_bcg {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    min-height: 35px;
+                    min-width: 35px;
+                    border-radius: 14px;
+                    background-color: $primary-color;
+
+                    &_icon {
+                        width: 16px;
+                        height: 12px;
+                    }
+                }
+
+                &__p1 {
+                    font-size: 16px;
+                    line-height: 26px;
+                    font-weight: 500;
+                    color: $text-color;
+                }
+            }
+        }
+    }
+}

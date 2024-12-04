@@ -1,3 +1,6 @@
+.features {
+  margin-bottom: 120px;
+}
 .features_container {
   display: flex;
   flex-direction: column;
