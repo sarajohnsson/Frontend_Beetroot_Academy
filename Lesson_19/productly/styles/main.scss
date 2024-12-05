@@ -17,6 +17,7 @@ $text-color: #544837;
 $primary-color: #ff9900;
 $nav-color: #22343d;
 $btn-color: #bcd0e5;
+$links: #173a56;
 
 @use "hero";
 @use "features";
@@ -56,47 +57,79 @@ button {
 }
 
 .page_wrapper {
-    max-width: 1120px;
+    width: 100%;
     margin: 0 auto;
 }
 
 .header {
     padding-top: 20px;
-    font-size: 14px;
-    line-height: 28px;
-    color: $nav-color;
+    min-height: 50px;
     margin-bottom: 30px;
 
     &_container {
+        max-width: 1120px;
+        margin: 0 auto;
+
         display: flex;
         align-items: center;
         justify-content: space-between;
 
-        &_col {
-            display: flex;
-            justify-content: flex-start;
-            align-items: center;
+        font-size: 14px;
+        line-height: 28px;
+        color: $nav-color;
 
-            &_logo {
+        @media screen and (max-width: 1200px) {
+            max-width: 90%;
+        }
+
+        &_logo {
+            min-width: 175px;
+
+            &_img {
+                height: 100%;
                 display: flex;
                 align-items: center;
-                height: 100%;
-                max-width: 175px;
             }
+        }
+
+        &_action {
+            display: flex;
+            min-height: 50px;
 
             &_nav {
                 margin-right: 60px;
+
+                @media screen and (max-width: 1024px) {
+                    margin-right: 0;
+                    margin-bottom: 12px;
+                }
+
                 &_item {
+                    height: 100%;
                     display: flex;
                     align-items: center;
                     gap: 32px;
+
+                    a:hover {
+                        color: $primary-color;
+                        text-decoration: underline;
+                        text-underline-offset: 0.5rem;
+                    }
                 }
+            }
+
+            @media screen and (max-width: 1024px) {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
             }
         }
     }
 }
 
 .btn {
+    min-width: 100px;
     margin-right: 12px;
     padding: 16px 20px;
     border: 1px solid $btn-color;

@@ -8,10 +8,17 @@ $btn-color: #bcd0e5;
     margin-bottom: 120px;
 
     &_container {
+        max-width: 1120px;
+        margin: 0 auto;
+
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+
+        @media screen and (max-width: 1200px) {
+            max-width: 90%;
+        }
 
         &_title {
             font-size: 36px;
@@ -27,6 +34,17 @@ $btn-color: #bcd0e5;
             align-items: center;
             gap: 80px;
             margin-bottom: 60px;
+
+            // @media screen and (min-width: 1200px) {
+            //     max-width: 90%;
+            // }
+
+            @media screen and (max-width: 1200px) {
+                max-width: 90%;
+                display: grid;
+                grid-template-rows: repeat(2, 1fr);
+                grid-template-columns: repeat(2, 1fr);
+            }
 
             &_card {
                 display: flex;
