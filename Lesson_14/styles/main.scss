@@ -45,23 +45,30 @@ button {
     width: 100%;
 }
 
-// HERO SECTION
-.hero {
-    background-image: url(../img/hero-img.jpg);
+.general_container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+
+    @media screen and (max-width: 1024px) {
+        max-width: 90%;
+    }
+}
+
+.section_bg {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    object-fit: cover;
+}
+
+// HERO SECTION
+.hero {
+    background-image: url(../img/hero-img.jpg);
 
     &_container {
-        max-width: 1200px;
-        margin: 0 auto;
+        flex-direction: column;
         padding-top: 264px;
         padding-bottom: 132px;
-
-        @media screen and (max-width: 1024px) {
-            max-width: 90%;
-        }
 
         &_title {
             text-align: center;
@@ -103,10 +110,10 @@ button {
             }
 
             input {
+                width: 100%;
                 display: flex;
                 justify-content: center;
                 max-height: 63px;
-                width: 100%;
                 max-width: 503px;
                 border: none;
                 padding: 20px 110px;
@@ -138,7 +145,9 @@ button {
             }
 
             &_btn {
-                position: relative;
+                display: flex;
+                justify-content: center;
+                gap: 15px;
                 cursor: pointer;
                 background-color: $primary;
                 border: 1px solid $white;
@@ -146,7 +155,7 @@ button {
                 font-size: 14px;
                 line-height: 26px;
                 letter-spacing: 1.4px;
-                padding: 16px 38px 16px 23px;
+                padding: 15px 20px;
                 min-width: 153px;
                 color: $white;
                 text-transform: uppercase;
@@ -157,10 +166,6 @@ button {
                 }
 
                 &_icon {
-                    position: absolute;
-                    top: 30%;
-                    left: 83%;
-                    transform: translate(-50%);
                     width: 22px;
                     height: 24px;
                 }
@@ -205,15 +210,9 @@ button {
     background-color: $primary;
 
     &_container {
-        max-width: 1200px;
-        margin: 0 auto;
-        display: flex;
-        justify-content: space-between;
         padding: 32px 10px;
-
-        @media screen and (max-width: 1024px) {
-            max-width: 90%;
-        }
+        justify-content: space-between;
+        align-items: center;
 
         @media screen and (max-width: 768px) {
             display: flex;
@@ -249,9 +248,10 @@ button {
             }
 
             &_logo {
-                height: 20px;
-
                 a {
+                    display: inline-block;
+                    vertical-align: middle;
+
                     font-family: "Josefin Sans", sans-serif;
                     font-size: 24px;
                     font-weight: 700;
@@ -402,25 +402,13 @@ button {
 }
 
 // PITCH SECTION
-.cta {
+.pitch {
     background-image: url(../img/section1-bg.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    object-fit: cover;
 
     &_container {
-        max-width: 1200px;
-        margin: 0 auto;
         padding: 118px 10px;
-        display: flex;
         justify-content: center;
         align-items: center;
-
-        @media screen and (max-width: 1024px) {
-            max-width: 90%;
-            margin: 0 auto;
-        }
 
         @media screen and (max-width: 768px) {
             display: flex;
@@ -549,17 +537,11 @@ button {
     }
 
     &_container {
-        max-width: 1200px;
-        margin: 0 auto;
-        display: flex;
         justify-content: center;
         align-items: center;
         position: relative;
         padding: 85px;
-
-        @media screen and (max-width: 1024px) {
-            max-width: 90%;
-        }
+        gap: 140px;
 
         @media screen and (max-width: 768px) {
             margin: 0 auto;
@@ -582,17 +564,12 @@ button {
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            margin-right: 140px;
-
-            &:nth-child(3) {
-                margin-right: 0;
-            }
+            text-align: center;
 
             &_box {
                 background-color: $secondary;
                 height: 100px;
                 width: 100px;
-                text-align: center;
 
                 &_icons {
                     height: 60px;
@@ -637,62 +614,41 @@ button {
 // BOOKING SECTION
 .booking {
     &_container {
-        &_top {
-            background-image: url(../img/section2-bg.jpg);
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: cover;
-            object-fit: cover;
+        &_box {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            padding: 230px 0 100px 0;
 
-            &_box {
-                max-width: 1200px;
-                margin: 0 auto;
-                padding: 230px 0 100px 0;
-                display: flex;
-                justify-content: flex-start;
-
-                @media (min-width: 1024px) and (max-width: 1280px) {
-                    max-width: 90%;
-                }
-
-                @media screen and (max-width: 1024px) {
-                    max-width: 90%;
-                }
-
-                @media screen and (max-width: 390px) {
-                    text-align: center;
-                }
+            @media (min-width: 1024px) and (max-width: 1280px) {
+                max-width: 90%;
             }
-        }
 
-        &_bottom {
-            background-image: url(../img/section3-bg.jpg);
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: cover;
-            object-fit: cover;
+            @media screen and (max-width: 1024px) {
+                max-width: 90%;
+            }
 
-            &_box {
-                max-width: 1200px;
-                margin: 0 auto;
-                padding: 230px 0 100px 0;
-                display: flex;
-                justify-content: flex-end;
-
-                @media (min-width: 1024px) and (max-width: 1280px) {
-                    max-width: 90%;
-                }
-
-                @media screen and (max-width: 1024px) {
-                    max-width: 90%;
-                }
-
-                @media screen and (max-width: 393px) {
-                    text-align: center;
-                }
+            @media screen and (max-width: 390px) {
+                text-align: center;
             }
         }
     }
+}
+
+.first_destination {
+    background-image: url(../img/section2-bg.jpg);
+}
+
+.second_destination {
+    background-image: url(../img/section3-bg.jpg);
+}
+
+.left_align {
+    justify-content: flex-start;
+}
+
+.right_align {
+    justify-content: flex-end;
 }
 
 .desc {
@@ -748,15 +704,8 @@ button {
 // TESTIMONIALS SECTION
 .testimonials {
     background-image: url(../img/section4-bg.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    object-fit: cover;
 
     &_container {
-        max-width: 1200px;
-        margin: 0 auto;
-        display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -796,6 +745,7 @@ button {
                 padding: 50px 25px 40px 62px;
                 display: flex;
                 flex-direction: column;
+                max-width: 670px;
 
                 @media (min-width: 768px) and (max-width: 1200px) {
                     width: 85%;
@@ -868,11 +818,8 @@ button {
     align-items: flex-end;
 
     &_container {
-        display: flex;
         flex-direction: column;
         align-items: center;
-        max-width: 1200px;
-        margin: 0 auto;
 
         @media screen and (max-width: 1024px) {
             max-width: 90%;

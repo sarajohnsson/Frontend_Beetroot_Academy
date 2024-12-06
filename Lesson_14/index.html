@@ -26,17 +26,13 @@
     <body>
         <div class="page_wrapper">
             <!-- HERO SECTION -->
-            <section class="hero">
-                <div class="hero_container">
+            <section class="hero section_bg">
+                <div class="hero_container general_container">
                     <h1 class="hero_container_title">Bhromaon</h1>
                     <p class="hero_container_title_subtitle">
                         Safe travel anywhere
                     </p>
                     <div class="hero_container_search_input">
-                        <label
-                            for="destination"
-                            class="hero_container_search_label"
-                        ></label>
                         <input
                             type="text"
                             id="destination"
@@ -54,9 +50,9 @@
                     </div>
 
                     <div class="hero_container_scroll">
-                        <button class="hero_container_scroll_btn">
+                        <div class="hero_container_scroll_btn">
                             <a href="#main" class="scroller">Scroll down</a>
-                        </button>
+                        </div>
                         <i class="fa-solid fa-chevron-down"></i>
                     </div>
                 </div>
@@ -64,7 +60,7 @@
 
             <!-- NAVIGATION -->
             <header class="header">
-                <div class="header_container">
+                <div class="header_container general_container">
                     <div class="header_container_col">
                         <div class="header_container_col_logo">
                             <a href="#" class="header_container_col_logo_link"
@@ -114,14 +110,14 @@
             </header>
 
             <main id="main">
-                <!-- CALL TO ACTION -->
-                <section class="cta">
-                    <div class="cta_container">
-                        <div class="cta_container_desc">
-                            <h2 class="cta_container_desc_title">
+                <!-- PITCH -->
+                <section class="pitch section_bg">
+                    <div class="pitch_container general_container">
+                        <div class="pitch_container_desc">
+                            <h2 class="pitch_container_desc_title">
                                 Why choose us
                             </h2>
-                            <p class="cta_container_desc__p1">
+                            <p class="pitch_container_desc__p1">
                                 Tion and dislike men who are so beguiled and
                                 demoralized by desire by the charms of pleasure
                                 of the moment, so blinded by desire, that they
@@ -129,16 +125,16 @@
                                 and demoralized by the charms of pleasure of the
                                 moment, so blinded by desire, that.
                             </p>
-                            <button class="cta_container_desc_btn">
+                            <button class="pitch_container_desc_btn">
                                 Explore places
                             </button>
                         </div>
 
-                        <div class="cta_container_img">
-                            <div class="cta_container_img left">
+                        <div class="pitch_container_img">
+                            <div class="pitch_container_img left">
                                 <img src="./img/section1-img-1.jpg" alt="" />
                             </div>
-                            <div class="cta_container_img right">
+                            <div class="pitch_container_img right">
                                 <img src="./img/section1-img-2.jpg" alt="" />
                             </div>
                         </div>
@@ -147,7 +143,7 @@
 
                 <!-- 3 STEPS-->
                 <section class="three-steps">
-                    <div class="three-steps_container">
+                    <div class="three-steps_container general_container">
                         <div class="three-steps_container_desc">
                             <div class="three-steps_container_desc_box">
                                 <img
@@ -189,9 +185,9 @@
 
                 <!-- BOOKING SECTION -->
                 <section class="booking">
-                    <div class="booking_container_top">
-                        <div class="booking_container_top_box">
-                            <div class="booking_container_top_box_left desc">
+                    <div class="booking_container section_bg first_destination">
+                        <div class="booking_container_box left_align">
+                            <div class="booking_container_box_col desc">
                                 <p class="desc_subtitle">Spain</p>
                                 <p class="desc_title">Grand Spain Madrid</p>
                                 <p class="desc__p1">
@@ -206,9 +202,11 @@
                         </div>
                     </div>
 
-                    <div class="booking_container_bottom">
-                        <div class="booking_container_bottom_box">
-                            <div class="booking_container_bottom_box_left desc">
+                    <div
+                        class="booking_container section_bg second_destination"
+                    >
+                        <div class="booking_container_box right_align">
+                            <div class="booking_container_box_col desc">
                                 <p class="desc_subtitle">Spain</p>
                                 <p class="desc_title">Grand Spain Madrid</p>
                                 <p class="desc__p1">
@@ -225,8 +223,8 @@
                 </section>
 
                 <!-- TESTIMONIALS -->
-                <section class="testimonials">
-                    <div class="testimonials_container">
+                <section class="testimonials section_bg">
+                    <div class="testimonials_container general_container">
                         <h2 class="testimonials_container__title">
                             What our tourist say
                         </h2>
@@ -259,34 +257,32 @@
                         </div>
                     </div>
                 </section>
-
-                <!-- FOOTER -->
-                <footer class="footer">
-                    <div class="footer_container">
-                        <h2 class="footer_container__title">Bhromaon</h2>
-                        <p class="footer_container__p1">Safe travel anywhere</p>
-                        <div class="footer_container_icons">
-                            <a href="#" class="footer_container_icons_social">
-                                <i class="fa-brands fa-facebook-f"></i>
-                            </a>
-                            <a href="#" class="footer_container_icons_social">
-                                <i class="fa-brands fa-twitter"></i>
-                            </a>
-                            <a href="#" class="footer_container_icons_social">
-                                <i
-                                    class="fa-brands fa-linkedin-in highlight"
-                                ></i>
-                            </a>
-                            <a href="#" class="footer_container_icons_social">
-                                <i class="fa-brands fa-youtube"></i>
-                            </a>
-                            <a href="#" class="footer_container_icons_social">
-                                <i class="fa-brands fa-pinterest"></i>
-                            </a>
-                        </div>
-                    </div>
-                </footer>
             </main>
+
+            <!-- FOOTER -->
+            <footer class="footer">
+                <div class="footer_container general_container">
+                    <h2 class="footer_container__title">Bhromaon</h2>
+                    <p class="footer_container__p1">Safe travel anywhere</p>
+                    <div class="footer_container_icons">
+                        <a href="#" class="footer_container_icons_social">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="footer_container_icons_social">
+                            <i class="fa-brands fa-twitter"></i>
+                        </a>
+                        <a href="#" class="footer_container_icons_social">
+                            <i class="fa-brands fa-linkedin-in highlight"></i>
+                        </a>
+                        <a href="#" class="footer_container_icons_social">
+                            <i class="fa-brands fa-youtube"></i>
+                        </a>
+                        <a href="#" class="footer_container_icons_social">
+                            <i class="fa-brands fa-pinterest"></i>
+                        </a>
+                    </div>
+                </div>
+            </footer>
         </div>
 
         <script>

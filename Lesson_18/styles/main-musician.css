@@ -25,6 +25,10 @@ button {
   border: none;
 }
 
+img.hero_img {
+  width: 100%;
+}
+
 .page_wrapper {
   max-width: 1160px;
   margin: 0 auto;
@@ -51,8 +55,6 @@ button {
 }
 
 .header {
-  display: flex;
-  justify-content: flex-end;
   width: 100%;
   margin-bottom: 185px;
 }
