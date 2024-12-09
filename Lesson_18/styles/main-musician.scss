@@ -27,25 +27,28 @@ button {
 
 img.hero_img {
     width: 100%;
+
+    @media screen and (min-width: 1280px) {
+        min-width: 858px;
+    }
 }
 
 .page_wrapper {
-    max-width: 1160px;
+    max-width: 1440px;
     margin: 0 auto;
 
-    @media screen and (max-width: 1280px) {
-        max-width: 617px;
+    @media screen and (max-width: 1440px) {
+        max-width: 90%;
         padding-top: 45px;
     }
 
     @media screen and (max-width: 768px) {
-        max-width: 320px;
         padding-top: 15px;
     }
 }
 
 .col {
-    height: 100%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -54,6 +57,8 @@ img.hero_img {
 
 .header {
     width: 100%;
+    display: flex;
+    justify-content: flex-end;
     margin-bottom: 185px;
 
     .navigation {
@@ -150,7 +155,7 @@ img.hero_img {
                 max-width: 211px;
                 font-size: 12px;
                 line-height: 18px;
-                margin-bottom: 0px;
+                margin-bottom: 45px;
             }
         }
 
@@ -192,7 +197,6 @@ img.hero_img {
 
 .dots_container {
     position: relative;
-    display: flex;
     background-color: transparent;
     height: 42px;
     width: 42px;
