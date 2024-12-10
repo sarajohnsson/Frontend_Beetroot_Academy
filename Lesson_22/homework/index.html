@@ -3,9 +3,42 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./main.css" />
+
         <title>Introduction to JavaScript</title>
     </head>
     <body>
-        <script src="./introductionToJavScript.js"></script>
+        <div class="page_wrapper">
+            <section class="user_name">
+                <div class="assignment">
+                    <p id="outputText">Welcome!</p>
+                    <label for="nameText">What is your name?</label>
+                    <input id="nameText" placeholder="John Doe" />
+                    <button id="nameSubmit">Submit</button>
+                </div>
+            </section>
+
+            <section class="user_birth">
+                <div class="assignment">
+                    <p id="birthOutput">Count your age</p>
+                    <label for="birthText">What year were you born?</label>
+                    <input id="birthText" placeholder="1956" />
+                    <button id="birthSubmit">Submit</button>
+                </div>
+            </section>
+
+            <section class="square_area">
+                <div class="assignment">
+                    <p id="lengthOutput">Square area calculator</p>
+                    <label for="lengthText"
+                        >Please provide the length of your square in meters to
+                        calculate the area</label
+                    >
+                    <input id="lengthText" placeholder="2" />
+                    <button id="lengthSubmit">Submit</button>
+                </div>
+            </section>
+        </div>
+        <script src="./index.js"></script>
     </body>
 </html>
