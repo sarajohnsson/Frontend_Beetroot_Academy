@@ -54,3 +54,15 @@
 // );
 
 // 7 - The user types in a sum of bank deposits for 2 months with a yearly interest rate of 5%. The program counts the sum of interest
+const bankDeposit = parseInt(
+    prompt(
+        "Please type in a sum of bank deposit for 2 month to calculate a yearly interest rate of 5%"
+    )
+);
+
+const yearlyAmount = (bankDeposit / 2) * 12;
+const interestRate = (bankDeposit / 2) * 12 * 1.05;
+
+const sumOfInterest = interestRate - yearlyAmount;
+
+alert("The sum of interest will be " + sumOfInterest + " kr");

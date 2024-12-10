@@ -1,3 +1,5 @@
+"use strict";
+
 // 1 - Request a user’s name and display the response “Hello, [name]”.
 // const userName = prompt("What is your name ?");
 // alert("Hello " + userName);
@@ -45,4 +47,8 @@
 //         " kr left"
 // );
 // 7 - The user types in a sum of bank deposits for 2 months with a yearly interest rate of 5%. The program counts the sum of interest
-"use strict";
+var bankDeposit = parseInt(prompt("Please type in a sum of bank deposit for 2 month to calculate a yearly interest rate of 5%"));
+var yearlyAmount = bankDeposit / 2 * 12;
+var interestRate = bankDeposit / 2 * 12 * 1.05;
+var sumOfInterest = interestRate - yearlyAmount;
+alert("The sum of interest will be " + sumOfInterest + " kr");
