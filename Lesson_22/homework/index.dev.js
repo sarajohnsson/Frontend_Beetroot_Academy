@@ -44,7 +44,16 @@ document.getElementById("lengthSubmit").onclick = function () {
 //     prompt("How long do you want the drive to take in hours?")
 // );
 // alert("You need to drive at " + distanceBetween / timeToDrive + " km/h");
-// 5 - A user states a flash drive memory in GB. The program has to count how many 820MB files can be stored on this flash drive.
+
+
+var distanceBetween;
+var timeToDrive;
+
+document.getElementById("driveSpeedSubmit").onclick = function () {
+  distanceBetween = document.getElementById("cityDistanceText").value;
+  timeToDrive = document.getElementById("driveTimeText").value;
+  document.getElementById("driveSpeedOutput").textContent = "You need to drive at ".concat(distanceBetween / timeToDrive, " km/h");
+}; // 5 - A user states a flash drive memory in GB. The program has to count how many 820MB files can be stored on this flash drive.
 // const storage = parseInt(prompt("State a flash drive memory in GB"));
 // alert(
 //     "You can store an amount of " +
