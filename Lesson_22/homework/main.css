@@ -9,6 +9,11 @@ body {
   background-color: #e5e5e5;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 h1 {
   font-size: 24px;
 }
@@ -42,7 +47,6 @@ button {
   border: 1px solid #003049;
   border-radius: 4px;
   padding: 0.5rem 1rem;
-  max-width: 250px;
 }
 button:hover, button:active {
   background-color: #003049;
@@ -57,7 +61,7 @@ section {
 .page_wrapper {
   max-width: 1200px;
   margin: 0 auto;
-  padding-top: 20px;
+  padding: 60px 0;
 }
 
 .container {
@@ -66,4 +70,21 @@ section {
   justify-content: center;
   align-items: flex-start;
   gap: 20px;
+}
+
+.resetButton {
+  color: #212529;
+  font-size: 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+  background-color: #f76707;
+  border: 1px solid #d9480f;
+  border-radius: 4px;
+  padding: 1rem 1.5rem;
+  max-width: fit-content;
+}
+.resetButton:hover, .resetButton:active {
+  background-color: #d9480f;
+  color: #e5e5e5;
+  transition: all 0.3s ease;
 }

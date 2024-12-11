@@ -7,7 +7,7 @@ var userName;
 
 document.getElementById("nameSubmit").onclick = function () {
   userName = document.getElementById("nameText").value;
-  document.getElementById("outputText").textContent = "Hello ".concat(userName, "!");
+  document.getElementById("nameOutput").textContent = "Hello ".concat(userName, "!");
   console.log(userName);
 }; // 2 - Request a user’s year of birth, count his age, and display the result. Store the current year as a constant.
 // const yearOfBirth = prompt("What year were you born? Including millenia");

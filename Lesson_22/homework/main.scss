@@ -3,6 +3,8 @@ $secondary: #003049;
 $dark: #212529;
 $shadow: #495057;
 $light: #e5e5e5;
+$contrast: #f76707;
+$contrast-dark: #d9480f;
 
 * {
     margin: 0;
@@ -13,6 +15,11 @@ $light: #e5e5e5;
 body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: $light;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
 }
 
 h1 {
@@ -48,7 +55,6 @@ button {
     border: 1px solid $secondary;
     border-radius: 4px;
     padding: 0.5rem 1rem;
-    max-width: 250px;
 
     &:hover,
     &:active {
@@ -65,7 +71,7 @@ section {
 .page_wrapper {
     max-width: 1200px;
     margin: 0 auto;
-    padding-top: 20px;
+    padding: 60px 0;
 }
 
 .container {
@@ -74,4 +80,23 @@ section {
     justify-content: center;
     align-items: flex-start;
     gap: 20px;
+}
+
+.resetButton {
+    color: $dark;
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+    background-color: $contrast;
+    border: 1px solid $contrast-dark;
+    border-radius: 4px;
+    padding: 1rem 1.5rem;
+    max-width: fit-content;
+
+    &:hover,
+    &:active {
+        background-color: $contrast-dark;
+        color: $light;
+        transition: all 0.3s ease;
+    }
 }

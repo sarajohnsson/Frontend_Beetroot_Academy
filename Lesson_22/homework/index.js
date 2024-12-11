@@ -6,7 +6,7 @@ let userName;
 
 document.getElementById("nameSubmit").onclick = function () {
     userName = document.getElementById("nameText").value;
-    document.getElementById("outputText").textContent = `Hello ${userName}!`;
+    document.getElementById("nameOutput").textContent = `Hello ${userName}!`;
     console.log(userName);
 };
 
