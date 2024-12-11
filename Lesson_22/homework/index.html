@@ -9,41 +9,42 @@
     </head>
     <body>
         <div class="page_wrapper">
+            <!-- 1. -->
             <section class="user_name">
-                <div class="assignment">
-                    <p id="outputText">Welcome!</p>
+                <div class="container">
+                    <h1 id="outputText">Welcome!</h1>
                     <label for="nameText">What is your name?</label>
                     <input id="nameText" placeholder="John Doe" />
                     <button id="nameSubmit">Submit</button>
                 </div>
             </section>
 
+            <!-- 2. -->
             <section class="user_birth">
-                <div class="assignment">
-                    <p id="birthOutput">Count your age</p>
+                <div class="container">
                     <label for="birthText">What year were you born?</label>
                     <input id="birthText" placeholder="1956" />
                     <button id="birthSubmit">Submit</button>
+                    <p id="birthOutput">...</p>
                 </div>
             </section>
 
+            <!-- 3. -->
             <section class="square_area">
-                <div class="assignment">
-                    <p id="lengthOutput">Square area calculator</p>
+                <div class="container">
                     <label for="lengthText"
                         >Please provide the length of your square in meters to
                         calculate the area</label
                     >
                     <input id="lengthText" placeholder="2" />
                     <button id="lengthSubmit">Submit</button>
+                    <p id="lengthOutput">...</p>
                 </div>
             </section>
 
+            <!-- 4. -->
             <section class="drive_speed">
-                <div class="assignment">
-                    <p id="driveSpeedOutput">
-                        Calculate your speed between two cities
-                    </p>
+                <div class="container">
                     <label for="cityDistanceText"
                         >What's the distance in km between the two
                         cities?</label
@@ -55,6 +56,45 @@
                     >
                     <input id="driveTimeText" placeholder="4" />
                     <button id="driveSpeedSubmit">Submit</button>
+                    <p id="driveSpeedOutput">...</p>
+                </div>
+            </section>
+
+            <!-- 5. -->
+            <section class="memory_storage">
+                <div class="container">
+                    <label for="memoryText"
+                        >How large is your flash drive in GB?</label
+                    >
+                    <input id="memoryText" placeholder="500" />
+                    <button id="memorySubmit">Submit</button>
+                    <p id="memoryOutput">...</p>
+                </div>
+            </section>
+
+            <!-- 6. -->
+            <section class="chocolate_bars">
+                <div class="container">
+                    <label for="moneyText">How much money do you have?</label>
+                    <input id="moneyText" placeholder="100" />
+                    <label for="priceText"
+                        >What's the price of the chocolate bar?</label
+                    >
+                    <input id="priceText" placeholder="35" />
+                    <button id="chocolateSubmit">Submit</button>
+                    <p id="chocolateOutput">...</p>
+                </div>
+            </section>
+
+            <!-- 7. -->
+            <section class="yearly_interest">
+                <div class="container">
+                    <label for="interestText"
+                        >Please type in the total sum for a 2 month deposit
+                    </label>
+                    <input id="interestText" placeholder="2" />
+                    <button id="interestSubmit">Submit</button>
+                    <p id="interestOutput">...</p>
                 </div>
             </section>
         </div>

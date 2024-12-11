@@ -9,8 +9,12 @@ body {
   background-color: #e5e5e5;
 }
 
-p {
+h1 {
   font-size: 24px;
+}
+
+p {
+  font-size: 18px;
   font-weight: 700;
 }
 
@@ -51,14 +55,15 @@ section {
 }
 
 .page_wrapper {
-  max-width: 1440px;
+  max-width: 1200px;
   margin: 0 auto;
   padding-top: 20px;
 }
 
-.assignment {
+.container {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: flex-start;
   gap: 20px;
 }

@@ -24,7 +24,7 @@ var yearOfBirth;
 
 document.getElementById("birthSubmit").onclick = function () {
   yearOfBirth = document.getElementById("birthText").value;
-  document.getElementById("birthOutput").textContent = "You were born in ".concat(yearOfBirth, " and are ").concat(2024 - yearOfBirth, " years old");
+  document.getElementById("birthOutput").textContent = "You were born in ".concat(yearOfBirth, " and are ").concat(parseInt(2024 - yearOfBirth), " years old");
   console.log(yearOfBirth);
 }; // 3 - Request a length of a side of a square from a user and display the perimeter of the square.
 // const squareLength = prompt("Please provide a length of a square in meter");
@@ -35,7 +35,7 @@ var squareLength;
 
 document.getElementById("lengthSubmit").onclick = function () {
   squareLength = document.getElementById("lengthText").value;
-  document.getElementById("lengthOutput").textContent = "The area is ".concat(squareLength * squareLength, " m");
+  document.getElementById("lengthOutput").textContent = "The area is ".concat(parseInt(squareLength * squareLength), " m");
 }; // 4 - Request a distance in km between the two cities from a user, and the time they want to cover it within. Count the speed needed to be on time.
 // const distanceBetween = parseInt(
 //     prompt("Please provide a distance in km between two cities")
@@ -52,7 +52,7 @@ var timeToDrive;
 document.getElementById("driveSpeedSubmit").onclick = function () {
   distanceBetween = document.getElementById("cityDistanceText").value;
   timeToDrive = document.getElementById("driveTimeText").value;
-  document.getElementById("driveSpeedOutput").textContent = "You need to drive at ".concat(distanceBetween / timeToDrive, " km/h");
+  document.getElementById("driveSpeedOutput").textContent = "You need to drive at ".concat(parseInt(distanceBetween / timeToDrive), " km/h");
 }; // 5 - A user states a flash drive memory in GB. The program has to count how many 820MB files can be stored on this flash drive.
 // const storage = parseInt(prompt("State a flash drive memory in GB"));
 // alert(
@@ -60,7 +60,14 @@ document.getElementById("driveSpeedSubmit").onclick = function () {
 //         (storage * 1000) / 820 +
 //         " files with the size of 820 MB in this drive"
 // );
-// 6 - A user types in an amount of money in a wallet and the price of one chocolate bar. The program counts how many chocolate bars the user can buy, and how much change will he/she have left.
+
+
+var storageGB;
+
+document.getElementById("memorySubmit").onclick = function () {
+  storageGB = document.getElementById("memoryText").value;
+  document.getElementById("memoryOutput").textContent = "You can store ".concat(parseInt(storageGB * 1000 / 820), " files in this drive");
+}; // 6 - A user types in an amount of money in a wallet and the price of one chocolate bar. The program counts how many chocolate bars the user can buy, and how much change will he/she have left.
 // const currentAmount = parseInt(
 //     prompt("Please type the amount of money in your wallet")
 // );
@@ -76,7 +83,18 @@ document.getElementById("driveSpeedSubmit").onclick = function () {
 //         newAmount +
 //         " kr left"
 // );
-// 7 - The user types in a sum of bank deposits for 2 months with a yearly interest rate of 5%. The program counts the sum of interest
+
+
+var currentAmount;
+var chocolateBarPrice;
+var chocolateBarAmount = Math.floor(currentAmount / chocolateBarPrice);
+var newAmount = currentAmount - chocolateBarAmount * chocolateBarPrice;
+
+document.getElementById("chocolateSubmit").onclick = function () {
+  currentAmount = document.getElementById("moneyText").value;
+  chocolateBarPrice = document.getElementById("priceText").value;
+  document.getElementById("chocolateOutput").textContent = "You'll be able to buy ".concat(parseInt(chocolateBarAmount), " and have ").concat(parseInt(newAmount));
+}; // 7 - The user types in a sum of bank deposits for 2 months with a yearly interest rate of 5%. The program counts the sum of interest
 // const bankDeposit = parseInt(
 //     prompt(
 //         "Please type in a sum of bank deposit for 2 month to calculate a yearly interest rate of 5%"
@@ -86,3 +104,11 @@ document.getElementById("driveSpeedSubmit").onclick = function () {
 // const interestRate = (bankDeposit / 2) * 12 * 1.05;
 // const sumOfInterest = interestRate - yearlyAmount;
 // alert("The sum of interest will be " + sumOfInterest + " kr");
+
+
+var bankDeposit;
+
+document.getElementById("interestSubmit").onclick = function () {
+  bankDeposit = document.getElementById("interestText").value;
+  document.getElementById("interestOutput").textContent = "The yearly interest sum will be ".concat(parseInt(bankDeposit / 2 * 12 * 1.05 - bankDeposit / 2 * 12), " kr");
+};
