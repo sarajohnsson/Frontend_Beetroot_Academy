@@ -83,17 +83,16 @@ document.getElementById("memorySubmit").onclick = function () {
 //         newAmount +
 //         " kr left"
 // );
+// let currentAmount;
+// let chocolateBarPrice;
 
-
-var currentAmount;
-var chocolateBarPrice;
-var chocolateBarAmount = Math.floor(currentAmount / chocolateBarPrice);
-var newAmount = currentAmount - chocolateBarAmount * chocolateBarPrice;
 
 document.getElementById("chocolateSubmit").onclick = function () {
-  currentAmount = document.getElementById("moneyText").value;
-  chocolateBarPrice = document.getElementById("priceText").value;
-  document.getElementById("chocolateOutput").textContent = "You'll be able to buy ".concat(parseInt(chocolateBarAmount), " and have ").concat(parseInt(newAmount));
+  var currentAmount = document.getElementById("moneyText").value;
+  var chocolateBarPrice = document.getElementById("priceText").value;
+  var chocolateBarAmount = Math.floor(currentAmount / chocolateBarPrice);
+  var newAmount = currentAmount - chocolateBarAmount * chocolateBarPrice;
+  document.getElementById("chocolateOutput").textContent = "You'll be able to buy ".concat(parseInt(chocolateBarAmount), " chocolate bars and have ").concat(parseInt(newAmount), " kr left");
 }; // 7 - The user types in a sum of bank deposits for 2 months with a yearly interest rate of 5%. The program counts the sum of interest
 // const bankDeposit = parseInt(
 //     prompt(
