@@ -35,3 +35,8 @@ document.getElementById("currencySubmit").onclick = function () {
     document.getElementById("exchangeOutput").textContent = "Pick either one of these currencies EUR, SEK or AUD";
   }
 };
+
+document.getElementById("dateSubmit").onclick = function () {// if (year % 4 === 0 || year % 100 === 0 || year % 400 === 0) {
+  //     return true;
+  // }
+};
