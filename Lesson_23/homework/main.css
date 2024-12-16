@@ -50,14 +50,14 @@ button:hover, button:active {
   transition: all 0.3s ease;
 }
 
+section {
+  margin-bottom: 60px;
+}
+
 .page_wrapper {
   max-width: 1200px;
   margin: 0 auto;
   padding: 60px 0;
-}
-
-.check_three_digits {
-  margin-bottom: 60px;
 }
 
 .container {

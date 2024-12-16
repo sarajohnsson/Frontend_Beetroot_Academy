@@ -54,19 +54,37 @@
                 </div>
             </section>
 
-            <!-- <section class="next_day">
+            <section class="next_day">
                 <div class="container">
-                    <h2 class="title">Request a date</h2>
+                    <h2 class="title">Request a date to output the next day</h2>
                     <label for="dayInput">Enter a day:</label>
-                    <input type="text" id="dayInput" placeholder="dd" />
+                    <input
+                        type="number"
+                        id="dayInput"
+                        min="1"
+                        max="31"
+                        placeholder="dd"
+                    />
                     <label for="monthInput">Enter a month:</label>
-                    <input type="text" id="monthInput" placeholder="mm" />
+                    <input
+                        type="number"
+                        id="monthInput"
+                        min="1"
+                        max="12"
+                        placeholder="mm"
+                    />
                     <label for="yearInput">Enter a year</label>
-                    <input type="text" id="yearInput" placeholder="yy" />
+                    <input
+                        type="number"
+                        id="yearInput"
+                        min="0"
+                        max="99"
+                        placeholder="yy"
+                    />
                     <button id="dateSubmit">Submit</button>
                     <p id="dateOutput">...</p>
                 </div>
-            </section> -->
+            </section>
         </div>
 
         <script src="./main.js"></script>

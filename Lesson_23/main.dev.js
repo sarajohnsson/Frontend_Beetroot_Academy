@@ -32,6 +32,6 @@ var anotherStr = "some string"; // const myNumber = 1_100_000_000;
 // const myNumber = 1e9;
 // This % could help you in the chocolate bar case. Ex. 10 % 3 . Can divide 9 by 3 and then the rest is 1
 // const year = 2024;
-// if(year % 4 === 0 || year % === 0){
+// if(year % 4 === 0 || year % 100 === 0){
 //     console.log("It's a leap year");
 // }

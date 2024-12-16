@@ -54,7 +54,63 @@ document.getElementById("currencySubmit").onclick = function () {
 };
 
 document.getElementById("dateSubmit").onclick = function () {
-    // if (year % 4 === 0 || year % 100 === 0 || year % 400 === 0) {
-    //     return true;
-    // }
+    let day = parseInt(document.getElementById("dayInput").value);
+    let month = parseInt(document.getElementById("monthInput").value);
+    let year = parseInt(document.getElementById("yearInput").value);
+
+    day++;
+
+    if (
+        month === 1 ||
+        month === 3 ||
+        month === 5 ||
+        month === 7 ||
+        month === 8 ||
+        month === 10 ||
+        month === 12
+    ) {
+        if (day > 31) {
+            day = 1;
+            month += 1;
+        }
+    } else if (month === 4 || month === 6 || month === 9 || month === 11) {
+        if (day > 30) {
+            day = 1;
+            month += 1;
+        }
+    } else if (month === 2) {
+        if (isLeapYear(year)) {
+            if (day > 29) {
+                day = 1;
+                month += 1;
+            }
+        } else {
+            if (day > 28) {
+                day = 1;
+                month += 1;
+            }
+        }
+    }
+
+    if (month > 12) {
+        month = 1;
+        year += 1;
+    }
+
+    function isLeapYear(year) {
+        if (year % 4 === 0 || year % 100 === 0 || year % 400 === 0) {
+            console.log("It's a leap year");
+        }
+    }
+
+    const nextDate = `${String(day).padStart(2, "0")}:${String(month).padStart(
+        2,
+        "0"
+    )}:${String(year).padStart(2, "0")}`;
+
+    document.getElementById(
+        "dateOutput"
+    ).textContent = `The next date is: ${nextDate}`;
+
+    console.log(nextDate);
 };
