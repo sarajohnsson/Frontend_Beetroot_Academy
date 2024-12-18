@@ -81,6 +81,17 @@ input {
     align-items: center;
 }
 
+.result_container {
+    width: 100%;
+    max-width: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+    font-weight: 700;
+}
+
 #total_output {
     font-size: 16px;
     font-weight: 700;
