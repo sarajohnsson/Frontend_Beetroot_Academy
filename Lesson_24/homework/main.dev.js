@@ -25,48 +25,49 @@ document.getElementById("calculate").onclick = function () {
   var operator = document.getElementById("operator_input").value;
   var num2 = parseFloat(document.getElementById("second_input").value);
 
-  while (!num1) {
-    document.getElementById("totalOutput").textContent = "Please add a number";
-    console.log("Error");
-    break;
-  } // while (!num2) {
-  //     document.getElementById(
-  //         "totalOutput"
-  //     ).textContent = `Please add a number`;
-  //     console.log("Error");
-  // }
-  // while (
-  //     operator !== "+" &&
-  //     operator !== "-" &&
-  //     operator !== "*" &&
-  //     operator !== "/"
-  // ) {
-  //     document.getElementById(
-  //         "totalOutput"
-  //     ).textContent = `Please select an operator`;
-  //     console.log("Error");
-  // }
-
+  if (!num1) {
+    document.getElementById("total_output").textContent = "Please add the first number";
+  } else if (!num2) {
+    document.getElementById("total_output").textContent = "Please add the second number";
+  } else if (operator !== "+" && operator !== "-" && operator !== "*" && operator !== "/") {
+    document.getElementById("total_output").textContent = "Please select an operator";
+  }
 
   switch (operator) {
     case "+":
+      document.getElementById("total_output").textContent = "".concat(num1 + num2);
       console.log(num1 + num2);
       break;
 
     case "-":
+      document.getElementById("total_output").textContent = "".concat(num1 - num2);
       console.log(num1 - num2);
       break;
 
     case "*":
+      document.getElementById("total_output").textContent = "".concat(num1 * num2);
       console.log(num1 * num2);
       break;
 
     case "/":
+      document.getElementById("total_output").textContent = "".concat(num1 / num2);
       console.log(num1 / num2);
       break;
 
     default:
+      document.getElementById("total_output").textContent = "Nothing to calculate";
       console.log("Bad expression");
       break;
   }
+}; // Reverse number
+
+
+document.getElementById("result").onclick = function () {
+  var n = parseInt(document.getElementById("user_input").value);
+  var num1 = parseInt(n / 100);
+  var num2 = parseInt(n % 100 / 10);
+  var num3 = parseInt(n % 10);
+  reverseNum = 100 * num3 + 10 * num2 + num1; // toString(num3) + toString(num2) + toString(num1);
+
+  document.getElementById("output").textContent = "".concat(reverseNum);
 };
