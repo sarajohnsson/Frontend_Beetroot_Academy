@@ -1,17 +1,15 @@
 "use strict";
 
-// Initialize the range and guess in the middle of the range with binary search
 var minValue = 0;
 var maxValue = 100;
 var guess = Math.floor((minValue + maxValue) / 2);
-var attempts = 0; // Get HTML reference
+var attempts = 0; // HTML reference
 
 var guessElement = document.getElementById("display");
 var resultElement = document.getElementById("result");
 var lessThanBtn = document.getElementById("lessThan");
 var equalBtn = document.getElementById("equal");
-var greaterThanBtn = document.getElementById("greaterThan"); // Display the initial guess
-
+var greaterThanBtn = document.getElementById("greaterThan");
 guessElement.textContent = "Is your number > ".concat(guess, ", < ").concat(guess, ", or == ").concat(guess, "?");
 
 function updateGuessTheNumber(answer) {

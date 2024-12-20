@@ -1,17 +1,14 @@
-// Initialize the range and guess in the middle of the range with binary search
 let minValue = 0;
 let maxValue = 100;
 let guess = Math.floor((minValue + maxValue) / 2);
 let attempts = 0;
 
-// Get HTML reference
+// HTML reference
 const guessElement = document.getElementById("display");
 const resultElement = document.getElementById("result");
 const lessThanBtn = document.getElementById("lessThan");
 const equalBtn = document.getElementById("equal");
 const greaterThanBtn = document.getElementById("greaterThan");
-
-// Display the initial guess
 
 guessElement.textContent = `Is your number > ${guess}, < ${guess}, or == ${guess}?`;
 
