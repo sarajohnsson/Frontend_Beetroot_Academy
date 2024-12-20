@@ -1,0 +1,114 @@
+$primary: #669bbc;
+$secondary: #003049;
+$dark: #212529;
+$shadow: #495057;
+$light: #e5e5e5;
+$contrast: #f76707;
+$contrast-dark: #d9480f;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    color: $dark;
+}
+
+.page_wrapper {
+    margin: 0 auto;
+    max-width: 1100px;
+}
+
+a {
+    font-style: none;
+    text-decoration: none;
+    color: inherit;
+}
+
+h1 {
+    font-size: 48px;
+}
+
+p {
+    font-size: 32px;
+}
+
+button {
+    border: 2px solid $secondary;
+    color: $light;
+    padding: 10px 20px;
+    border-radius: 25px;
+    background-color: $primary;
+    text-align: center;
+
+    &:hover {
+        border: 2px solid $secondary;
+        background-color: $secondary;
+        color: $contrast;
+        transition: all 0.3s ease;
+    }
+
+    &:active {
+        border: 2px solid $contrast;
+        background-color: $primary;
+        color: $contrast;
+        transition: all 0.3s ease;
+    }
+
+    i {
+        font-size: 24px;
+    }
+}
+
+.guess_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    background-color: $light;
+    padding: 60px 0;
+    border: 2px solid $secondary;
+    border-radius: 25px;
+
+    &_display {
+        background-color: #fff;
+        color: $shadow;
+        font-size: 24px;
+        text-align: center;
+        padding: 15px 20px;
+        min-width: 300px;
+        border-radius: 10px;
+        border: 2px solid $contrast;
+    }
+
+    &_buttons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+}
+
+.reset {
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    background-color: $contrast;
+    border: 2px solid $secondary;
+    border-radius: 5px;
+
+    &:hover,
+    &:active {
+        color: #fff;
+        background-color: $contrast-dark;
+        transition: all 0.3s ease;
+    }
+}

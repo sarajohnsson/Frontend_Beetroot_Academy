@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="../homework/main.css" />
+        <link rel="stylesheet" href="../fontawesome/css/all.min.css" />
+        <title>Guess the Number</title>
+    </head>
+    <body>
+        <div class="page_wrapper">
+            <div class="guess_container">
+                <h1>Guess the number</h1>
+                <p>Think of a number between 0-100, and I'll guess it!</p>
+                <div id="display" class="guess_container_display">
+                    Last guess
+                </div>
+                <div class="guess_container_buttons">
+                    <button id="lessThan">
+                        <i class="fa-solid fa-less-than"></i>
+                    </button>
+                    <button id="equal">
+                        <i class="fa-solid fa-equals"></i>
+                    </button>
+                    <button id="greaterThan">
+                        <i class="fa-solid fa-greater-than"></i>
+                    </button>
+                </div>
+                <div id="result" class="guess_container_display">Result</div>
+                <div class="reset">
+                    <a href="./game-index.html">Start over</a>
+                </div>
+            </div>
+        </div>
+
+        <script src="./game.js"></script>
+    </body>
+</html>

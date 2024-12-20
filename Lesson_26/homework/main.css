@@ -1,0 +1,98 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  color: #212529;
+}
+
+.page_wrapper {
+  margin: 0 auto;
+  max-width: 1100px;
+}
+
+a {
+  font-style: none;
+  text-decoration: none;
+  color: inherit;
+}
+
+h1 {
+  font-size: 48px;
+}
+
+p {
+  font-size: 32px;
+}
+
+button {
+  border: 2px solid #003049;
+  color: #e5e5e5;
+  padding: 10px 20px;
+  border-radius: 25px;
+  background-color: #669bbc;
+  text-align: center;
+}
+button:hover {
+  border: 2px solid #003049;
+  background-color: #003049;
+  color: #f76707;
+  transition: all 0.3s ease;
+}
+button:active {
+  border: 2px solid #f76707;
+  background-color: #669bbc;
+  color: #f76707;
+  transition: all 0.3s ease;
+}
+button i {
+  font-size: 24px;
+}
+
+.guess_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  background-color: #e5e5e5;
+  padding: 60px 0;
+  border: 2px solid #003049;
+  border-radius: 25px;
+}
+.guess_container_display {
+  background-color: #fff;
+  color: #495057;
+  font-size: 24px;
+  text-align: center;
+  padding: 15px 20px;
+  min-width: 300px;
+  border-radius: 10px;
+  border: 2px solid #f76707;
+}
+.guess_container_buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.reset {
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  background-color: #f76707;
+  border: 2px solid #003049;
+  border-radius: 5px;
+}
+.reset:hover, .reset:active {
+  color: #fff;
+  background-color: #d9480f;
+  transition: all 0.3s ease;
+}
