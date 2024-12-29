@@ -37,6 +37,17 @@ p {
     font-size: 32px;
 }
 
+input {
+    background-color: #fff;
+    color: $shadow;
+    font-size: 24px;
+    text-align: center;
+    padding: 15px 20px;
+    min-width: 300px;
+    border-radius: 10px;
+    border: 2px solid $contrast;
+}
+
 button {
     border: 2px solid $secondary;
     color: $light;
@@ -44,6 +55,8 @@ button {
     border-radius: 25px;
     background-color: $primary;
     text-align: center;
+
+    font-size: 24px;
 
     &:hover {
         border: 2px solid $secondary;
@@ -75,6 +88,7 @@ button {
     padding: 60px 0;
     border: 2px solid $secondary;
     border-radius: 25px;
+    margin-bottom: 60px;
 
     &_display {
         background-color: #fff;
@@ -109,6 +123,75 @@ button {
     &:active {
         color: #fff;
         background-color: $contrast-dark;
+        transition: all 0.3s ease;
+    }
+}
+
+.age_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    background-color: $light;
+    padding: 60px 0;
+    border: 2px solid $secondary;
+    border-radius: 25px;
+    margin-bottom: 60px;
+}
+
+.age_display {
+    background-color: #fff;
+    color: $shadow;
+    font-size: 24px;
+    text-align: center;
+    padding: 15px 20px;
+    min-width: 300px;
+    border-radius: 10px;
+    border: 2px solid $contrast;
+}
+
+.char_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    background-color: $light;
+    padding: 60px 0;
+    border: 2px solid $secondary;
+    border-radius: 25px;
+    margin-bottom: 60px;
+
+    &_numbers {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+}
+
+.number_button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 75px;
+    height: 75px;
+
+    border: 2px solid $contrast;
+    background-color: $primary;
+    border-radius: 50%;
+
+    font-size: 24px;
+    font-weight: 700;
+
+    &:hover {
+        border: 2px solid $contrast;
+        background-color: $secondary;
+        color: #fff;
         transition: all 0.3s ease;
     }
 }

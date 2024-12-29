@@ -12,9 +12,7 @@
             <div class="guess_container">
                 <h1>Guess the number</h1>
                 <p>Think of a number between 0-100, and I'll guess it!</p>
-                <div id="display" class="guess_container_display">
-                    Last guess
-                </div>
+                <div id="display" class="guess_container_display"></div>
                 <div class="guess_container_buttons">
                     <button id="lessThan">
                         <i class="fa-solid fa-less-than"></i>
@@ -29,6 +27,33 @@
                 <div id="result" class="guess_container_display">Result</div>
                 <div class="reset">
                     <a href="./game-index.html">Start over</a>
+                </div>
+            </div>
+
+            <div class="age_container">
+                <h1>Age classification</h1>
+                <input id="age_input" type="text" placeholder="Type your age" />
+                <button id="age_submit">Submit</button>
+                <div id="age_group" class="age_display">Result</div>
+            </div>
+
+            <div class="char_container">
+                <h1>Special character</h1>
+                <p>Pick a number to display its special character</p>
+                <div class="char_container_numbers">
+                    <button id="zero" class="number_button">0</button>
+                    <button id="one" class="number_button">1</button>
+                    <button id="two" class="number_button">2</button>
+                    <button id="three" class="number_button">3</button>
+                    <button id="four" class="number_button">4</button>
+                    <button id="five" class="number_button">5</button>
+                    <button id="six" class="number_button">6</button>
+                    <button id="seven" class="number_button">7</button>
+                    <button id="eight" class="number_button">8</button>
+                    <button id="nine" class="number_button">9</button>
+                </div>
+                <div id="char_result" class="guess_container_display">
+                    Result
                 </div>
             </div>
         </div>
