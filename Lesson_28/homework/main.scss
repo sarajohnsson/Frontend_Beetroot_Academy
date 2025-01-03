@@ -1,0 +1,156 @@
+$add-primary: #51cf66;
+$add-accent: #37b24d;
+$remove-primary: #ff6b6b;
+$remove-accent: #e03131;
+$secondary: #ffa94d;
+$light: #fff4e6;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: inherit;
+    background-color: #f1f3f5;
+}
+
+.page_wrapper {
+    padding-top: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    display: grid;
+    grid-template-columns: 5fr 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    width: 100%;
+    max-width: 500px;
+    padding: 8px;
+    margin-bottom: 10px;
+
+    font-size: 18px;
+
+    border-radius: 5px;
+    border: 1px solid $secondary;
+    background-color: $light;
+}
+
+h1 {
+    color: #444;
+    margin-bottom: 48px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.icon {
+    width: 24px;
+    height: 24px;
+
+    display: flex;
+    width: 100%;
+    margin: auto;
+}
+
+.btn {
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: capitalize;
+
+    padding: 10px;
+    max-width: 50px;
+    cursor: pointer;
+
+    justify-self: end;
+    align-self: center;
+}
+
+.remove {
+    background-color: $remove-primary;
+    border: 1px solid $remove-primary;
+    border-radius: 5px;
+
+    &:hover {
+        color: #fff;
+        background-color: $remove-accent;
+        border: 1px solid $remove-accent;
+        transition: all 0.3s ease;
+    }
+
+    &:active {
+        background-color: $remove-primary;
+        border: 1px solid $remove-primary;
+    }
+}
+
+.purchased {
+    background-color: $add-primary;
+    border: 1px solid $add-primary;
+    border-radius: 5px;
+
+    &:hover {
+        color: #fff;
+        background-color: $add-accent;
+        border: 1px solid $add-accent;
+        transition: all 0.3s ease;
+    }
+
+    &:active {
+        background-color: $add-primary;
+        border: 1px solid $add-primary;
+    }
+}
+
+.grocery_list_form {
+    margin-bottom: 20px;
+
+    input {
+        font-size: 18px;
+        padding: 10px;
+        margin-right: 10px;
+        background-color: $light;
+        border: 1px solid $secondary;
+        border-radius: 5px;
+    }
+
+    button {
+        font-size: 16px;
+        font-weight: 700;
+        text-transform: capitalize;
+
+        padding: 10px;
+        cursor: pointer;
+
+        background-color: $add-primary;
+        border: 1px solid $add-primary;
+        border-radius: 5px;
+
+        &:hover {
+            color: #fff;
+            background-color: $add-accent;
+            border: 1px solid $add-accent;
+            transition: all 0.3s ease;
+        }
+
+        &:active {
+            background-color: $add-primary;
+            border: 1px solid $add-primary;
+        }
+    }
+}
+
+.purchased_item {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
