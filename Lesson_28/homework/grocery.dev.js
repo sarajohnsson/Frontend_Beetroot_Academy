@@ -1,5 +1,12 @@
 "use strict";
 
+// GROCERY LIST
+// Create an array with groceries
+// Create a function that displays the grocery list
+// Sort the unbought item to appear first
+// Create a function that adds items. Check if it's a new item or it already exist. If it already exists, increase the quantity and if it's a new item add it to the list
+// Mark item as bought, with a boolean
+// Create a function that removes the items
 var groceryListItem = [{
   name: "Example: Chicken",
   quantity: 1,
@@ -15,6 +22,7 @@ function displayList() {
   groceryListContainer.innerHTML = "";
   groceryListItem.forEach(function (item, index) {
     var listItem = document.createElement("li");
+    listItem.classList.add("list_item");
     listItem.textContent = "".concat(item.name, " - Quantity: ").concat(item.quantity);
     var purchasedButton = document.createElement("button");
     purchasedButton.innerHTML = "<svg xmlns=\"http://www.w3.org/2000/svg\" class=\"icon\" viewBox=\"0 0 448 512\"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d=\"M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z\"/></svg>";

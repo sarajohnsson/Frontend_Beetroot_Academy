@@ -1,3 +1,12 @@
+// GROCERY LIST
+
+// Create an array with groceries
+// Create a function that displays the grocery list
+// Sort the unbought item to appear first
+// Create a function that adds items. Check if it's a new item or it already exist. If it already exists, increase the quantity and if it's a new item add it to the list
+// Mark item as bought, with a boolean
+// Create a function that removes the items
+
 let groceryListItem = [
     {
         name: "Example: Chicken",
@@ -18,6 +27,7 @@ function displayList() {
 
     groceryListItem.forEach((item, index) => {
         const listItem = document.createElement("li");
+        listItem.classList.add("list_item");
         listItem.textContent = `${item.name} - Quantity: ${item.quantity}`;
 
         const purchasedButton = document.createElement("button");

@@ -8,19 +8,40 @@
     </head>
     <body>
         <div class="page_wrapper">
-            <h1>Grocery list</h1>
-            <div class="grocery_list_form">
-                <input type="text" id="item_name" placeholder="Name" />
-                <input type="number" id="item_quantity" placeholder="Qty" />
-                <button onclick="addItem()">Add item</button>
+            <div class="container">
+                <h1>Grocery list</h1>
+                <div class="grocery_list_form">
+                    <input type="text" id="item_name" placeholder="Name" />
+                    <input type="number" id="item_quantity" placeholder="Qty" />
+                    <button onclick="addItem()">Add item</button>
+                </div>
+
+                <ul id="grocery_list">
+                    <!-- <li>Example text</li>
+                    <li>Example text</li> -->
+                </ul>
             </div>
 
-            <ul id="grocery_list">
-                <!-- <li>Example text</li>
-                <li>Example text</li> -->
-            </ul>
+            <div class="container">
+                <h1>Shopping Cart</h1>
+                <ul id="product_cards" class="product_cards"></ul>
+                <div class="receipt">
+                    <div class="receipt_function">
+                        <h2 class="subtitle">Total cost</h2>
+                        <p class="text" id="total_cost"></p>
+                    </div>
+                    <div class="receipt_function">
+                        <h2 class="subtitle">Most expensive item</h2>
+                        <p class="text" id="most_expensive"></p>
+                    </div>
+                    <div class="receipt_function">
+                        <h2 class="subtitle">Average price</h2>
+                        <p class="text" id="average_price"></p>
+                    </div>
+                </div>
+            </div>
         </div>
-
         <script src="./grocery.js"></script>
+        <script src="./shoppingcart.js"></script>
     </body>
 </html>
