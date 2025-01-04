@@ -42,14 +42,14 @@ function displayProducts() {
         const listItem = document.createElement("li");
         listItem.classList.add("product_list");
         listItem.innerHTML = `
-        <div class="product">
-        <div class="product_info">
-        <h3>${item.name}</h3>
-        <p>Qty: ${item.amount}</p>
-        <p>Price: ${item.pricePerItem.toFixed(2)} SEK</p>
-        </div>
-        <img src="${item.image}" alt="${item.name}" />
-        </div>
+            <div class="product">
+                <div class="product_info">
+                    <h3>${item.name}</h3>
+                    <p>Qty: ${item.amount}</p>
+                    <p>Price: ${item.pricePerItem.toFixed(2)} SEK</p>
+                </div>
+                <img src="${item.image}" alt="${item.name}" />
+            </div>
         `;
 
         productContainer.appendChild(listItem);

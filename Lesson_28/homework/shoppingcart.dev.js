@@ -34,7 +34,7 @@ function displayProducts() {
   products.forEach(function (item) {
     var listItem = document.createElement("li");
     listItem.classList.add("product_list");
-    listItem.innerHTML = "\n        <div class=\"product\">\n        <div class=\"product_info\">\n        <h3>".concat(item.name, "</h3>\n        <p>Qty: ").concat(item.amount, "</p>\n        <p>Price: ").concat(item.pricePerItem.toFixed(2), " SEK</p>\n        </div>\n        <img src=\"").concat(item.image, "\" alt=\"").concat(item.name, "\" />\n        </div>\n        ");
+    listItem.innerHTML = "\n            <div class=\"product\">\n                <div class=\"product_info\">\n                    <h3>".concat(item.name, "</h3>\n                    <p>Qty: ").concat(item.amount, "</p>\n                    <p>Price: ").concat(item.pricePerItem.toFixed(2), " SEK</p>\n                </div>\n                <img src=\"").concat(item.image, "\" alt=\"").concat(item.name, "\" />\n            </div>\n        ");
     productContainer.appendChild(listItem);
   });
   displayCalculations();
