@@ -31,6 +31,30 @@ let products = [
         amount: 6,
         pricePerItem: 69.95,
     },
+    {
+        name: "Melon",
+        image: "./assets/melon.jpg",
+        amount: 1,
+        pricePerItem: 43.95,
+    },
+    {
+        name: "Cherry",
+        image: "./assets/cherry.jpg",
+        amount: 3,
+        pricePerItem: 23.95,
+    },
+    {
+        name: "Apple",
+        image: "./assets/apple.jpg",
+        amount: 4,
+        pricePerItem: 32.95,
+    },
+    {
+        name: "Blueberry",
+        image: "./assets/blueberry.jpg",
+        amount: 7,
+        pricePerItem: 29.95,
+    },
 ];
 
 const productContainer = document.getElementById("product_cards");
@@ -59,12 +83,14 @@ function displayProducts() {
 }
 
 function displayCalculations() {
+    // Calculate total cost
     const initialValue = 0;
     const totalCost = products.reduce(
         (total, item) => total + item.pricePerItem * item.amount,
         initialValue
     );
 
+    // Calculate average price
     const totalAmount = products.reduce(
         (total, item) => total + item.amount,
         initialValue
@@ -79,6 +105,20 @@ function displayCalculations() {
     document.getElementById(
         "average_price"
     ).textContent = `${averageCost.toFixed(2)} SEK`;
+
+    // Find the most expensive item
+    let maxValue = 0;
+
+    const values = Object.values(products);
+
+    values.map((item) => {
+        const valueFromObject = item.pricePerItem;
+        maxValue = Math.max(maxValue, valueFromObject);
+    });
+
+    document.getElementById("most_expensive").textContent = `${maxValue.toFixed(
+        2
+    )} SEK`;
 }
 
 displayProducts();

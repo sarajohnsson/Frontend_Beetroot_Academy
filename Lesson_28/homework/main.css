@@ -167,7 +167,7 @@ h1 {
   margin-bottom: 5px;
 }
 .product img {
-  max-width: 100px;
+  width: 100px;
   height: 75px;
   object-fit: cover;
   border-radius: 50px;

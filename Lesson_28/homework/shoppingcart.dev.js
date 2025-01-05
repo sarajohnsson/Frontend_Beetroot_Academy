@@ -26,6 +26,26 @@ var products = [{
   image: "./assets/strawberry.jpg",
   amount: 6,
   pricePerItem: 69.95
+}, {
+  name: "Melon",
+  image: "./assets/melon.jpg",
+  amount: 1,
+  pricePerItem: 43.95
+}, {
+  name: "Cherry",
+  image: "./assets/cherry.jpg",
+  amount: 3,
+  pricePerItem: 23.95
+}, {
+  name: "Apple",
+  image: "./assets/apple.jpg",
+  amount: 4,
+  pricePerItem: 32.95
+}, {
+  name: "Blueberry",
+  image: "./assets/blueberry.jpg",
+  amount: 7,
+  pricePerItem: 29.95
 }];
 var productContainer = document.getElementById("product_cards");
 
@@ -41,16 +61,26 @@ function displayProducts() {
 }
 
 function displayCalculations() {
+  // Calculate total cost
   var initialValue = 0;
   var totalCost = products.reduce(function (total, item) {
     return total + item.pricePerItem * item.amount;
-  }, initialValue);
+  }, initialValue); // Calculate average price
+
   var totalAmount = products.reduce(function (total, item) {
     return total + item.amount;
   }, initialValue);
   var averageCost = totalCost / totalAmount;
   document.getElementById("total_cost").textContent = "".concat(totalCost.toFixed(2), " SEK");
-  document.getElementById("average_price").textContent = "".concat(averageCost.toFixed(2), " SEK");
+  document.getElementById("average_price").textContent = "".concat(averageCost.toFixed(2), " SEK"); // Find the most expensive item
+
+  var maxValue = 0;
+  var values = Object.values(products);
+  values.map(function (item) {
+    var valueFromObject = item.pricePerItem;
+    maxValue = Math.max(maxValue, valueFromObject);
+  });
+  document.getElementById("most_expensive").textContent = "".concat(maxValue.toFixed(2), " SEK");
 }
 
 displayProducts(); // Add function to add/remove amount of items with + or - button
