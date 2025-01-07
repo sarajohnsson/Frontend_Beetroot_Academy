@@ -160,6 +160,13 @@ body {
 }
 
 .car_container {
+    h2 {
+        color: $light;
+        font-size: 48px;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+    }
+
     &_btn {
         max-width: 250px;
         padding: 10px 20px;

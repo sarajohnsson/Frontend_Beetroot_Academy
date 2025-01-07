@@ -129,6 +129,12 @@ body {
   transition: all 0.3s ease;
 }
 
+.car_container h2 {
+  color: #c9d5e0;
+  font-size: 48px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
 .car_container_btn {
   max-width: 250px;
   padding: 10px 20px;
