@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="stylesheet"
+            href="https://unicons.iconscout.com/release/v4.0.8/css/line.css"
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+
+        <link rel="stylesheet" href="./weather-style.css" />
+
+        <title>Weather App</title>
+    </head>
+    <body>
+        <div class="page_wrapper">
+            <div class="card_container column">
+                <div class="weather_container row">
+                    <input
+                        type="text"
+                        name="city"
+                        class="weather_container_input"
+                        placeholder="Enter city"
+                    />
+                    <button class="weather_container_btn">
+                        <i
+                            class="uil uil-search weather_container_btn_icon"
+                        ></i>
+                    </button>
+                </div>
+
+                <div class="card_container_main column">
+                    <div class="card_container_main_city">
+                        <h1 class="city_data"></h1>
+                        <h2 class="description_data"></h2>
+                    </div>
+                    <div class="card_container_main_weather">
+                        <!-- <i class="uil uil-cloud-sun main_icon"></i> -->
+                    </div>
+                    <div class="card_container_main_temp row">
+                        <i class="uil uil-temperature-half icon"></i>
+                        <h2 class="temp_data"></h2>
+                    </div>
+                </div>
+
+                <div class="card_container_info row">
+                    <div class="card_container_info_condition row">
+                        <i class="uil uil-water icon"></i>
+                        <p class="humidity_data"></p>
+                    </div>
+                    <div class="card_container_info_condition row">
+                        <i class="uil uil-wind icon"></i>
+                        <p class="wind_data"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="./weather.js"></script>
+    </body>
+</html>

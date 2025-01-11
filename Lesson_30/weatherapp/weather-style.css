@@ -1,0 +1,123 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  height: 100%;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  color: inherit;
+  background-image: url(./img/forest.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 500;
+  color: #ff922b;
+}
+
+p {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.page_wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 120px;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main_icon {
+  font-size: 10rem;
+}
+
+.icon {
+  color: #fff;
+  font-size: 2rem;
+}
+
+.card_container {
+  width: fit-content;
+  padding: 60px 40px;
+  border-radius: 50px;
+  margin: 0 auto;
+  background: #3f5efb;
+  background: linear-gradient(195deg, #3f5efb 0%, #fc466b 100%);
+  box-shadow: 15px 15px 50px rgba(0, 0, 0, 0.5);
+}
+.card_container_main {
+  padding: 20px 0;
+  gap: 10px;
+}
+.card_container_main_city {
+  color: #fff;
+}
+.card_container_main_weather {
+  text-align: center;
+}
+.card_container_main_temp {
+  color: #fff;
+  font-size: 1.5rem;
+  gap: 5px;
+}
+
+.weather_container {
+  gap: 20px;
+}
+.weather_container_input {
+  background: rgba(255, 255, 255, 0.75);
+  padding: 10px 20px;
+  border: none;
+  outline: none;
+  border-radius: 50px;
+  font-size: 2rem;
+  text-transform: capitalize;
+}
+.weather_container_btn {
+  background-color: #ff922b;
+  cursor: pointer;
+  height: 60px;
+  width: 60px;
+  border: none;
+  border-radius: 50%;
+}
+.weather_container_btn:hover {
+  background-color: #fd7e14;
+}
+.weather_container_btn:active {
+  background: #ffa94d;
+}
+.weather_container_btn_icon {
+  font-size: 2rem;
+}
+
+.card_container_info {
+  gap: 20px;
+}
+.card_container_info_condition {
+  gap: 10px;
+  padding: 10px 20px;
+}

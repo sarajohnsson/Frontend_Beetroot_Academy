@@ -3,6 +3,8 @@
 // A method for changing the time by a given amount of minutes
 // A method for changing the time by a given amount of hours
 
+// Instead of using sec === 3600 and sec === 86400. Try to use a span between the values. If 60 >= 3600, handle minutes, if 3600 >= 86400 handle minutes and hours. If >= 86400 handle hours and days
+
 const clock = {
     seconds: 0,
     minutes: 0,
