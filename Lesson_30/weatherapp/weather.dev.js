@@ -28,22 +28,145 @@ var apiUrl = "https://api.openweathermap.org/data/2.5/weather";
 var locationInput = document.querySelector(".weather_container_input");
 var searchButton = document.querySelector(".weather_container_btn");
 var locationElement = document.querySelector(".city_data");
-var temperatureElement = document.querySelector(".city_data");
-var descriptionElement = document.querySelector(".city_data");
+var temperatureElement = document.querySelector(".temp_data");
+var descriptionElement = document.querySelector(".desc_data");
+var humidityElement = document.querySelector(".humidity_data");
+var windElement = document.querySelector(".wind_data");
+var weatherIconElement = document.querySelector(".card_container_main_weather");
+var defaultWeather = {
+  name: "Stockholm",
+  main: {
+    temp: 20,
+    humidity: 60
+  },
+  weather: [{
+    description: "Clear sky",
+    id: 800
+  }],
+  wind: {
+    speed: 5
+  }
+};
+document.addEventListener("DOMContentLoaded", function () {
+  displayDefaultWeather();
+});
 searchButton.addEventListener("click", function () {
-  var city = cityInput.value;
+  var city = locationInput.value;
 
   if (city) {
     getWeather(city);
+  } else {
+    // Display error
+    displayError("Please enter a city name");
   }
 });
 
 function getWeather(city) {
   var url = "".concat(apiUrl, "?q=").concat(city, "&appid=").concat(apiKey, "&units=metric");
-  fetch(url).then(function (res) {
-    return res.json();
-    console.log(res);
-  }).then(function (response) {
+  fetch(url).then(function (response) {
+    if (!response.ok) {
+      throw new Error("City not found");
+    }
+
+    return response.json();
     console.log(response);
+  }).then(function (data) {
+    displayWeather(data);
+    console.log(data);
+  })["catch"](function (error) {
+    displayError(error.message);
   });
+}
+
+function displayDefaultWeather() {
+  locationElement.textContent = defaultWeather.name;
+  temperatureElement.textContent = "".concat(Math.round(defaultWeather.main.temp), "  \xB0C");
+  descriptionElement.textContent = defaultWeather.weather[0].description;
+  humidityElement.textContent = "".concat(defaultWeather.main.humidity, " %");
+  windElement.textContent = "".concat(defaultWeather.wind.speed, " m/s"); // Clear any existing icon
+
+  weatherIconElement.innerHTML = ""; // Get the default icon code
+
+  var iconCode = getWeatherIcon(defaultWeather.weather[0].id); // Create an image element for the default icon
+
+  var iconElement = document.createElement("img");
+  iconElement.src = "http://openweathermap.org/img/wn/".concat(iconCode, "@2x.png");
+  iconElement.alt = defaultWeather.weather[0].description; // Append the icon to the weatherIconElement
+
+  weatherIconElement.appendChild(iconElement);
+}
+
+function getWeatherIcon(weatherId) {
+  switch (true) {
+    case weatherId >= 200 && weatherId < 300:
+      // Display equivalent icon from api
+      return "11d";
+
+    case weatherId >= 300 && weatherId < 400:
+      // Display equivalent icon from api
+      return "09d";
+
+    case weatherId >= 500 && weatherId < 600:
+      // Display equivalent icon from api
+      return "10d";
+
+    case weatherId >= 600 && weatherId < 700:
+      // Display equivalent icon from api
+      return "13d";
+
+    case weatherId >= 700 && weatherId < 800:
+      // Display equivalent icon from api
+      return "50d";
+
+    case weatherId === 800:
+      // Display equivalent icon from api
+      return "01d";
+
+    case weatherId >= 801 && weatherId < 810:
+      // Display equivalent icon from api
+      if (weatherId === 801) {
+        return "02d";
+      } else if (weatherId === 802) {
+        return "03d";
+      } else {
+        return "04d";
+      }
+
+    default:
+      return "01d";
+  }
+}
+
+function displayWeather(data) {
+  locationElement.textContent = data.name;
+  temperatureElement.textContent = "".concat(Math.round(data.main.temp), "  \xB0C");
+  descriptionElement.textContent = data.weather[0].description;
+  humidityElement.textContent = "".concat(data.main.humidity, " %");
+  windElement.textContent = "".concat(data.wind.speed, " m/s");
+  weatherIconElement.innerHTML = "";
+  var weatherId = data.weather[0].id;
+  var iconCode = getWeatherIcon(weatherId);
+  var iconElement = document.createElement("img");
+  iconElement.src = "http://openweathermap.org/img/wn/".concat(iconCode, "@2x.png");
+  iconElement.alt = data.weather[0].description;
+  weatherIconElement.appendChild(iconElement);
+  clearError("");
+}
+
+function displayError(message) {
+  var errorMessageElement = document.querySelector(".error_message");
+
+  if (errorMessageElement) {
+    errorMessageElement.textContent = message;
+    errorMessageElement.style.display = "flex";
+  }
+}
+
+function clearError() {
+  var errorMessageElement = document.querySelector(".error_message");
+
+  if (errorMessageElement) {
+    errorMessageElement.textContent = "";
+    errorMessageElement.style.display = "none";
+  }
 }

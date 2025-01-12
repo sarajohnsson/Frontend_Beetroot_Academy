@@ -14,20 +14,24 @@ html {
   background-size: cover;
 }
 
-h1 {
-  font-size: 3rem;
+.city_data,
+.temp_data {
+  font-size: 2.5rem;
   font-weight: 700;
+  text-align: center;
 }
 
-h2 {
-  font-size: 2rem;
+.desc_data {
+  font-size: 1.5rem;
   font-weight: 500;
+  text-align: center;
+  text-transform: capitalize;
   color: #ff922b;
 }
 
-p {
-  font-size: 1.5rem;
-  font-weight: 600;
+.humidity_data,
+.wind_data {
+  font-size: 1.25rem;
   color: #fff;
 }
 
@@ -50,10 +54,6 @@ p {
   align-items: center;
 }
 
-.main_icon {
-  font-size: 10rem;
-}
-
 .icon {
   color: #fff;
   font-size: 2rem;
@@ -69,6 +69,7 @@ p {
   box-shadow: 15px 15px 50px rgba(0, 0, 0, 0.5);
 }
 .card_container_main {
+  position: relative;
   padding: 20px 0;
   gap: 10px;
 }
@@ -76,12 +77,28 @@ p {
   color: #fff;
 }
 .card_container_main_weather {
-  text-align: center;
+  background-color: rgba(255, 255, 255, 0.5);
+  height: 200px;
+  width: 200px;
+  border-radius: 50% 50% 10px 10px;
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
+}
+.card_container_main_weather img {
+  height: 100px;
 }
 .card_container_main_temp {
   color: #fff;
   font-size: 1.5rem;
   gap: 5px;
+}
+.card_container_info {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 50px;
+  gap: 20px;
+}
+.card_container_info_condition {
+  gap: 10px;
+  padding: 10px 20px;
 }
 
 .weather_container {
@@ -114,10 +131,21 @@ p {
   font-size: 2rem;
 }
 
-.card_container_info {
-  gap: 20px;
-}
-.card_container_info_condition {
-  gap: 10px;
-  padding: 10px 20px;
+.error_message {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 350px;
+  min-height: 400px;
+  font-size: 3rem;
+  font-weight: 700;
+  text-align: center;
+  padding: 20px;
+  background-color: #ffa94d;
+  color: #fff;
+  border: 2px solid #fd7e14;
+  border-radius: 50px;
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
+  display: none;
 }
