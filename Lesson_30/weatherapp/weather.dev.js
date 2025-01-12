@@ -51,13 +51,13 @@ document.addEventListener("DOMContentLoaded", function () {
   displayDefaultWeather();
 });
 searchButton.addEventListener("click", function () {
-  var city = locationInput.value;
+  var city = locationInput.value.toLowerCase();
 
   if (city) {
     getWeather(city);
   } else {
     // Display error
-    displayError("Please enter a city name");
+    displayError("Please enter a valid city!");
   }
 });
 
@@ -65,14 +65,12 @@ function getWeather(city) {
   var url = "".concat(apiUrl, "?q=").concat(city, "&appid=").concat(apiKey, "&units=metric");
   fetch(url).then(function (response) {
     if (!response.ok) {
-      throw new Error("City not found");
+      throw new Error("City not found!");
     }
 
     return response.json();
-    console.log(response);
   }).then(function (data) {
     displayWeather(data);
-    console.log(data);
   })["catch"](function (error) {
     displayError(error.message);
   });
@@ -80,19 +78,15 @@ function getWeather(city) {
 
 function displayDefaultWeather() {
   locationElement.textContent = defaultWeather.name;
-  temperatureElement.textContent = "".concat(Math.round(defaultWeather.main.temp), "  \xB0C");
+  temperatureElement.textContent = "".concat(Math.round(defaultWeather.main.temp), "\xB0");
   descriptionElement.textContent = defaultWeather.weather[0].description;
   humidityElement.textContent = "".concat(defaultWeather.main.humidity, " %");
-  windElement.textContent = "".concat(defaultWeather.wind.speed, " m/s"); // Clear any existing icon
-
-  weatherIconElement.innerHTML = ""; // Get the default icon code
-
-  var iconCode = getWeatherIcon(defaultWeather.weather[0].id); // Create an image element for the default icon
-
+  windElement.textContent = "".concat(defaultWeather.wind.speed, " m/s");
+  weatherIconElement.innerHTML = "";
+  var iconCode = getWeatherIcon(defaultWeather.weather[0].id);
   var iconElement = document.createElement("img");
   iconElement.src = "http://openweathermap.org/img/wn/".concat(iconCode, "@2x.png");
-  iconElement.alt = defaultWeather.weather[0].description; // Append the icon to the weatherIconElement
-
+  iconElement.alt = defaultWeather.weather[0].description;
   weatherIconElement.appendChild(iconElement);
 }
 
@@ -139,7 +133,7 @@ function getWeatherIcon(weatherId) {
 
 function displayWeather(data) {
   locationElement.textContent = data.name;
-  temperatureElement.textContent = "".concat(Math.round(data.main.temp), "  \xB0C");
+  temperatureElement.textContent = "".concat(Math.round(data.main.temp), "\xB0");
   descriptionElement.textContent = data.weather[0].description;
   humidityElement.textContent = "".concat(data.main.humidity, " %");
   windElement.textContent = "".concat(data.wind.speed, " m/s");
@@ -155,18 +149,20 @@ function displayWeather(data) {
 
 function displayError(message) {
   var errorMessageElement = document.querySelector(".error_message");
+  var errorTextElement = document.querySelector(".error_message_text");
 
-  if (errorMessageElement) {
-    errorMessageElement.textContent = message;
-    errorMessageElement.style.display = "flex";
+  if (errorMessageElement && errorTextElement) {
+    errorTextElement.textContent = message;
+    errorMessageElement.classList.add("visible");
   }
 }
 
 function clearError() {
   var errorMessageElement = document.querySelector(".error_message");
+  var errorTextElement = document.querySelector(".error_message_text");
 
-  if (errorMessageElement) {
-    errorMessageElement.textContent = "";
-    errorMessageElement.style.display = "none";
+  if (errorMessageElement && errorTextElement) {
+    errorTextElement.textContent = "";
+    errorMessageElement.classList.remove("visible");
   }
 }

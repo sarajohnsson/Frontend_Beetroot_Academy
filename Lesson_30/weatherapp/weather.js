@@ -62,12 +62,12 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 searchButton.addEventListener("click", () => {
-    const city = locationInput.value;
+    const city = locationInput.value.toLowerCase();
     if (city) {
         getWeather(city);
     } else {
         // Display error
-        displayError("Please enter a city name");
+        displayError("Please enter a valid city!");
     }
 });
 
@@ -77,14 +77,12 @@ function getWeather(city) {
     fetch(url)
         .then((response) => {
             if (!response.ok) {
-                throw new Error("City not found");
+                throw new Error("City not found!");
             }
             return response.json();
-            console.log(response);
         })
         .then((data) => {
             displayWeather(data);
-            console.log(data);
         })
         .catch((error) => {
             displayError(error.message);
@@ -95,23 +93,19 @@ function displayDefaultWeather() {
     locationElement.textContent = defaultWeather.name;
     temperatureElement.textContent = `${Math.round(
         defaultWeather.main.temp
-    )}  \u00B0C`;
+    )}\u00B0`;
     descriptionElement.textContent = defaultWeather.weather[0].description;
     humidityElement.textContent = `${defaultWeather.main.humidity} %`;
     windElement.textContent = `${defaultWeather.wind.speed} m/s`;
 
-    // Clear any existing icon
     weatherIconElement.innerHTML = "";
 
-    // Get the default icon code
     const iconCode = getWeatherIcon(defaultWeather.weather[0].id);
 
-    // Create an image element for the default icon
     const iconElement = document.createElement("img");
     iconElement.src = `http://openweathermap.org/img/wn/${iconCode}@2x.png`;
     iconElement.alt = defaultWeather.weather[0].description;
 
-    // Append the icon to the weatherIconElement
     weatherIconElement.appendChild(iconElement);
 }
 
@@ -152,7 +146,7 @@ function getWeatherIcon(weatherId) {
 
 function displayWeather(data) {
     locationElement.textContent = data.name;
-    temperatureElement.textContent = `${Math.round(data.main.temp)}  \u00B0C`;
+    temperatureElement.textContent = `${Math.round(data.main.temp)}\u00B0`;
     descriptionElement.textContent = data.weather[0].description;
     humidityElement.textContent = `${data.main.humidity} %`;
     windElement.textContent = `${data.wind.speed} m/s`;
@@ -173,16 +167,18 @@ function displayWeather(data) {
 
 function displayError(message) {
     const errorMessageElement = document.querySelector(".error_message");
-    if (errorMessageElement) {
-        errorMessageElement.textContent = message;
-        errorMessageElement.style.display = "flex";
+    const errorTextElement = document.querySelector(".error_message_text");
+    if (errorMessageElement && errorTextElement) {
+        errorTextElement.textContent = message;
+        errorMessageElement.classList.add("visible");
     }
 }
 
 function clearError() {
     const errorMessageElement = document.querySelector(".error_message");
-    if (errorMessageElement) {
-        errorMessageElement.textContent = "";
-        errorMessageElement.style.display = "none";
+    const errorTextElement = document.querySelector(".error_message_text");
+    if (errorMessageElement && errorTextElement) {
+        errorTextElement.textContent = "";
+        errorMessageElement.classList.remove("visible");
     }
 }

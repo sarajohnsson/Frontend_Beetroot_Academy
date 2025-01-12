@@ -15,27 +15,6 @@ html {
     background-size: cover;
 }
 
-.city_data,
-.temp_data {
-    font-size: 2.5rem;
-    font-weight: 700;
-    text-align: center;
-}
-
-.desc_data {
-    font-size: 1.5rem;
-    font-weight: 500;
-    text-align: center;
-    text-transform: capitalize;
-    color: #ff922b;
-}
-
-.humidity_data,
-.wind_data {
-    font-size: 1.25rem;
-    color: #fff;
-}
-
 .page_wrapper {
     max-width: 1200px;
     margin: 0 auto;
@@ -82,34 +61,44 @@ html {
         gap: 10px;
 
         &_city {
+            position: relative;
+            z-index: 3;
+
             color: #fff;
         }
 
         &_weather {
-            background-color: rgba($color: #fff, $alpha: 0.5);
+            position: absolute;
+            bottom: 25%;
+            right: 20%;
+            z-index: 2;
+
             height: 200px;
             width: 200px;
-            border-radius: 50% 50% 10px 10px;
-            box-shadow: 10px 10px 15px rgba($color: #000000, $alpha: 0.5);
 
             img {
-                height: 100px;
+                height: 150px;
             }
         }
 
         &_temp {
+            position: relative;
+            z-index: 1;
+            background-color: rgba($color: #fff, $alpha: 0.15);
+            border-radius: 50%;
+            height: 250px;
+            width: 250px;
             color: #fff;
-            font-size: 1.5rem;
-            gap: 5px;
         }
     }
 
     &_info {
-        background-color: rgba($color: #fff, $alpha: 0.15);
-        border-radius: 50px;
         gap: 20px;
 
         &_condition {
+            background-color: rgba($color: #fff, $alpha: 0.15);
+            border-radius: 50px;
+
             gap: 10px;
             padding: 10px 20px;
         }
@@ -154,19 +143,48 @@ html {
     }
 }
 
+.city_data {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    text-shadow: 2.5px 2.5px 5px rgba($color: #000000, $alpha: 0.5);
+}
+
+.temp_data {
+    position: relative;
+    z-index: 3;
+    font-size: 5rem;
+    font-weight: 700;
+    text-align: center;
+    text-shadow: 5px 5px 10px rgba($color: #000000, $alpha: 0.5);
+}
+
+.desc_data {
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-align: center;
+    text-transform: capitalize;
+    color: #ff922b;
+    text-shadow: 2.5px 2.5px 5px rgba($color: #000000, $alpha: 0.5);
+}
+
+.humidity_data,
+.wind_data {
+    font-size: 1.25rem;
+    color: #fff;
+    text-shadow: 1px 1px 2px rgba($color: #000000, $alpha: 0.5);
+}
+
 .error_message {
     position: absolute;
-    display: flex;
+    display: none;
+    z-index: 4;
+
     justify-content: center;
     align-items: center;
 
     min-width: 350px;
     min-height: 475px;
-
-    font-size: 3rem;
-    font-weight: 700;
-    text-align: center;
-    padding: 20px;
 
     background-color: #ffa94d;
     color: #fff;
@@ -174,5 +192,26 @@ html {
     border-radius: 50px;
     box-shadow: 10px 10px 15px rgba($color: #000000, $alpha: 0.5);
 
-    display: none;
+    &_icon {
+        position: absolute;
+        z-index: 4;
+        color: #000000;
+        opacity: 0.5;
+        font-size: 10rem;
+    }
+
+    &_text {
+        position: relative;
+        z-index: 5;
+
+        font-size: 3rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        text-align: center;
+        padding: 20px;
+    }
+}
+
+.error_message.visible {
+    display: flex;
 }
