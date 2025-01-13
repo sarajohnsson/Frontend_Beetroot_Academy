@@ -26,6 +26,8 @@
 // If there's an error (e.g., invalid city, network issue):
 // Display a user-friendly error message on the page
 
+// If time, create weather for 5 days and display as well
+
 const apiKey = "5a7e7522a15d8571bdfc87cfd54874ac";
 const apiUrl = "https://api.openweathermap.org/data/2.5/weather";
 
