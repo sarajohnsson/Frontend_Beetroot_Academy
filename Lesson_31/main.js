@@ -49,3 +49,5 @@ p.append(myNewButton);
 // Popular question. What's the difference between static and live DOM elements, and how to get it
 // querySelector -> static
 // getElements -> live
+
+// If you don't want to use your regular email you can create a temporary one. 10-min email

@@ -3,39 +3,71 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./pokeStyle.css" />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+            rel="stylesheet"
+        />
         <title>Pokemon</title>
     </head>
     <body>
         <div class="page_wrapper">
-            <section class="pokemon_container">
-                <div class="pokemon_container_search">
+            <section class="pokemon_container column">
+                <h1 class="pokemon_container_title">PokeDex</h1>
+                <div class="pokemon_container_search row">
                     <input
                         class="pokemon_container_search_input"
                         type="text"
-                        placeholder="Enter Pokémon name"
+                        placeholder="Search for a Pokémon"
                     />
                     <button class="pokemon_container_search_btn">Search</button>
                 </div>
+            </section>
 
-                <div class="pokemon_card">
-                    <div class="pokemon_card_info">
-                        <div class="pokemon_card_name">Charizard</div>
-                        <div class="pokemon_card_hp">120HP</div>
-                    </div>
+            <section class="pokemon_card column">
+                <div class="pokemon_card_border">
+                    <div class="pokemon_card_bg">
+                        <div class="pokemon_card_bg_info row">
+                            <div class="pokemon_card_bg_info_name"></div>
+                            <div class="pokemon_card_bg_info_hp">
+                                HP:
+                                <p class="pokemon_card_bg_info_hp_text"></p>
+                            </div>
+                        </div>
 
-                    <img src="" alt="" class="pokemon_sprite" />
+                        <div class="pokemon_card_bg_img">
+                            <img
+                                src=""
+                                alt="Pokemon sprite"
+                                class="pokemon_card_bg_img_sprite"
+                            />
+                        </div>
 
-                    <div class="pokemon_card_info">
-                        <div class="pokemon_card_type">Fire</div>
-                        <div class="pokemon_card_attack">
-                            <span class="pokemon_card_attack_name"
-                                >Fire Spin</span
-                            >
-                            <span class="pokemon_card_attack_dmg">100</span>
+                        <div class="pokemon_card_bg_stats">
+                            <div class="pokemon_card_bg_stats_type"></div>
+                            <div class="pokemon_card_bg_stats_attack row">
+                                <div
+                                    class="pokemon_card_bg_stats_attack_name"
+                                ></div>
+                                <div
+                                    class="pokemon_card_bg_stats_attack_dmg"
+                                ></div>
+                            </div>
+                            <div class="pokemon_card_bg_stats_gen row">
+                                <div
+                                    class="pokemon_card_bg_stats_gen_weight"
+                                ></div>
+                                <div class="pokemon_card_bg_stats_gen_id"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </section>
         </div>
+
+        <script src="./pokeApi.js"></script>
     </body>
 </html>
