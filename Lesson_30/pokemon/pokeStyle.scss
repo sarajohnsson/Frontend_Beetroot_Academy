@@ -90,6 +90,8 @@ body {
         }
 
         &_btn {
+            cursor: pointer;
+
             padding: 10px 20px;
             background-color: $theme-contrast;
             border: 2.5px solid $theme-accent;

@@ -75,6 +75,7 @@ body {
   border-radius: 5px;
 }
 .pokemon_container_search_btn {
+  cursor: pointer;
   padding: 10px 20px;
   background-color: #ffcc00;
   border: 2.5px solid #2a70b8;
