@@ -34,6 +34,15 @@ var typeColors = {
   ice: "#73cebe",
   fairy: "#ed8fe7"
 };
+
+function getRandomPokemonId() {
+  return Math.floor(Math.random() * 1000) + 1;
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  var randomPokemonId = getRandomPokemonId();
+  getPokemon(randomPokemonId);
+});
 buttonElement.addEventListener("click", function () {
   var pokemonId = pokemonInput.value.toLowerCase();
 
