@@ -37,3 +37,21 @@ p.append(myNewButton); // p.prepend(myNewButton);
 // querySelector -> static
 // getElements -> live
 // If you don't want to use your regular email you can create a temporary one. 10-min email
+
+var productCart = [{
+  propductName: "potato",
+  price: 12,
+  isDiscounted: true
+}, {
+  propductName: "tomato",
+  price: 8,
+  isDiscounted: true
+}, {
+  propductName: "wine",
+  price: 80,
+  isDiscounted: false
+}, {
+  propductName: "meat",
+  price: 40,
+  isDiscounted: false
+}];

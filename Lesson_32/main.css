@@ -1,0 +1,12 @@
+.container {
+  background-color: lightblue;
+  padding: 20px;
+}
+
+.box {
+  background-color: lightcoral;
+}
+
+.hidden {
+  display: none;
+}

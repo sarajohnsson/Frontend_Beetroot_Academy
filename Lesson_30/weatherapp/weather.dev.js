@@ -86,7 +86,7 @@ function displayDefaultWeather() {
   weatherIconElement.innerHTML = "";
   var iconCode = getWeatherIcon(defaultWeather.weather[0].id);
   var iconElement = document.createElement("img");
-  iconElement.src = "http://openweathermap.org/img/wn/".concat(iconCode, "@2x.png");
+  iconElement.src = "https://openweathermap.org/img/wn/".concat(iconCode, "@2x.png");
   iconElement.alt = defaultWeather.weather[0].description;
   weatherIconElement.appendChild(iconElement);
 }
@@ -142,7 +142,7 @@ function displayWeather(data) {
   var weatherId = data.weather[0].id;
   var iconCode = getWeatherIcon(weatherId);
   var iconElement = document.createElement("img");
-  iconElement.src = "http://openweathermap.org/img/wn/".concat(iconCode, "@2x.png");
+  iconElement.src = "https://openweathermap.org/img/wn/".concat(iconCode, "@2x.png");
   iconElement.alt = data.weather[0].description;
   weatherIconElement.appendChild(iconElement);
   clearError("");

@@ -105,7 +105,7 @@ function displayDefaultWeather() {
     const iconCode = getWeatherIcon(defaultWeather.weather[0].id);
 
     const iconElement = document.createElement("img");
-    iconElement.src = `http://openweathermap.org/img/wn/${iconCode}@2x.png`;
+    iconElement.src = `https://openweathermap.org/img/wn/${iconCode}@2x.png`;
     iconElement.alt = defaultWeather.weather[0].description;
 
     weatherIconElement.appendChild(iconElement);
@@ -159,7 +159,7 @@ function displayWeather(data) {
     const iconCode = getWeatherIcon(weatherId);
 
     const iconElement = document.createElement("img");
-    iconElement.src = `http://openweathermap.org/img/wn/${iconCode}@2x.png`;
+    iconElement.src = `https://openweathermap.org/img/wn/${iconCode}@2x.png`;
     iconElement.alt = data.weather[0].description;
 
     weatherIconElement.appendChild(iconElement);
