@@ -56,4 +56,23 @@ function displayGroceries() {
     });
 }
 
+function sortName() {
+    groceryList.sort((a, b) => a.name.localeCompare(b.name));
+    // console.log(groceryList);
+
+    displayGroceries();
+}
+
+function sortPrice() {
+    groceryList.sort((a, b) => a.price - b.price);
+
+    displayGroceries();
+}
+
+function sortType() {
+    groceryList.sort((a, b) => a.type.localeCompare(b.type));
+
+    displayGroceries();
+}
+
 displayGroceries();

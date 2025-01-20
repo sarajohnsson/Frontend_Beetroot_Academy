@@ -46,6 +46,7 @@ body {
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
     padding: 10px;
+    margin-bottom: 40px;
 }
 
 .heading {
@@ -66,4 +67,31 @@ body {
     padding: 10px;
     border-bottom: 1px solid #ddd;
     text-align: left;
+}
+
+.box {
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    background-color: #fcc419;
+    border: 3px solid #444;
+}
+
+.resizer_container_corner {
+    width: 10px;
+    height: 10px;
+    background: #fff;
+    border: 3px solid #444;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.bottom_right {
+    right: -5px;
+    bottom: -5px;
+    cursor: grab;
+
+    &:active {
+        cursor: grabbing;
+    }
 }

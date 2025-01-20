@@ -50,4 +50,26 @@ function displayGroceries() {
   });
 }
 
+function sortName() {
+  groceryList.sort(function (a, b) {
+    return a.name.localeCompare(b.name);
+  }); // console.log(groceryList);
+
+  displayGroceries();
+}
+
+function sortPrice() {
+  groceryList.sort(function (a, b) {
+    return a.price - b.price;
+  });
+  displayGroceries();
+}
+
+function sortType() {
+  groceryList.sort(function (a, b) {
+    return a.type.localeCompare(b.type);
+  });
+  displayGroceries();
+}
+
 displayGroceries();

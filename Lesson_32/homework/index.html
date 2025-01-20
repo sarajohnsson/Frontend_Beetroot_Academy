@@ -16,12 +16,23 @@
 
             <h2 class="title">Grocery List</h2>
             <div class="groceries_container">
-                <div class="heading" onclick="sortGrid(0)">Name</div>
-                <div class="heading" onclick="sortGrid(1)">Price</div>
-                <div class="heading" onclick="sortGrid(2)">Category</div>
+                <div class="heading" onclick="sortName()">Name</div>
+                <div class="heading" onclick="sortPrice()">Price</div>
+                <div class="heading" onclick="sortType()">Category</div>
+            </div>
+
+            <!-- Resizable box -->
+            <h2 class="title">Resizable box</h2>
+            <div class="box">
+                <!-- Resizers container -->
+                <div class="resizer_container">
+                    <!-- Resizer corner -->
+                    <div class="resizer_container_corner bottom_right"></div>
+                </div>
             </div>
         </div>
         <script src="./displayingText.js"></script>
         <script src="./tableList.js"></script>
+        <script src="./resizeBox.js"></script>
     </body>
 </html>
