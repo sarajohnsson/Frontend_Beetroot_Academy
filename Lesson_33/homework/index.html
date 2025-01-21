@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./main.css" />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,700;1,500&display=swap"
+            rel="stylesheet"
+        />
+        <title>Clock</title>
+    </head>
+    <body>
+        <div class="page_wrapper row">
+            <h1 class="title row">World Clock Dashboard</h1>
+            <p class="subtitle row">
+                UTC, Europe/Stockholm, or America/New_York
+            </p>
+            <div class="input_container row">
+                <input
+                    type="text"
+                    class="timezone_input"
+                    placeholder="Enter timezone (e.g., America/New_York)"
+                />
+                <button class="add_clock_btn">Add clock</button>
+            </div>
+            <div class="clock_dashboard"></div>
+        </div>
+
+        <script src="./clock.js"></script>
+    </body>
+</html>
