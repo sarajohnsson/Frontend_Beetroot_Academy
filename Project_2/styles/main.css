@@ -1,0 +1,64 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  font-size: 0;
+  color: #444;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+img {
+  width: 100%;
+}
+
+.section_bg {
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.page_wrapper {
+  margin: 0 auto;
+  max-width: 1600px;
+}
+
+.header {
+  background-image: url(../assets/hero-img.jpg);
+  padding: 50px 0;
+}
+.header_logo {
+  max-width: 240px;
+  height: 55px;
+}
+.header .nav {
+  font-size: 14px;
+}
+.header .nav_list {
+  list-style: circle;
+}
+.header .nav_list li:hover {
+  list-style: disc;
+}
+.header_section {
+  text-transform: uppercase;
+}
+.header_section_title {
+  font-size: 80px;
+  letter-spacing: 10%;
+}
+.header_section_subtitle {
+  font-size: 18px;
+  letter-spacing: 30%;
+}

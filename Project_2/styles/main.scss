@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
+    font-size: 0;
+    color: #444;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+img {
+    width: 100%;
+}
+
+.section_bg {
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.page_wrapper {
+    margin: 0 auto;
+    max-width: 1600px;
+}
+
+.header {
+    background-image: url(../assets/hero-img.jpg);
+    // background: rgb(126, 90, 255);
+    // background: linear-gradient(
+    //     190deg,
+    //     rgba(126, 90, 255, 0.8) 0%,
+    //     rgba(85, 183, 255, 0.8) 100%
+    // );
+    padding: 50px 0;
+
+    &_logo {
+        max-width: 240px;
+        height: 55px;
+    }
+
+    .nav {
+        font-size: 14px;
+
+        &_list {
+            list-style: circle;
+
+            li {
+                &:hover {
+                    list-style: disc;
+                }
+            }
+        }
+    }
+
+    &_section {
+        text-transform: uppercase;
+
+        &_title {
+            font-size: 80px;
+            letter-spacing: 10%;
+        }
+
+        &_subtitle {
+            font-size: 18px;
+            letter-spacing: 30%;
+        }
+    }
+}
