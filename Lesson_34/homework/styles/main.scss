@@ -1,0 +1,191 @@
+$dark-blue: #2b3040;
+$deep-blue: #212534;
+$light-green: #13e28d;
+$yellow: #ffdd3f;
+$text: #b7bacd;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Lato", Arial, Helvetica, sans-serif;
+    background-color: $dark-blue;
+    font-size: 0px;
+    color: #fff;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+}
+
+button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+h3 {
+    font-size: 24px;
+}
+
+p {
+    font-size: 14px;
+}
+
+.page_wrapper {
+    margin: 0 auto;
+    max-width: 1000px;
+    height: 100vh;
+
+    background-image: url(../assets/bg-image.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.tabs_component {
+    margin: 0 auto;
+    max-width: 600px;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, 50%);
+    transform: translate(-50%, -50%);
+
+    .tabs_container {
+        background-color: $dark-blue;
+        display: flex;
+
+        .tabs {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            color: $text;
+            padding: 25px 0;
+
+            .tabs_text {
+                font-size: 16px;
+                line-height: 28px;
+                text-transform: uppercase;
+            }
+
+            i {
+                font-size: 22px;
+                margin-bottom: 15px;
+            }
+        }
+    }
+
+    .content {
+        display: none;
+        background-color: $deep-blue;
+        padding: 60px 40px;
+
+        .main_container {
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+
+            .img_box {
+                .cover {
+                    width: 160px;
+                    height: 230px;
+                }
+            }
+
+            .information_box {
+                display: flex;
+                flex-direction: column;
+
+                .heading {
+                    display: flex;
+                    align-items: center;
+                    gap: 70px;
+
+                    .titles {
+                        color: #fff;
+
+                        .title {
+                            font-size: 32px;
+                            line-height: 32px;
+                            margin-bottom: 15px;
+                        }
+
+                        .subtitle {
+                            font-size: 14px;
+                            line-height: 20px;
+                            margin-bottom: 40px;
+                        }
+                    }
+                }
+
+                .desc {
+                    color: $text;
+                    font-size: 14px;
+                    line-height: 22px;
+                    margin-bottom: 40px;
+                }
+
+                .purchase_container {
+                    display: flex;
+                    gap: 50px;
+
+                    .discount {
+                        font-size: 12px;
+                        line-height: 20px;
+                        text-transform: uppercase;
+                        color: $yellow;
+                        margin-bottom: 5px;
+                    }
+
+                    .price {
+                        color: #fff;
+                        font-size: 32px;
+                        line-height: 32px;
+                    }
+
+                    .buy_btn {
+                        background-color: $light-green;
+                        border-radius: 2px;
+                        padding: 20px 30px;
+
+                        color: #fff;
+                        font-size: 16px;
+                        line-height: 20px;
+                        text-transform: uppercase;
+
+                        &:hover {
+                            background-color: #00d4be;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Animation class
+
+.content.active_content {
+    display: block;
+}
+
+.active {
+    background-color: $deep-blue;
+
+    i,
+    .tabs_text {
+        color: #fff;
+    }
+}
