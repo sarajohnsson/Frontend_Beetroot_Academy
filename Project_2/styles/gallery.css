@@ -1,0 +1,25 @@
+.gallery {
+  margin-bottom: 140px;
+}
+.gallery .gallery_container_line {
+  background-color: #2c4058;
+  width: 100px;
+  height: 1px;
+  margin-bottom: 30px;
+}
+.gallery .gallery_container_title {
+  font-size: 44px;
+  font-weight: 700;
+  color: #2c4058;
+}
+.gallery .gallery_container_btn {
+  font-size: 14px;
+  text-transform: uppercase;
+  background-color: #fff;
+  border: 1px solid #2c4058;
+  padding: 15px 60px;
+}
+
+.light_gallery {
+  margin-bottom: 60px;
+}

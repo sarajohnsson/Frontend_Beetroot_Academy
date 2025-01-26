@@ -3,50 +3,362 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- GOOGLE FONT -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
             href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
             rel="stylesheet"
         />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+            rel="stylesheet"
+        />
+
+        <!-- CSS -->
         <link rel="stylesheet" href="./styles/main.css" />
+
+        <!-- FONTAWESOME -->
         <link rel="stylesheet" href="./fontawesome/css/all.min.css" />
+
+        <!-- OWL CAROUSEL -->
+        <!-- <link rel="stylesheet" href="owlcarousel/owl.carousel.min.css" />
+        <link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css" /> -->
         <title>Project 2</title>
     </head>
     <body>
         <div class="page_wrapper">
             <header class="header section_bg">
-                <img src="./assets/logo.svg" alt="Logo" class="header_logo" />
-                <nav class="nav">
-                    <ul class="nav_list">
-                        <li>
-                            <a href="#" class="nav_list_links">About us</a>
-                        </li>
-                        <li>
-                            <a href="#" class="nav_list_links">Projects</a>
-                        </li>
-                        <li>
-                            <a href="#" class="nav_list_links">News</a>
-                        </li>
-                        <li>
-                            <a href="#" class="nav_list_links">Contact</a>
-                        </li>
-                    </ul>
-                    <div class="socials">
-                        <a href="#" class="socials_link"></a>
-                        <a href="#" class="socials_link"></a>
-                        <a href="#" class="socials_link"></a>
+                <div class="header_overlay">
+                    <div class="nav_container row">
+                        <img src="./assets/logo.svg" alt="Logo" class="logo" />
+                        <nav class="nav_bar row">
+                            <ul class="nav_bar_list">
+                                <li>
+                                    <div class="nav_bar_list_icon active"></div>
+                                    <a href="#" class="nav_bar_list_link"
+                                        >About us</a
+                                    >
+                                </li>
+                                <li>
+                                    <div class="nav_bar_list_icon active"></div>
+                                    <a href="#" class="nav_bar_list_link"
+                                        >Projects</a
+                                    >
+                                </li>
+                                <li>
+                                    <div class="nav_bar_list_icon active"></div>
+                                    <a href="#" class="nav_bar_list_link"
+                                        >News</a
+                                    >
+                                </li>
+                                <li>
+                                    <div class="nav_bar_list_icon active"></div>
+                                    <a href="#" class="nav_bar_list_link"
+                                        >Contact</a
+                                    >
+                                </li>
+                            </ul>
+                            <div class="socials row">
+                                <a href="#" class="socials_link row">
+                                    <i class="fa-brands fa-facebook-f"></i>
+                                </a>
+                                <a href="#" class="socials_link row">
+                                    <i class="fa-brands fa-twitter"></i>
+                                </a>
+                                <a href="#" class="socials_link row">
+                                    <i class="fa-brands fa-instagram"></i>
+                                </a>
+                            </div>
+                        </nav>
                     </div>
-                </nav>
-                <section class="header_section">
-                    <h1 class="header_section_title">Simple & modern</h1>
-                    <p class="header_section_subtitle">
-                        We make the world beautiful everyday
-                    </p>
-                </section>
+                    <section class="header_section column">
+                        <h1 class="header_section_title">Simple & modern</h1>
+                        <p class="header_section_subtitle">
+                            We make the world beautiful everyday
+                        </p>
+                        <div class="scroll_btn row">
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </div>
+                    </section>
+                </div>
             </header>
 
-            <main></main>
+            <main>
+                <section class="hero_section column">
+                    <div class="hero_section_line"></div>
+                    <h2 class="hero_section_main_title">WHAT WE DO</h2>
+                    <div class="hero_section_content content_left">
+                        <div class="hero_section_content_box">
+                            <img
+                                class="world_trade_img"
+                                src="../Project_2/assets/section-img-1.jpg"
+                                alt=""
+                            />
+                            <div class="blue_sqr"></div>
+                        </div>
+                        <div class="hero_section_content_info">
+                            <p class="hero_section_subtitle">ONE WORLD</p>
+                            <h2 class="hero_section_title">TRADE CENTER</h2>
+                            <p class="hero_section_desc">
+                                Increasing prosperity in our lives can be
+                                accomplished by having the right frame of mind.
+                                The truth is, our thoughts are very powerful.
+                            </p>
+                            <button class="hero_section_btn">
+                                More details
+                            </button>
+                            <p class="hero_section_geo_tag">
+                                New York City, United States - 1776 feet
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="hero_section_content content_right">
+                        <div class="hero_section_content_info">
+                            <p class="hero_section_subtitle">INTERNATIONAL</p>
+                            <h2 class="hero_section_title">COMMERCE CENTRE</h2>
+                            <p class="hero_section_desc">
+                                Successful businesses have many things in
+                                common, today we’ll look at the big ‘R’ of
+                                recognition and how a digital advertising
+                                network may help.
+                            </p>
+                            <button class="hero_section_btn">
+                                More details
+                            </button>
+                            <p class="hero_section_geo_tag">
+                                Hong Kong - 1588 feet
+                            </p>
+                        </div>
+                        <div class="hero_section_content_box">
+                            <img
+                                class="commerce_center_img"
+                                src="../Project_2/assets/section-img-2.jpg"
+                                alt=""
+                            />
+                            <div class="purple_sqr"></div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="slider section_bg">
+                    <div class="slider_overlay">
+                        <div class="slider_container column">
+                            <div class="slider_container_line"></div>
+                            <h2 class="slider_container_title">LATEST NEWS</h2>
+                            <div class="owl_carousel">
+                                <!-- TESTIMONY 1 -->
+                                <div class="slider_section_box_test">
+                                    <img
+                                        src="./assets/slider-img-1.jpg"
+                                        alt=""
+                                        class="slider_section_box_test_img"
+                                    />
+                                    <div class="slider_section_box_test_info">
+                                        <h3
+                                            class="slider_section_box_test_info_title"
+                                        >
+                                            SEE THE UNMATCHED BEAUTY OF THE
+                                            GREAT.
+                                        </h3>
+                                        <p
+                                            class="slider_section_box_test_info_desc"
+                                        >
+                                            Free directories: directories are
+                                            perfect for customers that are
+                                            searching for...
+                                        </p>
+                                    </div>
+                                    <div class="slider_section_box_test_area">
+                                        <div
+                                            class="slider_section_box_test_area_pic"
+                                        >
+                                            <img
+                                                src="./assets/testimony-img-1.jpg"
+                                                alt=""
+                                                class="slider_section_box_test_area_pic_img"
+                                            />
+                                        </div>
+                                        <div
+                                            class="slider_section_box_test_area_name"
+                                        >
+                                            <p
+                                                class="slider_section_box_test_area_name_text"
+                                            >
+                                                ALJA BRUN
+                                            </p>
+                                            <p
+                                                class="slider_section_box_test_area_name_date"
+                                            >
+                                                20 Jan 2020
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- TESTIMONY 2 -->
+                                <div class="slider_section_box_test">
+                                    <img
+                                        src="./assets/slider-img-2.jpg"
+                                        alt=""
+                                        class="slider_section_box_test_img"
+                                    />
+                                    <div class="slider_section_box_test_info">
+                                        <h3
+                                            class="slider_section_box_test_info_title"
+                                        >
+                                            EFFECTIVE ADVERTISING POINTERS.
+                                        </h3>
+                                        <p
+                                            class="slider_section_box_test_info_desc"
+                                        >
+                                            Having a home based business is a
+                                            wonderful asset to your life...
+                                        </p>
+                                    </div>
+                                    <div class="slider_section_box_test_area">
+                                        <div
+                                            class="slider_section_box_test_area_pic"
+                                        >
+                                            <img
+                                                src="./assets/testimony-img-2.jpg"
+                                                alt=""
+                                                class="slider_section_box_test_area_pic_img"
+                                            />
+                                        </div>
+                                        <div
+                                            class="slider_section_box_test_area_name"
+                                        >
+                                            <p
+                                                class="slider_section_box_test_area_name_text"
+                                            >
+                                                DOMINIC FREEMAN
+                                            </p>
+                                            <p
+                                                class="slider_section_box_test_area_name_date"
+                                            >
+                                                13 Dec 2019
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- TESTIMONY 3 -->
+                                <div class="slider_section_box_test">
+                                    <img
+                                        src="./assets/slider-img-3.jpg"
+                                        alt=""
+                                        class="slider_section_box_test_img"
+                                    />
+                                    <div class="slider_section_box_test_info">
+                                        <h3
+                                            class="slider_section_box_test_info_title"
+                                        >
+                                            HYPNOTIZE YOURSELF INTO THE GHOST.
+                                        </h3>
+                                        <p
+                                            class="slider_section_box_test_info_desc"
+                                        >
+                                            There are many things that are
+                                            important to catalog design...
+                                        </p>
+                                    </div>
+                                    <div class="slider_section_box_test_area">
+                                        <div
+                                            class="slider_section_box_test_area_pic"
+                                        >
+                                            <img
+                                                src="./assets/testimony-img-3.jpg"
+                                                alt=""
+                                                class="slider_section_box_test_area_pic_img"
+                                            />
+                                        </div>
+                                        <div
+                                            class="slider_section_box_test_area_name"
+                                        >
+                                            <p
+                                                class="slider_section_box_test_area_name_text"
+                                            >
+                                                ALICE WARD
+                                            </p>
+                                            <p
+                                                class="slider_section_box_test_area_name_date"
+                                            >
+                                                30 Nov 2019
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="gallery">
+                    <div class="gallery_container column">
+                        <div class="gallery_container_line"></div>
+                        <div class="gallery_container_title">GALLERY</div>
+
+                        <!-- GALLERY PLUGIN -->
+                        <div class="light_gallery">
+                            <!-- <img
+                                src="./assets/gallery-img-1.jpg"
+                                alt=""
+                                class="light_gallery_img"
+                            /> -->
+                        </div>
+                        <button class="gallery_container_btn">SEE MORE</button>
+                    </div>
+                </section>
+            </main>
         </div>
+
+        <section class="map">
+            <!-- INTERACTIVE MAP -->
+            <img src="./assets/map.jpg" alt="" />
+        </section>
+
+        <section class="contanct">
+            <form action=""></form>
+        </section>
+
+        <footer class="footer">
+            <div class="footer_overlay">
+                <div class="footer_overlay_content">
+                    <div class="footer_overlay_content_logo">
+                        <img src="./assets/logo.svg" alt="Logo" class="logo" />
+                        <p class="footer_overlay_content_logo_copy">
+                            Copyrights © 2020 Montichello
+                        </p>
+                    </div>
+                    <div class="footer_overlay_content_socials">
+                        <a
+                            href="#"
+                            class="footer_overlay_content_socials_link row"
+                        >
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a
+                            href="#"
+                            class="footer_overlay_content_socials_link row"
+                        >
+                            <i class="fa-brands fa-twitter"></i>
+                        </a>
+                        <a
+                            href="#"
+                            class="footer_overlay_content_socials_link row"
+                        >
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- SCRIPTS -->
+        <!-- <script src="jquery.min.js"></script>
+        <script src="owlcarousel/owl.carousel.min.js"></script> -->
     </body>
 </html>

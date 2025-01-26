@@ -1,0 +1,36 @@
+$main-color: #55b7ff;
+$accent-color: #7e5aff;
+$slider-light: #24ccfa;
+$slider-dark: #3c7fd4;
+$text: #2c4058;
+
+.gallery {
+    margin-bottom: 140px;
+
+    .gallery_container {
+        &_line {
+            background-color: $text;
+            width: 100px;
+            height: 1px;
+            margin-bottom: 30px;
+        }
+
+        &_title {
+            font-size: 44px;
+            font-weight: 700;
+            color: $text;
+        }
+
+        &_btn {
+            font-size: 14px;
+            text-transform: uppercase;
+            background-color: #fff;
+            border: 1px solid $text;
+            padding: 15px 60px;
+        }
+    }
+}
+
+.light_gallery {
+    margin-bottom: 60px;
+}
