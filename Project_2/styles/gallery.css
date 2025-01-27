@@ -19,6 +19,11 @@
   border: 1px solid #2c4058;
   padding: 15px 60px;
 }
+.gallery .gallery_container_btn:hover {
+  background-color: #24ccfa;
+  border: 1px solid #3c7fd4;
+  transition: all 0.3s ease;
+}
 
 .light_gallery {
   margin-bottom: 60px;

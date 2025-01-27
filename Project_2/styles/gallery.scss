@@ -27,6 +27,12 @@ $text: #2c4058;
             background-color: #fff;
             border: 1px solid $text;
             padding: 15px 60px;
+
+            &:hover {
+                background-color: $slider-light;
+                border: 1px solid $slider-dark;
+                transition: all 0.3s ease;
+            }
         }
     }
 }

@@ -33,19 +33,19 @@ function handleTabs(event) {
   }
 
   if (newIndex === index) {
-    console.log("Samt tab clicked again. Ignoring");
+    console.log("Same tab clicked again. Ignoring");
     return;
   }
 
   if (index >= 0 && index < tabs.length) {
     tabs[index].classList.remove("active");
-    contents[index].classList.remove("active");
+    contents[index].classList.remove("active_content");
   }
 
   index = newIndex;
 
   if (index >= 0 && index < tabs.length) {
     tabs[index].classList.add("active");
-    contents[index].classList.add("active");
+    contents[index].classList.add("active_content");
   }
 }

@@ -156,3 +156,9 @@ p {
 .active .tabs_text {
   color: #fff;
 }
+
+.star_icon {
+  cursor: pointer;
+  color: #8D91A3;
+  font-size: 1.5rem;
+}

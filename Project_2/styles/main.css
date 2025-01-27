@@ -85,6 +85,8 @@
 .slider_overlay {
   background: rgba(0, 0, 0, 0.1) url(../assets/slider-bg.png);
   background-blend-mode: darken;
+  background-repeat: no-repeat;
+  background-size: cover;
   width: 100%;
   height: 100%;
 }
@@ -154,6 +156,7 @@
   font-size: 14px;
 }
 
+/* SLIDER */
 .gallery {
   margin-bottom: 140px;
 }
@@ -174,6 +177,11 @@
   background-color: #fff;
   border: 1px solid #2c4058;
   padding: 15px 60px;
+}
+.gallery .gallery_container_btn:hover {
+  background-color: #24ccfa;
+  border: 1px solid #3c7fd4;
+  transition: all 0.3s ease;
 }
 
 .light_gallery {
@@ -245,6 +253,16 @@ a {
   text-decoration: none;
   color: inherit;
   cursor: pointer;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #24ccfa;
+  border: 1px solid #3c7fd4;
+  transition: all 0.3s ease;
 }
 
 img {

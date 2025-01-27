@@ -3,19 +3,15 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="../homework/styles/main.css" />
 
-        <link
-            rel="stylesheet"
-            href="https://unicons.iconscout.com/release/v4.0.8/css/line.css"
-        />
+        <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css" />
+        <link rel="stylesheet" href="../fontawesome/css/all.min.css" />
 
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
-            rel="stylesheet"
-        />
+        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet" />
+
+        <link rel="stylesheet" href="../homework/styles/main.css" />
         <title>Far Cry</title>
     </head>
     <body>
@@ -40,30 +36,28 @@
                 <div class="content active_content">
                     <div class="main_container">
                         <div class="img_box">
-                            <img
-                                src="./assets/image.png"
-                                alt=""
-                                class="cover"
-                            />
+                            <img src="./assets/image.png" alt="" class="cover" />
                             <!-- Star rating -->
-                            4 of 5
+                            <div class="star_rating_container">
+                                <i class="fa-solid fa-star star_icon" aria-hidden="true" id="s1"></i>
+                                <i class="fa-solid fa-star star_icon" aria-hidden="true" id="s2"></i>
+                                <i class="fa-solid fa-star star_icon" aria-hidden="true" id="s3"></i>
+                                <i class="fa-solid fa-star star_icon" aria-hidden="true" id="s4"></i>
+                                <i class="fa-solid fa-star star_icon" aria-hidden="true" id="s5"></i>
+                            </div>
                         </div>
                         <div class="information_box">
                             <div class="heading">
                                 <div class="titles">
                                     <h1 class="title">FarCry 6</h1>
-                                    <p class="subtitle">
-                                        First released oct 6, 2021
-                                    </p>
+                                    <p class="subtitle">First released oct 6, 2021</p>
                                 </div>
                                 <!-- Radial rating -->
                                 8.7
                             </div>
                             <p class="desc">
-                                Far Cry 6 is a 2021 action-adventure
-                                first-person shooter game developed by Ubisoft
-                                Toronto. It is the sixth main installment in the
-                                Far Cry series and the successor Far Cry 5.
+                                Far Cry 6 is a 2021 action-adventure first-person shooter game developed by Ubisoft Toronto. It is the sixth main installment in
+                                the Far Cry series and the successor Far Cry 5.
                             </p>
                             <div class="purchase_container">
                                 <div class="price_box">
@@ -78,25 +72,40 @@
                 <div class="content">
                     <h3>Content 2</h3>
                     <p>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing
-                        elit. Nesciunt itaque aut, placeat enim nobis libero
-                        nihil distinctio ratione, et, mollitia tenetur harum
-                        quaerat maiores esse dicta at adipisci recusandae
-                        reprehenderit?
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nesciunt itaque aut, placeat enim nobis libero nihil distinctio ratione, et,
+                        mollitia tenetur harum quaerat maiores esse dicta at adipisci recusandae reprehenderit?
                     </p>
                 </div>
                 <div class="content">
                     <h3>Content 3</h3>
                     <p>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing
-                        elit. Nesciunt itaque aut, placeat enim nobis libero
-                        nihil distinctio ratione, et, mollitia tenetur harum
-                        quaerat maiores esse dicta at adipisci recusandae
-                        reprehenderit?
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nesciunt itaque aut, placeat enim nobis libero nihil distinctio ratione, et,
+                        mollitia tenetur harum quaerat maiores esse dicta at adipisci recusandae reprehenderit?
                     </p>
                 </div>
             </div>
         </div>
+
+        <script src="./plugins/jquery-3.7.1.slim.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $('#s1').on('click', function () {
+                    $('#s1').css('color', '#ffdd3f');
+                });
+                $('#s2').on('click', function () {
+                    $('#s2').css('color', '#ffdd3f');
+                });
+                $('#s3').on('click', function () {
+                    $('#s3').css('color', '#ffdd3f');
+                });
+                $('#s4').on('click', function () {
+                    $('#s4').css('color', '#ffdd3f');
+                });
+                $('#s5').on('click', function () {
+                    $('#s5').css('color', '#ffdd3f');
+                });
+            });
+        </script>
 
         <script src="../homework/js/main.js"></script>
     </body>

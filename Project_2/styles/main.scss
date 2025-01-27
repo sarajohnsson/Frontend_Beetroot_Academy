@@ -31,6 +31,17 @@ a {
     cursor: pointer;
 }
 
+button {
+    border: none;
+    cursor: pointer;
+
+    &:hover {
+        background-color: $slider-light;
+        border: 1px solid $slider-dark;
+        transition: all 0.3s ease;
+    }
+}
+
 img {
     width: 100%;
 }

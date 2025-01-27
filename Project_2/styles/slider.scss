@@ -16,6 +16,8 @@ $text: #2c4058;
     &_overlay {
         background: rgba(0, 0, 0, 0.1) url(../assets/slider-bg.png);
         background-blend-mode: darken;
+        background-repeat: no-repeat;
+        background-size: cover;
         width: 100%;
         height: 100%;
     }
@@ -36,8 +38,6 @@ $text: #2c4058;
         margin-bottom: 90px;
     }
 }
-
-// OWL CAROUSEL
 
 // TESTIMONIALS
 .slider_section_box_test {
@@ -99,3 +99,5 @@ $text: #2c4058;
         }
     }
 }
+
+/* SLIDER */
