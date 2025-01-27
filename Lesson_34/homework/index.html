@@ -39,10 +39,10 @@
                             <img src="./assets/image.png" alt="" class="cover" />
                             <!-- Star rating -->
                             <div class="star_rating_container">
-                                <i class="fa-solid fa-star star_icon" aria-hidden="true" id="s1"></i>
-                                <i class="fa-solid fa-star star_icon" aria-hidden="true" id="s2"></i>
-                                <i class="fa-solid fa-star star_icon" aria-hidden="true" id="s3"></i>
-                                <i class="fa-solid fa-star star_icon" aria-hidden="true" id="s4"></i>
+                                <i class="fa-solid fa-star star_icon animate" aria-hidden="true" id="s1"></i>
+                                <i class="fa-solid fa-star star_icon animate" aria-hidden="true" id="s2"></i>
+                                <i class="fa-solid fa-star star_icon animate" aria-hidden="true" id="s3"></i>
+                                <i class="fa-solid fa-star star_icon animate" aria-hidden="true" id="s4"></i>
                                 <i class="fa-solid fa-star star_icon" aria-hidden="true" id="s5"></i>
                             </div>
                         </div>
@@ -53,7 +53,7 @@
                                     <p class="subtitle">First released oct 6, 2021</p>
                                 </div>
                                 <!-- Radial rating -->
-                                8.7
+                                <div class="indicatorContainer"></div>
                             </div>
                             <p class="desc">
                                 Far Cry 6 is a 2021 action-adventure first-person shooter game developed by Ubisoft Toronto. It is the sixth main installment in
@@ -86,27 +86,17 @@
             </div>
         </div>
 
-        <script src="./plugins/jquery-3.7.1.slim.min.js"></script>
+        <script src="./plugins/jquery-3.7.1.min.js"></script>
         <script type="text/javascript">
             $(document).ready(function () {
-                $('#s1').on('click', function () {
-                    $('#s1').css('color', '#ffdd3f');
-                });
-                $('#s2').on('click', function () {
-                    $('#s2').css('color', '#ffdd3f');
-                });
-                $('#s3').on('click', function () {
-                    $('#s3').css('color', '#ffdd3f');
-                });
-                $('#s4').on('click', function () {
-                    $('#s4').css('color', '#ffdd3f');
-                });
-                $('#s5').on('click', function () {
-                    $('#s5').css('color', '#ffdd3f');
+                $('.star_icon.animate').each(function (index, element) {
+                    if (index < 4) {
+                        $(element).addClass('active');
+                    }
                 });
             });
         </script>
-
+        <script src="./plugins/radialIndicator.min.js"></script>
         <script src="../homework/js/main.js"></script>
     </body>
 </html>

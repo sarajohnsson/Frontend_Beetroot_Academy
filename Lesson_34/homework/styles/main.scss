@@ -11,7 +11,7 @@ $text: #b7bacd;
 }
 
 body {
-    font-family: "Lato", Arial, Helvetica, sans-serif;
+    font-family: 'Lato', Arial, Helvetica, sans-serif;
     background-color: $dark-blue;
     font-size: 0px;
     color: #fff;
@@ -99,6 +99,7 @@ p {
 
             .img_box {
                 .cover {
+                    margin-bottom: 25px;
                     width: 160px;
                     height: 230px;
                 }
@@ -110,10 +111,11 @@ p {
 
                 .heading {
                     display: flex;
-                    align-items: center;
                     gap: 70px;
+                    margin-bottom: 40px;
 
                     .titles {
+                        padding-top: 15px;
                         color: #fff;
 
                         .title {
@@ -125,12 +127,12 @@ p {
                         .subtitle {
                             font-size: 14px;
                             line-height: 20px;
-                            margin-bottom: 40px;
                         }
                     }
                 }
 
                 .desc {
+                    max-width: 280px;
                     color: $text;
                     font-size: 14px;
                     line-height: 22px;
@@ -191,9 +193,29 @@ p {
 }
 
 // Star rating
+.star_rating_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
 
-.star_icon{
+.star_icon {
+    display: inline-block;
+    font-size: 20px;
     cursor: pointer;
-color: #8D91A3;
-    font-size: 1.5rem;
+    color: #8d91a3;
+    transform: scale(1);
+    opacity: 1;
+    transition: all 1s ease;
+}
+
+.star_icon.animate {
+    transform: scale(0.5);
+    opacity: 1;
+}
+
+.star_icon.active {
+    transform: scale(1);
+    color: #ffdd3f;
 }
