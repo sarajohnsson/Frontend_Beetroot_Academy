@@ -1,7 +1,5 @@
 "use strict";
 
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
 function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread(); }
 
 function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance"); }
@@ -53,12 +51,16 @@ function handleTabs(event) {
 }
 
 radialObj = radialIndicator('.indicatorContainer', {
+  fontSize: 20,
+  fontColor: '#B7BACD',
+  fontWeight: 400,
   radius: 40,
-  barColor: _defineProperty({
+  barColor: {
     0: '#00D4BE',
     19: '#1AE780',
-    83: '#1AE780'
-  }, "0", '#00D4BE'),
+    83: '#1AE780',
+    100: '#00D4BE'
+  },
   barWidth: 5,
   initValue: 8.7,
   minValue: 0,

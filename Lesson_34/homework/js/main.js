@@ -39,12 +39,15 @@ function handleTabs(event) {
 }
 
 radialObj = radialIndicator('.indicatorContainer', {
+    fontSize: 20,
+    fontColor: '#B7BACD',
+    fontWeight: 400,
     radius: 40,
     barColor: {
         0: '#00D4BE',
         19: '#1AE780',
         83: '#1AE780',
-        0: '#00D4BE',
+        100: '#00D4BE',
     },
     barWidth: 5,
     initValue: 8.7,
