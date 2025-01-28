@@ -27,15 +27,19 @@
   gap: 70px;
 }
 .hero_section_content_box {
+  width: 100%;
+  max-width: 845px;
   height: 530px;
-  min-width: 845px;
   position: relative;
   display: flex;
   margin-bottom: 140px;
 }
-.hero_section_content_box img {
-  height: 470px;
+.hero_section_content_box .trade_center_img,
+.hero_section_content_box .commerce_center_img {
+  max-height: 470px;
   max-width: 630px;
+  width: 100%;
+  height: auto;
 }
 .hero_section_content_box .blue_sqr {
   background-color: #55b7ff;

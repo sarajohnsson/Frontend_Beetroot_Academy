@@ -38,15 +38,19 @@ $text: #2c4058;
         gap: 70px;
 
         &_box {
+            width: 100%;
+            max-width: 845px;
             height: 530px;
-            min-width: 845px;
             position: relative;
             display: flex;
             margin-bottom: 140px;
 
-            img {
-                height: 470px;
+            .trade_center_img,
+            .commerce_center_img {
+                max-height: 470px;
                 max-width: 630px;
+                width: 100%;
+                height: auto;
             }
 
             .blue_sqr {
@@ -67,13 +71,13 @@ $text: #2c4058;
         }
 
         &_info {
-            font-family: "Open Sans", Arial, Helvetica, sans-serif;
+            font-family: 'Open Sans', Arial, Helvetica, sans-serif;
             max-width: 470px;
         }
     }
 
     &_geo_tag {
-        font-family: "Open Sans", Arial, Helvetica, sans-serif;
+        font-family: 'Open Sans', Arial, Helvetica, sans-serif;
         font-size: 15px;
         font-style: italic;
     }

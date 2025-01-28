@@ -4,10 +4,10 @@ $slider-light: #24ccfa;
 $slider-dark: #3c7fd4;
 $text: #2c4058;
 
-@use "hero";
-@use "slider";
-@use "gallery";
-@use "footer";
+@use 'hero';
+@use 'slider';
+@use 'gallery';
+@use 'footer';
 
 * {
     margin: 0;
@@ -16,7 +16,7 @@ $text: #2c4058;
 }
 
 body {
-    font-family: "Montserrat", Arial, Helvetica, sans-serif;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
     font-size: 0;
     color: $text;
 }
@@ -43,15 +43,11 @@ button {
 }
 
 img {
-    width: 100%;
-}
-
-.section_bg {
-    background-repeat: no-repeat;
-    background-size: cover;
+    max-width: 100%;
 }
 
 .page_wrapper {
+    width: 100%;
     margin: 0 auto;
     max-width: 1600px;
 }
@@ -75,12 +71,9 @@ img {
 }
 
 .header {
+    width: 100%;
     background: rgb(126, 90, 255);
-    background: linear-gradient(
-        230deg,
-        rgba(126, 90, 255, 1) 20%,
-        rgba(85, 183, 255, 1) 80%
-    );
+    background: linear-gradient(230deg, rgba(126, 90, 255, 1) 20%, rgba(85, 183, 255, 1) 80%);
     margin-bottom: 100px;
 
     &_overlay {
@@ -88,23 +81,60 @@ img {
         background-blend-mode: darken;
         width: 100%;
         height: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
     }
 
     .nav_container {
+        width: 100%;
+        margin: 0 auto;
         padding-top: 55px;
-        gap: 145px;
+        gap: 9rem;
         margin-bottom: 225px;
 
+        @media (max-width: 1280px) {
+            gap: 5rem;
+        }
+        @media (max-width: 1025px) {
+            gap: 3rem;
+        }
+        @media (max-width: 801px) {
+            gap: 2rem;
+        }
+
         .nav_bar {
-            gap: 110px;
+            gap: 7rem;
 
             font-size: 14px;
             text-transform: uppercase;
             color: #fff;
 
+            @media (max-width: 1280px) {
+                gap: 5rem;
+            }
+            @media (max-width: 1025px) {
+                flex-direction: column;
+                gap: 3rem;
+            }
+            @media (max-width: 801px) {
+                flex-direction: column;
+                grid-area: 2rem;
+            }
+
             &_list {
                 display: flex;
                 gap: 70px;
+
+                @media (max-width: 1200px) {
+                    gap: 40px;
+                }
+                @media (max-width: 1025px) {
+                    gap: 20px;
+                }
+                @media (max-width: 801px) {
+                    flex-direction: column;
+                    gap: 15px;
+                }
 
                 li {
                     display: flex;
@@ -114,9 +144,10 @@ img {
                 }
 
                 &_icon {
+                    overflow: hidden;
                     border: 1px solid #fff;
-                    width: 0.8rem;
-                    height: 0.8rem;
+                    min-width: 14px;
+                    height: 14px;
                     border-radius: 50%;
                 }
             }
@@ -124,8 +155,22 @@ img {
             .socials {
                 gap: 20px;
 
+                @media (max-width: 1025px) {
+                    gap: 15px;
+                }
+                @media (max-width: 801px) {
+                    gap: 10px;
+                }
+
                 i {
                     font-size: 16px;
+
+                    @media (max-width: 1025px) {
+                        font-size: 14px;
+                    }
+                    @media (max-width: 801px) {
+                        font-size: 12px;
+                    }
                 }
 
                 &_link {
@@ -133,6 +178,16 @@ img {
                     border-radius: 50%;
                     width: 40px;
                     height: 40px;
+
+                    @media (max-width: 1025px) {
+                        gap: 15px;
+                        width: 35px;
+                        height: 35px;
+                    }
+                    @media (max-width: 801px) {
+                        width: 30px;
+                        height: 30px;
+                    }
                 }
             }
         }
@@ -141,16 +196,54 @@ img {
     &_section {
         color: #fff;
         text-transform: uppercase;
+        text-align: center;
 
-        &_title {
-            font-size: 80px;
-            letter-spacing: 0.1em;
-        }
+        .vertical_carousel {
+            max-width: 1280px;
+            margin-bottom: 240px !important;
 
-        &_subtitle {
-            font-size: 18px;
-            letter-spacing: 0.3em;
-            margin-bottom: 240px;
+            .slide {
+                background-color: red;
+                padding: 20px;
+
+                &_title {
+                    font-size: 5rem;
+                    letter-spacing: 0.1em;
+
+                    @media (max-width: 1025px) {
+                        font-size: 4rem;
+                    }
+
+                    @media (max-width: 801px) {
+                        font-size: 3rem;
+                    }
+
+                    @media (max-width: 600px) {
+                        font-size: 2.5rem;
+                    }
+
+                    @media (max-width: 480px) {
+                        font-size: 2rem;
+                    }
+                }
+
+                &_subtitle {
+                    font-size: 1.125rem;
+                    letter-spacing: 0.3em;
+
+                    @media (max-width: 1025px) {
+                        font-size: 1rem;
+                    }
+
+                    @media (max-width: 801px) {
+                        font-size: 0.875rem;
+                    }
+
+                    @media (max-width: 600px) {
+                        font-size: 0.75rem;
+                    }
+                }
+            }
         }
 
         .scroll_btn {
@@ -164,4 +257,12 @@ img {
             margin-bottom: 55px;
         }
     }
+}
+
+// SLICK OVERRIDE
+
+.slick-dots {
+    top: -20%;
+    left: 50%;
+    transform: rotate(90deg);
 }
