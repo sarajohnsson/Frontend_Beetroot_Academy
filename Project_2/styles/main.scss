@@ -34,12 +34,6 @@ a {
 button {
     border: none;
     cursor: pointer;
-
-    &:hover {
-        background-color: $slider-light;
-        border: 1px solid $slider-dark;
-        transition: all 0.3s ease;
-    }
 }
 
 img {
@@ -198,13 +192,13 @@ img {
         text-transform: uppercase;
         text-align: center;
 
-        .vertical_carousel {
-            max-width: 1280px;
-            margin-bottom: 240px !important;
+        .vertical_slider {
+            margin: 0 auto;
+            max-width: 100%;
+            margin-bottom: 240px;
 
-            .slide {
-                background-color: red;
-                padding: 20px;
+            &_slide {
+                padding: 10px 0;
 
                 &_title {
                     font-size: 5rem;
@@ -259,10 +253,55 @@ img {
     }
 }
 
-// SLICK OVERRIDE
+// SLICK SLIDER
+.left_arrow {
+    position: absolute;
+    top: 30%;
+    left: -10px;
+    font-size: 30px;
+    height: 35px;
+    width: 35px;
+    background-color: #fff;
+    color: #fff;
+}
 
+.right_arrow {
+    position: absolute;
+    top: 30%;
+    left: -10px;
+    font-size: 30px;
+    height: 35px;
+    width: 35px;
+    background-color: #fff;
+    color: #fff;
+}
+
+// SLICK OVERRIDE
 .slick-dots {
-    top: -20%;
-    left: 50%;
-    transform: rotate(90deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    padding-top: 60px;
+}
+
+.slick-dots li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slick-dots li button {
+    font-size: 0;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    background-color: transparent;
+}
+
+.slick-dots .slick-active {
+    border-radius: 50%;
+    background-color: #fff;
+    border: none;
 }

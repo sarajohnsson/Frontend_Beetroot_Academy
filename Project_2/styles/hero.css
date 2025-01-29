@@ -72,6 +72,11 @@
   padding: 15px 40px;
   margin-bottom: 60px;
 }
+.hero_section_btn:hover {
+  background-color: #24ccfa;
+  border: 1px solid #3c7fd4;
+  transition: all 0.3s ease;
+}
 
 .content_left {
   justify-content: start;
