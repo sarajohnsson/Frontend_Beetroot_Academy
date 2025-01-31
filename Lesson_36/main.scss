@@ -1,0 +1,43 @@
+.container {
+    width: 90%;
+    margin: auto;
+    max-width: 1140px;
+}
+
+img {
+    width: 100%;
+}
+
+/* 370 / 240 = target aspect ratio 1,5*/
+// padding-top: calc(50% / 1.5)
+// For colored container, use before and after. Pic should be one container and colored boxes another container, it can be related to another box
+
+.img_wrapper {
+    // Set height according to the with. Will make responsive, to make it vertical change the percent of padding-top to either 25% or 75%
+    width: 50%; // Related to element width
+    padding-top: 50%; // Half of the element width
+    overflow: hidden;
+    position: relative;
+}
+
+.img_wrapper img {
+    position: absolute;
+    // Use top, left, bottom, right to position picture
+    left: 0;
+    top: 0;
+}
+
+// Restrict access of hackers to your device
+// Cookies can be stored forever until user clears it
+// Session storage is only available during the session, unlike local storage
+// We're not using localstorage for sensitive data
+// You won't use sessionstorage because of lifetime, usally we are working with localstorage.
+// Cookies is better protected to store sensitive data, api key or user credentials. That is the main differense from cookies and localstorage
+// Each cookie has expiration date. Belong to global object document
+// Document cookie is always a string
+// Can't remove cookie, need to use expiration date and set to date in the past
+
+// Popular technical question
+// local storage -> size 5-10mb; Expiration: never; Accessability -> only from browser
+// session storage -> size 5-10mb; Expiration: never; when tab/window closed; Accessability -> only from browser
+// cookies -> size ~ 4kb; Expiration: you can set expiration; Accessability -> browser/server

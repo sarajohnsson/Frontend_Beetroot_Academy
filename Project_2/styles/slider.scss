@@ -37,13 +37,12 @@ $text: #2c4058;
 
 // TESTIMONIALS
 .slider_testimonials {
-    margin: 0 auto;
+    box-sizing: border-box;
     background-color: #fff;
-
-    max-width: 370px;
-    margin: 0 30px 0 30px;
+    width: 100%;
 
     &_img {
+        width: 100%;
         margin-bottom: 30px;
     }
 
@@ -101,7 +100,19 @@ $text: #2c4058;
 
 /* SLIDER */
 .horizontal_slider {
-    margin: 0 auto;
-    max-width: 1280px;
-    max-height: 515px;
+    // Try to play around with percent
+    width: 90%;
+}
+
+.slick-track {
+    margin: auto;
+}
+
+.slick-initialized {
+    overflow: hidden;
+}
+
+.slick-slide {
+    margin-right: 30px;
+    margin-left: 30px;
 }

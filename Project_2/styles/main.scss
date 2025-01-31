@@ -43,7 +43,6 @@ img {
 .page_wrapper {
     width: 100%;
     margin: 0 auto;
-    max-width: 1600px;
 }
 
 .column {
@@ -140,8 +139,8 @@ img {
                 &_icon {
                     overflow: hidden;
                     border: 1px solid #fff;
-                    min-width: 14px;
-                    height: 14px;
+                    min-width: 10px;
+                    height: 10px;
                     border-radius: 50%;
                 }
             }
@@ -204,6 +203,9 @@ img {
                     font-size: 5rem;
                     letter-spacing: 0.1em;
 
+                    @media (max-width: 1025px) {
+                        font-size: 4rem;
+                    }
                     @media (max-width: 1025px) {
                         font-size: 4rem;
                     }

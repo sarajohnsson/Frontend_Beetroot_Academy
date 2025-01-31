@@ -1,0 +1,23 @@
+.container {
+  width: 90%;
+  margin: auto;
+  max-width: 1140px;
+}
+
+img {
+  width: 100%;
+}
+
+/* 370 / 240 = target aspect ratio 1,5*/
+.img_wrapper {
+  width: 50%;
+  padding-top: 50%;
+  overflow: hidden;
+  position: relative;
+}
+
+.img_wrapper img {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
