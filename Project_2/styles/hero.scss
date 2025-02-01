@@ -5,6 +5,9 @@ $slider-dark: #3c7fd4;
 $text: #2c4058;
 
 .hero_section {
+    max-width: 1600px;
+    margin: 0 auto;
+
     &_line {
         background-color: #2c4058;
         width: 100px;
@@ -35,42 +38,14 @@ $text: #2c4058;
     &_content {
         width: 100%;
         display: flex;
+        justify-content: center;
         gap: 70px;
-
-        &_box {
-            width: 100%;
-            max-width: 845px;
-            height: 530px;
-            position: relative;
-            display: flex;
-            margin-bottom: 140px;
-
-            .trade_center_img,
-            .commerce_center_img {
-                max-height: 470px;
-                max-width: 630px;
-                width: 100%;
-                height: auto;
-            }
-
-            .blue_sqr {
-                background-color: $main-color;
-                height: 470px;
-                width: 100%;
-                max-width: 630px;
-                z-index: -1;
-            }
-
-            .purple_sqr {
-                background-color: $accent-color;
-                height: 470px;
-                width: 100%;
-                max-width: 630px;
-                z-index: -1;
-            }
-        }
+        margin-bottom: 140px;
 
         &_info {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
             font-family: 'Open Sans', Arial, Helvetica, sans-serif;
             max-width: 470px;
         }
@@ -89,6 +64,7 @@ $text: #2c4058;
         border: 1px solid $text;
         padding: 15px 40px;
         margin-bottom: 60px;
+        max-width: fit-content;
 
         &:hover {
             background-color: $slider-light;
@@ -98,10 +74,37 @@ $text: #2c4058;
     }
 }
 
-.content_left {
-    justify-content: start;
+.hero_section_content_blue_container,
+.hero_section_content_purple_container {
+    position: relative;
+    display: inline-block;
+    max-width: 585px;
+    height: 100%;
 }
 
-.content_right {
-    justify-content: end;
+.hero_section_content_blue_container::after {
+    content: '';
+    position: absolute;
+    background-color: $main-color;
+    width: 100%;
+    height: 100%;
+    top: -10%;
+    left: -45%;
+}
+
+.hero_section_content_purple_container::after {
+    content: '';
+    position: absolute;
+    background-color: $accent-color;
+    width: 100%;
+    height: 100%;
+    top: -10%;
+    left: 45%;
+}
+
+.trade_center_img,
+.commerce_center_img {
+    position: relative;
+    z-index: 1;
+    display: block;
 }

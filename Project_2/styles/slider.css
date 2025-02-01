@@ -7,9 +7,9 @@
   background: rgba(0, 0, 0, 0.1) url(../assets/slider-bg.png);
   background-blend-mode: darken;
   background-repeat: no-repeat;
-  background-size: cover;
-  width: 100%;
-  height: 100%;
+  background-size: 100%;
+  padding-top: calc(2.8);
+  background-position: bottom;
 }
 
 .slider_container {
@@ -30,7 +30,7 @@
 .slider_testimonials {
   box-sizing: border-box;
   background-color: #fff;
-  width: 100%;
+  height: fit-content;
 }
 .slider_testimonials_img {
   width: 100%;
@@ -40,15 +40,45 @@
   padding: 0 20px;
 }
 .slider_testimonials_info_title {
-  font-size: 22px;
+  font-size: 1.375rem;
   font-weight: 700;
   color: #2c4058;
   margin-bottom: 15px;
 }
+@media (max-width: 1025px) {
+  .slider_testimonials_info_title {
+    font-size: 1.25;
+  }
+}
+@media (max-width: 801px) {
+  .slider_testimonials_info_title {
+    font-size: 1.125rem;
+  }
+}
+@media (max-width: 600px) {
+  .slider_testimonials_info_title {
+    font-size: 1rem;
+  }
+}
 .slider_testimonials_info_desc {
   font-family: "Open Sans", Arial, Helvetica, sans-serif;
-  font-size: 18px;
+  font-size: 1.125rem;
   margin-bottom: 40px;
+}
+@media (max-width: 1025px) {
+  .slider_testimonials_info_desc {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 801px) {
+  .slider_testimonials_info_desc {
+    font-size: 0.875rem;
+  }
+}
+@media (max-width: 600px) {
+  .slider_testimonials_info_desc {
+    font-size: 0.75rem;
+  }
 }
 .slider_testimonials_area {
   display: flex;
@@ -57,6 +87,16 @@
 }
 .slider_testimonials_area_box {
   margin-bottom: 30px;
+}
+@media (max-width: 600px) {
+  .slider_testimonials_area_box {
+    margin-bottom: 25px;
+  }
+}
+@media (max-width: 480px) {
+  .slider_testimonials_area_box {
+    margin-bottom: 20px;
+  }
 }
 .slider_testimonials_area_box_img {
   border-radius: 50%;
@@ -74,6 +114,21 @@
   font-size: 18px;
   margin-bottom: 6px;
 }
+@media (max-width: 1025px) {
+  .slider_testimonials_area_name_text {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 801px) {
+  .slider_testimonials_area_name_text {
+    font-size: 0.875rem;
+  }
+}
+@media (max-width: 600px) {
+  .slider_testimonials_area_name_text {
+    font-size: 0.75rem;
+  }
+}
 .slider_testimonials_area_name_date {
   color: #55b7ff;
   font-size: 14px;
@@ -81,7 +136,7 @@
 
 /* SLIDER */
 .horizontal_slider {
-  width: 90%;
+  width: 80%;
 }
 
 .slick-track {
@@ -92,7 +147,7 @@
   overflow: hidden;
 }
 
-.slick-slide {
+.horizontal_slider .slick-slide {
   margin-right: 30px;
   margin-left: 30px;
 }

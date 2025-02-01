@@ -13,9 +13,9 @@ $text: #2c4058;
         background: rgba(0, 0, 0, 0.1) url(../assets/slider-bg.png);
         background-blend-mode: darken;
         background-repeat: no-repeat;
-        background-size: cover;
-        width: 100%;
-        height: 100%;
+        background-size: 100%;
+        padding-top: calc(2.8);
+        background-position: bottom;
     }
 }
 
@@ -39,7 +39,7 @@ $text: #2c4058;
 .slider_testimonials {
     box-sizing: border-box;
     background-color: #fff;
-    width: 100%;
+    height: fit-content;
 
     &_img {
         width: 100%;
@@ -50,16 +50,40 @@ $text: #2c4058;
         padding: 0 20px;
 
         &_title {
-            font-size: 22px;
+            font-size: 1.375rem;
             font-weight: 700;
             color: $text;
             margin-bottom: 15px;
+
+            @media (max-width: 1025px) {
+                font-size: 1.25;
+            }
+
+            @media (max-width: 801px) {
+                font-size: 1.125rem;
+            }
+
+            @media (max-width: 600px) {
+                font-size: 1rem;
+            }
         }
 
         &_desc {
             font-family: 'Open Sans', Arial, Helvetica, sans-serif;
-            font-size: 18px;
+            font-size: 1.125rem;
             margin-bottom: 40px;
+
+            @media (max-width: 1025px) {
+                font-size: 1rem;
+            }
+
+            @media (max-width: 801px) {
+                font-size: 0.875rem;
+            }
+
+            @media (max-width: 600px) {
+                font-size: 0.75rem;
+            }
         }
     }
 
@@ -70,6 +94,14 @@ $text: #2c4058;
 
         &_box {
             margin-bottom: 30px;
+
+            @media (max-width: 600px) {
+                margin-bottom: 25px;
+            }
+
+            @media (max-width: 480px) {
+                margin-bottom: 20px;
+            }
 
             &_img {
                 border-radius: 50%;
@@ -88,6 +120,18 @@ $text: #2c4058;
                 color: $text;
                 font-size: 18px;
                 margin-bottom: 6px;
+
+                @media (max-width: 1025px) {
+                    font-size: 1rem;
+                }
+
+                @media (max-width: 801px) {
+                    font-size: 0.875rem;
+                }
+
+                @media (max-width: 600px) {
+                    font-size: 0.75rem;
+                }
             }
 
             &_date {
@@ -101,18 +145,17 @@ $text: #2c4058;
 /* SLIDER */
 .horizontal_slider {
     // Try to play around with percent
-    width: 90%;
+    width: 80%;
 }
 
 .slick-track {
     margin: auto;
 }
-
 .slick-initialized {
     overflow: hidden;
 }
 
-.slick-slide {
+.horizontal_slider .slick-slide {
     margin-right: 30px;
     margin-left: 30px;
 }
