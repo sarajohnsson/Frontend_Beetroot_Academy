@@ -1,0 +1,17 @@
+$main-color: #55b7ff;
+$accent-color: #7e5aff;
+$slider-light: #24ccfa;
+$slider-dark: #3c7fd4;
+$text: #2c4058;
+
+.map {
+    &_container {
+        height: 700px;
+
+        &_interactive {
+            z-index: 1;
+            height: 100%;
+            width: 100%;
+        }
+    }
+}

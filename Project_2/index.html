@@ -6,6 +6,9 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+        <!-- CSS -->
+        <link rel="stylesheet" href="./styles/main.css" />
+
         <!-- GOOGLE FONT -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -21,16 +24,22 @@
         <!-- Add the new slick-theme.css if you want the default styling -->
 
         <!-- LIGHTGALLERY -->
-        <link rel="stylesheet" href="./plugins/lightgallery/lightgallery-bundle.min.css" />
 
-        <!-- CSS -->
-        <link rel="stylesheet" href="./styles/main.css" />
+        <!-- LEAFLET -->
+        <link
+            rel="stylesheet"
+            href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+            integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+            crossorigin="" />
+
         <title>Project 2</title>
     </head>
     <body>
-        <!-- Remove page wrapper. Content shoudl be full with!!! Stop making the same mistake all the time -->
+        <!-- Remove page wrapper. Content should be full with!!! Stop making the same mistake all the time -->
+        <!-- WEB PAGE -->
         <div class="page_wrapper">
-            <header class="header">
+            <!-- HEADER -->
+            <header class="header" id="main">
                 <div class="header_overlay">
                     <div class="nav_container row">
                         <nav class="nav_bar row">
@@ -55,7 +64,7 @@
                             <!-- NAV BAR -->
                             <ul class="nav_bar_list">
                                 <li>
-                                    <a href="#" class="logo">
+                                    <a href="#main" class="logo">
                                         <img src="./assets/logo.svg" alt="Logo" class="logo_img" />
                                     </a>
                                 </li>
@@ -125,12 +134,14 @@
                         </div>
 
                         <div class="scroll_btn row">
-                            <i class="fa-solid fa-chevron-down"></i>
+                            <a href="#projects">
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </a>
                         </div>
                     </section>
                 </div>
             </header>
-
+            <!-- MAIN CONTENT -->
             <main>
                 <!-- HERO SECTION -->
                 <section class="hero_section column" id="projects">
@@ -148,7 +159,10 @@
                                 powerful.
                             </p>
                             <button class="hero_section_btn">More details</button>
-                            <p class="hero_section_geo_tag">New York City, United States - 1776 feet</p>
+                            <p class="hero_section_geo_tag">
+                                <i class="fa-solid fa-location-dot"></i>
+                                New York City, United States - 1776 feet
+                            </p>
                         </div>
                     </div>
 
@@ -161,7 +175,10 @@
                                 network may help.
                             </p>
                             <button class="hero_section_btn">More details</button>
-                            <p class="hero_section_geo_tag">Hong Kong - 1588 feet</p>
+                            <p class="hero_section_geo_tag">
+                                <i class="fa-solid fa-location-dot"></i>
+                                Hong Kong - 1588 feet
+                            </p>
                         </div>
                         <div class="hero_section_content_purple_container">
                             <img class="commerce_center_img" src="../Project_2/assets/section-img-2.jpg" alt="Commerce center building" />
@@ -311,15 +328,27 @@
                 </section>
 
                 <!-- GALLERY -->
-                <section class="gallery" id="">
+                <section class="gallery" id="gallery">
                     <div class="gallery_container column">
                         <div class="gallery_container_line"></div>
                         <div class="gallery_container_title">GALLERY</div>
 
                         <!-- GALLERY PLUGIN -->
                         <div id="lightgallery">
-                            <a href="./assets/gallery-img-1.jpg" data-lg-size="1980-1080">
-                                <img alt="img1" src="./assets/gallery-img-thumb-1.jpg" />
+                            <a href="./assets/gallery-img-1.jpg">
+                                <img src="./assets/gallery-img-thumb-1.jpg" />
+                            </a>
+                            <a href="./assets/gallery-img-2.jpg">
+                                <img src="./assets/gallery-img-thumb-2.jpg" />
+                            </a>
+                            <a href="./assets/gallery-img-3.jpg">
+                                <img src="./assets/gallery-img-thumb-3.jpg" />
+                            </a>
+                            <a href="./assets/gallery-img-4.jpg">
+                                <img src="./assets/gallery-img-thumb-4.jpg" />
+                            </a>
+                            <a href="./assets/gallery-img-5.jpg">
+                                <img src="./assets/gallery-img-thumb-5.jpg" />
                             </a>
                         </div>
 
@@ -327,21 +356,63 @@
                     </div>
                 </section>
 
+                <!-- INTERACTIVE MAP -->
                 <section class="map">
-                    <!-- INTERACTIVE MAP -->
-                    <img src="./assets/map.jpg" alt="" />
+                    <div class="map_container">
+                        <div class="map_container_interactive" id="map"></div>
+                    </div>
                 </section>
 
-                <section class="contact" id="contact">
-                    <form action=""></form>
+                <!-- CONTACT -->
+                <section class="contact_section" id="contact">
+                    <div class="contact_container">
+                        <div class="contact_container_line"></div>
+                        <h2 class="contact_container_title">Get in touch</h2>
+
+                        <div class="form_container">
+                            <div class="form_container_info">
+                                <p class="form_container_info_text">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                    91 Nolan Extension Suite 670
+                                </p>
+                                <p class="form_container_info_text">
+                                    <i class="fa-solid fa-phone"></i>
+                                    +001 356-868-2454
+                                </p>
+                                <p class="form_container_info_text">
+                                    <i class="fa-solid fa-inbox"></i>
+                                    montichello@service.com
+                                </p>
+                                <p class="form_container_info_text">
+                                    <i class="fa-regular fa-clock"></i>
+                                    From 07:05AM to 19:30PM
+                                </p>
+                            </div>
+                            <form action="/" method="get" id="form" class="form">
+                                <div class="input_field">
+                                    <div class="form_control">
+                                        <label for="name"></label>
+                                        <input type="text" name="name" id="name" placeholder="Mollie Medina" />
+                                        <label for="email"></label>
+                                        <input type="text" name="email" id="email" placeholder="Email" />
+                                    </div>
+                                    <div class="submit_field">
+                                        <p class="submit_field_message" id="messageBox"></p>
+                                        <button type="submit" class="submit_field_button" id="submitButton">Submit</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
                 </section>
             </main>
 
+            <!-- FOOTER -->
             <footer class="footer">
                 <div class="footer_overlay">
                     <div class="footer_overlay_content">
                         <div class="footer_overlay_content_logo">
-                            <a href="#" class="logo_link">
+                            <a href="#main" class="logo_link">
                                 <img src="./assets/logo.svg" alt="Logo" class="logo" />
                             </a>
                             <p class="footer_overlay_content_logo_copy">Copyrights © 2020 Montichello</p>
@@ -365,10 +436,8 @@
         <!-- SCRIPTS -->
         <script src="./plugins/jquery-3.7.1.min.js"></script>
         <script type="text/javascript" src="./plugins/slick/slick.min.js"></script>
-        <script src="./plugins/lightgallery/lightgallery.min.js"></script>
-        <script src="./plugins/lightgallery/lg-fullscreen.min.js"></script>
-        <script src="./plugins/lightgallery/lg-zoom.min.js"></script>
-        <script src="./plugins/lightgallery/lg-thumbnail.min.js"></script>
+
+        <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 
         <!-- MAIN SCRIPT -->
         <script src="./js/main.js"></script>

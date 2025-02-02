@@ -2,11 +2,17 @@
 function showSidebar() {
     const sidebar = document.querySelector('.sidebar');
     sidebar.style.display = 'flex';
+
+    const hamburger = document.querySelector('.open_icon');
+    hamburger.style.visibility = 'hidden';
 }
 
 function closeSidebar() {
     const sidebar = document.querySelector('.sidebar');
     sidebar.style.display = 'none';
+
+    const hamburger = document.querySelector('.open_icon');
+    hamburger.style.visibility = 'visible';
 }
 
 function setActive() {
@@ -56,8 +62,10 @@ $(document).ready(function () {
         verticalSwiping: true,
         speed: 800,
         dots: true,
-        prevArrow: '',
-        nextArrow: '',
+        autoplay: true,
+        autoplaySpeed: 3000,
+        prevArrow: false,
+        nextArrow: false,
     });
 
     $('.horizontal_slider').slick({
@@ -67,6 +75,8 @@ $(document).ready(function () {
         slidesToScroll: 1,
         speed: 800,
         dots: true,
+        autoplay: true,
+        autoplaySpeed: 3000,
 
         prevArrow: '<i class="fa-solid fa-chevron-left left_arrow"></i>',
         nextArrow: '<i class="fa-solid fa-chevron-right right_arrow"></i>',
@@ -105,6 +115,76 @@ $(document).ready(function () {
 });
 
 // LIGHTGALLERY
-lightGallery(document.getElementById('lightgallery'), {
-    plugins: [lgZoom, lgFullscreen],
+
+// INTERACTIVE MAP
+document.addEventListener('DOMContentLoaded', function () {
+    const map = L.map('map').setView([59.33255219928953, 18.064587649123187], 15);
+
+    L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png', {}).addTo(map);
+
+    const custMarker = L.icon({
+        iconUrl: 'assets/pin.png',
+        iconSize: [100, 100], // size of the icon
+        iconAnchor: [50, 50], // point of the icon which will correspond to marker's location
+        popupAnchor: [0, 0], // point from which the popup should open relative to the iconAnchor
+    });
+
+    L.marker([59.33255219928953, 18.064587649123187], { icon: custMarker }).addTo(map).bindPopup('Come to visit us').openPopup();
+});
+
+// FORM
+const form = document.querySelector('#form');
+const messageBox = document.querySelector('#messageBox');
+
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    validateForm();
+});
+
+function validateForm() {
+    const name = document.querySelector('#name');
+    const email = document.querySelector('#email');
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    let errorField = null;
+
+    messageBox.textContent = '';
+    messageBox.classList.remove('success', 'error');
+
+    if (!name.value.trim()) {
+        errorField = name;
+    } else if (!email.value.trim() || !emailPattern.test(email.value)) {
+        errorField = email;
+    }
+
+    if (errorField) {
+        messageBox.textContent = 'Please fill out all required fields correctly.';
+        messageBox.classList.add('error');
+        errorField.focus();
+    } else {
+        messageBox.textContent = 'Form submitted successfully!';
+        messageBox.classList.add('success');
+        form.reset();
+    }
+}
+
+// SMOOTH SCROLLING
+$(document).ready(function () {
+    $('a').on('click', function (event) {
+        if (this.has !== '') {
+            event.preventDefault();
+
+            const hash = this.hash;
+
+            $('html, body').animate(
+                {
+                    scrollTop: $(hash).offset().top,
+                },
+                800,
+                function () {
+                    window.location.hash = hash;
+                }
+            );
+        }
+    });
 });

@@ -4,11 +4,15 @@
 function showSidebar() {
   var sidebar = document.querySelector('.sidebar');
   sidebar.style.display = 'flex';
+  var hamburger = document.querySelector('.open_icon');
+  hamburger.style.visibility = 'hidden';
 }
 
 function closeSidebar() {
   var sidebar = document.querySelector('.sidebar');
   sidebar.style.display = 'none';
+  var hamburger = document.querySelector('.open_icon');
+  hamburger.style.visibility = 'visible';
 }
 
 function setActive() {
@@ -56,8 +60,10 @@ $(document).ready(function () {
     verticalSwiping: true,
     speed: 800,
     dots: true,
-    prevArrow: '',
-    nextArrow: ''
+    autoplay: true,
+    autoplaySpeed: 3000,
+    prevArrow: false,
+    nextArrow: false
   });
   $('.horizontal_slider').slick({
     initialSlide: 0,
@@ -66,6 +72,8 @@ $(document).ready(function () {
     slidesToScroll: 1,
     speed: 800,
     dots: true,
+    autoplay: true,
+    autoplaySpeed: 3000,
     prevArrow: '<i class="fa-solid fa-chevron-left left_arrow"></i>',
     nextArrow: '<i class="fa-solid fa-chevron-right right_arrow"></i>',
     responsive: [{
@@ -95,7 +103,68 @@ $(document).ready(function () {
   $('.horizontal_slider').on('init', setEqualHeight);
   $('.horizontal_slider').on('setPosition', setEqualHeight);
 }); // LIGHTGALLERY
+// INTERACTIVE MAP
 
-lightGallery(document.getElementById('lightgallery'), {
-  plugins: [lgZoom, lgFullscreen]
+document.addEventListener('DOMContentLoaded', function () {
+  var map = L.map('map').setView([59.33255219928953, 18.064587649123187], 15);
+  L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png', {}).addTo(map);
+  var custMarker = L.icon({
+    iconUrl: 'assets/pin.png',
+    iconSize: [100, 100],
+    // size of the icon
+    iconAnchor: [50, 50],
+    // point of the icon which will correspond to marker's location
+    popupAnchor: [0, 0] // point from which the popup should open relative to the iconAnchor
+
+  });
+  L.marker([59.33255219928953, 18.064587649123187], {
+    icon: custMarker
+  }).addTo(map).bindPopup('Come to visit us').openPopup();
+}); // FORM
+
+var form = document.querySelector('#form');
+var messageBox = document.querySelector('#messageBox');
+form.addEventListener('submit', function (e) {
+  e.preventDefault();
+  validateForm();
+});
+
+function validateForm() {
+  var name = document.querySelector('#name');
+  var email = document.querySelector('#email');
+  var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  var errorField = null;
+  messageBox.textContent = '';
+  messageBox.classList.remove('success', 'error');
+
+  if (!name.value.trim()) {
+    errorField = name;
+  } else if (!email.value.trim() || !emailPattern.test(email.value)) {
+    errorField = email;
+  }
+
+  if (errorField) {
+    messageBox.textContent = 'Please fill out all required fields correctly.';
+    messageBox.classList.add('error');
+    errorField.focus();
+  } else {
+    messageBox.textContent = 'Form submitted successfully!';
+    messageBox.classList.add('success');
+    form.reset();
+  }
+} // SMOOTH SCROLLING
+
+
+$(document).ready(function () {
+  $('a').on('click', function (event) {
+    if (this.has !== '') {
+      event.preventDefault();
+      var hash = this.hash;
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function () {
+        window.location.hash = hash;
+      });
+    }
+  });
 });

@@ -25,6 +25,7 @@
   font-size: 44px;
   color: #fff;
   margin-bottom: 90px;
+  text-transform: uppercase;
 }
 
 .slider_testimonials {
@@ -44,6 +45,7 @@
   font-weight: 700;
   color: #2c4058;
   margin-bottom: 15px;
+  text-transform: uppercase;
 }
 @media (max-width: 1025px) {
   .slider_testimonials_info_title {
@@ -141,6 +143,17 @@
   position: relative;
   padding: 50px;
 }
+@media (max-width: 1280px) {
+  .horizontal_slider {
+    padding: 25px;
+  }
+}
+@media (max-width: 480px) {
+  .horizontal_slider {
+    width: 100%;
+    padding: 0;
+  }
+}
 
 .horizontal_slider .slider .slick-track {
   margin: auto;
@@ -159,7 +172,7 @@
 
 .horizontal_slider .left_arrow,
 .horizontal_slider .right_arrow {
-  display: flex !important;
+  display: flex;
   justify-content: center;
   align-items: center;
   position: absolute;
@@ -168,10 +181,22 @@
   font-size: 16px;
   height: 40px;
   width: 40px;
-  color: #fff;
-  border: 1px solid #fff;
+  color: rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.5);
   border-radius: 50%;
   cursor: pointer;
+  transition: all 0.3s ease;
+}
+.horizontal_slider .left_arrow:hover,
+.horizontal_slider .right_arrow:hover {
+  color: white;
+  border: 1px solid white;
+}
+@media (max-width: 480px) {
+  .horizontal_slider .left_arrow,
+.horizontal_slider .right_arrow {
+    display: none !important;
+  }
 }
 
 .horizontal_slider .left_arrow {

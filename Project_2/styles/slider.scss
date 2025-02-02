@@ -32,6 +32,7 @@ $text: #2c4058;
         font-size: 44px;
         color: #fff;
         margin-bottom: 90px;
+        text-transform: uppercase;
     }
 }
 
@@ -54,6 +55,7 @@ $text: #2c4058;
             font-weight: 700;
             color: $text;
             margin-bottom: 15px;
+            text-transform: uppercase;
 
             @media (max-width: 1025px) {
                 font-size: 1.25;
@@ -149,6 +151,15 @@ $text: #2c4058;
     margin: 0 auto;
     position: relative;
     padding: 50px;
+
+    @media (max-width: 1280px) {
+        padding: 25px;
+    }
+
+    @media (max-width: 480px) {
+        width: 100%;
+        padding: 0;
+    }
 }
 
 .horizontal_slider .slider .slick-track {
@@ -169,7 +180,7 @@ $text: #2c4058;
 // SLICK OVERRIDE
 .horizontal_slider .left_arrow,
 .horizontal_slider .right_arrow {
-    display: flex !important;
+    display: flex;
     justify-content: center;
     align-items: center;
     position: absolute;
@@ -179,10 +190,21 @@ $text: #2c4058;
     font-size: 16px;
     height: 40px;
     width: 40px;
-    color: #fff;
-    border: 1px solid #fff;
+    color: rgba($color: #fff, $alpha: 0.5);
+    border: 1px solid rgba($color: #fff, $alpha: 0.5);
     border-radius: 50%;
+
     cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+        color: rgba($color: #fff, $alpha: 1);
+        border: 1px solid rgba($color: #fff, $alpha: 1);
+    }
+
+    @media (max-width: 480px) {
+        display: none !important;
+    }
 }
 
 .horizontal_slider .left_arrow {

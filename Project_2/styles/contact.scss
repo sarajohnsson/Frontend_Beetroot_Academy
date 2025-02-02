@@ -1,0 +1,190 @@
+$main-color: #55b7ff;
+$accent-color: #7e5aff;
+$slider-light: #24ccfa;
+$slider-dark: #3c7fd4;
+$text: #2c4058;
+
+.contact {
+    &_container {
+        background-image: url(../assets/contact-bg.png);
+        background-blend-mode: darken;
+        background-position: bottom;
+        background-repeat: no-repeat;
+
+        margin: 0 auto;
+        position: absolute;
+        z-index: 2;
+
+        left: 50%;
+        transform: translate(-50%, -70%);
+
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        background-color: #fff;
+        padding: 60px 60px 70px 60px;
+        width: 100%;
+        max-width: 770px;
+        box-shadow: 0 5px 10px rgba($color: #000000, $alpha: 0.2);
+
+        @media (max-width: 1025px) {
+            width: 90%;
+        }
+
+        &_line {
+            background-color: #2c4058;
+            width: 100px;
+            height: 1px;
+            margin-bottom: 30px;
+        }
+
+        &_title {
+            font-size: 44px;
+            font-weight: 700;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+
+            @media (max-width: 1025px) {
+                font-size: 40px;
+                text-align: center;
+            }
+            @media (max-width: 820px) {
+                font-size: 36px;
+            }
+            @media (max-width: 600px) {
+                font-size: 32px;
+            }
+        }
+    }
+}
+
+.form_container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    gap: 55px;
+
+    @media (max-width: 820px) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    &_info {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        min-width: 286px;
+        color: $text;
+
+        &_text {
+            font-size: 18px;
+            line-height: 28px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            @media (max-width: 820px) {
+                text-align: center;
+                font-size: 16px;
+            }
+            @media (max-width: 600px) {
+                font-size: 14px;
+            }
+        }
+    }
+
+    i {
+        color: $accent-color;
+        margin-right: 10px;
+    }
+}
+
+.form {
+    width: 100%;
+
+    .input_field {
+        display: flex;
+        flex-direction: column;
+
+        .form_control {
+            input[type='text'] {
+                width: 100%;
+                font-size: 18px;
+                margin-bottom: 30px;
+                padding: 15px 0;
+                border: none;
+                border-bottom: 1px solid rgba($color: #000000, $alpha: 0.1);
+                outline: none;
+            }
+
+            input[type='text']::placeholder {
+                font-weight: lighter;
+                opacity: 0.5;
+                transition: 0.3s ease;
+            }
+            input[type='text']:focus {
+                border-bottom: 1px solid rgba($color: #000000, $alpha: 1);
+                background-color: rgba($color: #24ccfa, $alpha: 0.5);
+            }
+            input[type='text']:focus::placeholder {
+                opacity: 0;
+            }
+        }
+
+        .submit_field {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            @media (max-width: 600px) {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 20px;
+            }
+
+            &_message {
+                width: 100%;
+                font-size: 14px;
+                font-weight: 700;
+                margin-right: 20px;
+
+                @media (max-width: 600px) {
+                    text-align: center;
+                    margin-right: 0;
+                }
+                @media (max-width: 480px) {
+                    font-size: 12px;
+                }
+            }
+
+            &_button {
+                font-size: 18px;
+                text-transform: uppercase;
+                padding: 12px 35px;
+                border: 1px solid #000000;
+                background-color: transparent;
+
+                &:hover {
+                    background-color: $slider-light;
+                    border: 1px solid $slider-dark;
+                    transition: all 0.3s ease;
+                }
+            }
+        }
+    }
+}
+
+.success {
+    color: #2f9e44;
+}
+
+.error {
+    color: #e03131;
+}
