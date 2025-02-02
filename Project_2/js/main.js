@@ -1,11 +1,34 @@
-// Calculate the height of the tallest slide
-// Set that height to all other slides
-// - Select all slides
-// - Loop through the selected slides, no matter how many containers
-// - Store the elements in a variable
-// - Find the tallest slide
-// - Set height to maximum height
-// - Dynamically calculate height
+// NAVIGATION
+function showSidebar() {
+    const sidebar = document.querySelector('.sidebar');
+    sidebar.style.display = 'flex';
+}
+
+function closeSidebar() {
+    const sidebar = document.querySelector('.sidebar');
+    sidebar.style.display = 'none';
+}
+
+function setActive() {
+    const navLinks = document.querySelectorAll('.nav_bar_list_link');
+
+    navLinks.forEach((link) => {
+        link.addEventListener('click', () => {
+            const navIcons = document.querySelectorAll('.nav_bar_list_link_icon');
+            navIcons.forEach((icon) => {
+                icon.classList.remove('active');
+            });
+
+            const icon = link.querySelector('.nav_bar_list_link_icon');
+            if (icon) {
+                icon.classList.add('active');
+            }
+        });
+    });
+}
+
+// ADDITIONAL SLIDER FUNCTION
+setActive();
 
 function setEqualHeight() {
     const slides = document.querySelectorAll('.slider_testimonials');

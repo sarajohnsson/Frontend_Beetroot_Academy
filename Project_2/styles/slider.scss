@@ -59,7 +59,7 @@ $text: #2c4058;
                 font-size: 1.25;
             }
 
-            @media (max-width: 801px) {
+            @media (max-width: 820px) {
                 font-size: 1.125rem;
             }
 
@@ -77,7 +77,7 @@ $text: #2c4058;
                 font-size: 1rem;
             }
 
-            @media (max-width: 801px) {
+            @media (max-width: 820px) {
                 font-size: 0.875rem;
             }
 
@@ -125,7 +125,7 @@ $text: #2c4058;
                     font-size: 1rem;
                 }
 
-                @media (max-width: 801px) {
+                @media (max-width: 820px) {
                     font-size: 0.875rem;
                 }
 
@@ -145,17 +145,66 @@ $text: #2c4058;
 /* SLIDER */
 .horizontal_slider {
     // Try to play around with percent
-    width: 80%;
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+    padding: 50px;
 }
 
-.slick-track {
+.horizontal_slider .slider .slick-track {
     margin: auto;
+    display: flex;
+    align-items: center;
 }
-.slick-initialized {
-    overflow: hidden;
+
+.horizontal_slider .slick-initialized {
+    overflow: visible;
 }
 
 .horizontal_slider .slick-slide {
     margin-right: 30px;
     margin-left: 30px;
+}
+
+// SLICK OVERRIDE
+.horizontal_slider .left_arrow,
+.horizontal_slider .right_arrow {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 45%;
+    transform: translateY(-50%);
+
+    font-size: 16px;
+    height: 40px;
+    width: 40px;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.horizontal_slider .left_arrow {
+    left: -20px;
+
+    @media (max-width: 600px) {
+        left: -10px;
+    }
+
+    @media (max-width: 480px) {
+        left: 0;
+    }
+}
+
+.horizontal_slider .right_arrow {
+    right: -20px;
+
+    @media (max-width: 600px) {
+        right: -10px;
+    }
+
+    @media (max-width: 480px) {
+        right: 0;
+    }
 }

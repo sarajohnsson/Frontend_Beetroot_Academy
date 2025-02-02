@@ -12,9 +12,6 @@
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet" />
 
-        <!-- CSS -->
-        <link rel="stylesheet" href="./styles/main.css" />
-
         <!-- FONTAWESOME -->
         <link rel="stylesheet" href="./fontawesome/css/all.min.css" />
 
@@ -26,6 +23,8 @@
         <!-- LIGHTGALLERY -->
         <link rel="stylesheet" href="./plugins/lightgallery/lightgallery-bundle.min.css" />
 
+        <!-- CSS -->
+        <link rel="stylesheet" href="./styles/main.css" />
         <title>Project 2</title>
     </head>
     <body>
@@ -35,25 +34,57 @@
                 <div class="header_overlay">
                     <div class="nav_container row">
                         <nav class="nav_bar row">
-                            <a href="#" class="logo_link">
-                                <img src="./assets/logo.svg" alt="Logo" class="logo" />
-                            </a>
+                            <!-- SIDEBAR -->
+                            <ul class="sidebar">
+                                <li onclick="closeSidebar()">
+                                    <a href="#" class="close_icon"><i class="fa-solid fa-x"></i></a>
+                                </li>
+                                <li>
+                                    <a href="#" class="sidebar_list_link">About us</a>
+                                </li>
+                                <li>
+                                    <a href="#projects" class="sidebar_list_link">Projects</a>
+                                </li>
+                                <li>
+                                    <a href="#news" class="sidebar_list_link">News</a>
+                                </li>
+                                <li>
+                                    <a href="#contact" class="sidebar_list_link">Contact</a>
+                                </li>
+                            </ul>
+                            <!-- NAV BAR -->
                             <ul class="nav_bar_list">
                                 <li>
-                                    <div class="nav_bar_list_icon active"></div>
-                                    <a href="#" class="nav_bar_list_link">About us</a>
+                                    <a href="#" class="logo">
+                                        <img src="./assets/logo.svg" alt="Logo" class="logo_img" />
+                                    </a>
                                 </li>
-                                <li>
-                                    <div class="nav_bar_list_icon active"></div>
-                                    <a href="#" class="nav_bar_list_link">Projects</a>
+                                <li class="hideOnMobile">
+                                    <a href="#" class="nav_bar_list_link">
+                                        <div class="nav_bar_list_link_icon"></div>
+                                        About us
+                                    </a>
                                 </li>
-                                <li>
-                                    <div class="nav_bar_list_icon active"></div>
-                                    <a href="#" class="nav_bar_list_link">News</a>
+                                <li class="hideOnMobile">
+                                    <a href="#projects" class="nav_bar_list_link">
+                                        <div class="nav_bar_list_link_icon"></div>
+                                        Projects
+                                    </a>
                                 </li>
-                                <li>
-                                    <div class="nav_bar_list_icon active"></div>
-                                    <a href="#" class="nav_bar_list_link">Contact</a>
+                                <li class="hideOnMobile">
+                                    <a href="#news" class="nav_bar_list_link">
+                                        <div class="nav_bar_list_link_icon"></div>
+                                        News
+                                    </a>
+                                </li>
+                                <li class="hideOnMobile">
+                                    <a href="#contact" class="nav_bar_list_link">
+                                        <div class="nav_bar_list_link_icon"></div>
+                                        Contact
+                                    </a>
+                                </li>
+                                <li onclick="showSidebar()">
+                                    <a href="#" class="open_icon"><i class="fa-solid fa-bars"></i></a>
                                 </li>
                             </ul>
                             <div class="socials row">
@@ -102,10 +133,10 @@
 
             <main>
                 <!-- HERO SECTION -->
-                <section class="hero_section column">
+                <section class="hero_section column" id="projects">
                     <div class="hero_section_line"></div>
                     <h2 class="hero_section_main_title">WHAT WE DO</h2>
-                    <div class="hero_section_content">
+                    <div class="hero_section_content display_left">
                         <div class="hero_section_content_blue_container">
                             <img class="trade_center_img" src="../Project_2/assets/section-img-1.jpg" alt="Trade center building" />
                         </div>
@@ -121,7 +152,7 @@
                         </div>
                     </div>
 
-                    <div class="hero_section_content">
+                    <div class="hero_section_content display_right">
                         <div class="hero_section_content_info">
                             <p class="hero_section_subtitle">INTERNATIONAL</p>
                             <h2 class="hero_section_title">COMMERCE CENTRE</h2>
@@ -139,7 +170,7 @@
                 </section>
 
                 <!-- SLIDER SECTION -->
-                <section class="slider">
+                <section class="slider" id="news">
                     <div class="slider_overlay">
                         <div class="slider_container column">
                             <div class="slider_container_line"></div>
@@ -280,7 +311,7 @@
                 </section>
 
                 <!-- GALLERY -->
-                <section class="gallery">
+                <section class="gallery" id="">
                     <div class="gallery_container column">
                         <div class="gallery_container_line"></div>
                         <div class="gallery_container_title">GALLERY</div>
@@ -301,7 +332,7 @@
                     <img src="./assets/map.jpg" alt="" />
                 </section>
 
-                <section class="contact">
+                <section class="contact" id="contact">
                     <form action=""></form>
                 </section>
             </main>
