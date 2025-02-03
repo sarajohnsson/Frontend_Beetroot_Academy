@@ -44,7 +44,7 @@ function setActive() {
 document.addEventListener('DOMContentLoaded', function () {
   var navBar = document.querySelector('.nav_container');
   window.addEventListener('scroll', function () {
-    if (this.window.scrollY > 100) {
+    if (this.window.scrollY > 50) {
       navBar.classList.add('scrolled');
     } else {
       navBar.classList.remove('scrolled');
@@ -82,7 +82,8 @@ $(document).ready(function () {
     autoplay: true,
     autoplaySpeed: 3000,
     prevArrow: false,
-    nextArrow: false
+    nextArrow: false,
+    adaptiveHeight: true
   });
   $('.horizontal_slider').slick({
     initialSlide: 0,
