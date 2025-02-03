@@ -1016,17 +1016,17 @@ img {
   width: 100%;
   padding: 330px 0 240px 0;
 }
-@media (max-width: 600px) {
+@media (max-width: 1025px) {
   .header_section .vertical_slider {
     padding: 330px 0 120px 0;
   }
 }
-@media (max-width: 600px) {
+@media (max-width: 820px) {
   .header_section .vertical_slider {
     padding: 330px 0 60px 0;
   }
 }
-@media (max-width: 480px) {
+@media (max-width: 600px) {
   .header_section .vertical_slider {
     padding: 330px 0 30px 0;
   }
