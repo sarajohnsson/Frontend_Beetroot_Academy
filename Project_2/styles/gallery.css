@@ -32,6 +32,7 @@
 }
 .gallery .gallery_container_btn {
   font-size: 0.875rem;
+  color: #000;
   text-transform: uppercase;
   background-color: #fff;
   border: 1px solid #2c4058;

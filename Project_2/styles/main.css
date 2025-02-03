@@ -144,6 +144,7 @@
 }
 .hero_section_btn {
   font-size: 0.875rem;
+  color: #000;
   text-transform: uppercase;
   background-color: #fff;
   border: 1px solid #2c4058;
@@ -483,6 +484,7 @@
 }
 .gallery .gallery_container_btn {
   font-size: 0.875rem;
+  color: #000;
   text-transform: uppercase;
   background-color: #fff;
   border: 1px solid #2c4058;
@@ -574,25 +576,25 @@
   margin-bottom: 30px;
 }
 .contact_container_title {
-  font-size: 44px;
+  font-size: 2.75rem;
   font-weight: 700;
   margin-bottom: 40px;
   text-transform: uppercase;
 }
 @media (max-width: 1025px) {
   .contact_container_title {
-    font-size: 40px;
+    font-size: 2.5rem;
     text-align: center;
   }
 }
 @media (max-width: 820px) {
   .contact_container_title {
-    font-size: 36px;
+    font-size: 2.25rem;
   }
 }
 @media (max-width: 600px) {
   .contact_container_title {
-    font-size: 32px;
+    font-size: 2rem;
   }
 }
 
@@ -619,7 +621,7 @@
   color: #2c4058;
 }
 .form_container_info_text {
-  font-size: 18px;
+  font-size: 1.125rem;
   line-height: 28px;
 }
 .form_container_info_text:last-child {
@@ -628,12 +630,12 @@
 @media (max-width: 820px) {
   .form_container_info_text {
     text-align: center;
-    font-size: 16px;
+    font-size: 1rem;
   }
 }
 @media (max-width: 600px) {
   .form_container_info_text {
-    font-size: 14px;
+    font-size: 0.875rem;
   }
 }
 .form_container i {
@@ -650,7 +652,7 @@
 }
 .form .input_field .form_control input[type=text] {
   width: 100%;
-  font-size: 18px;
+  font-size: 1.125rem;
   margin-bottom: 30px;
   padding: 15px 0;
   border: none;
@@ -685,8 +687,9 @@
 }
 .form .input_field .submit_field_message {
   width: 100%;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 700;
+  padding: 10px 0;
   margin-right: 20px;
 }
 @media (max-width: 600px) {
@@ -697,11 +700,12 @@
 }
 @media (max-width: 480px) {
   .form .input_field .submit_field_message {
-    font-size: 12px;
+    font-size: 0.75rem;
   }
 }
 .form .input_field .submit_field_button {
-  font-size: 18px;
+  color: #000;
+  font-size: 0.875rem;
   text-transform: uppercase;
   padding: 12px 35px;
   border: 1px solid #000000;
@@ -900,7 +904,7 @@ img {
   padding-top: 55px;
 }
 .header .nav_container .nav_bar {
-  font-size: 14px;
+  font-size: 0.875rem;
   text-transform: uppercase;
   color: #fff;
 }
@@ -973,7 +977,7 @@ img {
   gap: 20px;
 }
 .header .nav_container .nav_bar .socials i {
-  font-size: 16px;
+  font-size: 1rem;
 }
 @media (max-width: 1025px) {
   .header .nav_container .nav_bar .socials i {
@@ -1115,7 +1119,7 @@ img {
 }
 
 .open_icon {
-  font-size: 42px;
+  font-size: 2.625rem;
   transition: all 0.3s ease-in-out;
 }
 .open_icon:hover {
@@ -1129,7 +1133,7 @@ img {
 }
 
 .close_icon {
-  font-size: 24px;
+  font-size: 1.5rem;
 }
 
 .slick-dots {
@@ -1179,6 +1183,7 @@ img {
 }
 @media (max-width: 820px) {
   .header .slick-dots {
-    display: none;
+    visibility: hidden;
+    position: relative;
   }
 }
