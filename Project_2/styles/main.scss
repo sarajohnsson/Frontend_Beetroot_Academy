@@ -93,9 +93,16 @@ img {
 
     .nav_container {
         margin: 0 auto;
-        padding-top: 55px;
+        height: fit-content;
+        position: fixed;
+        z-index: 8;
+        width: 100%;
+        background: transparent;
+        transition: background 0.3s ease-in-out;
 
         .nav_bar {
+            padding: 55px 0 10px 0;
+
             font-size: 0.875rem;
             text-transform: uppercase;
             color: #fff;
@@ -108,6 +115,7 @@ img {
 
             &_list {
                 width: 100%;
+
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -193,6 +201,12 @@ img {
                 }
             }
         }
+    }
+
+    .nav_container.scrolled {
+        background: rgb(126, 90, 255);
+        background: linear-gradient(230deg, rgba(126, 90, 255, 1) 20%, rgba(85, 183, 255, 1) 80%);
+        box-shadow: 0 5px 10px rgba($color: #000000, $alpha: 0.5);
     }
 
     &_section {
@@ -288,33 +302,45 @@ img {
 .sidebar {
     position: fixed;
     top: 0;
-    right: 0;
+    right: -100%;
     height: 100vh;
-    z-index: 999;
+    z-index: 10;
     width: 300px;
     backdrop-filter: blur(10px);
     background: rgb(126, 90, 255);
     background: linear-gradient(230deg, rgba(126, 90, 255, 0.1) 20%, rgba(85, 183, 255, 0.1) 80%);
     box-shadow: -10px 0 10px rgba($color: #000000, $alpha: 0.1);
-
-    display: none;
     flex-direction: column;
+
     cursor: pointer;
+    transition: right 0.3s ease-in-out;
 
     @media (max-width: 480px) {
         width: 100%;
+        height: 100%;
     }
 }
 
-.sidebar li,
-.sidebar a {
-    color: #000;
-    padding: 20px 10px;
+.sidebar li {
+    color: #fff;
+    height: 50px;
     width: 100%;
 
     &:hover {
-        background-color: $main-color;
+        background-color: rgba($color: #24ccfa, $alpha: 1);
     }
+
+    &:active {
+        background-color: rgba($color: #55b7ff, $alpha: 1);
+    }
+}
+
+.sidebar a {
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    width: 100%;
+    height: 100%;
 }
 
 .open_icon {
@@ -331,8 +357,30 @@ img {
     }
 }
 
+.open_icon.hidden {
+    visibility: hidden;
+}
+
 .close_icon {
     font-size: 1.5rem;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.toggle_overlay {
+    background-color: rgba($color: #000, $alpha: 0.5);
+    position: fixed;
+    inset: 0;
+    z-index: 9;
+    display: none;
+}
+
+.toggle_overlay.active {
+    display: block;
+}
+
+.sidebar.show {
+    right: 0%;
 }
 
 // SLICK OVERRIDE
