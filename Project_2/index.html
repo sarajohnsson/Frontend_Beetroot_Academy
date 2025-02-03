@@ -24,6 +24,7 @@
         <!-- Add the new slick-theme.css if you want the default styling -->
 
         <!-- LIGHTGALLERY -->
+        <link rel="stylesheet" href="../Project_2/plugins/lightgallery/lightgallery-bundle.min.css" />
 
         <!-- LEAFLET -->
         <link
@@ -334,24 +335,23 @@
                         <div class="gallery_container_title">GALLERY</div>
 
                         <!-- GALLERY PLUGIN -->
-                        <div id="lightgallery">
-                            <a href="./assets/gallery-img-1.jpg">
-                                <img src="./assets/gallery-img-thumb-1.jpg" />
+                        <div class="lightGallery" id="lightGallery">
+                            <a href="../Project_2/assets/gallery-img-1.jpg" class="lightGallery_img gallery_item1">
+                                <img src="../Project_2/assets/gallery-img-thumb-1.jpg" alt="Image 1" />
                             </a>
-                            <a href="./assets/gallery-img-2.jpg">
-                                <img src="./assets/gallery-img-thumb-2.jpg" />
+                            <a href="../Project_2/assets/gallery-img-2.jpg" class="lightGallery_img gallery_item2">
+                                <img src="../Project_2/assets/gallery-img-thumb-2.jpg" alt="Image 2" />
                             </a>
-                            <a href="./assets/gallery-img-3.jpg">
-                                <img src="./assets/gallery-img-thumb-3.jpg" />
+                            <a href="../Project_2/assets/gallery-img-3.jpg" class="lightGallery_img gallery_item3">
+                                <img src="../Project_2/assets/gallery-img-thumb-3.jpg" alt="Image 3" />
                             </a>
-                            <a href="./assets/gallery-img-4.jpg">
-                                <img src="./assets/gallery-img-thumb-4.jpg" />
+                            <a href="../Project_2/assets/gallery-img-4.jpg" class="lightGallery_img gallery_item4">
+                                <img src="../Project_2/assets/gallery-img-thumb-4.jpg" alt="Image 4" />
                             </a>
-                            <a href="./assets/gallery-img-5.jpg">
-                                <img src="./assets/gallery-img-thumb-5.jpg" />
+                            <a href="../Project_2/assets/gallery-img-5.jpg" class="lightGallery_img gallery_item5">
+                                <img src="../Project_2/assets/gallery-img-thumb-5.jpg" alt="Image 5" />
                             </a>
                         </div>
-
                         <button class="gallery_container_btn">SEE MORE</button>
                     </div>
                 </section>
@@ -436,7 +436,10 @@
         <!-- SCRIPTS -->
         <script src="./plugins/jquery-3.7.1.min.js"></script>
         <script type="text/javascript" src="./plugins/slick/slick.min.js"></script>
-
+        <script src="../Project_2/plugins/lightgallery/lightgallery.min.js"></script>
+        <script src="../Project_2/plugins/lightgallery/lg-thumbnail.min.js"></script>
+        <script src="../Project_2/plugins/lightgallery/lg-fullscreen.min.js"></script>
+        <script src="../Project_2/plugins/lightgallery/lg-zoom.min.js"></script>
         <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 
         <!-- MAIN SCRIPT -->

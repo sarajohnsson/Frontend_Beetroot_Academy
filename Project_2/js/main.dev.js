@@ -103,7 +103,12 @@ $(document).ready(function () {
   $('.horizontal_slider').on('init', setEqualHeight);
   $('.horizontal_slider').on('setPosition', setEqualHeight);
 }); // LIGHTGALLERY
-// INTERACTIVE MAP
+
+lightGallery(document.getElementById('lightGallery'), {
+  plugins: [lgZoom, lgThumbnail, lgFullscreen],
+  thumbnail: true,
+  speed: 500
+}); // INTERACTIVE MAP
 
 document.addEventListener('DOMContentLoaded', function () {
   var map = L.map('map').setView([59.33255219928953, 18.064587649123187], 15);
@@ -119,7 +124,7 @@ document.addEventListener('DOMContentLoaded', function () {
   });
   L.marker([59.33255219928953, 18.064587649123187], {
     icon: custMarker
-  }).addTo(map).bindPopup('Come to visit us').openPopup();
+  }).addTo(map).bindPopup('Come Visit Us').openPopup();
 }); // FORM
 
 var form = document.querySelector('#form');
@@ -157,7 +162,7 @@ function validateForm() {
 
 $(document).ready(function () {
   $('a').on('click', function (event) {
-    if (this.has !== '') {
+    if (!$(this).hasClass('lightGallery_img') && this.has !== '') {
       event.preventDefault();
       var hash = this.hash;
       $('html, body').animate({

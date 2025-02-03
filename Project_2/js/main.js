@@ -115,6 +115,11 @@ $(document).ready(function () {
 });
 
 // LIGHTGALLERY
+lightGallery(document.getElementById('lightGallery'), {
+    plugins: [lgZoom, lgThumbnail, lgFullscreen],
+    thumbnail: true,
+    speed: 500,
+});
 
 // INTERACTIVE MAP
 document.addEventListener('DOMContentLoaded', function () {
@@ -129,7 +134,7 @@ document.addEventListener('DOMContentLoaded', function () {
         popupAnchor: [0, 0], // point from which the popup should open relative to the iconAnchor
     });
 
-    L.marker([59.33255219928953, 18.064587649123187], { icon: custMarker }).addTo(map).bindPopup('Come to visit us').openPopup();
+    L.marker([59.33255219928953, 18.064587649123187], { icon: custMarker }).addTo(map).bindPopup('Come Visit Us').openPopup();
 });
 
 // FORM
@@ -171,7 +176,7 @@ function validateForm() {
 // SMOOTH SCROLLING
 $(document).ready(function () {
     $('a').on('click', function (event) {
-        if (this.has !== '') {
+        if (!$(this).hasClass('lightGallery_img') && this.has !== '') {
             event.preventDefault();
 
             const hash = this.hash;
