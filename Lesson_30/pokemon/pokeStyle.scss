@@ -1,28 +1,31 @@
 $pokemon-type-colors: (
-    "normal": #929da2,
-    "poison": #ab6bc8,
-    "bug": #91c12f,
-    "$fire": #ff9c54,
-    "electric": #f4d339,
-    "dragon": #086dc3,
-    "fighting": #cd416a,
-    "ground": #d97845,
-    "ghost": #516aae,
-    "water": #4f90d6,
-    "psychic": #fa7077,
-    "dark": #5a5465,
-    "flying": #90a8de,
-    "rock": #c5b68c,
-    "steel": #598ea1,
-    "grass": #63bd5a,
-    "ice": #73cebe,
-    "fairy": #ed8fe7,
+    'normal': #929da2,
+    'poison': #ab6bc8,
+    'bug': #91c12f,
+    '$fire': #ff9c54,
+    'electric': #f4d339,
+    'dragon': #086dc3,
+    'fighting': #cd416a,
+    'ground': #d97845,
+    'ghost': #516aae,
+    'water': #4f90d6,
+    'psychic': #fa7077,
+    'dark': #5a5465,
+    'flying': #90a8de,
+    'rock': #c5b68c,
+    'steel': #598ea1,
+    'grass': #63bd5a,
+    'ice': #73cebe,
+    'fairy': #ed8fe7,
 );
 
 $border: #f4bd02;
 $theme: #f44336;
 $theme-accent: #2a70b8;
 $theme-contrast: #ffcc00;
+
+$fav_default: #e9ecef;
+$fav_accent: #e67700;
 
 :root {
     @each $type, $color in $pokemon-type-colors {
@@ -31,8 +34,8 @@ $theme-contrast: #ffcc00;
 }
 
 @font-face {
-    font-family: "Pokemon";
-    src: url("./fonts/Pokemon\ Solid.ttf") format("truetype");
+    font-family: 'Pokemon';
+    src: url('./fonts/Pokemon\ Solid.ttf') format('truetype');
 }
 
 * {
@@ -42,7 +45,7 @@ $theme-contrast: #ffcc00;
 }
 
 body {
-    font-family: "Roboto", Arial, Helvetica, sans-serif;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
     color: inherit;
     background-color: #444;
 }
@@ -70,7 +73,7 @@ body {
     margin-bottom: 40px;
 
     &_title {
-        font-family: "Pokemon";
+        font-family: 'Pokemon';
         text-shadow: 5px 5px 10px rgba($color: #000000, $alpha: 0.8);
         color: $theme-contrast;
         font-size: 64px;
@@ -112,6 +115,20 @@ body {
 }
 
 .pokemon_card {
+    position: relative;
+
+    .fav_btn {
+        color: $fav_default;
+        -webkit-text-stroke-width: 2px;
+        -webkit-text-stroke-color: $theme;
+        position: absolute;
+        border: none;
+        top: -5%;
+        left: 58%;
+        font-size: 42px;
+        background: transparent;
+    }
+
     &_bg {
         display: flex;
         flex-direction: column;

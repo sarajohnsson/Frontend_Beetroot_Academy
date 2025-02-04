@@ -90,6 +90,20 @@ body {
   background-color: #f4d339;
 }
 
+.pokemon_card {
+  position: relative;
+}
+.pokemon_card .fav_btn {
+  color: #e9ecef;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #f44336;
+  position: absolute;
+  border: none;
+  top: -5%;
+  left: 58%;
+  font-size: 42px;
+  background: transparent;
+}
 .pokemon_card_bg {
   display: flex;
   flex-direction: column;
