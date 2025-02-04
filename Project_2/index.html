@@ -14,6 +14,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet" />
 
         <!-- FONTAWESOME -->
         <link rel="stylesheet" href="./fontawesome/css/all.min.css" />
@@ -38,402 +39,400 @@
     <body>
         <!-- Remove page wrapper. Content should be full with!!! Stop making the same mistake all the time -->
         <!-- WEB PAGE -->
-        <div class="page_wrapper">
-            <!-- HEADER -->
-            <header class="header" id="main">
-                <div class="header_overlay">
-                    <div class="nav_container row">
-                        <nav class="nav_bar row">
-                            <!-- SIDEBAR -->
-                            <ul class="sidebar">
-                                <li onclick="closeSidebar()">
-                                    <a href="#" class="close_icon"><i class="fa-solid fa-x"></i></a>
-                                </li>
-                                <li>
-                                    <a href="#" class="sidebar_list_link">About us</a>
-                                </li>
-                                <li>
-                                    <a href="#projects" class="sidebar_list_link">Projects</a>
-                                </li>
-                                <li>
-                                    <a href="#news" class="sidebar_list_link">News</a>
-                                </li>
-                                <li>
-                                    <a href="#contact" class="sidebar_list_link">Contact</a>
-                                </li>
-                            </ul>
-                            <!-- NAV BAR -->
-                            <ul class="nav_bar_list">
-                                <li>
-                                    <a href="#main" class="logo">
-                                        <img src="./assets/logo.svg" alt="Logo" class="logo_img" />
-                                    </a>
-                                </li>
-                                <li class="hideOnMobile">
-                                    <a href="#" class="nav_bar_list_link">
-                                        <div class="nav_bar_list_link_icon"></div>
-                                        About us
-                                    </a>
-                                </li>
-                                <li class="hideOnMobile">
-                                    <a href="#projects" class="nav_bar_list_link">
-                                        <div class="nav_bar_list_link_icon"></div>
-                                        Projects
-                                    </a>
-                                </li>
-                                <li class="hideOnMobile">
-                                    <a href="#news" class="nav_bar_list_link">
-                                        <div class="nav_bar_list_link_icon"></div>
-                                        News
-                                    </a>
-                                </li>
-                                <li class="hideOnMobile">
-                                    <a href="#contact" class="nav_bar_list_link">
-                                        <div class="nav_bar_list_link_icon"></div>
-                                        Contact
-                                    </a>
-                                </li>
-                                <li onclick="showSidebar()">
-                                    <a href="#" class="open_icon"><i class="fa-solid fa-bars"></i></a>
-                                </li>
-                            </ul>
-                            <div class="socials row">
-                                <a href="#" class="socials_link row">
-                                    <i class="fa-brands fa-facebook-f"></i>
+        <!-- HEADER -->
+        <header class="header" id="main">
+            <div class="header_overlay">
+                <div class="nav_container row">
+                    <nav class="nav_bar page_wrapper row">
+                        <!-- SIDEBAR -->
+                        <div class="mobile_layout">
+                            <a href="#main" class="logo">
+                                <img src="./assets/logo.svg" alt="Logo" class="logo_img" />
+                            </a>
+                            <div onclick="showSidebar()">
+                                <a href="#" class="open_icon"><i class="fa-solid fa-bars"></i></a>
+                            </div>
+                        </div>
+                        <ul class="sidebar">
+                            <li onclick="closeSidebar()">
+                                <a href="#" class="close_icon"><i class="fa-solid fa-x"></i></a>
+                            </li>
+                            <li>
+                                <a href="#" class="sidebar_list_link">About us</a>
+                            </li>
+                            <li>
+                                <a href="#projects" class="sidebar_list_link">Projects</a>
+                            </li>
+                            <li>
+                                <a href="#news" class="sidebar_list_link">News</a>
+                            </li>
+                            <li>
+                                <a href="#contact" class="sidebar_list_link">Contact</a>
+                            </li>
+                        </ul>
+                        <!-- NAV BAR -->
+                        <ul class="nav_bar_list">
+                            <li class="hideOnMobile">
+                                <a href="#" class="nav_bar_list_link">
+                                    <div class="nav_bar_list_link_icon"></div>
+                                    About us
                                 </a>
-                                <a href="#" class="socials_link row">
-                                    <i class="fa-brands fa-twitter"></i>
+                            </li>
+                            <li class="hideOnMobile">
+                                <a href="#projects" class="nav_bar_list_link">
+                                    <div class="nav_bar_list_link_icon"></div>
+                                    Projects
                                 </a>
-                                <a href="#" class="socials_link row">
-                                    <i class="fa-brands fa-instagram"></i>
+                            </li>
+                            <li class="hideOnMobile">
+                                <a href="#news" class="nav_bar_list_link">
+                                    <div class="nav_bar_list_link_icon"></div>
+                                    News
                                 </a>
-                            </div>
-                        </nav>
-                        <div class="toggle_overlay" onclick="closeSidebar()"></div>
-                    </div>
-
-                    <section class="header_section column">
-                        <div class="vertical_slider">
-                            <div class="vertical_slider_slide">
-                                <h1 class="vertical_slider_slide_title">Simple & modern</h1>
-                                <p class="vertical_slider_slide_subtitle">We make the world beautiful everyday</p>
-                            </div>
-                            <div class="vertical_slider_slide">
-                                <h1 class="vertical_slider_slide_title">Elegant & Timeless</h1>
-                                <p class="vertical_slider_slide_subtitle">Designing a more beautiful world every day</p>
-                            </div>
-                            <div class="vertical_slider_slide">
-                                <h1 class="vertical_slider_slide_title">Minimal & Impactful</h1>
-                                <p class="vertical_slider_slide_subtitle">Bringing beauty to life, one detail at a time</p>
-                            </div>
-                            <div class="vertical_slider_slide">
-                                <h1 class="vertical_slider_slide_title">Sleek & Inspired</h1>
-                                <p class="vertical_slider_slide_subtitle">Transforming ordinary into extraordinary</p>
-                            </div>
-                            <div class="vertical_slider_slide">
-                                <h1 class="vertical_slider_slide_title">Clean & Creative</h1>
-                                <p class="vertical_slider_slide_subtitle">Crafting beauty in every moment</p>
-                            </div>
-                        </div>
-
-                        <div class="scroll_btn row">
-                            <a href="#projects">
-                                <i class="fa-solid fa-chevron-down"></i>
-                            </a>
-                        </div>
-                    </section>
-                </div>
-            </header>
-            <!-- MAIN CONTENT -->
-            <main>
-                <!-- HERO SECTION -->
-                <section class="hero_section column" id="projects">
-                    <div class="hero_section_line"></div>
-                    <h2 class="hero_section_main_title">WHAT WE DO</h2>
-                    <div class="hero_section_content display_left">
-                        <div class="hero_section_content_blue_container">
-                            <img class="trade_center_img" src="../Project_2/assets/section-img-1.jpg" alt="Trade center building" />
-                        </div>
-                        <div class="hero_section_content_info">
-                            <p class="hero_section_subtitle">ONE WORLD</p>
-                            <h2 class="hero_section_title">TRADE CENTER</h2>
-                            <p class="hero_section_desc">
-                                Increasing prosperity in our lives can be accomplished by having the right frame of mind. The truth is, our thoughts are very
-                                powerful.
-                            </p>
-                            <button class="hero_section_btn">More details</button>
-                            <p class="hero_section_geo_tag">
-                                <i class="fa-solid fa-location-dot"></i>
-                                New York City, United States - 1776 feet
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="hero_section_content display_right">
-                        <div class="hero_section_content_info">
-                            <p class="hero_section_subtitle">INTERNATIONAL</p>
-                            <h2 class="hero_section_title">COMMERCE CENTRE</h2>
-                            <p class="hero_section_desc">
-                                Successful businesses have many things in common, today we’ll look at the big ‘R’ of recognition and how a digital advertising
-                                network may help.
-                            </p>
-                            <button class="hero_section_btn">More details</button>
-                            <p class="hero_section_geo_tag">
-                                <i class="fa-solid fa-location-dot"></i>
-                                Hong Kong - 1588 feet
-                            </p>
-                        </div>
-                        <div class="hero_section_content_purple_container">
-                            <img class="commerce_center_img" src="../Project_2/assets/section-img-2.jpg" alt="Commerce center building" />
-                        </div>
-                    </div>
-                </section>
-
-                <!-- SLIDER SECTION -->
-                <section class="slider" id="news">
-                    <div class="slider_overlay">
-                        <div class="slider_container column">
-                            <div class="slider_container_line"></div>
-                            <h2 class="slider_container_title">LATEST NEWS</h2>
-                            <div class="horizontal_slider">
-                                <!-- TESTIMONY 1 -->
-                                <div class="slider_testimonials">
-                                    <!-- Use anchors insted of div -->
-                                    <a href="#" class="news_letter">
-                                        <img src="./assets/slider-img-1.jpg" alt="" class="slider_testimonials_img" />
-                                        <div class="slider_testimonials_info">
-                                            <h3 class="slider_testimonials_info_title">SEE THE UNMATCHED BEAUTY OF THE GREAT.</h3>
-                                            <p class="slider_testimonials_info_desc">
-                                                Free directories: directories are perfect for customers that are searching for...
-                                            </p>
-                                        </div>
-                                        <div class="slider_testimonials_area">
-                                            <div class="slider_testimonials_area_box">
-                                                <img src="./assets/testimony-img-1.jpg" alt="" class="slider_testimonials_area_box_img" />
-                                            </div>
-                                            <div class="slider_testimonials_area_name">
-                                                <p class="slider_testimonials_area_name_text">ALJA BRUN</p>
-                                                <p class="slider_testimonials_area_name_date">20 Jan 2020</p>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-
-                                <!-- TESTIMONY 2 -->
-                                <div class="slider_testimonials">
-                                    <!-- Use anchors insted of div -->
-                                    <a href="#" class="news_letter">
-                                        <img src="./assets/slider-img-2.jpg" alt="" class="slider_testimonials_img" />
-                                        <div class="slider_testimonials_info">
-                                            <h3 class="slider_testimonials_info_title">EFFECTIVE ADVERTISING POINTERS.</h3>
-                                            <p class="slider_testimonials_info_desc">Having a home based business is a wonderful asset to your life...</p>
-                                        </div>
-                                        <div class="slider_testimonials_area">
-                                            <div class="slider_testimonials_area_box">
-                                                <img src="./assets/testimony-img-2.jpg" alt="" class="slider_testimonials_area_box_img" />
-                                            </div>
-                                            <div class="slider_testimonials_area_name">
-                                                <p class="slider_testimonials_area_name_text">DOMINIC FREEMAN</p>
-                                                <p class="slider_testimonials_area_name_date">13 Dec 2019</p>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-
-                                <!-- TESTIMONY 3 -->
-                                <div class="slider_testimonials">
-                                    <!-- Use anchors insted of div -->
-                                    <a href="#" class="news_letter">
-                                        <img src="./assets/slider-img-3.jpg" alt="" class="slider_testimonials_img" />
-                                        <div class="slider_testimonials_info">
-                                            <h3 class="slider_testimonials_info_title">HYPNOTIZE YOURSELF INTO THE GHOST.</h3>
-                                            <p class="slider_testimonials_info_desc">There are many things that are important to catalog design...</p>
-                                        </div>
-                                        <div class="slider_testimonials_area">
-                                            <div class="slider_testimonials_area_box">
-                                                <img src="./assets/testimony-img-3.jpg" alt="" class="slider_testimonials_area_box_img" />
-                                            </div>
-                                            <div class="slider_testimonials_area_name">
-                                                <p class="slider_testimonials_area_name_text">ALICE WARD</p>
-                                                <p class="slider_testimonials_area_name_date">30 Nov 2019</p>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-
-                                <!-- TESTIMONY 1 -->
-                                <div class="slider_testimonials">
-                                    <!-- Use anchors insted of div -->
-                                    <a href="#" class="news_letter">
-                                        <img src="./assets/slider-img-1.jpg" alt="" class="slider_testimonials_img" />
-                                        <div class="slider_testimonials_info">
-                                            <h3 class="slider_testimonials_info_title">SEE THE UNMATCHED BEAUTY OF THE GREAT.</h3>
-                                            <p class="slider_testimonials_info_desc">
-                                                Free directories: directories are perfect for customers that are searching for...
-                                            </p>
-                                        </div>
-                                        <div class="slider_testimonials_area">
-                                            <div class="slider_testimonials_area_box">
-                                                <img src="./assets/testimony-img-1.jpg" alt="" class="slider_testimonials_area_box_img" />
-                                            </div>
-                                            <div class="slider_testimonials_area_name">
-                                                <p class="slider_testimonials_area_name_text">ALJA BRUN</p>
-                                                <p class="slider_testimonials_area_name_date">20 Jan 2020</p>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-
-                                <!-- TESTIMONY 2 -->
-                                <div class="slider_testimonials">
-                                    <!-- Use anchors insted of div -->
-                                    <a href="#" class="news_letter">
-                                        <img src="./assets/slider-img-2.jpg" alt="" class="slider_testimonials_img" />
-                                        <div class="slider_testimonials_info">
-                                            <h3 class="slider_testimonials_info_title">EFFECTIVE ADVERTISING POINTERS.</h3>
-                                            <p class="slider_testimonials_info_desc">Having a home based business is a wonderful asset to your life...</p>
-                                        </div>
-                                        <div class="slider_testimonials_area">
-                                            <div class="slider_testimonials_area_box">
-                                                <img src="./assets/testimony-img-2.jpg" alt="" class="slider_testimonials_area_box_img" />
-                                            </div>
-                                            <div class="slider_testimonials_area_name">
-                                                <p class="slider_testimonials_area_name_text">DOMINIC FREEMAN</p>
-                                                <p class="slider_testimonials_area_name_date">13 Dec 2019</p>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-
-                                <!-- TESTIMONY 3 -->
-                                <div class="slider_testimonials">
-                                    <!-- Use anchors insted of div -->
-                                    <a href="#" class="news_letter">
-                                        <img src="./assets/slider-img-3.jpg" alt="" class="slider_testimonials_img" />
-                                        <div class="slider_testimonials_info">
-                                            <h3 class="slider_testimonials_info_title">HYPNOTIZE YOURSELF INTO THE GHOST.</h3>
-                                            <p class="slider_testimonials_info_desc">There are many things that are important to catalog design...</p>
-                                        </div>
-                                        <div class="slider_testimonials_area">
-                                            <div class="slider_testimonials_area_box">
-                                                <img src="./assets/testimony-img-3.jpg" alt="" class="slider_testimonials_area_box_img" />
-                                            </div>
-                                            <div class="slider_testimonials_area_name">
-                                                <p class="slider_testimonials_area_name_text">ALICE WARD</p>
-                                                <p class="slider_testimonials_area_name_date">30 Nov 2019</p>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <!-- GALLERY -->
-                <section class="gallery" id="gallery">
-                    <div class="gallery_container column">
-                        <div class="gallery_container_line"></div>
-                        <div class="gallery_container_title">GALLERY</div>
-
-                        <!-- GALLERY PLUGIN -->
-                        <div class="lightGallery" id="lightGallery">
-                            <a href="../Project_2/assets/gallery-img-1.jpg" class="lightGallery_img gallery_item1">
-                                <img src="../Project_2/assets/gallery-img-thumb-1.jpg" alt="Image 1" />
-                            </a>
-                            <a href="../Project_2/assets/gallery-img-2.jpg" class="lightGallery_img gallery_item2">
-                                <img src="../Project_2/assets/gallery-img-thumb-2.jpg" alt="Image 2" />
-                            </a>
-                            <a href="../Project_2/assets/gallery-img-3.jpg" class="lightGallery_img gallery_item3">
-                                <img src="../Project_2/assets/gallery-img-thumb-3.jpg" alt="Image 3" />
-                            </a>
-                            <a href="../Project_2/assets/gallery-img-4.jpg" class="lightGallery_img gallery_item4">
-                                <img src="../Project_2/assets/gallery-img-thumb-4.jpg" alt="Image 4" />
-                            </a>
-                            <a href="../Project_2/assets/gallery-img-5.jpg" class="lightGallery_img gallery_item5">
-                                <img src="../Project_2/assets/gallery-img-thumb-5.jpg" alt="Image 5" />
-                            </a>
-                        </div>
-                        <button class="gallery_container_btn">SEE MORE</button>
-                    </div>
-                </section>
-
-                <!-- INTERACTIVE MAP -->
-                <section class="map">
-                    <div class="map_container">
-                        <div class="map_container_interactive" id="map"></div>
-                    </div>
-                </section>
-
-                <!-- CONTACT -->
-                <section class="contact_section" id="contact">
-                    <div class="contact_container">
-                        <div class="contact_container_line"></div>
-                        <h2 class="contact_container_title">Get in touch</h2>
-
-                        <div class="form_container">
-                            <div class="form_container_info">
-                                <p class="form_container_info_text">
-                                    <i class="fa-solid fa-location-dot"></i>
-                                    91 Nolan Extension Suite 670
-                                </p>
-                                <p class="form_container_info_text">
-                                    <i class="fa-solid fa-phone"></i>
-                                    +001 356-868-2454
-                                </p>
-                                <p class="form_container_info_text">
-                                    <i class="fa-solid fa-inbox"></i>
-                                    montichello@service.com
-                                </p>
-                                <p class="form_container_info_text">
-                                    <i class="fa-regular fa-clock"></i>
-                                    From 07:05AM to 19:30PM
-                                </p>
-                            </div>
-                            <form action="/" method="get" id="form" class="form">
-                                <div class="input_field">
-                                    <div class="form_control">
-                                        <label for="name"></label>
-                                        <input type="text" name="name" id="name" placeholder="Mollie Medina" />
-                                        <label for="email"></label>
-                                        <input type="text" name="email" id="email" placeholder="Email" />
-                                    </div>
-                                    <div class="submit_field">
-                                        <p class="submit_field_message" id="messageBox"></p>
-                                        <button type="submit" class="submit_field_button" id="submitButton">Submit</button>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </section>
-            </main>
-
-            <!-- FOOTER -->
-            <footer class="footer">
-                <div class="footer_overlay">
-                    <div class="footer_overlay_content">
-                        <div class="footer_overlay_content_logo">
-                            <a href="#main" class="logo_link">
-                                <img src="./assets/logo.svg" alt="Logo" class="logo" />
-                            </a>
-                            <p class="footer_overlay_content_logo_copy">Copyrights © 2020 Montichello</p>
-                        </div>
-                        <div class="footer_overlay_content_socials">
-                            <a href="#" class="footer_overlay_content_socials_link row">
+                            </li>
+                            <li class="hideOnMobile">
+                                <a href="#contact" class="nav_bar_list_link">
+                                    <div class="nav_bar_list_link_icon"></div>
+                                    Contact
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="socials row">
+                            <a href="#" class="socials_link row">
                                 <i class="fa-brands fa-facebook-f"></i>
                             </a>
-                            <a href="#" class="footer_overlay_content_socials_link row">
+                            <a href="#" class="socials_link row">
                                 <i class="fa-brands fa-twitter"></i>
                             </a>
-                            <a href="#" class="footer_overlay_content_socials_link row">
+                            <a href="#" class="socials_link row">
                                 <i class="fa-brands fa-instagram"></i>
                             </a>
                         </div>
+                    </nav>
+                    <div class="toggle_overlay" onclick="closeSidebar()"></div>
+                </div>
+
+                <section class="header_section column">
+                    <div class="vertical_slider">
+                        <div class="vertical_slider_slide">
+                            <h2 class="vertical_slider_slide_title">Simple & modern</h2>
+                            <p class="vertical_slider_slide_subtitle">We make the world beautiful everyday</p>
+                        </div>
+                        <div class="vertical_slider_slide">
+                            <h2 class="vertical_slider_slide_title">Elegant & Timeless</h2>
+                            <p class="vertical_slider_slide_subtitle">Designing a more beautiful world every day</p>
+                        </div>
+                        <div class="vertical_slider_slide">
+                            <h2 class="vertical_slider_slide_title">Minimal & Impactful</h2>
+                            <p class="vertical_slider_slide_subtitle">Bringing beauty to life, one detail at a time</p>
+                        </div>
+                        <div class="vertical_slider_slide">
+                            <h2 class="vertical_slider_slide_title">Sleek & Inspired</h2>
+                            <p class="vertical_slider_slide_subtitle">Transforming ordinary into extraordinary</p>
+                        </div>
+                        <div class="vertical_slider_slide">
+                            <h2 class="vertical_slider_slide_title">Clean & Creative</h2>
+                            <p class="vertical_slider_slide_subtitle">Crafting beauty in every moment</p>
+                        </div>
+                    </div>
+
+                    <div class="scroll_btn row">
+                        <a href="#projects">
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </a>
+                    </div>
+                </section>
+            </div>
+        </header>
+        <!-- MAIN CONTENT -->
+        <main>
+            <!-- HERO SECTION -->
+            <section class="hero_section page_wrapper column" id="projects">
+                <div class="hero_section_line"></div>
+                <h3 class="hero_section_main_title">WHAT WE DO</h3>
+                <div class="hero_section_content">
+                    <div class="hero_section_content_blue_container">
+                        <img class="trade_center_img" src="../Project_2/assets/section-img-1.jpg" alt="Trade center building" />
+                    </div>
+                    <div class="hero_section_content_info">
+                        <p class="hero_section_subtitle">ONE WORLD</p>
+                        <h3 class="hero_section_title">TRADE CENTER</h3>
+                        <p class="hero_section_desc">
+                            Increasing prosperity in our lives can be accomplished by having the right frame of mind. The truth is, our thoughts are very
+                            powerful.
+                        </p>
+                        <button class="hero_section_btn">More details</button>
+                        <p class="hero_section_geo_tag">
+                            <i class="fa-solid fa-location-dot"></i>
+                            New York City, United States - 1776 feet
+                        </p>
                     </div>
                 </div>
-            </footer>
-        </div>
+
+                <div class="hero_section_content reverse">
+                    <div class="hero_section_content_info">
+                        <p class="hero_section_subtitle">INTERNATIONAL</p>
+                        <h3 class="hero_section_title">COMMERCE CENTRE</h3>
+                        <p class="hero_section_desc">
+                            Successful businesses have many things in common, today we’ll look at the big ‘R’ of recognition and how a digital advertising
+                            network may help.
+                        </p>
+                        <button class="hero_section_btn">More details</button>
+                        <p class="hero_section_geo_tag">
+                            <i class="fa-solid fa-location-dot"></i>
+                            Hong Kong - 1588 feet
+                        </p>
+                    </div>
+                    <div class="hero_section_content_purple_container">
+                        <img class="commerce_center_img" src="../Project_2/assets/section-img-2.jpg" alt="Commerce center building" />
+                    </div>
+                </div>
+            </section>
+
+            <!-- SLIDER SECTION -->
+            <section class="slider" id="news">
+                <div class="slider_overlay">
+                    <div class="slider_container page_wrapper column">
+                        <div class="slider_container_line"></div>
+                        <h3 class="slider_container_title">LATEST NEWS</h3>
+                        <div class="horizontal_slider">
+                            <!-- TESTIMONY 1 -->
+                            <div class="slider_testimonials">
+                                <!-- Use anchors insted of div -->
+                                <a href="#" class="news_letter">
+                                    <img src="./assets/slider-img-1.jpg" alt="" class="slider_testimonials_img" />
+                                    <div class="slider_testimonials_info">
+                                        <h4 class="slider_testimonials_info_title">SEE THE UNMATCHED BEAUTY OF THE GREAT.</h4>
+                                        <p class="slider_testimonials_info_desc">
+                                            Free directories: directories are perfect for customers that are searching for...
+                                        </p>
+                                    </div>
+                                    <div class="slider_testimonials_area">
+                                        <div class="slider_testimonials_area_box">
+                                            <img src="./assets/testimony-img-1.jpg" alt="" class="slider_testimonials_area_box_img" />
+                                        </div>
+                                        <div class="slider_testimonials_area_name">
+                                            <p class="slider_testimonials_area_name_text">ALJA BRUN</p>
+                                            <p class="slider_testimonials_area_name_date">20 Jan 2020</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <!-- TESTIMONY 2 -->
+                            <div class="slider_testimonials">
+                                <!-- Use anchors insted of div -->
+                                <a href="#" class="news_letter">
+                                    <img src="./assets/slider-img-2.jpg" alt="" class="slider_testimonials_img" />
+                                    <div class="slider_testimonials_info">
+                                        <h4 class="slider_testimonials_info_title">EFFECTIVE ADVERTISING POINTERS.</h4>
+                                        <p class="slider_testimonials_info_desc">Having a home based business is a wonderful asset to your life...</p>
+                                    </div>
+                                    <div class="slider_testimonials_area">
+                                        <div class="slider_testimonials_area_box">
+                                            <img src="./assets/testimony-img-2.jpg" alt="" class="slider_testimonials_area_box_img" />
+                                        </div>
+                                        <div class="slider_testimonials_area_name">
+                                            <p class="slider_testimonials_area_name_text">DOMINIC FREEMAN</p>
+                                            <p class="slider_testimonials_area_name_date">13 Dec 2019</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <!-- TESTIMONY 3 -->
+                            <div class="slider_testimonials">
+                                <!-- Use anchors insted of div -->
+                                <a href="#" class="news_letter">
+                                    <img src="./assets/slider-img-3.jpg" alt="" class="slider_testimonials_img" />
+                                    <div class="slider_testimonials_info">
+                                        <h4 class="slider_testimonials_info_title">HYPNOTIZE YOURSELF INTO THE GHOST.</h4>
+                                        <p class="slider_testimonials_info_desc">There are many things that are important to catalog design...</p>
+                                    </div>
+                                    <div class="slider_testimonials_area">
+                                        <div class="slider_testimonials_area_box">
+                                            <img src="./assets/testimony-img-3.jpg" alt="" class="slider_testimonials_area_box_img" />
+                                        </div>
+                                        <div class="slider_testimonials_area_name">
+                                            <p class="slider_testimonials_area_name_text">ALICE WARD</p>
+                                            <p class="slider_testimonials_area_name_date">30 Nov 2019</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <!-- TESTIMONY 1 -->
+                            <div class="slider_testimonials">
+                                <!-- Use anchors insted of div -->
+                                <a href="#" class="news_letter">
+                                    <img src="./assets/slider-img-1.jpg" alt="" class="slider_testimonials_img" />
+                                    <div class="slider_testimonials_info">
+                                        <h4 class="slider_testimonials_info_title">SEE THE UNMATCHED BEAUTY OF THE GREAT.</h4>
+                                        <p class="slider_testimonials_info_desc">
+                                            Free directories: directories are perfect for customers that are searching for...
+                                        </p>
+                                    </div>
+                                    <div class="slider_testimonials_area">
+                                        <div class="slider_testimonials_area_box">
+                                            <img src="./assets/testimony-img-1.jpg" alt="" class="slider_testimonials_area_box_img" />
+                                        </div>
+                                        <div class="slider_testimonials_area_name">
+                                            <p class="slider_testimonials_area_name_text">ALJA BRUN</p>
+                                            <p class="slider_testimonials_area_name_date">20 Jan 2020</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <!-- TESTIMONY 2 -->
+                            <div class="slider_testimonials">
+                                <!-- Use anchors insted of div -->
+                                <a href="#" class="news_letter">
+                                    <img src="./assets/slider-img-2.jpg" alt="" class="slider_testimonials_img" />
+                                    <div class="slider_testimonials_info">
+                                        <h4 class="slider_testimonials_info_title">EFFECTIVE ADVERTISING POINTERS.</h4>
+                                        <p class="slider_testimonials_info_desc">Having a home based business is a wonderful asset to your life...</p>
+                                    </div>
+                                    <div class="slider_testimonials_area">
+                                        <div class="slider_testimonials_area_box">
+                                            <img src="./assets/testimony-img-2.jpg" alt="" class="slider_testimonials_area_box_img" />
+                                        </div>
+                                        <div class="slider_testimonials_area_name">
+                                            <p class="slider_testimonials_area_name_text">DOMINIC FREEMAN</p>
+                                            <p class="slider_testimonials_area_name_date">13 Dec 2019</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <!-- TESTIMONY 3 -->
+                            <div class="slider_testimonials">
+                                <!-- Use anchors insted of div -->
+                                <a href="#" class="news_letter">
+                                    <img src="./assets/slider-img-3.jpg" alt="" class="slider_testimonials_img" />
+                                    <div class="slider_testimonials_info">
+                                        <h4 class="slider_testimonials_info_title">HYPNOTIZE YOURSELF INTO THE GHOST.</h4>
+                                        <p class="slider_testimonials_info_desc">There are many things that are important to catalog design...</p>
+                                    </div>
+                                    <div class="slider_testimonials_area">
+                                        <div class="slider_testimonials_area_box">
+                                            <img src="./assets/testimony-img-3.jpg" alt="" class="slider_testimonials_area_box_img" />
+                                        </div>
+                                        <div class="slider_testimonials_area_name">
+                                            <p class="slider_testimonials_area_name_text">ALICE WARD</p>
+                                            <p class="slider_testimonials_area_name_date">30 Nov 2019</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- GALLERY -->
+            <section class="gallery" id="gallery">
+                <div class="gallery_container column">
+                    <div class="gallery_container_line"></div>
+                    <div class="gallery_container_title">GALLERY</div>
+
+                    <!-- GALLERY PLUGIN -->
+                    <div class="lightGallery page_wrapper" id="lightGallery">
+                        <a href="../Project_2/assets/gallery-img-1.jpg" class="lightGallery_img gallery_item1">
+                            <img src="../Project_2/assets/gallery-img-thumb-1.jpg" alt="Image 1" />
+                        </a>
+                        <a href="../Project_2/assets/gallery-img-2.jpg" class="lightGallery_img gallery_item2">
+                            <img src="../Project_2/assets/gallery-img-thumb-2.jpg" alt="Image 2" />
+                        </a>
+                        <a href="../Project_2/assets/gallery-img-3.jpg" class="lightGallery_img gallery_item3">
+                            <img src="../Project_2/assets/gallery-img-thumb-3.jpg" alt="Image 3" />
+                        </a>
+                        <a href="../Project_2/assets/gallery-img-4.jpg" class="lightGallery_img gallery_item4">
+                            <img src="../Project_2/assets/gallery-img-thumb-4.jpg" alt="Image 4" />
+                        </a>
+                        <a href="../Project_2/assets/gallery-img-5.jpg" class="lightGallery_img gallery_item5">
+                            <img src="../Project_2/assets/gallery-img-thumb-5.jpg" alt="Image 5" />
+                        </a>
+                    </div>
+                    <button class="gallery_container_btn">SEE MORE</button>
+                </div>
+            </section>
+
+            <!-- INTERACTIVE MAP -->
+            <section class="map">
+                <div class="map_container">
+                    <div class="map_container_interactive" id="map"></div>
+                </div>
+            </section>
+
+            <!-- CONTACT -->
+            <section class="contact_section" id="contact">
+                <div class="contact_container">
+                    <div class="contact_container_line"></div>
+                    <h2 class="contact_container_title">Get in touch</h2>
+
+                    <div class="form_container">
+                        <div class="form_container_info">
+                            <div class="form_container_info_text">
+                                <i class="fa-solid fa-location-dot"></i>
+                                <span>91 Nolan Extension Suite 670</span>
+                            </div>
+                            <div class="form_container_info_text">
+                                <i class="fa-solid fa-phone"></i>
+                                <a href="tel:+001356-868-2454">+001 356-868-2454</a>
+                            </div>
+                            <div class="form_container_info_text">
+                                <i class="fa-solid fa-inbox"></i>
+                                <a href="mailto:montichello@service.com">montichello@service.com</a>
+                            </div>
+                            <div class="form_container_info_text">
+                                <i class="fa-regular fa-clock"></i>
+                                <span>From 07:05AM to 19:30PM</span>
+                            </div>
+                        </div>
+                        <form action="/" method="get" id="form" class="form">
+                            <div class="input_field">
+                                <div class="form_control">
+                                    <label for="name"></label>
+                                    <input type="text" name="name" id="name" placeholder="Mollie Medina" />
+                                    <label for="email"></label>
+                                    <input type="text" name="email" id="email" placeholder="Email" />
+                                </div>
+                                <div class="submit_field">
+                                    <p class="submit_field_message" id="messageBox"></p>
+                                    <button type="submit" class="submit_field_button" id="submitButton">Submit</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- FOOTER -->
+        <footer class="footer">
+            <div class="footer_overlay">
+                <div class="footer_overlay_content">
+                    <div class="footer_overlay_content_logo">
+                        <a href="#main" class="logo">
+                            <img src="./assets/logo.svg" alt="Logo" class="logo_img" />
+                        </a>
+                        <p class="footer_overlay_content_logo_copy">Copyrights © 2020 Montichello</p>
+                    </div>
+                    <div class="footer_overlay_content_socials">
+                        <a href="#" class="footer_overlay_content_socials_link row">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="footer_overlay_content_socials_link row">
+                            <i class="fa-brands fa-twitter"></i>
+                        </a>
+                        <a href="#" class="footer_overlay_content_socials_link row">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer>
 
         <!-- SCRIPTS -->
         <script src="./plugins/jquery-3.7.1.min.js"></script>

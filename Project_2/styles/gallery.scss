@@ -52,10 +52,7 @@ $text: #2c4058;
 }
 
 .lightGallery {
-    margin: 0 auto;
-    width: 80%;
-    margin-bottom: 60px;
-
+    padding-bottom: 60px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(285px, 1fr));
     justify-content: center;

@@ -147,13 +147,13 @@ $text: #2c4058;
 /* SLIDER */
 .horizontal_slider {
     // Try to play around with percent
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
     position: relative;
-    padding: 50px;
+    padding: 25px;
 
     @media (max-width: 1280px) {
-        padding: 25px;
+        width: 90%;
     }
 
     @media (max-width: 480px) {
@@ -173,8 +173,8 @@ $text: #2c4058;
 }
 
 .horizontal_slider .slick-slide {
-    margin-right: 30px;
-    margin-left: 30px;
+    margin-right: 15px;
+    margin-left: 15px;
 }
 
 // SLICK OVERRIDE
