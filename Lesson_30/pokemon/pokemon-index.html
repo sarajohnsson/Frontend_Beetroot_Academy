@@ -11,47 +11,51 @@
         <title>Pokemon</title>
     </head>
     <body>
-        <div class="page_wrapper">
-            <section class="pokemon_container column">
-                <h1 class="pokemon_container_title">PokeDex</h1>
-                <div class="pokemon_container_search row">
-                    <input class="pokemon_container_search_input" type="text" placeholder="Search for a Pokémon" />
-                    <button class="pokemon_container_search_btn">Search</button>
-                </div>
-            </section>
+        <section class="pokemon_container column page_wrapper">
+            <h1 class="pokemon_container_title">PokeDex</h1>
+            <div class="pokemon_container_search row">
+                <input class="pokemon_container_search_input" type="text" placeholder="Search for a Pokémon" />
+                <button class="pokemon_container_search_btn">Search</button>
+            </div>
+        </section>
 
-            <section class="pokemon_card column">
-                <button class="fav_btn"><i class="fa-solid fa-star"></i></button>
-                <div class="pokemon_card_border">
-                    <div class="pokemon_card_bg">
-                        <div class="pokemon_card_bg_info row">
-                            <div class="pokemon_card_bg_info_name"></div>
-                            <div class="pokemon_card_bg_info_hp">
-                                <span>HP:</span>
-                                <p class="pokemon_card_bg_info_hp_text"></p>
-                            </div>
+        <section class="pokemon_card column page_wrapper">
+            <button class="fav_btn"><i class="fa-solid fa-star"></i></button>
+            <div class="pokemon_card_border">
+                <div class="pokemon_card_bg">
+                    <div class="pokemon_card_bg_info row">
+                        <div class="pokemon_card_bg_info_name"></div>
+                        <div class="pokemon_card_bg_info_hp">
+                            <span>HP:</span>
+                            <p class="pokemon_card_bg_info_hp_text"></p>
                         </div>
+                    </div>
 
-                        <div class="pokemon_card_bg_img">
-                            <img src="" alt="Pokemon sprite" class="pokemon_card_bg_img_sprite" />
+                    <div class="pokemon_card_bg_img">
+                        <img src="" alt="Pokemon sprite" class="pokemon_card_bg_img_sprite" />
+                    </div>
+
+                    <div class="pokemon_card_bg_stats">
+                        <div class="pokemon_card_bg_stats_type"></div>
+                        <div class="pokemon_card_bg_stats_attack row">
+                            <div class="pokemon_card_bg_stats_attack_name"></div>
+                            <div class="pokemon_card_bg_stats_attack_dmg"></div>
                         </div>
-
-                        <div class="pokemon_card_bg_stats">
-                            <div class="pokemon_card_bg_stats_type"></div>
-                            <div class="pokemon_card_bg_stats_attack row">
-                                <div class="pokemon_card_bg_stats_attack_name"></div>
-                                <div class="pokemon_card_bg_stats_attack_dmg"></div>
-                            </div>
-                            <div class="pokemon_card_bg_stats_gen row">
-                                <div class="pokemon_card_bg_stats_gen_weight"></div>
-                                <div class="pokemon_card_bg_stats_gen_id"></div>
-                            </div>
+                        <div class="pokemon_card_bg_stats_gen row">
+                            <div class="pokemon_card_bg_stats_gen_weight"></div>
+                            <div class="pokemon_card_bg_stats_gen_id"></div>
                         </div>
                     </div>
                 </div>
-            </section>
-        </div>
+            </div>
+        </section>
 
+        <section class="fav_container page_wrapper">
+            <!-- <div class="fav_container_card">
+                <img src="#" alt="" class="fav_container_card_img" />
+                <p class="fav_container_card_name">Charizard</p>
+            </div> -->
+        </section>
         <script src="./pokeApi.js"></script>
     </body>
 </html>

@@ -95,9 +95,3 @@ function getPokemonType(pokemonData) {
     pokemonCardBg.style.setProperty('--normal-color', typeColors.normal);
   }
 }
-
-favButton.addEventListener('click', savePokemon);
-
-function savePokemon() {
-  var currentFav = localStorage.get();
-}
