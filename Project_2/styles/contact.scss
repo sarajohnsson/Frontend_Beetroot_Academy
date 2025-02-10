@@ -32,18 +32,24 @@ $text: #2c4058;
             width: 90%;
         }
 
-        &_line {
-            background-color: #2c4058;
-            width: 100px;
-            height: 1px;
-            margin-bottom: 30px;
-        }
-
         &_title {
             font-size: 2.75rem;
             font-weight: 700;
             margin-bottom: 40px;
             text-transform: uppercase;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            &::before {
+                content: '';
+                background-color: #2c4058;
+                width: 100px;
+                height: 1px;
+                margin-bottom: 30px;
+                text-align: center;
+                display: block;
+            }
 
             @media (max-width: 1025px) {
                 font-size: 2.5rem;
