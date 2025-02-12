@@ -227,3 +227,7 @@
     right: 0;
   }
 }
+
+.horizontal_slider .slick-list {
+  margin-bottom: 60px;
+}
