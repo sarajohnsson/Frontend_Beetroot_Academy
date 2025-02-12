@@ -424,9 +424,12 @@ img {
 }
 
 // SLICK OVERRIDE
+.slick-list {
+    margin-bottom: 60px;
+}
+
 .slick-dots {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 40px;
