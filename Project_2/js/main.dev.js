@@ -1,45 +1,59 @@
 "use strict";
 
 // NAVIGATION
-var sidebar = document.querySelector('.sidebar');
-var toggleOverlay = document.querySelector('.toggle_overlay');
-var hamburger = document.querySelector('.open_icon');
+function initSidebar() {
+  var sidebar = document.querySelector('.nav_bar_list');
+  var toggleOverlay = document.querySelector('.toggle_overlay');
+  var hamburger = document.querySelector('.open_icon');
+  var closeBtn = document.querySelector('.close_btn');
 
-function showSidebar() {
-  sidebar.classList.add('show');
-  toggleOverlay.classList.add('active');
-  hamburger.classList.add('hidden');
-}
+  if (sidebar && toggleOverlay && hamburger && closeBtn) {
+    var showSidebar = function showSidebar() {
+      sidebar.classList.add('show');
+      toggleOverlay.classList.add('active');
+      hamburger.classList.add('hidden');
+    };
 
-function closeSidebar() {
-  sidebar.classList.remove('show');
-  toggleOverlay.classList.remove('active');
-  hamburger.classList.remove('hidden');
-}
+    var closeSidebar = function closeSidebar() {
+      sidebar.classList.remove('show');
+      toggleOverlay.classList.remove('active');
+      hamburger.classList.remove('hidden');
+    };
 
-sidebar.addEventListener('click', function (e) {
-  if (e.target.tagName === 'A') {
-    closeSidebar();
-  }
-}); // ACTIVE LINKS
-
-function setActive() {
-  var navLinks = document.querySelectorAll('.nav_bar_list_link');
-  navLinks.forEach(function (link) {
-    link.addEventListener('click', function () {
-      var navIcons = document.querySelectorAll('.nav_bar_list_link_icon');
-      navIcons.forEach(function (icon) {
-        icon.classList.remove('active');
-      });
-      var icon = link.querySelector('.nav_bar_list_link_icon');
-
-      if (icon) {
-        icon.classList.add('active');
+    hamburger.addEventListener('click', showSidebar);
+    closeBtn.addEventListener('click', closeSidebar);
+    toggleOverlay.addEventListener('click', closeSidebar);
+    sidebar.addEventListener('click', function (e) {
+      if (e.target.tagName === 'A') {
+        closeSidebar();
       }
     });
-  });
-} // NAV SCROLL
+  }
+}
 
+initSidebar(); // ACTIVE LINKS
+
+function setActive() {
+  var navLinks = document.querySelectorAll('.nav_bar_list li');
+  navLinks.forEach(function (link) {
+    link.addEventListener('click', function () {
+      navLinks.forEach(function (item) {
+        item.classList.remove('active');
+      });
+      link.classList.add('active');
+    });
+  });
+  window.addEventListener('scroll', function () {
+    if (window.scrollY === 0) {
+      navLinks.forEach(function (item) {
+        item.classList.remove('active');
+      });
+    }
+  });
+} // ADDITIONAL SLIDER FUNCTION
+
+
+document.addEventListener('DOMContentLoaded', setActive); // NAV SCROLL
 
 document.addEventListener('DOMContentLoaded', function () {
   var navBar = document.querySelector('.nav_container');
@@ -50,9 +64,7 @@ document.addEventListener('DOMContentLoaded', function () {
       navBar.classList.remove('scrolled');
     }
   });
-}); // ADDITIONAL SLIDER FUNCTION
-
-setActive();
+});
 
 function setEqualHeight() {
   var slides = document.querySelectorAll('.slider_testimonials');
@@ -66,11 +78,22 @@ function setEqualHeight() {
 
     slide.style.height = "".concat(maxHeight, "px");
   });
-} // SLICK SLIDER
-
+}
 
 $(document).ready(function () {
-  // Slick slider
+  // SMOOTH SCROLLING
+  $('a').on('click', function (event) {
+    if (!$(this).hasClass('lightGallery_img') && !$(this).hasClass('no_prevent') && this.has !== '') {
+      event.preventDefault();
+      var hash = this.hash;
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function () {
+        window.location.hash = hash;
+      });
+    }
+  }); // SLICK SLIDER
+
   $('.vertical_slider').slick({
     infinite: true,
     slidesToShow: 1,
@@ -177,19 +200,4 @@ function validateForm() {
     messageBox.classList.add('success');
     form.reset();
   }
-} // SMOOTH SCROLLING
-
-
-$(document).ready(function () {
-  $('a').on('click', function (event) {
-    if (!$(this).hasClass('lightGallery_img') && this.has !== '') {
-      event.preventDefault();
-      var hash = this.hash;
-      $('html, body').animate({
-        scrollTop: $(hash).offset().top
-      }, 800, function () {
-        window.location.hash = hash;
-      });
-    }
-  });
-});
+}

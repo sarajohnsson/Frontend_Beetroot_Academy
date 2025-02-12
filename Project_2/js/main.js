@@ -1,44 +1,62 @@
 // NAVIGATION
-const sidebar = document.querySelector('.sidebar');
-const toggleOverlay = document.querySelector('.toggle_overlay');
-const hamburger = document.querySelector('.open_icon');
+function initSidebar() {
+    const sidebar = document.querySelector('.nav_bar_list');
+    const toggleOverlay = document.querySelector('.toggle_overlay');
+    const hamburger = document.querySelector('.open_icon');
+    const closeBtn = document.querySelector('.close_btn');
 
-function showSidebar() {
-    sidebar.classList.add('show');
-    toggleOverlay.classList.add('active');
-    hamburger.classList.add('hidden');
-}
+    if (sidebar && toggleOverlay && hamburger && closeBtn) {
+        function showSidebar() {
+            sidebar.classList.add('show');
+            toggleOverlay.classList.add('active');
+            hamburger.classList.add('hidden');
+        }
 
-function closeSidebar() {
-    sidebar.classList.remove('show');
-    toggleOverlay.classList.remove('active');
-    hamburger.classList.remove('hidden');
-}
+        function closeSidebar() {
+            sidebar.classList.remove('show');
+            toggleOverlay.classList.remove('active');
+            hamburger.classList.remove('hidden');
+        }
 
-sidebar.addEventListener('click', (e) => {
-    if (e.target.tagName === 'A') {
-        closeSidebar();
+        hamburger.addEventListener('click', showSidebar);
+        closeBtn.addEventListener('click', closeSidebar);
+        toggleOverlay.addEventListener('click', closeSidebar);
+
+        sidebar.addEventListener('click', (e) => {
+            if (e.target.tagName === 'A') {
+                closeSidebar();
+            }
+        });
     }
-});
+}
+
+initSidebar();
 
 // ACTIVE LINKS
 function setActive() {
-    const navLinks = document.querySelectorAll('.nav_bar_list_link');
+    const navLinks = document.querySelectorAll('.nav_bar_list li');
 
     navLinks.forEach((link) => {
         link.addEventListener('click', () => {
-            const navIcons = document.querySelectorAll('.nav_bar_list_link_icon');
-            navIcons.forEach((icon) => {
-                icon.classList.remove('active');
+            navLinks.forEach((item) => {
+                item.classList.remove('active');
             });
 
-            const icon = link.querySelector('.nav_bar_list_link_icon');
-            if (icon) {
-                icon.classList.add('active');
-            }
+            link.classList.add('active');
         });
     });
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY === 0) {
+            navLinks.forEach((item) => {
+                item.classList.remove('active');
+            });
+        }
+    });
 }
+
+// ADDITIONAL SLIDER FUNCTION
+document.addEventListener('DOMContentLoaded', setActive);
 
 // NAV SCROLL
 document.addEventListener('DOMContentLoaded', function () {
@@ -52,9 +70,6 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 });
-
-// ADDITIONAL SLIDER FUNCTION
-setActive();
 
 function setEqualHeight() {
     const slides = document.querySelectorAll('.slider_testimonials');
@@ -71,9 +86,27 @@ function setEqualHeight() {
     });
 }
 
-// SLICK SLIDER
 $(document).ready(function () {
-    // Slick slider
+    // SMOOTH SCROLLING
+    $('a').on('click', function (event) {
+        if (!$(this).hasClass('lightGallery_img') && !$(this).hasClass('no_prevent') && this.has !== '') {
+            event.preventDefault();
+
+            const hash = this.hash;
+
+            $('html, body').animate(
+                {
+                    scrollTop: $(hash).offset().top,
+                },
+                800,
+                function () {
+                    window.location.hash = hash;
+                }
+            );
+        }
+    });
+
+    // SLICK SLIDER
     $('.vertical_slider').slick({
         infinite: true,
         slidesToShow: 1,
@@ -193,24 +226,3 @@ function validateForm() {
         form.reset();
     }
 }
-
-// SMOOTH SCROLLING
-$(document).ready(function () {
-    $('a').on('click', function (event) {
-        if (!$(this).hasClass('lightGallery_img') && this.has !== '') {
-            event.preventDefault();
-
-            const hash = this.hash;
-
-            $('html, body').animate(
-                {
-                    scrollTop: $(hash).offset().top,
-                },
-                800,
-                function () {
-                    window.location.hash = hash;
-                }
-            );
-        }
-    });
-});

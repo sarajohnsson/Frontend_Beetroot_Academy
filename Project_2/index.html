@@ -6,9 +6,6 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <!-- CSS -->
-        <link rel="stylesheet" href="./styles/main.css" />
-
         <!-- GOOGLE FONT -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -34,6 +31,8 @@
             integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
             crossorigin="" />
 
+        <!-- CSS -->
+        <link rel="stylesheet" href="./styles/main.css" />
         <title>Project 2</title>
     </head>
     <body>
@@ -41,108 +40,107 @@
         <!-- WEB PAGE -->
         <!-- HEADER -->
         <header class="header" id="main">
-            <div class="header_overlay">
-                <div class="nav_container row">
-                    <nav class="nav_bar page_wrapper row">
-                        <!-- SIDEBAR -->
-                        <div class="mobile_layout">
-                            <a href="#main" class="logo">
-                                <img src="./assets/logo.svg" alt="Logo" class="logo_img" />
-                            </a>
-                            <div onclick="showSidebar()">
-                                <a href="#" class="open_icon"><i class="fa-solid fa-bars"></i></a>
-                            </div>
-                        </div>
-                        <ul class="sidebar">
-                            <li onclick="closeSidebar()">
-                                <a href="#" class="close_icon"><i class="fa-solid fa-x"></i></a>
-                            </li>
-                            <li>
-                                <a href="#" class="sidebar_list_link">About us</a>
-                            </li>
-                            <li>
-                                <a href="#projects" class="sidebar_list_link">Projects</a>
-                            </li>
-                            <li>
-                                <a href="#news" class="sidebar_list_link">News</a>
-                            </li>
-                            <li>
-                                <a href="#contact" class="sidebar_list_link">Contact</a>
-                            </li>
-                        </ul>
-                        <!-- NAV BAR -->
-                        <ul class="nav_bar_list">
-                            <li class="hideOnMobile">
-                                <a href="#" class="nav_bar_list_link">
-                                    <div class="nav_bar_list_link_icon"></div>
-                                    About us
-                                </a>
-                            </li>
-                            <li class="hideOnMobile">
-                                <a href="#projects" class="nav_bar_list_link">
-                                    <div class="nav_bar_list_link_icon"></div>
-                                    Projects
-                                </a>
-                            </li>
-                            <li class="hideOnMobile">
-                                <a href="#news" class="nav_bar_list_link">
-                                    <div class="nav_bar_list_link_icon"></div>
-                                    News
-                                </a>
-                            </li>
-                            <li class="hideOnMobile">
-                                <a href="#contact" class="nav_bar_list_link">
-                                    <div class="nav_bar_list_link_icon"></div>
-                                    Contact
-                                </a>
-                            </li>
-                        </ul>
-                        <div class="socials row">
-                            <a href="#" class="socials_link row">
-                                <i class="fa-brands fa-facebook-f"></i>
-                            </a>
-                            <a href="#" class="socials_link row">
-                                <i class="fa-brands fa-twitter"></i>
-                            </a>
-                            <a href="#" class="socials_link row">
-                                <i class="fa-brands fa-instagram"></i>
-                            </a>
-                        </div>
-                    </nav>
-                    <div class="toggle_overlay" onclick="closeSidebar()"></div>
-                </div>
-
-                <section class="header_section column">
-                    <div class="vertical_slider">
-                        <div class="vertical_slider_slide">
-                            <h2 class="vertical_slider_slide_title">Simple & modern</h2>
-                            <p class="vertical_slider_slide_subtitle">We make the world beautiful everyday</p>
-                        </div>
-                        <div class="vertical_slider_slide">
-                            <h2 class="vertical_slider_slide_title">Elegant & Timeless</h2>
-                            <p class="vertical_slider_slide_subtitle">Designing a more beautiful world every day</p>
-                        </div>
-                        <div class="vertical_slider_slide">
-                            <h2 class="vertical_slider_slide_title">Minimal & Impactful</h2>
-                            <p class="vertical_slider_slide_subtitle">Bringing beauty to life, one detail at a time</p>
-                        </div>
-                        <div class="vertical_slider_slide">
-                            <h2 class="vertical_slider_slide_title">Sleek & Inspired</h2>
-                            <p class="vertical_slider_slide_subtitle">Transforming ordinary into extraordinary</p>
-                        </div>
-                        <div class="vertical_slider_slide">
-                            <h2 class="vertical_slider_slide_title">Clean & Creative</h2>
-                            <p class="vertical_slider_slide_subtitle">Crafting beauty in every moment</p>
+            <div class="nav_container row">
+                <nav class="nav_bar page_wrapper row">
+                    <!-- SIDEBAR -->
+                    <div class="mobile_layout">
+                        <a href="#main" class="logo">
+                            <img src="./assets/logo.svg" alt="Logo" class="logo_img" />
+                        </a>
+                        <div onclick="showSidebar()">
+                            <a href="#" class="open_icon"><i class="fa-solid fa-bars"></i></a>
                         </div>
                     </div>
-
-                    <div class="scroll_btn row">
-                        <a href="#projects">
-                            <i class="fa-solid fa-chevron-down"></i>
+                    <!-- <ul class="sidebar">
+                      
+                        <li>
+                            <a href="#" class="sidebar_list_link">About us</a>
+                        </li>
+                        <li>
+                            <a href="#projects" class="sidebar_list_link">Projects</a>
+                        </li>
+                        <li>
+                            <a href="#news" class="sidebar_list_link">News</a>
+                        </li>
+                        <li>
+                            <a href="#contact" class="sidebar_list_link">Contact</a>
+                        </li>
+                    </ul> -->
+                    <!-- NAV BAR -->
+                    <ul class="nav_bar_list">
+                        <div class="close_btn" onclick="closeSidebar()">
+                            <a href="#" class="close_icon"><i class="fa-solid fa-x"></i></a>
+                        </div>
+                        <li class="hideOnMobile">
+                            <a href="#" class="nav_bar_list_link">
+                                <!-- <div class="nav_bar_list_link_icon"></div> -->
+                                About us
+                            </a>
+                        </li>
+                        <li class="hideOnMobile">
+                            <a href="#projects" class="nav_bar_list_link">
+                                <!-- <div class="nav_bar_list_link_icon"></div> -->
+                                Projects
+                            </a>
+                        </li>
+                        <li class="hideOnMobile">
+                            <a href="#news" class="nav_bar_list_link">
+                                <!-- <div class="nav_bar_list_link_icon"></div> -->
+                                News
+                            </a>
+                        </li>
+                        <li class="hideOnMobile">
+                            <a href="#contact" class="nav_bar_list_link">
+                                <!-- <div class="nav_bar_list_link_icon"></div> -->
+                                Contact
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="socials row">
+                        <a href="#" class="socials_link row">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="socials_link row">
+                            <i class="fa-brands fa-twitter"></i>
+                        </a>
+                        <a href="#" class="socials_link row">
+                            <i class="fa-brands fa-instagram"></i>
                         </a>
                     </div>
-                </section>
+                </nav>
+                <div class="toggle_overlay" onclick="closeSidebar()"></div>
             </div>
+
+            <section class="header_section column">
+                <div class="vertical_slider">
+                    <div class="vertical_slider_slide">
+                        <h2 class="vertical_slider_slide_title">Simple & modern</h2>
+                        <p class="vertical_slider_slide_subtitle">We make the world beautiful everyday</p>
+                    </div>
+                    <div class="vertical_slider_slide">
+                        <h2 class="vertical_slider_slide_title">Elegant & Timeless</h2>
+                        <p class="vertical_slider_slide_subtitle">Designing a more beautiful world every day</p>
+                    </div>
+                    <div class="vertical_slider_slide">
+                        <h2 class="vertical_slider_slide_title">Minimal & Impactful</h2>
+                        <p class="vertical_slider_slide_subtitle">Bringing beauty to life, one detail at a time</p>
+                    </div>
+                    <div class="vertical_slider_slide">
+                        <h2 class="vertical_slider_slide_title">Sleek & Inspired</h2>
+                        <p class="vertical_slider_slide_subtitle">Transforming ordinary into extraordinary</p>
+                    </div>
+                    <div class="vertical_slider_slide">
+                        <h2 class="vertical_slider_slide_title">Clean & Creative</h2>
+                        <p class="vertical_slider_slide_subtitle">Crafting beauty in every moment</p>
+                    </div>
+                </div>
+
+                <div class="scroll_btn row">
+                    <a href="#projects">
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </a>
+                </div>
+            </section>
         </header>
         <!-- MAIN CONTENT -->
         <main>
@@ -163,7 +161,7 @@
                         <button class="hero_section_btn">More details</button>
                         <p class="hero_section_geo_tag">
                             <i class="fa-solid fa-location-dot"></i>
-                            New York City, United States - 1776 feet
+                            <a class="no_prevent" href="https://maps.app.goo.gl/h5oAGiRRfSV6djd5A">New York City, United States - 1776 feet</a>
                         </p>
                     </div>
                 </div>
@@ -179,7 +177,7 @@
                         <button class="hero_section_btn">More details</button>
                         <p class="hero_section_geo_tag">
                             <i class="fa-solid fa-location-dot"></i>
-                            Hong Kong - 1588 feet
+                            <a class="no_prevent" href="https://maps.app.goo.gl/sL9wiGkZZgNwXJdR6">Hong Kong - 1588 feet</a>
                         </p>
                     </div>
                     <div class="hero_section_content_purple_container">
@@ -371,15 +369,15 @@
                         <div class="form_container_info">
                             <div class="form_container_info_text">
                                 <i class="fa-solid fa-location-dot"></i>
-                                <span>91 Nolan Extension Suite 670</span>
+                                <a class="no_prevent" href="https://maps.app.goo.gl/1Y1MRKJTum7HZ6Vu5">91 Nolan Extension Suite 670</a>
                             </div>
                             <div class="form_container_info_text">
                                 <i class="fa-solid fa-phone"></i>
-                                <a href="tel:+001356-868-2454">+001 356-868-2454</a>
+                                <a class="no_prevent" href="tel:+001356-868-2454">+001 356-868-2454</a>
                             </div>
                             <div class="form_container_info_text">
                                 <i class="fa-solid fa-inbox"></i>
-                                <a href="mailto:montichello@service.com">montichello@service.com</a>
+                                <a class="no_prevent" href="mailto:montichello@service.com">montichello@service.com</a>
                             </div>
                             <div class="form_container_info_text">
                                 <i class="fa-regular fa-clock"></i>

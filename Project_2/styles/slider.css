@@ -1,15 +1,16 @@
 .slider {
   background: #7e5aff;
   background: linear-gradient(230deg, #24ccfa 0%, #3c7fd4 100%);
+  background-blend-mode: multiply;
   margin-bottom: 100px;
 }
 .slider_overlay {
-  background: rgba(0, 0, 0, 0.1) url(../assets/slider-bg.png);
-  background-blend-mode: darken;
+  background: url(../assets/slider-bg.png);
   background-repeat: no-repeat;
-  background-size: 100%;
-  padding-top: calc(2.8);
   background-position: bottom;
+  width: 100%;
+  background-size: 100%;
+  padding-top: calc(2.8rem);
 }
 
 .slider_container {
