@@ -1,0 +1,85 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+    font-size: 1rem;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    padding: 2%;
+    min-height: 100vh;
+}
+
+.box {
+    background-color: #0071ff;
+    border-radius: 20px;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.highlights-desc {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Small Phones (default) */
+.grid {
+    width: 100%;
+    max-width: 1024px;
+    margin: 0 auto;
+    display: grid;
+    gap: 0.8rem;
+    padding: 1rem;
+    grid-template-columns: 1fr;
+    grid-auto-rows: 1fr;
+    grid-template-areas:
+        'highlights'
+        'fitness'
+        'pokemon'
+        'monticello'
+        'weather'
+        'bhromaon'
+        'clock';
+}
+
+@media (min-width: 600px) {
+    .grid {
+        gap: 0.75rem;
+        padding: 0.75rem;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+            'fitness fitness'
+            'fitness fitness'
+            'pokemon highlights'
+            'pokemon monticello'
+            'pokemon monticello'
+            'weather monticello'
+            'weather clock'
+            'weather clock'
+            'bhromaon bhromaon';
+    }
+}
+
+@media (min-width: 768px) {
+    .grid {
+        gap: 1rem;
+        padding: 1rem;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas:
+            'pokemon fitness fitness'
+            'pokemon fitness fitness'
+            'pokemon highlights highlights'
+            'monticello monticello weather'
+            'monticello monticello weather'
+            'clock bhromaon weather'
+            'clock bhromaon weather';
+    }
+}
